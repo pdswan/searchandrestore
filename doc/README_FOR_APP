@@ -1,2 +1,24 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+*Webbynode Notes*
+
+ IMPORTANT: Rapp now will disable root SSH access by default. 
+
+ If you want to overwrite this setting follow this steps:
+
+ 1. Make sure you have the latest gem version (1.0.4)
+ 
+    $ wn version
+    [Webbynode] Rapid Deployment Gem v1.0.4
+
+ 2. If needed, update your gem
+
+    $ gem install webbynode
+
+ 3. Set the allow_root setting to true
+
+    $ wn settings add allow_root true
+ 
+ 4. Run 'wn push' and root will be allowed again.
+
