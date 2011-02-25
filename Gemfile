@@ -32,7 +32,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'cucumber-rails'
-  gem 'webrat'
+  gem 'capybara'
   gem 'factory_girl'
   gem 'faker'
   gem 'database_cleaner'
