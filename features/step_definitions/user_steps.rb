@@ -18,3 +18,6 @@ Given /^I am logged in as an admin user$/ do
   Then %{I log in with "#{email}" and "#{password}"}
 end
 
+Given /^I am not logged in$/ do
+  # no-op
+end
