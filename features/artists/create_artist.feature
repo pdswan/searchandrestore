@@ -9,10 +9,10 @@ Feature: Create Artist
     And I follow "Add an artist"
     Then I should be on the new artist page
 
-  Scenario: Non admin can not add a new artist
+  Scenario: Non admin does not see add artist link on artists page
     Given I am not logged in
     When I go to the artists page
-    Then I should not see "Add a new artists"
+    Then I should not see "Add an artist"
 
   Scenario: Non admin is redirected from new artist page
     Given I am not logged in
