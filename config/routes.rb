@@ -7,6 +7,9 @@ Searchandrestore::Application.routes.draw do
   match 'components/:action' => 'components#action'
 
   match 'home/:action' => 'home#action'
+
+  resources :artists
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

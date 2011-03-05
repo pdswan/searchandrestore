@@ -3,13 +3,11 @@ Feature: Create Artist
   In order to present information about an artist
   I should be able to create an artist
 
-  @wip
-  Scenario: Admin views new artist form
+  Scenario: Admin sees new artist page
     Given I am logged in as an admin user
     When I go to the artists page
-    And I click "Add a new artist"
+    And I follow "Add an artist"
     Then I should be on the new artist page
-    And I should see the new artist form
 
   Scenario: Non admin can not add a new artist
     Given I am not logged in
