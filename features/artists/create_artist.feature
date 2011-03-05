@@ -14,10 +14,15 @@ Feature: Create Artist
     When I go to the artists page
     Then I should not see "Add an artist"
 
-  Scenario: Non admin is redirected from new artist page
-    Given I am not logged in
+  Scenario Outline: Non admin is redirected from new artist page
+    Given I am <log in state>
     When I go to the new artist page
-    Then I should be redirected to the login in page
+    Then I should be on the <redirected to> page
+
+    Scenarios:
+      | log in state  | redirected to |
+      | logged in     | homepage      |
+      | not logged in | login         |
 
   Scenario: Admin creates new artist
     Given I am logged in as an admin user

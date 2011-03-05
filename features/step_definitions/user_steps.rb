@@ -5,11 +5,12 @@ Then /^I log\s?in with "([^"]+)" and "([^"]+)"$/ do |email, password|
   page.should have_content("Signed in successfully.")
 end
 
-Given /^I am logged in as an admin user$/ do
+Given /^I am logged in(?: as an (admin) user)?$/ do |role|
   email = Faker::Internet.email
   password = 'password123'
 
-  the.user = Factory(:admin,
+  role ||= 'user'
+  the.user = Factory(role.to_sym,
                      :email => email,
                      :password => password,
                      :password_confirmation => password)
