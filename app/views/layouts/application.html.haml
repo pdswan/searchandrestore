@@ -7,15 +7,15 @@
 
   %body
   
-  - if flash[:notice]
-    .flash#notice
-      = flash[:notice]
+    - if flash[:notice]
+      .flash#notice
+        = flash[:notice]
 
-  - if flash[:alert]
-    .flash#alert
-      = flash[:alert]
-  
-  = yield
+    - if flash[:alert]
+      .flash#alert
+        = flash[:alert]
+    
+    = yield
 
-  = javascript_include_tag ['jquery-5.1.min.js']
+    = javascript_include_tag ['jquery-5.1.min.js']
   
