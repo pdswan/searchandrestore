@@ -1,2 +1,34 @@
 .jazz
   %h1 Forms
+
+
+  - form_for :blah do |f|
+    %fieldset
+
+      .field.text
+        = f.label(:text, 'Text')
+        .control
+          = f.text_field(:text)
+      .field.textarea
+        = f.label(:textarea, 'Textarea')
+        .control
+          = f.text_area(:textarea)
+      .field.radio
+        = f.label(:radio_one, 'Radio One')
+        .control
+          = f.radio_button(:radio, 'one')
+        = f.label(:radio_two, 'Radio Two')
+        .control
+          = f.radio_button(:radio, 'two')
+      .field.check
+        = f.label(:check_one, 'Check One')
+        .control
+          = f.check_box(:check_one)
+      .field.check
+        = f.label(:check_two, 'Check Two')
+        .control
+          = f.check_box(:check_two)
+      .field.select
+        = f.label(:select, 'Select')
+        .control
+          = f.select(:select, [['One','1'],['Two','2'],['Three','3']])
