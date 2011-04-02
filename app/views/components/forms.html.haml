@@ -13,22 +13,24 @@
         = f.label(:textarea, 'Textarea')
         .control
           = f.text_area(:textarea)
-      .field.radio
+      .field.radio.inline
         = f.label(:radio_one, 'Radio One')
         .control
           = f.radio_button(:radio, 'one')
+
+      .field.radio.inline
         = f.label(:radio_two, 'Radio Two')
         .control
           = f.radio_button(:radio, 'two')
-      .field.check
+      .field.check.clear.inline
         = f.label(:check_one, 'Check One')
         .control
           = f.check_box(:check_one)
-      .field.check
+      .field.check.inline
         = f.label(:check_two, 'Check Two')
         .control
           = f.check_box(:check_two)
-      .field.select
+      .field.select.clear
         = f.label(:select, 'Select')
         .control
           = f.select(:select, [['One','1'],['Two','2'],['Three','3']])

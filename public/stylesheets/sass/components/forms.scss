@@ -1,0 +1,65 @@
+.jazz {
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .field {
+    margin-bottom: 20px;
+    overflow: hidden;
+    input[type='text'],
+    input[type='password'],
+    textarea {
+      border: 2px solid #d7d7d7;
+      width: 300px;
+    }  
+    input[type='text'],
+    input[type='password'] {
+      line-height: 25px;
+      font-size: 16px;
+      color: #ccc;
+    }
+    label,
+    .control {
+      float: left;
+    }
+
+    label {
+      font-weight: bold;
+      clear: both;
+      margin-right: 20px;
+    }
+    &.inline {
+      float: left;
+      margin-right: 10px;
+      label {
+        clear: none;
+      }
+    }
+    &.text {
+
+    }
+    &.textarea {
+      textarea {
+        height: 150px;
+      }
+    }
+    &.radio {
+      label {
+        padding-top: 2px;
+        margin-right: 8px;
+      }
+    }
+    &.check {
+      label {
+        padding-top: 1px;
+        margin-right: 8px;
+      }
+    }
+    &.select {
+      label {
+        padding-top: 3px;
+      }
+    }
+  }
+}
