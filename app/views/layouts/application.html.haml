@@ -18,8 +18,25 @@
 
     .masthead
       .site-container
-        = image_tag('logo.png', :alt => 'Search and Restore', :id => 'logo')
-        Blah
+        .masthead-top
+          = image_tag('logo.png', :alt => 'Search and Restore', :id => 'logo')
+        %ul.nav
+          %li
+            %a{:href => '#'} Home
+          %li.selected
+            %a{:href => '#'} Shows
+          %li
+            %a{:href => '#'} Artists
+          %li
+            %a{:href => '#'} Venues
+          %li
+            %a{:href => '#'} Video
+          %li
+            %a{:href => '#'} About
+          %li
+            %a{:href => '#'} Resources
+          %li
+            %a{:href => '#'} Donate
     .site-container
       = yield
 

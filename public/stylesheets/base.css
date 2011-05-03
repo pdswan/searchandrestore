@@ -46,6 +46,11 @@ body {
   padding: 0;
   background: url(/images/body_bg.png); }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 #logo {
   position: absolute;
   top: 35px;
@@ -58,9 +63,27 @@ body {
   .masthead .site-container {
     position: relative; }
 
+.masthead-top {
+  height: 126px; }
+
 .site-container {
   width: 960px;
   margin: 0px auto; }
+
+.nav li {
+  float: left; }
+  .nav li a {
+    display: block;
+    cursor: pointer;
+    line-height: 16px;
+    padding: 3px 6px 2px 6px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none; }
+  .nav li.selected a, .nav li:hover a {
+    background-color: #ff9900; }
 
 .clear {
   clear: both; }
