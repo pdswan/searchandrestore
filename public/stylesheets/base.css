@@ -41,7 +41,18 @@
 body {
   line-height: 1.2;
   font-size: 12px;
-  font-family: Ariel, sans-serif; }
+  font-family: Ariel, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.masthead {
+  background: url(/images/masthead_bg.png) repeat-x;
+  height: 148px;
+  width: 100%; }
+
+.site-container {
+  width: 960px;
+  margin: 0px auto; }
 
 .clear {
   clear: both; }
