@@ -43,7 +43,8 @@ body {
   font-size: 12px;
   font-family: Ariel, sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: url(/images/body_bg.png); }
 
 .masthead {
   background: url(/images/masthead_bg.png) repeat-x;
