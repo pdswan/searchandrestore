@@ -9,11 +9,19 @@ body {
   padding:0;
   background: url(/images/body_bg.png);
 }
+#logo {
+  position: absolute;
+  top: 35px;
+  left: 0px;
+}
 
 .masthead {
   background: url(/images/masthead_bg.png) repeat-x;
   height: 148px;
   width: 100%;
+  .site-container {
+    position: relative;
+  }
 }
 .site-container {
   width: 960px;
