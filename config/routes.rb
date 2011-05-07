@@ -5,6 +5,8 @@ Searchandrestore::Application.routes.draw do
   devise_for :users
 
   match 'components/:action' => 'components#action'
+
+  match 'home/:action' => 'home#action'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
