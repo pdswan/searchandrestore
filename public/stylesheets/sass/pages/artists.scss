@@ -1,5 +1,13 @@
 .jazz {
   &.page-artists-landing {
+    #search-by-name {width: 485px;}
+    #search-by-instrument {width: 375px;}
+    select {
+      width: 200px;
+    }
+    label {
+      margin-right: 3px;
+    }
     .artists-grid {
       li {
         margin-right: 11px;

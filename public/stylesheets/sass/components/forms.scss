@@ -28,12 +28,17 @@
       font-weight: bold;
       clear: both;
       margin-right: 20px;
+      color: $ORANGE;
+      font-size: 14px;
     }
     &.inline {
       float: left;
       margin-right: 10px;
       label {
         clear: none;
+      }
+      .wrapper {
+        float: left;
       }
     }
     &.text {
@@ -58,7 +63,7 @@
     }
     &.select {
       label {
-        padding-top: 3px;
+        padding-top: 1px;
       }
     }
   }
