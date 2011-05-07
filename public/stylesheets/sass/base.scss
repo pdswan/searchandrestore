@@ -1,4 +1,5 @@
 $ORANGE: #ff9900;
+@import "components/spacing";
 @import "components/forms";
 @import "grid";
 @import "components/links";
@@ -6,6 +7,12 @@ $ORANGE: #ff9900;
 @import "components/lists";
 @import "components/headers";
 @import "pages/artists";
+
+.jazz {
+  @include margins();
+  @include paddings();
+  @include heights();
+}
 
 body {
   line-height: 1.2;
@@ -43,8 +50,20 @@ ul {
   width: 960px;
   margin: 0px auto;
 }
+.snug-bottom {
+  margin-bottom: 0px !important;
+}
 .block {
   display: block !important;
+}
+.inline {
+  display: inline !important;
+}
+.inline-block {
+  display: inline-block !important;
+}
+.floatleft {
+  float: left;
 }
 p {
   margin-top: 0px;
@@ -87,4 +106,10 @@ p {
       background-color: #fff;
     }
   }
+  .mr-5 {margin-right: 5px;}
+  .mr-10 {margin-right: 10px;}
+  .mr-15 {margin-right: 15px;}
+  .mr-20 {margin-right: 25px;}
+  .mr-25 {margin-right: 5px;}
+  .mr-30 {margin-right: 5px;}
 }

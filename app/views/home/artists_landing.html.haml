@@ -1,13 +1,23 @@
 - @page_class = 'page-artists-landing'
-- form_for :blah do |f|
-  = f.label :name, :class => 'box dark'
-  = f.label :name
-  = f.select :name, ['one','two','three']
-  = f.submit :submit
-- form_for :blah do |f|
-  = f.label :instrument
-  = f.select :instrument, ['one','two','three']
-  = f.submit :submit
+
+.floatleft#search-by-name.mr10
+  - form_for :blah do |f|
+    %fieldset
+      = f.label :name, 'Search Artists By ...', :class => 'box dark floatleft mr10 pr10 pl10'
+      .field.select.inline.mb5
+        = f.label :name, 'Name:'
+        .wrapper
+          = f.select :name, ['one','two','three']
+      = f.submit :submit
+.floatleft#search-by-instrument
+  - form_for :blah do |f|
+    %fieldset
+      .field.select.inline.mb5
+        = f.label :instrument, 'Instrument:'
+        .wrapper
+          = f.select :instrument, ['one','two','three']
+      = f.submit :submit
+.clear
 %ul.inline-list.artists-grid
   - 18.times do |t|
     %li.container{:class => cycle('first','','','','','last')}

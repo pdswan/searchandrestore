@@ -1,3 +1,11 @@
+.jazz.page-artists-landing #search-by-name {
+  width: 485px; }
+.jazz.page-artists-landing #search-by-instrument {
+  width: 375px; }
+.jazz.page-artists-landing select {
+  width: 200px; }
+.jazz.page-artists-landing label {
+  margin-right: 3px; }
 .jazz.page-artists-landing .artists-grid li {
   margin-right: 11px;
   margin-bottom: 5px; }

@@ -1,0 +1,130 @@
+@mixin margins() {
+  
+  .mt1 {margin-top: 1px !important};
+  .mt5 {margin-top: 5px !important;}
+  .mt10 {margin-top: 10px !important;}
+  .mt15 {margin-top: 15px !important;}
+  .mt20 {margin-top: 20px !important;}
+  .mt25 {margin-top: 25px !important;}
+  .mt30 {margin-top: 30px !important;}
+  .mt35 {margin-top: 35px !important;}
+  .mt40 {margin-top: 40px !important;}
+  .mt45 {margin-top: 45px !important;}
+  
+  .mr1 {margin-right: 1px !important};
+  .mr5 {margin-right: 5px !important;}
+  .mr10 {margin-right: 10px !important;}
+  .mr15 {margin-right: 15px !important;}
+  .mr20 {margin-right: 20px !important;}
+  .mr25 {margin-right: 25px !important;}
+  .mr30 {margin-right: 30px !important;}
+  .mr35 {margin-right: 35px !important;}
+  .mr40 {margin-right: 40px !important;}
+  .mr45 {margin-right: 45px !important;}
+  
+  .mb1 {margin-bottom: 1px !important};
+  .mb5 {margin-bottom: 5px !important;}
+  .mb10 {margin-bottom: 10px !important;}
+  .mb15 {margin-bottom: 15px !important;}
+  .mb20 {margin-bottom: 20px !important;}
+  .mb25 {margin-bottom: 25px !important;}
+  .mb30 {margin-bottom: 30px !important;}
+  .mb35 {margin-bottom: 35px !important;}
+  .mb40 {margin-bottom: 40px !important;}
+  .mb45 {margin-bottom: 45px !important;}
+  
+  .ml1 {margin-left: 1px !important};
+  .ml5 {margin-left: 5px !important;}
+  .ml10 {margin-left: 10px !important;}
+  .ml15 {margin-left: 15px !important;}
+  .ml20 {margin-left: 20px !important;}
+  .ml25 {margin-left: 25px !important;}
+  .ml30 {margin-left: 30px !important;}
+  .ml35 {margin-left: 35px !important;}
+  .ml40 {margin-left: 40px !important;}
+  .ml45 {margin-left: 45px !important;}
+  
+  .m5 {margin: 5px !important;}
+  .m10 {margin: 10px !important;}
+  .m15 {margin: 15px !important;}
+  .m20 {margin: 20px !important;}
+  .m25 {margin: 25px !important;}
+  .m30 {margin: 30px !important;}
+  .m35 {margin: 35px !important;}
+  .m40 {margin: 40px !important;}
+  .m45 {margin: 45px !important;}
+}
+
+@mixin paddings() {
+  .pt1 {padding-top: 1px !important;}
+  .pt5 {padding-top: 5px !important;}
+  .pt10 {padding-top: 10px !important;}
+  .pt15 {padding-top: 15px !important;}
+  .pt20 {padding-top: 20px !important;}
+  .pt25 {padding-top: 25px !important;}
+  .pt30 {padding-top: 30px !important;}
+  .pt35 {padding-top: 35px !important;}
+  .pt40 {padding-top: 40px !important;}
+  .pt45 {padding-top: 45px !important;}
+  
+  .pr1 {padding-right: 1px !important;}
+  .pr5 {padding-right: 5px !important;}
+  .pr10 {padding-right: 10px !important;}
+  .pr15 {padding-right: 15px !important;}
+  .pr20 {padding-right: 20px !important;}
+  .pr25 {padding-right: 25px !important;}
+  .pr30 {padding-right: 30px !important;}
+  .pr35 {padding-right: 35px !important;}
+  .pr40 {padding-right: 40px !important;}
+  .pr45 {padding-right: 45px !important;}
+  
+  .pb1 {padding-bottom: 1px !important};
+  .pb5 {padding-bottom: 5px !important;}
+  .pb10 {padding-bottom: 10px !important;}
+  .pb15 {padding-bottom: 15px !important;}
+  .pb20 {padding-bottom: 20px !important;}
+  .pb25 {padding-bottom: 25px !important;}
+  .pb30 {padding-bottom: 30px !important;}
+  .pb35 {padding-bottom: 35px !important;}
+  .pb40 {padding-bottom: 40px !important;}
+  .pb45 {padding-bottom: 45px !important;}
+  
+  .pl1 {padding-left: 1px !important;}
+  .pl5 {padding-left: 5px !important;}
+  .pl10 {padding-left: 10px !important;}
+  .pl15 {padding-left: 15px !important;}
+  .pl20 {padding-left: 20px !important;}
+  .pl25 {padding-left: 25px !important;}
+  .pl30 {padding-left: 30px !important;}
+  .pl35 {padding-left: 35px !important;}
+  .pl40 {padding-left: 40px !important;}
+  .pl45 {padding-left: 45px !important;}
+  
+  
+  .p5 {padding: 5px !important;}
+  .p10 {padding: 10px !important;}
+  .p15 {padding: 15px !important;}
+  .p20 {padding: 20px !important;}
+  .p25 {padding: 25px !important;}
+  .p30 {padding: 30px !important;}
+  .p35 {padding: 35px !important;}
+  .p40 {padding: 40px !important;}
+  .p45 {padding: 45px !important;}
+}
+
+@mixin heights() {
+  .h1 {height: 1px !important;}
+  .h2 {height: 2px !important;}
+  .h3 {height: 3px !important;}
+  .h4 {height: 4px !important;}
+  .h5 {height: 5px !important;}
+  .h10 {height: 10px !important;}
+  .h15 {height: 15px !important;}
+  .h20 {height: 20px !important;}
+  .h25 {height: 25px !important;}
+  .h30 {height: 30px !important;}
+  .h35 {height: 35px !important;}
+  .h40 {height: 40px !important;}
+  .h45 {height: 45px !important;}
+}
+
