@@ -344,11 +344,13 @@ body {
 .jazz ul li.last {
   margin-bottom: 0px !important; }
 
+.jazz h1, .jazz h2, .jazz h3, .jazz h4, .jazz h5, .jazz h6 {
+  margin-top: 0px; }
 .jazz h3 {
   color: #ff9900;
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 3px; }
+  margin-bottom: 5px; }
 
 body {
   line-height: 1.2;

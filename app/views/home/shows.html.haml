@@ -1,22 +1,38 @@
 .grid-4
-  asjfdkj
+  %a.box.dark{:href => '#'} Search Shows By...
+  - form_for :blah do |f|
+    %fieldset
+      .field.select
+        = f.label :artist
+        = f.select :artist, ['One','Two','Three']
+      .field.select
+        = f.label :venue
+        = f.select :venue, ['One','Two','Three']
+      .field.calendar
+        = f.label :date
+        Calendar
+
+  .container.skin-dark
+    .body
+      Bach
 .grid-8
+  %h3 Search results for Thursday 31st of March 2011:
   %ul.containers
-    %li.container
-      .body
-        %a.box.dark{:href => '#'} SILENT Z
-        %a.box{:href => '#'} Tea Lounge, Brooklyn
-        %h3 Featured Musicians:
-        %ul.inline-list
-          %li
-            %a.box{:href => '#'} Tea Lounge, Brooklyn
-          %li
-            %a.box{:href => '#'} Tea Lounge, Brooklyn
-          %li
-            %a.box{:href => '#'} Tea Lounge, Brooklyn
-          %li.last
-            %a.box{:href => '#'} Tea Lounge, Brooklyn
-    %li.container
-      .body
-        blah
+    - 9.times do |t|
+      %li.container
+        .body
+          %a.box.dark{:href => '#'} SILENT Z
+          %a.box{:href => '#'} Tea Lounge, Brooklyn
+          %h3 Featured Musicians:
+          %ul.inline-list
+            %li
+              %a.box{:href => '#'} Tea Lounge, Brooklyn
+            %li
+              %a.box{:href => '#'} Tea Lounge, Brooklyn
+            %li
+              %a.box{:href => '#'} Tea Lounge, Brooklyn
+            %li.last
+              %a.box{:href => '#'} Tea Lounge, Brooklyn
+          %h3 About This Show
+          %p This quartet tours Europe extensively, playing a mix of my older and newer pieces. Compared to siLENT Z, the focus is less on timbre and semi-structured improvisation and more on exploring the details of the harmonic and rhythmic elements of the compositions in a clear and convincing manner. A live album may be coming in 2011... stay tuned...
 .clear

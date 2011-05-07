@@ -1,8 +1,12 @@
 .jazz {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+  }
+
   h3 {
     color: $ORANGE;
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 }
