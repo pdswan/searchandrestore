@@ -1,6 +1,6 @@
-- @page_class = 'page-artists'
+- @page_class = 'layout-1 page-artists'
 
-.grid-4.alpha
+.col-1
   .section
     .container.skin-dark
       .body
@@ -61,7 +61,34 @@
             %a.box{:href => '#'} Mikkel Ploug
           %li.last
             %a.box{:href => '#'} Mikkel Ploug
-.grid-8.omega
-  .container
-    .body
-      Blach
+.col-2
+  .section
+    .container
+      .body
+        = image_tag('/images/fpo/video.png')
+        %p
+          %a.box.dark{:href => '#'} Transatlantic Quartet
+          03/31/2011 Tea Lounge, Brooklyn
+        %h3 Featured Artists
+        %ul.inline-list
+          %li
+            %a.box{:href => '#'} Pete Robbins(alto saxophone)
+          %li
+            %a.box{:href => '#'} Mikkel Plouge(guitar)
+          %li
+            %a.box{:href => '#'} Simon Jermyn(bass)
+          %li.last
+            %a.box{:href => '#'} Kevin Brow(drums)
+
+  .section
+    %h3 More videos by this artist:
+  .section
+    %ul.inline-list.grid-view
+      - 4.times do |t|
+        %li.container{:class => cycle('first','','','last')}
+          %a.block{:href => '#'}
+            .body
+              = image_tag('http://dummyimage.com/141x77/000/fff')
+              .clear
+              %span.box.block.name{:href => '#'} Pete Robbins
+              %p.instrument Alto Saxophone

@@ -10,3 +10,17 @@
       margin-right: 0px; }
 .jazz ul li.last {
   margin-bottom: 0px !important; }
+.jazz ul.grid-view li {
+  margin-right: 11px;
+  margin-bottom: 5px; }
+  .jazz ul.grid-view li.last {
+    margin-right: 0px; }
+  .jazz ul.grid-view li.first {
+    clear: both; }
+  .jazz ul.grid-view li .body {
+    padding: 5px 5px 0px 5px; }
+    .jazz ul.grid-view li .body .name {
+      margin-bottom: 2px; }
+    .jazz ul.grid-view li .body .instrument {
+      margin-bottom: 0px;
+      padding-left: 5px; }

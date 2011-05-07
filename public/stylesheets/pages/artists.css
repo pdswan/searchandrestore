@@ -6,17 +6,3 @@
   width: 200px; }
 .jazz.page-artists-landing label {
   margin-right: 3px; }
-.jazz.page-artists-landing .artists-grid li {
-  margin-right: 11px;
-  margin-bottom: 5px; }
-  .jazz.page-artists-landing .artists-grid li.last {
-    margin-right: 0px; }
-  .jazz.page-artists-landing .artists-grid li.first {
-    clear: both; }
-  .jazz.page-artists-landing .artists-grid li .body {
-    padding: 5px 5px 0px 5px; }
-    .jazz.page-artists-landing .artists-grid li .body .name {
-      margin-bottom: 2px; }
-    .jazz.page-artists-landing .artists-grid li .body .instrument {
-      margin-bottom: 0px;
-      padding-left: 5px; }

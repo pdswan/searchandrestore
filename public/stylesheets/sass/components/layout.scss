@@ -1,4 +1,18 @@
 .jazz {
+  .col-1,
+  .col-2,
+  .col-3 {
+    float: left;
+  }
+  &.layout-1 {
+    .col-1 {
+      width: 310px;
+      margin-right: 10px;
+    }
+    .col-2 {
+      width: 640px;
+    }  
+  }
   .section {
     clear: both;
     margin-bottom: 5px;

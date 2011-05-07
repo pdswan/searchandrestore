@@ -8,28 +8,6 @@
     label {
       margin-right: 3px;
     }
-    .artists-grid {
-      li {
-        margin-right: 11px;
-        margin-bottom: 5px;
-        &.last {
-          margin-right: 0px;
-        } 
-        &.first {
-          clear: both;
-        }
-        .body {
-          padding: 5px 5px 0px 5px;
-          .name {
-            margin-bottom: 2px;
-          }
-          .instrument {
-            margin-bottom: 0px;
-            padding-left: 5px;
-          }
-        }
-      }
-    }
 
   }
 }
