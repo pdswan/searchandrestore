@@ -1,7 +1,10 @@
 .jazz {
   .col-1,
   .col-2,
-  .col-3 {
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6 {
     float: left;
   }
   &.layout-1 {
@@ -22,6 +25,20 @@
     .col-1,
     .col-2 {
       margin-right: 10px;
+    }
+  }
+  &.layout-3 {
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6 {
+      width: 135px;
+      margin-right: 30px;
+    }
+    .col-6 {
+      margin-right: 0px;
     }
   }
   .section {
