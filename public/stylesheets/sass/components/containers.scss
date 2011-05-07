@@ -1,0 +1,12 @@
+.jazz {
+  .container {
+    overflow: hidden;
+    background-color: #fff;
+    .body {
+      padding: 9px 6px 18px 9px;
+    }
+    &.skin-dark {
+      background-color: #000;
+    }
+  }
+}

@@ -323,6 +323,14 @@ body {
       background-color: #000;
       text-transform: uppercase; }
 
+.jazz .container {
+  overflow: hidden;
+  background-color: #fff; }
+  .jazz .container .body {
+    padding: 9px 6px 18px 9px; }
+  .jazz .container.skin-dark {
+    background-color: #000; }
+
 body {
   line-height: 1.2;
   font-size: 12px;
@@ -372,3 +380,6 @@ ul {
 
 .clear {
   clear: both; }
+
+.skin-dark {
+  color: #fff; }
