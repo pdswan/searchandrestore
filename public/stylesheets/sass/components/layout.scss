@@ -13,6 +13,17 @@
       width: 640px;
     }  
   }
+  &.layout-2 {
+    .col-1,
+    .col-2,
+    .col-3 {
+      width: 310px;
+    }
+    .col-1,
+    .col-2 {
+      margin-right: 10px;
+    }
+  }
   .section {
     clear: both;
     margin-bottom: 5px;

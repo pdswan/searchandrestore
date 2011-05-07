@@ -7,6 +7,13 @@
   margin-right: 10px; }
 .jazz.layout-1 .col-2 {
   width: 640px; }
+.jazz.layout-2 .col-1,
+.jazz.layout-2 .col-2,
+.jazz.layout-2 .col-3 {
+  width: 310px; }
+.jazz.layout-2 .col-1,
+.jazz.layout-2 .col-2 {
+  margin-right: 10px; }
 .jazz .section {
   clear: both;
   margin-bottom: 5px; }
