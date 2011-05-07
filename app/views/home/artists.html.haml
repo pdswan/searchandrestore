@@ -1,11 +1,67 @@
 - @page_class = 'page-artists'
 
 .grid-4
-  .container.skin-dark
-    .body
-      .media-with-info
-        .media
-          = image_tag('http://dummyimage.com/140x140/000/fff')
-        .info
-          Blah
+  .section
+    .container.skin-dark
+      .body
+        .media-with-info
+          .media
+            = image_tag('http://dummyimage.com/140x140/000/fff')
+          .info
+            %h3.name Pete Robbins
+            %p.instrument Alto Saxophone
+            %p Called "a force" (pianist Paul Bley) with "spiraling notoriety within global jazz circles" AllAboutJazz.com)
+            %p Pete Robbins is a Brooklyn-based alto saxophonist and composer who tours worldwide and has... his fifth and sixth albums coming out in 2011. 
+        %a.box{:href => '#'} Read More
+        %a.box{:href => '#'} Visit artists website
+  .section
+    .container.skin-dark
+      .body
+        %h3 Shop for tunes by this artist:
+        %ul.inline-list
+          %li
+            %a.box{:href => '#'} iTunes
+          %li
+            %a.box{:href => '#'} Bandcamp
+          %li.last
+            %a.box{:href => '#'} Amazon 
+  .section
+    .container.skin-dark
+      .body
+        %h3 Upcoming shows by this artist:
+        %ul
+          %li Blah
+          %li Blah
+          %li Blah
+        %a.box{:href => '#'} See all shows by this artist
+  .section.snug
+    .container.skin-dark
+      .body
+        %h3 Known associates:
+        %ul.inline-list
+          %li
+            %a.box{:href => '#'} Mikkel Ploug
+          %li
+            %a.box{:href => '#'} Simon Jermyn
+          %li
+            %a.box{:href => '#'} Tommy Crane 
+          %li
+            %a.box{:href => '#'} Eivind Opsvik
+          %li
+            %a.box{:href => '#'} Oscar Norieka 
+          %li
+            %a.box{:href => '#'} Simon Jermyn
+          %li
+            %a.box{:href => '#'} Tommy Crane 
+          %li
+            %a.box{:href => '#'} Eivind Opsvik
+          %li
+            %a.box{:href => '#'} Mikkel Ploug
+          %li
+            %a.box{:href => '#'} Mikkel Ploug
+          %li.last
+            %a.box{:href => '#'} Mikkel Ploug
 .grid-8
+  .container
+    .body
+      Blach

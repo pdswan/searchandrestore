@@ -1,3 +1,6 @@
+.jazz .section {
+  clear: both;
+  margin-bottom: 5px; }
 .jazz .media-with-info {
   overflow: hidden; }
   .jazz .media-with-info .media {
