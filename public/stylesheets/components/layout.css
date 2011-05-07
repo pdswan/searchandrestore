@@ -1,0 +1,8 @@
+.jazz .media-with-info {
+  overflow: hidden; }
+  .jazz .media-with-info .media {
+    width: 140px;
+    height: 140px;
+    float: left; }
+  .jazz .media-with-info .info {
+    padding-left: 150px; }

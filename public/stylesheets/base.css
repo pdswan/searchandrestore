@@ -23,7 +23,8 @@
     clear: both;
     margin-right: 20px;
     color: #ff9900;
-    font-size: 14px; }
+    font-size: 14px;
+    cursor: pointer; }
   .jazz .field.inline {
     float: left;
     margin-right: 10px; }
@@ -321,7 +322,7 @@ body {
   color: #fff;
   background-color: #ff9900;
   line-height: 14px;
-  padding: 2px 5px 0px 5px;
+  padding: 3px 5px 1px 5px;
   display: inline-block;
   text-decoration: none;
   font-weight: bold; }
@@ -356,6 +357,15 @@ body {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px; }
+
+.jazz .media-with-info {
+  overflow: hidden; }
+  .jazz .media-with-info .media {
+    width: 140px;
+    height: 140px;
+    float: left; }
+  .jazz .media-with-info .info {
+    padding-left: 150px; }
 
 .jazz.page-artists-landing #search-by-name {
   width: 485px; }

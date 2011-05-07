@@ -9,10 +9,10 @@ Syntax error: Undefined variable: "$ORANGE".
 30:       margin-right: 20px;
 31:       color: $ORANGE;
 32:       font-size: 14px;
-33:     }
-34:     &.inline {
-35:       float: left;
-36:       margin-right: 10px;
+33:       cursor: pointer;
+34:     }
+35:     &.inline {
+36:       float: left;
 
 Backtrace:
 /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/forms.scss:31
@@ -115,4 +115,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 31 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/forms.scss\A \A 26: \A 27:     label {\A 28:       font-weight: bold;\A 29:       clear: both;\A 30:       margin-right: 20px;\A 31:       color: $ORANGE;\A 32:       font-size: 14px;\A 33:     }\A 34:     &.inline {\A 35:       float: left;\A 36:       margin-right: 10px;"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 31 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/forms.scss\A \A 26: \A 27:     label {\A 28:       font-weight: bold;\A 29:       clear: both;\A 30:       margin-right: 20px;\A 31:       color: $ORANGE;\A 32:       font-size: 14px;\A 33:       cursor: pointer;\A 34:     }\A 35:     &.inline {\A 36:       float: left;"; }
