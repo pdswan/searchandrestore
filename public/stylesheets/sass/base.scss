@@ -2,6 +2,7 @@ $ORANGE: #ff9900;
 @import "components/forms";
 @import "grid";
 @import "components/links";
+@import "components/containers";
 
 body {
   line-height: 1.2;
@@ -62,4 +63,8 @@ ul {
 }
 .clear {
   clear: both;
+}
+
+.skin-dark {
+  color: #fff;
 }
