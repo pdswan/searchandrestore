@@ -1,0 +1,18 @@
+.jazz {
+  &.page-about {
+    #recent-press {
+      .byline {
+        margin-bottom: 2px;
+        .date { 
+          color: #666;
+        }
+        .author {
+          color: #ccc;
+        }
+      }
+      li {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
