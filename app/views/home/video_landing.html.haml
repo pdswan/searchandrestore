@@ -1,0 +1,12 @@
+- @page_class = 'page-video-landing'
+
+%ul.inline-list.grid-view
+  - 18.times do |t|
+    %li.container{:class => cycle('first','','','','','last')}
+      %a.block{:href => '#'}
+        .body
+          = image_tag('http://dummyimage.com/140x75/000/fff')
+          .clear
+          %span.box.block.name{:href => '#'} Pete Robbins
+          %p.byline Alto Saxophone
+

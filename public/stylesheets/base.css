@@ -80,7 +80,7 @@
   margin-bottom: 0px !important; }
 .jazz ul.grid-view li {
   margin-right: 10px;
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
   .jazz ul.grid-view li.last {
     margin-right: 0px; }
   .jazz ul.grid-view li.first {
@@ -89,7 +89,7 @@
     padding: 5px 5px 0px 5px; }
     .jazz ul.grid-view li .body .name {
       margin-bottom: 2px; }
-    .jazz ul.grid-view li .body .instrument {
+    .jazz ul.grid-view li .body .byline {
       margin-bottom: 0px;
       padding-left: 5px; }
 .jazz dl {
