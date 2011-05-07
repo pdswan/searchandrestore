@@ -6,4 +6,5 @@ config/database.yml
 db/schema.rb
 *~
 *.swp
+*.swo
 .webbynode/credentials
