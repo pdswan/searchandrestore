@@ -17,7 +17,7 @@
     
 
     .masthead
-      .site-container
+      .site-container.container-12
         .masthead-top
           = image_tag('logo.png', :alt => 'Search and Restore', :id => 'logo')
         %ul.nav
@@ -37,7 +37,7 @@
             %a{:href => '#'} Resources
           %li
             %a{:href => '#'} Donate
-    .site-container
+    .site-container.container-12
       = yield
 
     = javascript_include_tag ['jquery-5.1.min.js']
