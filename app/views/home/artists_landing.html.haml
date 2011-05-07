@@ -1,6 +1,16 @@
-%ul.inline-list
+- @page_class = 'page-artists-landing'
+- form_for :blah do |f|
+  = f.label :name, :class => 'box dark'
+  = f.label :name
+  = f.select :name, ['one','two','three']
+  = f.submit :submit
+- form_for :blah do |f|
+  = f.label :instrument
+  = f.select :instrument, ['one','two','three']
+  = f.submit :submit
+%ul.inline-list.artists-grid
   - 18.times do |t|
-    %li.container{:class => cycle('','','','','','last')}
+    %li.container{:class => cycle('clear','','','','last')}
       .body
         = image_tag('http://dummyimage.com/140x140/000/fff')
         .clear

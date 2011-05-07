@@ -1,0 +1,15 @@
+.jazz {
+  &.page-artists-landing {
+    .artists-grid {
+      li {
+        margin-right: 11px;
+        margin-bottom: 5px;
+        &.last {
+          margin-right: 0px;
+        } 
+      }
+    }
+
+  }
+}
+
