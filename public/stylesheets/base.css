@@ -357,6 +357,10 @@ body {
   margin-bottom: 5px; }
   .jazz.page-artists-landing .artists-grid li.last {
     margin-right: 0px; }
+  .jazz.page-artists-landing .artists-grid li.first {
+    clear: both; }
+  .jazz.page-artists-landing .artists-grid li .body {
+    padding: 5px 5px 0px 5px; }
 
 body {
   line-height: 1.2;
@@ -390,6 +394,9 @@ ul {
 .site-container {
   width: 960px;
   margin: 0px auto; }
+
+.block {
+  display: block !important; }
 
 p {
   margin-top: 0px; }

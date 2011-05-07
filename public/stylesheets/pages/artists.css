@@ -3,3 +3,7 @@
   margin-bottom: 5px; }
   .jazz.page-artists-landing .artists-grid li.last {
     margin-right: 0px; }
+  .jazz.page-artists-landing .artists-grid li.first {
+    clear: both; }
+  .jazz.page-artists-landing .artists-grid li .body {
+    padding: 5px 5px 0px 5px; }

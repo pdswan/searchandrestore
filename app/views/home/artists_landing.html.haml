@@ -10,9 +10,9 @@
   = f.submit :submit
 %ul.inline-list.artists-grid
   - 18.times do |t|
-    %li.container{:class => cycle('clear','','','','last')}
+    %li.container{:class => cycle('first','','','','','last')}
       .body
         = image_tag('http://dummyimage.com/140x140/000/fff')
         .clear
-        %a.box{:href => '#'} Pete Robbins
+        %a.box.block{:href => '#'} Pete Robbins
         %p.instrument Alto Saxophone
