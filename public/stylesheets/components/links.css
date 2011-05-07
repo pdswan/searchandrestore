@@ -9,7 +9,7 @@ Syntax error: Undefined variable: "$ORANGE".
 6:     color: #fff;
 7:     background-color: $ORANGE;
 8:     line-height: 14px;
-9:     padding: 2px 2px 0px 2px;
+9:     padding: 2px 5px 0px 5px;
 10:     display: inline-block;
 11:     text-decoration: none;
 12:     font-weight: bold;
@@ -108,4 +108,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 7 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss\A \A 2:   a {\A 3:     cursor: pointer;\A 4:   }\A 5:   .box {\A 6:     color: #fff;\A 7:     background-color: $ORANGE;\A 8:     line-height: 14px;\A 9:     padding: 2px 2px 0px 2px;\A 10:     display: inline-block;\A 11:     text-decoration: none;\A 12:     font-weight: bold;"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 7 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss\A \A 2:   a {\A 3:     cursor: pointer;\A 4:   }\A 5:   .box {\A 6:     color: #fff;\A 7:     background-color: $ORANGE;\A 8:     line-height: 14px;\A 9:     padding: 2px 5px 0px 5px;\A 10:     display: inline-block;\A 11:     text-decoration: none;\A 12:     font-weight: bold;"; }

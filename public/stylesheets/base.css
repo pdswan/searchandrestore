@@ -316,7 +316,7 @@ body {
   color: #fff;
   background-color: #ff9900;
   line-height: 14px;
-  padding: 2px 2px 0px 2px;
+  padding: 2px 5px 0px 5px;
   display: inline-block;
   text-decoration: none;
   font-weight: bold; }
@@ -361,6 +361,11 @@ body {
     clear: both; }
   .jazz.page-artists-landing .artists-grid li .body {
     padding: 5px 5px 0px 5px; }
+    .jazz.page-artists-landing .artists-grid li .body .name {
+      margin-bottom: 2px; }
+    .jazz.page-artists-landing .artists-grid li .body .instrument {
+      margin-bottom: 0px;
+      padding-left: 5px; }
 
 body {
   line-height: 1.2;
@@ -399,7 +404,8 @@ ul {
   display: block !important; }
 
 p {
-  margin-top: 0px; }
+  margin-top: 0px;
+  color: #666; }
 
 .nav li {
   float: left; }
