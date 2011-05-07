@@ -50,7 +50,7 @@
   color: #fff;
   background-color: #ff9900;
   line-height: 14px;
-  padding: 3px 5px 1px 5px;
+  padding: 1px 5px 0px 5px;
   display: inline-block;
   text-decoration: none;
   font-weight: bold; }
@@ -92,6 +92,22 @@
     .jazz ul.grid-view li .body .instrument {
       margin-bottom: 0px;
       padding-left: 5px; }
+.jazz dl {
+  overflow: hidden;
+  margin: 0 0 5px 0; }
+  .jazz dl dd, .jazz dl dt {
+    float: left; }
+  .jazz dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff9900;
+    padding-right: 5px;
+    clear: both; }
+  .jazz dl dd {
+    color: #ccc;
+    font-size: 12px;
+    margin: 0px;
+    line-height: 18px; }
 
 .jazz h1, .jazz h2, .jazz h3, .jazz h4, .jazz h5, .jazz h6 {
   margin-top: 0px; }
@@ -125,7 +141,7 @@
     width: 160px;
     height: 160px; }
   .jazz .media-with-info.large .info {
-    padding-left: 170px; }
+    padding-left: 172px; }
 
 .jazz.page-artists-landing #search-by-name {
   width: 485px; }
@@ -371,6 +387,16 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0; }
+
+address {
+  color: #666;
+  font-style: normal; }
+
+h4 {
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase; }
 
 #logo {
   position: absolute;
