@@ -5,6 +5,16 @@
        margin-bottom: 6px; 
       }
     }
+    &.inline-list {
+      overflow: hidden;
+      li {
+        float: left;
+        margin-right: 3px;
+        &.last {
+          margin-right: 0px;
+        }
+      }
+    }
     li.last {margin-bottom: 0px !important;}
   }
 }

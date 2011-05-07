@@ -1,31 +1,21 @@
 /*
 Syntax error: Undefined variable: "$ORANGE".
-        on line 6 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss
+        on line 3 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/headers.scss
 
 1: .jazz {
-2:   a {
-3:     font-size: 12px;
-4:     &.box {
-5:       color: #fff;
-6:       background-color: $ORANGE;
-7:       line-height: 14px;
-8:       padding: 0px 2px;
-9:       display: inline-block;
-10:       text-decoration: none;
-11:       font-weight: bold;
+2:   h3 {
+3:     color: $ORANGE;
+4:     font-size: 14px;
+5:     font-weight: bold;
+6:     margin-bottom: 3px;
+7:   }
+8: }
 
 Backtrace:
-/Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss:6
+/Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/headers.scss:3
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/script/variable.rb:39:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/script/node.rb:61:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/prop_node.rb:132:in `perform!'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/rule_node.rb:191:in `perform!'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
@@ -115,4 +105,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 6 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss\A \A 1: .jazz {\A 2:   a {\A 3:     font-size: 12px;\A 4:     &.box {\A 5:       color: #fff;\A 6:       background-color: $ORANGE;\A 7:       line-height: 14px;\A 8:       padding: 0px 2px;\A 9:       display: inline-block;\A 10:       text-decoration: none;\A 11:       font-weight: bold;"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 3 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/headers.scss\A \A 1: .jazz {\A 2:   h3 {\A 3:     color: $ORANGE;\A 4:     font-size: 14px;\A 5:     font-weight: bold;\A 6:     margin-bottom: 3px;\A 7:   }\A 8: }"; }

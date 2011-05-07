@@ -1,4 +1,11 @@
 .jazz ul.containers li {
   margin-bottom: 6px; }
+.jazz ul.inline-list {
+  overflow: hidden; }
+  .jazz ul.inline-list li {
+    float: left;
+    margin-right: 3px; }
+    .jazz ul.inline-list li.last {
+      margin-right: 0px; }
 .jazz ul li.last {
   margin-bottom: 0px !important; }
