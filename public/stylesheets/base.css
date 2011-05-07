@@ -310,6 +310,19 @@ body {
 .clearfix {
   zoom: 1; }
 
+.jazz a {
+  font-size: 12px; }
+  .jazz a.box {
+    color: #fff;
+    background-color: #ff9900;
+    line-height: 14px;
+    padding: 0px 2px;
+    display: inline-block;
+    text-decoration: none; }
+    .jazz a.box.dark {
+      background-color: #000;
+      text-transform: uppercase; }
+
 body {
   line-height: 1.2;
   font-size: 12px;

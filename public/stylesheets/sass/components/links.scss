@@ -1,0 +1,17 @@
+.jazz {
+  a {
+    font-size: 12px;
+    &.box {
+      color: #fff;
+      background-color: $ORANGE;
+      line-height: 14px;
+      padding: 0px 2px;
+      display: inline-block;
+      text-decoration: none;
+      &.dark {
+        background-color: #000;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
