@@ -11,8 +11,9 @@
 %ul.inline-list.artists-grid
   - 18.times do |t|
     %li.container{:class => cycle('first','','','','','last')}
-      .body
-        = image_tag('http://dummyimage.com/140x140/000/fff')
-        .clear
-        %a.box.block.name{:href => '#'} Pete Robbins
-        %p.instrument Alto Saxophone
+      %a.block{:href => '#'}
+        .body
+          = image_tag('http://dummyimage.com/140x140/000/fff')
+          .clear
+          %span.box.block.name{:href => '#'} Pete Robbins
+          %p.instrument Alto Saxophone

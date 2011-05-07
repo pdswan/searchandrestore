@@ -311,7 +311,8 @@ body {
   zoom: 1; }
 
 .jazz a {
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 .jazz .box {
   color: #fff;
   background-color: #ff9900;
@@ -427,3 +428,6 @@ p {
 
 .skin-dark {
   color: #fff; }
+
+.jazz.section-components #main-content {
+  background-color: #fff; }

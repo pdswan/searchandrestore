@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$ORANGE".
-        on line 7 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss
+        on line 8 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss
 
-2:   a {
 3:     cursor: pointer;
-4:   }
-5:   .box {
-6:     color: #fff;
-7:     background-color: $ORANGE;
-8:     line-height: 14px;
-9:     padding: 2px 5px 0px 5px;
-10:     display: inline-block;
-11:     text-decoration: none;
-12:     font-weight: bold;
+4:     text-decoration: none;
+5:   }
+6:   .box {
+7:     color: #fff;
+8:     background-color: $ORANGE;
+9:     line-height: 14px;
+10:     padding: 2px 5px 0px 5px;
+11:     display: inline-block;
+12:     text-decoration: none;
+13:     font-weight: bold;
 
 Backtrace:
-/Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss:7
+/Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss:8
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/script/variable.rb:39:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/script/node.rb:61:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/prop_node.rb:132:in `perform!'
@@ -108,4 +108,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 7 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss\A \A 2:   a {\A 3:     cursor: pointer;\A 4:   }\A 5:   .box {\A 6:     color: #fff;\A 7:     background-color: $ORANGE;\A 8:     line-height: 14px;\A 9:     padding: 2px 5px 0px 5px;\A 10:     display: inline-block;\A 11:     text-decoration: none;\A 12:     font-weight: bold;"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 8 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/links.scss\A \A 3:     cursor: pointer;\A 4:     text-decoration: none;\A 5:   }\A 6:   .box {\A 7:     color: #fff;\A 8:     background-color: $ORANGE;\A 9:     line-height: 14px;\A 10:     padding: 2px 5px 0px 5px;\A 11:     display: inline-block;\A 12:     text-decoration: none;\A 13:     font-weight: bold;"; }
