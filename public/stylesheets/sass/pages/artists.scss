@@ -7,6 +7,12 @@
         &.last {
           margin-right: 0px;
         } 
+        &.first {
+          clear: both;
+        }
+        .body {
+          padding: 5px 5px 0px 5px;
+        }
       }
     }
 
