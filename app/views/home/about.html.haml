@@ -5,7 +5,7 @@
   .section
     = image_tag('/images/about.png')
   .section.snug
-    .container.skin-black
+    .container.skin-dark
       .body
         %h3 Join our mailing list.
         - form_for :blah do |f|
@@ -37,10 +37,12 @@
   .container.skin-dark
     .body
       %h3 Recent Press:
-      %ul
+      %ul#recent-press
         - 5.times do |t|
           %li
             %h4 The New York Times
-            %p.byline 03/31/2011, Ben Ratliff
+            %p.byline 
+              %span.date 03/31/2011, 
+              %span.author Ben Ratliff
             %a.box{:href => '#'} "Promoter wants to build jazz audience"
 .clear
