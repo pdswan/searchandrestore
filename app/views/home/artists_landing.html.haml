@@ -1,0 +1,8 @@
+%ul.inline-list
+  - 18.times do |t|
+    %li.container{:class => cycle('','','','','','last')}
+      .body
+        = image_tag('http://dummyimage.com/140x140/000/fff')
+        .clear
+        %a.box{:href => '#'} Pete Robbins
+        %p.instrument Alto Saxophone
