@@ -1,18 +1,18 @@
 .jazz {
   a {
-    font-size: 12px;
-    &.box {
-      color: #fff;
-      background-color: $ORANGE;
-      line-height: 14px;
-      padding: 0px 2px;
-      display: inline-block;
-      text-decoration: none;
-      font-weight: bold;
-      &.dark {
-        background-color: #000;
-        text-transform: uppercase;
-      }
+    cursor: pointer;
+  }
+  .box {
+    color: #fff;
+    background-color: $ORANGE;
+    line-height: 14px;
+    padding: 2px 2px 0px 2px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    &.dark {
+      background-color: #000;
+      text-transform: uppercase;
     }
   }
 }

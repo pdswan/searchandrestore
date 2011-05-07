@@ -311,18 +311,18 @@ body {
   zoom: 1; }
 
 .jazz a {
-  font-size: 12px; }
-  .jazz a.box {
-    color: #fff;
-    background-color: #ff9900;
-    line-height: 14px;
-    padding: 0px 2px;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold; }
-    .jazz a.box.dark {
-      background-color: #000;
-      text-transform: uppercase; }
+  cursor: pointer; }
+.jazz .box {
+  color: #fff;
+  background-color: #ff9900;
+  line-height: 14px;
+  padding: 2px 2px 0px 2px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold; }
+  .jazz .box.dark {
+    background-color: #000;
+    text-transform: uppercase; }
 
 .jazz .container {
   overflow: hidden;
@@ -352,6 +352,12 @@ body {
   font-weight: bold;
   margin-bottom: 5px; }
 
+.jazz.page-artists-landing .artists-grid li {
+  margin-right: 11px;
+  margin-bottom: 5px; }
+  .jazz.page-artists-landing .artists-grid li.last {
+    margin-right: 0px; }
+
 body {
   line-height: 1.2;
   font-size: 12px;
@@ -373,7 +379,8 @@ ul {
 .masthead {
   background: url(/images/masthead_bg.png) repeat-x;
   height: 148px;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 13px; }
   .masthead .site-container {
     position: relative; }
 
@@ -383,6 +390,9 @@ ul {
 .site-container {
   width: 960px;
   margin: 0px auto; }
+
+p {
+  margin-top: 0px; }
 
 .nav li {
   float: left; }
