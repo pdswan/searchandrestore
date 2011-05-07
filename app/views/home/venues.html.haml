@@ -1,0 +1,64 @@
+- @page_class = 'layout-1 page-venues'
+
+.col-1
+  .section
+    .box.dark Search Venues
+  .section
+    Map!
+  .section.snug
+    .container.dark
+      .body
+        %h3 Upcoming Shows at this Venue:
+        Stuff
+        %a.box{:href => '#'} See all shows at this Venue
+
+
+.col-2
+  .section
+    .container.dark
+      .body
+        .media-with-info.large
+          .media
+            = image_tag('http://dummyimage.com/160x160/000/fff')
+          .info
+            %h4 Barbez
+            %address  375 9th St, 11216, Park Slope, Brooklyn
+            %dl
+              %dt Music every night:
+              %dd Yes
+              %dt Capacity:
+              %dd 40 
+              %dt Reservations:
+              %dd no
+              %dt Age Restrictions:
+              %dd all ages
+              %dt Food/Drink:
+              %dd loaded bar
+              %dt Price / Student Discount:
+              %dd $10 suggestion, but feel free to give more 
+            %a.box{:href => '#'} Visit this venue's website
+  .section
+    .container
+      .body
+        %h3 Their words:
+        %p Owned and operated by two French musicians and long-time Brooklyn residents, BarbËs functions as a neighborhood community center of sorts. Much like the neighborhood it is named after, Barbes puts the stress on cultural variety, neighborhood conviviality - and bargain hunting , with $6 Ricard and an eclectic music collection which ranges from the Lebanese diva Asmahan to Mexican bandas, Venezuelan joropos and Romanian brass bands. Our performance space in our intimate back room, is host to regular events - music, readings and film screenings (see our calendar page) and fills a gap in a neighborhood which is home to a large population of artists, musicians, and writers but still offers little in terms of performing outlets. 
+  .section
+    .container
+      .body
+        %h3 Our words:
+        %p Home to residencies of the Balkan dance band Slavic Soul Party andviolin master Jenny Scheinmann, Barbes is a venue where you’re often wondering “shouldn’t these folks be playing a bigger room?” It’s a perfectly intimate back room of a bar in Park Slope and the calendar is always stocked with two great shows per night. WFMU DJ Bethany Ryker has been curating Wednesdays the past few months with greatly eclectic bills, pairing bassist Todd Sickafoose’s Blood Orange band with New Hampshire Dirty Projectors affiliate Nat Baldwin, an upright bassist and a great songwriter. It is definitely worth going to Barbes any night of the week just to see what’s being offered, and with no drink minimum and many times the cover being donation, you can pay what you want, and have a great time. 
+        
+  .section
+    .pl10.pt5
+      %h3.inline Latest videos from this venue:
+      %a.box{:href => '#'} See all videos from this venue
+  .section.snug
+    %ul.inline-list.grid-view
+      - 4.times do |t|
+        %li.container{:class => cycle('first','','','last')}
+          %a.block{:href => '#'}
+            .body
+              = image_tag('http://dummyimage.com/140x77/000/fff')
+              .clear
+              %span.box.block.name{:href => '#'} Val Shaffer Quartet
+              %p.instrument 03/31/2011, Tea Lounge 

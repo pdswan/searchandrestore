@@ -18,3 +18,8 @@
     float: left; }
   .jazz .media-with-info .info {
     padding-left: 150px; }
+  .jazz .media-with-info.large .media {
+    width: 160px;
+    height: 160px; }
+  .jazz .media-with-info.large .info {
+    padding-left: 170px; }
