@@ -79,3 +79,12 @@ p {
 .skin-dark {
   color: #fff;
 }
+
+
+.jazz {
+  &.section-components {
+    #main-content {
+      background-color: #fff;
+    }
+  }
+}
