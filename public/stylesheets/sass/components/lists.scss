@@ -1,0 +1,10 @@
+.jazz {
+  ul {
+    &.containers {
+      li {
+       margin-bottom: 6px; 
+      }
+    }
+    li.last {margin-bottom: 0px !important;}
+  }
+}
