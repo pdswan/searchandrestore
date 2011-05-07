@@ -1,3 +1,12 @@
+.jazz .col-1,
+.jazz .col-2,
+.jazz .col-3 {
+  float: left; }
+.jazz.layout-1 .col-1 {
+  width: 310px;
+  margin-right: 10px; }
+.jazz.layout-1 .col-2 {
+  width: 640px; }
 .jazz .section {
   clear: both;
   margin-bottom: 5px; }

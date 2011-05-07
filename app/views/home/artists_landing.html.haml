@@ -18,7 +18,7 @@
           = f.select :instrument, ['one','two','three']
       = f.submit :submit
 .clear
-%ul.inline-list.artists-grid
+%ul.inline-list.grid-view
   - 18.times do |t|
     %li.container{:class => cycle('first','','','','','last')}
       %a.block{:href => '#'}
