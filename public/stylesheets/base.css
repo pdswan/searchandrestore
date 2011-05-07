@@ -344,7 +344,8 @@ body {
   overflow: hidden; }
   .jazz ul.inline-list li {
     float: left;
-    margin-right: 3px; }
+    margin-right: 3px;
+    padding-bottom: 4px; }
     .jazz ul.inline-list li.last {
       margin-right: 0px; }
 .jazz ul li.last {
@@ -358,6 +359,9 @@ body {
   font-weight: bold;
   margin-bottom: 5px; }
 
+.jazz .section {
+  clear: both;
+  margin-bottom: 5px; }
 .jazz .media-with-info {
   overflow: hidden; }
   .jazz .media-with-info .media {
@@ -648,6 +652,10 @@ ul {
 
 .snug-bottom {
   margin-bottom: 0px !important; }
+
+.snug {
+  margin: 0px !important;
+  padding: 0px !important; }
 
 .block {
   display: block !important; }
