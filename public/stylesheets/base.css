@@ -68,6 +68,8 @@
 
 .jazz ul.containers li {
   margin-bottom: 6px; }
+.jazz ul.with-gaps li {
+  margin-bottom: 8px; }
 .jazz ul.inline-list {
   overflow: hidden; }
   .jazz ul.inline-list li {
@@ -119,7 +121,10 @@
 
 .jazz .col-1,
 .jazz .col-2,
-.jazz .col-3 {
+.jazz .col-3,
+.jazz .col-4,
+.jazz .col-5,
+.jazz .col-6 {
   float: left; }
 .jazz.layout-1 .col-1 {
   width: 310px;
@@ -133,6 +138,16 @@
 .jazz.layout-2 .col-1,
 .jazz.layout-2 .col-2 {
   margin-right: 10px; }
+.jazz.layout-3 .col-1,
+.jazz.layout-3 .col-2,
+.jazz.layout-3 .col-3,
+.jazz.layout-3 .col-4,
+.jazz.layout-3 .col-5,
+.jazz.layout-3 .col-6 {
+  width: 135px;
+  margin-right: 30px; }
+.jazz.layout-3 .col-6 {
+  margin-right: 0px; }
 .jazz .section {
   clear: both;
   margin-bottom: 5px; }

@@ -5,6 +5,11 @@
        margin-bottom: 6px; 
       }
     }
+    &.with-gaps {
+      li {
+        margin-bottom: 8px;
+      }
+    }
     &.inline-list {
       overflow: hidden;
       li {

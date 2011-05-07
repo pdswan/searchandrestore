@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$ORANGE".
-        on line 50 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/lists.scss
+        on line 55 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/lists.scss
 
-45:     margin: 0 0 5px 0;
-46:     dd, dt {float: left;}
-47:     dt {
-48:       font-size: 14px;
-49:       font-weight: bold;
-50:       color: $ORANGE;
-51:       padding-right: 5px;
-52:       clear: both;
-53:     }
-54:     dd {
-55:       color: #ccc;
+50:     margin: 0 0 5px 0;
+51:     dd, dt {float: left;}
+52:     dt {
+53:       font-size: 14px;
+54:       font-weight: bold;
+55:       color: $ORANGE;
+56:       padding-right: 5px;
+57:       clear: both;
+58:     }
+59:     dd {
+60:       color: #ccc;
 
 Backtrace:
-/Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/lists.scss:50
+/Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/lists.scss:55
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/script/variable.rb:39:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/script/node.rb:61:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p334@searchandrestore/gems/haml-3.0.25/lib/sass/tree/prop_node.rb:132:in `perform!'
@@ -115,4 +115,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 50 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/lists.scss\A \A 45:     margin: 0 0 5px 0;\A 46:     dd, dt {float: left;}\A 47:     dt {\A 48:       font-size: 14px;\A 49:       font-weight: bold;\A 50:       color: $ORANGE;\A 51:       padding-right: 5px;\A 52:       clear: both;\A 53:     }\A 54:     dd {\A 55:       color: #ccc;"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 55 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/lists.scss\A \A 50:     margin: 0 0 5px 0;\A 51:     dd, dt {float: left;}\A 52:     dt {\A 53:       font-size: 14px;\A 54:       font-weight: bold;\A 55:       color: $ORANGE;\A 56:       padding-right: 5px;\A 57:       clear: both;\A 58:     }\A 59:     dd {\A 60:       color: #ccc;"; }
