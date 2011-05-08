@@ -5,4 +5,8 @@ class HomeController < ApplicationController
 
   def shows
   end
+
+  def venues
+    @uses_gmap = true
+  end
 end
