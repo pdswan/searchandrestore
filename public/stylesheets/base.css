@@ -487,6 +487,19 @@ p {
   .nav li.selected a, .nav li:hover a {
     background-color: #ff9900; }
 
+body.page-shows .nav li#nav-shows a {
+  background-color: #ff9900; }
+body.page-artists .nav li#nav-artists a, body.page-artists-landing .nav li#nav-artists a {
+  background-color: #ff9900; }
+body.page-venues .nav li#nav-venues a {
+  background-color: #ff9900; }
+body.page-video .nav li#nav-video a, body.page-video-landing .nav li#nav-video a {
+  background-color: #ff9900; }
+body.page-about .nav li#nav-about a {
+  background-color: #ff9900; }
+body.page-resources .nav li#nav-resources a {
+  background-color: #ff9900; }
+
 .clear {
   clear: both; }
 

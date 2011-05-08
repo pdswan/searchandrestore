@@ -27,19 +27,19 @@
         %ul.nav
           %li
             %a{:href => '#'} Home
-          %li.selected
+          %li#nav-shows
             %a{:href => '/home/shows'} Shows
-          %li
+          %li#nav-artists
             %a{:href => '/home/artists_landing'} Artists
-          %li
+          %li#nav-venues
             %a{:href => '/home/venues'} Venues
-          %li
+          %li#nav-video
             %a{:href => '/home/video_landing'} Video
-          %li
+          %li#nav-about
             %a{:href => '/home/about'} About
-          %li
+          %li#nav-resources
             %a{:href => '/home/resources'} Resources
-          %li
+          %li#nav-donate
             %a{:href => '#'} Donate
     .site-container#main-content
       = yield

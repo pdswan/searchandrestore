@@ -101,8 +101,42 @@ p {
     &.selected,
     &:hover {
       a {
-        background-color: #ff9900;
+        background-color: $ORANGE;
       }
+    }
+  }
+}
+body {
+  &.page-shows {
+    .nav li#nav-shows a {
+      background-color: $ORANGE;
+    }
+  }
+  &.page-artists,
+  &.page-artists-landing {
+    .nav li#nav-artists a {
+      background-color: $ORANGE;
+    }
+  }
+  &.page-venues {
+    .nav li#nav-venues a {
+      background-color: $ORANGE;
+    }
+  }
+  &.page-video,
+  &.page-video-landing {
+    .nav li#nav-video a {
+      background-color: $ORANGE;
+    }
+  }
+  &.page-about {
+    .nav li#nav-about a {
+      background-color: $ORANGE;
+    }
+  }
+  &.page-resources {
+    .nav li#nav-resources a {
+      background-color: $ORANGE;
     }
   }
 }
