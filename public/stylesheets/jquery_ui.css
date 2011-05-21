@@ -1050,7 +1050,9 @@
   height: 1.8em; }
 
 .ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
-  top: 1px; }
+  top: 1px;
+  border: none !important;
+  background: #000 !important; }
 
 .ui-datepicker .ui-datepicker-prev {
   left: 2px; }
@@ -1071,6 +1073,13 @@
   margin-left: -8px;
   top: 50%;
   margin-top: -8px; }
+
+.ui-datepicker .ui-datepicker-prev-hover span, .ui-datepicker .ui-datepicker-next-hover span {
+  border: none !important;
+  background-color: #000 !important;
+  background-image: url(/images/jquery_ui/ui-icons_ffffff_256x240.png) !important;
+  left: 50% !important;
+  top: 50% !important; }
 
 .ui-datepicker .ui-datepicker-title {
   margin: 0 2.3em;
