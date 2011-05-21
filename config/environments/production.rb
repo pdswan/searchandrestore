@@ -47,5 +47,6 @@ Searchandrestore::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.GMAP_KEY = 'ABQIAAAAgWjvq5VmPsi62Hq7CCASJxQwNLt4fLk2XZHTz1FQBq5OyejVHxQU1DwHBBkyacTZedMqdmGUZNspAA'
 end
+
+GMAP_KEY = 'ABQIAAAAgWjvq5VmPsi62Hq7CCASJxQwNLt4fLk2XZHTz1FQBq5OyejVHxQU1DwHBBkyacTZedMqdmGUZNspAA'

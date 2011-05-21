@@ -23,6 +23,7 @@ Searchandrestore::Application.configure do
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
 
-  config.GMAP_KEY = 'ABQIAAAAgWjvq5VmPsi62Hq7CCASJxQwNLt4fLk2XZHTz1FQBq5OyejVHxQU1DwHBBkyacTZedMqdmGUZNspAA'
 end
+
+GMAP_KEY = 'ABQIAAAAgWjvq5VmPsi62Hq7CCASJxQwNLt4fLk2XZHTz1FQBq5OyejVHxQU1DwHBBkyacTZedMqdmGUZNspAA'
 
