@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
 
   def shows
+    @uses_datepicker = true
   end
 
   def venues
