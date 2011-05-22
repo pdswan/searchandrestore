@@ -12,7 +12,7 @@ Syntax error: Undefined variable: "$ORANGE".
 9:     font-weight: bold;
 10:     margin-bottom: 5px;
 11:   }
-12: }
+12:   h3.box-header {
 
 Backtrace:
 /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/headers.scss:7
@@ -108,4 +108,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 7 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/headers.scss\A \A 2:   h1, h2, h3, h4, h5, h6 {\A 3:     margin-top: 0px;\A 4:   }\A 5: \A 6:   h3 {\A 7:     color: $ORANGE;\A 8:     font-size: 14px;\A 9:     font-weight: bold;\A 10:     margin-bottom: 5px;\A 11:   }\A 12: }"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 7 of /Users/dalton/desktop/searchandrestore/public/stylesheets/sass/components/headers.scss\A \A 2:   h1, h2, h3, h4, h5, h6 {\A 3:     margin-top: 0px;\A 4:   }\A 5: \A 6:   h3 {\A 7:     color: $ORANGE;\A 8:     font-size: 14px;\A 9:     font-weight: bold;\A 10:     margin-bottom: 5px;\A 11:   }\A 12:   h3.box-header {"; }

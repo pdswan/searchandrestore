@@ -44,6 +44,21 @@
         }
       }
     }
+    &.header-meta-list {
+      .byline {
+        margin-bottom: 2px;
+        .date { 
+          color: #666;
+        }
+        .author,
+        .location {
+          color: #ccc;
+        }
+      }
+      li {
+        margin-bottom: 10px;
+      }
+    }
   }
   dl {
     overflow: hidden;
