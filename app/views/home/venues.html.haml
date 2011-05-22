@@ -3,16 +3,20 @@
 .col-1
   .section
     .box.dark Search Venues
-  .section
-    #map_canvas{:style => "width: 310px; height: 387px"}
-    
-    Map!
   .section.snug
-    .container.dark
+    #map_canvas{:style => "width: 310px; height: 387px"}
+  .section.snug
+    .container.skin-dark
       .body
         %h3 Upcoming Shows at this Venue:
-        Stuff
-        %a.box{:href => '#'} See all shows at this Venue
+        %ul.header-meta-list
+          - 3.times do |t|
+            %li
+              %h4 Trans-Atlantic Quartet
+              %p.byline
+                %span.date 03/31/2011
+                %span.location Bowery Poetry Club
+        %a.box{:href => '#'} See All Shows at this Venue
 
 
 .col-2
