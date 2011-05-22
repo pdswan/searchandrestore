@@ -11,10 +11,14 @@
   }
   h3.box-header {
     background-color: $ORANGE;
+  }
+  h3.box-header,
+  h3.box-header a {
     color: #fff;
     font-size: 12px;
     line-height: 13px;
     padding: 8px;
     text-transform: uppercase;
   }
+
 }

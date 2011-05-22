@@ -128,7 +128,9 @@
   font-weight: bold;
   margin-bottom: 5px; }
 .jazz h3.box-header {
-  background-color: #ff9900;
+  background-color: #ff9900; }
+.jazz h3.box-header,
+.jazz h3.box-header a {
   color: #fff;
   font-size: 12px;
   line-height: 13px;
@@ -486,6 +488,9 @@ h4 {
 
 .floatleft {
   float: left; }
+
+.centered {
+  text-align: center; }
 
 p {
   margin-top: 0px;
