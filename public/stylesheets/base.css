@@ -94,6 +94,15 @@
     .jazz ul.grid-view li .body .byline {
       margin-bottom: 0px;
       padding-left: 5px; }
+.jazz ul.header-meta-list .byline {
+  margin-bottom: 2px; }
+  .jazz ul.header-meta-list .byline .date {
+    color: #666; }
+  .jazz ul.header-meta-list .byline .author,
+  .jazz ul.header-meta-list .byline .location {
+    color: #ccc; }
+.jazz ul.header-meta-list li {
+  margin-bottom: 10px; }
 .jazz dl {
   overflow: hidden;
   margin: 0 0 5px 0; }
@@ -118,6 +127,13 @@
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px; }
+.jazz h3.box-header {
+  background-color: #ff9900;
+  color: #fff;
+  font-size: 12px;
+  line-height: 13px;
+  padding: 8px;
+  text-transform: uppercase; }
 
 .jazz .col-1,
 .jazz .col-2,
@@ -182,6 +198,9 @@
     color: #ccc; }
 .jazz.page-about #recent-press li {
   margin-bottom: 6px; }
+
+.jazz.page-shows form input[type='submit'] {
+  margin: 200px 0 0 10px; }
 
 .jazz .mt1 {
   margin-top: 1px !important; }

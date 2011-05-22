@@ -9,12 +9,24 @@
       .field.select
         = f.label :venue
         = f.select :venue, ['One','Two','Three']
-      .field.calendar
+      .field.calendar.floatleft
         #datepicker
+      .floatleft
+        = f.submit :search
+      .clear
 
+  %h3.box-header See Tonight's Top Picks
   .container.skin-dark
     .body
-      Bach
+      %h3 Upcoming Search&amp;Restore Shows:
+      %ul.header-meta-list
+        - 3.times do |t|
+          %li
+            %h4 Trans-Atlantic Quartet
+            %p.byline
+              %span.date 03/31/2011
+              %span.location Bowery Poetry Club
+      %a.box{:href => '#'} See All Search&amp;Restore Shows
 .col-2
   %h3 Search results for Thursday 31st of March 2011:
   %ul.containers
