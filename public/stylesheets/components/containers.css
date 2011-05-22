@@ -5,3 +5,13 @@
     padding: 10px; }
   .jazz .container.skin-dark {
     background-color: #000; }
+  .jazz .container.with-tip {
+    overflow: visible;
+    position: relative; }
+  .jazz .container .tip {
+    width: 41px;
+    height: 37px;
+    position: absolute;
+    bottom: -31px;
+    right: 100px;
+    background: url(/images/tip.png) no-repeat top left; }
