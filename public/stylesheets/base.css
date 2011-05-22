@@ -204,6 +204,10 @@
 .jazz.page-shows form input[type='submit'] {
   margin: 200px 0 0 10px; }
 
+.jazz.page-donate #main-content {
+  height: 543px;
+  background: url(/images/rats.png) no-repeat top left; }
+
 .jazz .mt1 {
   margin-top: 1px !important; }
 .jazz .mt5 {
