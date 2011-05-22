@@ -176,6 +176,12 @@
   margin-right: 30px; }
 .jazz.layout-3 .col-6 {
   margin-right: 0px; }
+.jazz.layout-4 .col-1,
+.jazz.layout-4 .col-2 {
+  width: 470px;
+  margin-right: 10px; }
+.jazz.layout-4 .col-2 {
+  margin-right: 0px; }
 .jazz .section {
   clear: both;
   margin-bottom: 5px; }
