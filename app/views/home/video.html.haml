@@ -1,0 +1,42 @@
+- @page_class = 'layout-1 page-artists'
+
+.col-1
+  .section
+    Search
+  .section
+    .container.skin-dark
+      .body
+        %h3 Free Space!
+
+.col-2
+  .section
+    .container
+      .body
+        = image_tag('/images/fpo/video.png')
+        %p
+          %a.box.dark{:href => '#'} Transatlantic Quartet
+          03/31/2011 Tea Lounge, Brooklyn
+        %h3 Featured Artists
+        %ul.inline-list
+          %li
+            %a.box{:href => '#'} Pete Robbins(alto saxophone)
+          %li
+            %a.box{:href => '#'} Mikkel Plouge(guitar)
+          %li
+            %a.box{:href => '#'} Simon Jermyn(bass)
+          %li.last
+            %a.box{:href => '#'} Kevin Brow(drums)
+
+  .section.pl10.pt5
+    %h3 Search Results for artist Pete Robbins:
+  .section
+    %ul.inline-list.grid-view
+      - 4.times do |t|
+        %li.container{:class => cycle('first','','','last')}
+          %a.block{:href => '#'}
+            .body
+              = image_tag('http://dummyimage.com/140x77/000/fff')
+              .clear
+              %span.box.block.name{:href => '#'} Trans-Atlantic Quartet
+              %p.location.snug 10/27/4000, Tea Lounge
+
