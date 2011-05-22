@@ -1,0 +1,17 @@
+- @page_class = 'layout-4 page-venues-landing'
+
+.col-1
+  .container
+    .body
+      #map_canvas{:style => "width: 457px; height: 528px"}
+.col-2
+  %ul.inline-list.grid-view
+    - 9.times do |t|
+      %li.container{:class => cycle('first','','last')}
+        %a.block{:href => '#'}
+          .body
+            = image_tag('http://dummyimage.com/140x140/000/fff')
+            .clear
+            %span.box.block.name{:href => '#'} Village Vanguard
+            %p.byline Manhattan 
+.clear

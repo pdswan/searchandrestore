@@ -10,4 +10,7 @@ class HomeController < ApplicationController
   def venues
     @uses_gmap = true
   end
+  def venues_landing
+    @uses_gmap = true
+  end
 end

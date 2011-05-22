@@ -41,6 +41,16 @@
       margin-right: 0px;
     }
   }
+  &.layout-4 {
+    .col-1,
+    .col-2 {
+      width: 470px;
+      margin-right: 10px;
+    }
+    .col-2 {
+      margin-right: 0px;
+    }
+  }
   .section {
     clear: both;
     margin-bottom: 5px;
