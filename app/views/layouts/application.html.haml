@@ -52,9 +52,24 @@
       %script{:src => "http://maps.google.com/maps?file=api&v=2&key=#{GMAP_KEY}&sensor=false"}
   
       :javascript
-        var map = new GMap2(document.getElementById("map_canvas"));
-        map.setCenter(new GLatLng(37.4419, -122.1419), 13);
-        map.setUIToDefault();
+        var map = null;
+        if (GBrowserIsCompatible()) {
+            map = new GMap2(document.getElementById('map_canvas'));
+            map.setUIToDefault();
+            var geocoder = new GClientGeocoder();
+            var address = "75 9th St, 11216, Brooklyn, NY";
+            geocoder.getLatLng(
+                address,
+                function(point) {
+                  if (!point) {
+                    return;
+                  }
+                  map.setCenter(point, 13);
+                  marker = new GMarker(point);
+                  map.addOverlay(marker);
+                }
+            );
+        }    
 
     - if @uses_datepicker
       :javascript
