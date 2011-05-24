@@ -14,4 +14,8 @@ class HomeController < ApplicationController
     @uses_gmap = true
   end
 
+  def video
+    @has_video = true
+  end
+
 end

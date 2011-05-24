@@ -12,7 +12,7 @@
   .section
     .container
       .body
-        <iframe src="http://player.vimeo.com/video/14015287?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="621" height="350" frameborder="0"></iframe>
+        <iframe src="http://player.vimeo.com/video/14015287?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="621" height="350" frameborder="0" id="video-player"></iframe>
         %p
           %a.box.dark{:href => '#'} Transatlantic Quartet
           03/31/2011 Tea Lounge, Brooklyn
@@ -33,9 +33,9 @@
     %ul.inline-list.grid-view
       - 4.times do |t|
         %li.container{:class => cycle('first','','','last')}
-          %a.block{:href => '#'}
+          %a.block{:href => '#', 'data-video' => 'http://player.vimeo.com/video/10467928?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'}
             .body
               = image_tag('http://dummyimage.com/140x77/000/fff')
               .clear
-              %span.box.block.name{:href => '#'} Trans-Atlantic Quartet
+              %span.box.block.name{:href => '#'} Logan Richardson
               %p.location.snug 10/27/4000, Tea Lounge
