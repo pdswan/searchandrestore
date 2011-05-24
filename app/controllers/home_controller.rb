@@ -13,4 +13,5 @@ class HomeController < ApplicationController
   def venues_landing
     @uses_gmap = true
   end
+
 end
