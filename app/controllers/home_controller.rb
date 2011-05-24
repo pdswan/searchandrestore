@@ -18,4 +18,8 @@ class HomeController < ApplicationController
     @has_video = true
   end
 
+  def artists
+    @has_video = true
+  end
+
 end
