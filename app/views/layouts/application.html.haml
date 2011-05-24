@@ -80,3 +80,14 @@
             inline: true
           });
         });
+
+    - if @has_video
+      :javascript
+        $(function() {
+          $('ul').delegate('[data-video]', 'click', function(e) {
+            var src = $(this).attr('data-video');
+            var the_frame = $('#video-player');
+            the_frame.attr('src',src);
+            e.preventDefault();
+          });
+        });
