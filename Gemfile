@@ -11,6 +11,8 @@ gem 'devise'
 gem 'cancan'
 gem 'haml'
 gem 'activeadmin'
+gem 'carrierwave'
+gem 'rmagick'
 
 # Use unicorn as the web server
 # gem 'unicorn'
