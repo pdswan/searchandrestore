@@ -24,10 +24,26 @@ Feature: Create Artist
       | logged in     | homepage      |
       | not logged in | login         |
 
+  @wip
   Scenario: Admin creates new artist
     Given I am logged in as an admin user
     When I go to the new artist page
     And I fill in the new artist form with valid attributes
-    Then I can create an artist
-    And I should see the artist
+    And I press "Save"
+    Then I should see the "name" of the artist
+    And I should see the "bio" of the artist
+
+  @wip
+  Scenario Outline: Admin fails to create new artist
+    Given I am logged in as an admin user
+    When I go to the new artist page
+    And I fill in the new artist form with valid attributes
+    But I ommit "<ommitted>"
+    And I press "Save"
+    Then I should see "<expected error>"
+
+    Scenarios:
+      | ommitted | expected error      |
+      | Name     | Name can't be blank |
+      | Bio      | Bio can't be blank  |
 
