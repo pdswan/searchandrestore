@@ -39,4 +39,8 @@ group :development, :test do
   gem 'factory_girl'
   gem 'faker'
   gem 'database_cleaner'
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'launchy'
+  gem 'shoulda-matchers', '~> 1.0.0.beta1'
+  gem 'watchr'
 end
