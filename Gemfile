@@ -10,6 +10,7 @@ gem 'mysql2'
 gem 'devise'
 gem 'cancan'
 gem 'haml'
+gem 'activeadmin'
 
 # Use unicorn as the web server
 # gem 'unicorn'

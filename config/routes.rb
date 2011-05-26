@@ -1,8 +1,10 @@
 Searchandrestore::Application.routes.draw do
 
+  ActiveAdmin.routes(self)
+
   root :to => "home#index"
 
-  devise_for :users
+  devise_for :users, ActiveAdmin::Devise.config
 
   match 'components/:action' => 'components#action'
 
