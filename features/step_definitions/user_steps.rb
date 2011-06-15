@@ -1,7 +1,7 @@
 Then /^I log\s?in with "([^"]+)" and "([^"]+)"$/ do |email, password|
   fill_in "Email", :with => email
   fill_in "Password", :with => password
-  click_button "Sign in"
+  click_button "Login"
   page.should have_content("Signed in successfully.")
 end
 
