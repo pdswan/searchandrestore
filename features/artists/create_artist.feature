@@ -3,20 +3,17 @@ Feature: Create Artist
   In order to present information about an artist
   I should be able to create an artist
 
+  @fixme
   Scenario: Admin sees new artist page
     Given I am logged in as an admin user
-    When I go to the artists page
-    And I follow "Add an artist"
-    Then I should be on the new artist page
+    When I go to the admin artists page
+    And I follow "New Artist"
+    Then I should be on the new admin artist page
 
-  Scenario: Non admin does not see add artist link on artists page
-    Given I am not logged in
-    When I go to the artists page
-    Then I should not see "Add an artist"
-
+  @fixme
   Scenario Outline: Non admin is redirected from new artist page
     Given I am <log in state>
-    When I go to the new artist page
+    When I go to the new admin artist page
     Then I should be on the <redirected to> page
 
     Scenarios:
@@ -24,26 +21,32 @@ Feature: Create Artist
       | logged in     | homepage      |
       | not logged in | login         |
 
-  @wip
   Scenario: Admin creates new artist
     Given I am logged in as an admin user
-    When I go to the new artist page
+    When I go to the new admin artist page
     And I fill in the new artist form with valid attributes
-    And I press "Save"
-    Then I should see the "name" of the artist
-    And I should see the "bio" of the artist
+    And I press "Create Artist"
+    Then I should see "Artist was successfully created"
+    And I should see the "name" of the artist
 
-  @wip
   Scenario Outline: Admin fails to create new artist
     Given I am logged in as an admin user
-    When I go to the new artist page
+    When I go to the new admin artist page
     And I fill in the new artist form with valid attributes
     But I ommit "<ommitted>"
-    And I press "Save"
-    Then I should see "<expected error>"
+    And I press "Create Artist"
+    Then I should see "<expected error>" within "<container>"
 
     Scenarios:
-      | ommitted | expected error      |
-      | Name     | Name can't be blank |
-      | Bio      | Bio can't be blank  |
+      | ommitted | expected error | container          |
+      | Name     | can't be blank | #artist_name_input |
+      | Bio      | can't be blank | #artist_bio_input  |
 
+  Scenario: Admin creates artist with website url
+    Given I am logged in as an admin user
+    When I go to the new admin artist page
+    And I fill in the new artist form with valid attributes
+    And I fill in "Website" with "http://www.google.com"
+    And I press "Create Artist"
+    Then I should see "Artist was successfully created"
+    And I should see the "website" of the artist
