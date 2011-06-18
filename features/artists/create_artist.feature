@@ -51,7 +51,15 @@ Feature: Create Artist
     Then I should see "Artist was successfully created"
     And I should see the "website" of the artist
 
-  @wip
+  Scenario: Admin creates artist with new primary instrument
+    Given I am logged in as an admin user
+    When I go to the new admin artist page
+    And I fill in the new artist form with valid attributes
+    And I fill in "Name" with "Banjo" within "#artist_instrument_attributes_name_input"
+    And I press "Create Artist"
+    Then I should see "Artist was successfully created"
+    And I should see "banjo"
+
   Scenario: Admin creates artist with existing primary instrument
     Given I am logged in as an admin user
     And there is an instrument with:
