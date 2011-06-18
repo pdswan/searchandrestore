@@ -13,6 +13,7 @@ ActiveAdmin.register Artist do
   form(:html => { :multipart => true }) do |f|
     f.inputs do
       f.input :name
+      f.input :instrument, :as => :select
       f.input :bio
       f.input :website
       f.input :image, :as => :file
@@ -24,6 +25,7 @@ ActiveAdmin.register Artist do
   show do
     attributes_table do
       row(:name)
+      row(:instrument)
       row(:bio)
       row(:image) { image_tag(artist.image.thumb.url) if artist.image.present? }
       row(:website) { link_to(artist.website, artist.website, :target => '_blank') if artist.website.present? }
