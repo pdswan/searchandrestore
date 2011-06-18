@@ -1,6 +1,13 @@
 ActiveAdmin.register Artist do
+  belongs_to :instrument, :optional => true
+
+  filter :name
+  filter :instrument, :as => :select
+  filter :bio
+
   index do
     column :name
+    column :instrument, :sortable => 'instruments.name'
     column :website do |artist|
       link_to artist.website, artist.website, :target => '_blank' if artist.website.present?
     end
@@ -43,7 +50,6 @@ ActiveAdmin.register Artist do
 end
 
 Admin::ArtistsController.class_eval do
-  belongs_to :instrument, :optional => true
 
   protected
 
@@ -57,6 +63,10 @@ Admin::ArtistsController.class_eval do
       end
 
       artist
+    end
+
+    def scoped_collection
+      super.scoped(:joins => :instrument, :include => :instrument)
     end
 
 end
