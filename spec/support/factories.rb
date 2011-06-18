@@ -7,3 +7,7 @@ end
 Factory.define :admin, :parent => :user do |u|
   u.roles [:admin]
 end
+
+Factory.define :instrument do |i|
+  i.name 'Jazz Flute'
+end
