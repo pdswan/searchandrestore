@@ -11,13 +11,18 @@ ActiveAdmin.register Artist do
   end
 
   form(:html => { :multipart => true }) do |f|
-    f.inputs do
+    f.inputs :name => 'Basic Info' do
       f.input :name
-      f.input :instrument, :as => :select
       f.input :bio
       f.input :website
       f.input :image, :as => :file
     end
+
+    f.inputs :name => 'Choose an existing instrument' do
+      f.input :instrument, :as => :select
+    end
+
+    f.inputs :name, :for => :instrument, :name => 'Add a new instrument'
 
     f.buttons
   end
@@ -35,4 +40,23 @@ ActiveAdmin.register Artist do
 
     active_admin_comments if active_admin_config.comments?
   end
+end
+
+Admin::ArtistsController.class_eval do
+  belongs_to :instrument, :optional => true
+
+  protected
+
+    def resource
+      artist = super
+
+      # if we are creating a new artist or editing an existing artist
+      # we want to build a new instrument for the embedded instrument form
+      if ['new', 'edit'].include?(params[:action])
+        artist.build_instrument
+      end
+
+      artist
+    end
+
 end
