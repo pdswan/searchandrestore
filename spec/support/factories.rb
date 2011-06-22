@@ -11,3 +11,10 @@ end
 Factory.define :instrument do |i|
   i.name 'Jazz Flute'
 end
+
+Factory.define :venue do |v|
+  v.name 'Birdland'
+  v.address '315 West 44th Street New York, NY'
+  v.their_words { Faker::Lorem.paragraphs.join("\n") }
+  v.our_words   { Faker::Lorem.paragraphs.join("\n") }
+end
