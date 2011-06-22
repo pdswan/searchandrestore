@@ -22,7 +22,7 @@ ActiveAdmin.register Artist do
       f.input :name
       f.input :bio
       f.input :website
-      f.input :image, :as => :file
+      f.input :image, :as => :file, :hint => 'Image will be resized to 140x140px'
     end
 
     f.inputs :name => 'Choose an existing instrument' do
