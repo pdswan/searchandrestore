@@ -1,4 +1,6 @@
 class Venue < ActiveRecord::Base
+  mount_uploader :image, VenueImageUploader
+
   validates :name, 
             :address, 
             :their_words,
