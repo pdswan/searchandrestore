@@ -71,3 +71,12 @@ Feature: Create Artist
     Then I should see "Artist was successfully created"
     And I should see "banjo"
 
+  Scenario: Admin adds buy link to artist
+    Given I am logged in as an admin user
+    When I go to the new admin artist page
+    And I fill in the new artist form with valid attributes
+    And I fill in the new buy link form with valid attributes
+    And I press "Create Artist"
+    Then I should see "Artist was successfully created"
+    And the artist should have 1 buy link
+

@@ -31,6 +31,8 @@ ActiveAdmin.register Artist do
 
     f.inputs :name, :for => :instrument, :name => 'Add a new instrument'
 
+    f.inputs :title, :url, :for => :buy_links, :name => 'Buy Links'
+
     f.buttons
   end
 
@@ -60,6 +62,7 @@ Admin::ArtistsController.class_eval do
       # we want to build a new instrument for the embedded instrument form
       if ['new', 'edit'].include?(params[:action])
         artist.build_instrument
+        3.times { artist.buy_links.build }
       end
 
       artist
