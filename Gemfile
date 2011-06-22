@@ -13,6 +13,7 @@ gem 'haml'
 gem 'activeadmin'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'geocoder'
 
 # Use unicorn as the web server
 # gem 'unicorn'
