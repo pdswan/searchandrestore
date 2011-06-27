@@ -14,6 +14,7 @@ gem 'activeadmin'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'geocoder'
+gem 'state_machine'
 
 # Use unicorn as the web server
 # gem 'unicorn'

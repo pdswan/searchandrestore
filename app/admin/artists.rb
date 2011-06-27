@@ -31,7 +31,10 @@ ActiveAdmin.register Artist do
 
     f.inputs :name, :for => :instrument, :name => 'Add a new instrument'
 
-    f.inputs :title, :url, :for => :buy_links, :name => 'Buy Links'
+    f.has_many :buy_links do |link|
+      link.input :title
+      link.input :url
+    end
 
     f.buttons
   end
