@@ -7,5 +7,11 @@ class Artist < ActiveRecord::Base
   has_many :buy_links, :as => :linkable
   accepts_nested_attributes_for :buy_links, :reject_if => proc { |attributes| attributes['url'].blank? }
 
-  validates_presence_of :name, :bio
+  validates_presence_of :name
+
+  state_machine :state, :initial => :in_progress do
+    state :live do
+      validates_presence_of :bio
+    end
+  end
 end

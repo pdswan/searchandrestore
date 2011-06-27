@@ -6,7 +6,7 @@ module Geocoder
     class Base
       private #-----------------------------------------------------------------
       def read_fixture(file)
-        File.read(File.join(Rspec.configuration.fixture_path, file)).strip.gsub(/\n\s*/, "")
+        File.read(File.join("#{::Rails.root}/spec/fixtures", file)).strip.gsub(/\n\s*/, "")
       end
     end
 

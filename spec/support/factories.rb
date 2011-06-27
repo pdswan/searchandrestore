@@ -18,3 +18,8 @@ Factory.define :venue do |v|
   v.their_words { Faker::Lorem.paragraphs.join("\n") }
   v.our_words   { Faker::Lorem.paragraphs.join("\n") }
 end
+
+Factory.define :artist do |a|
+  a.name 'Miles Davis'
+  a.bio  Faker::Lorem.paragraphs.join("\n")
+end
