@@ -11,10 +11,18 @@ ActiveAdmin.register Show do
 
     f.has_many :performances do |p|
       p.inputs :artist, :name => 'Choose an existing artist'
-      p.inputs :name, :for => :artist, :name => 'Add a new artist'
 
-      p.inputs :instrument, :name => 'Choose an existing instrument'
-      p.inputs :name, :for => :instrument, :name => 'Add a new instrument'
+      if p.object.new_record?
+        p.inputs :name, :for => :artist, :name => 'Add a new artist'
+      end
+
+      last = p.inputs :instrument, :name => 'Choose an existing instrument'
+
+      if p.object.new_record?
+        p.inputs :name, :for => :instrument, :name => 'Add a new instrument'
+      else
+        last
+      end
     end
 
     f.buttons
@@ -28,7 +36,7 @@ Admin::ShowsController.class_eval do
     def resource
       show = super
 
-      if ['new', 'edit'].include?(params[:action])
+      if ['new'].include?(params[:action])
         3.times do
           show.performances.build
           show.performances.last.build_artist
