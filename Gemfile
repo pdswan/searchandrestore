@@ -15,6 +15,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'geocoder'
 gem 'state_machine'
+gem 'ruby-oembed'
 
 # Use unicorn as the web server
 # gem 'unicorn'
