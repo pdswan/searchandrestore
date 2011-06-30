@@ -4,7 +4,7 @@ describe Artist do
   it { should validate_presence_of(:name) }
 
   context "the artist is in the live state" do
-    let(:artist) { Factory.build(:artist, :state => :live) }
+    subject { Factory.build(:artist, :state => 'live') }
 
     it { should validate_presence_of(:bio) }
   end

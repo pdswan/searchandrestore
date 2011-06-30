@@ -14,4 +14,10 @@ class Artist < ActiveRecord::Base
       validates_presence_of :bio
     end
   end
+
+  def self.state_options
+    state_machine.states.inject({ }) do |hash, state|
+      hash.merge(state.name.to_s.titleize => state.name)
+    end
+  end
 end

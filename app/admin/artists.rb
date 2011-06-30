@@ -2,11 +2,15 @@ ActiveAdmin.register Artist do
   belongs_to :instrument, :optional => true
 
   filter :name
+  filter :state, :as => :select, :collection => Artist.state_options
   filter :instrument, :as => :select
   filter :bio
 
   index do
     column :name
+    column :state do |artist|
+      artist.state.titleize
+    end
     column :instrument, :sortable => 'instruments.name'
     column :website do |artist|
       link_to artist.website, artist.website, :target => '_blank' if artist.website.present?
@@ -23,6 +27,7 @@ ActiveAdmin.register Artist do
       f.input :bio
       f.input :website
       f.input :image, :as => :file, :hint => 'Image will be resized to 140x140px'
+      f.input :state, :as => :select, :include_blank => false, :collection => Artist.state_options
     end
 
     f.inputs :name => 'Choose an existing instrument' do
@@ -42,6 +47,7 @@ ActiveAdmin.register Artist do
   show do
     attributes_table do
       row(:name)
+      row(:state) { artist.state.titleize }
       row(:instrument)
       row(:bio)
       row(:image) { image_tag(artist.image.thumb.url) if artist.image.present? }
