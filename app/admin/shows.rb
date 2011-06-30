@@ -13,12 +13,14 @@ ActiveAdmin.register Show do
       p.inputs :artist, :name => 'Choose an existing artist'
 
       if p.object.new_record?
+        p.object.build_artist
         p.inputs :name, :for => :artist, :name => 'Add a new artist'
       end
 
       last = p.inputs :instrument, :name => 'Choose an existing instrument'
 
       if p.object.new_record?
+        p.object.build_instrument
         p.inputs :name, :for => :instrument, :name => 'Add a new instrument'
       else
         last
