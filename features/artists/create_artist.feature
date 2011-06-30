@@ -3,7 +3,6 @@ Feature: Create Artist
   In order to present information about an artist
   I should be able to create an artist
 
-  @fixme
   Scenario: Admin sees new artist page
     Given I am logged in as an admin user
     When I go to the admin artists page
@@ -28,20 +27,20 @@ Feature: Create Artist
     Then I should see "Artist was successfully created"
     And I should see the "name" of the artist
 
-  # FIXME
-  # bio should be required for artists in the live state
-  Scenario Outline: Admin fails to create new artist
+  Scenario Outline: Admin fails to create artist
     Given I am logged in as an admin user
     When I go to the new admin artist page
     And I fill in the new artist form with valid attributes
+    And I select "<state>" from "State"
     But I ommit "<ommitted>"
     And I press "Create Artist"
     Then I should see "<expected error>" within "<container>"
 
     Scenarios:
-      | ommitted | expected error | container          |
-      | Name     | can't be blank | #artist_name_input |
-      #| Bio      | can't be blank | #artist_bio_input  |
+      | state       | ommitted | expected error | container          |
+      | In Progress | Name     | can't be blank | #artist_name_input |
+      | Live        | Name     | can't be blank | #artist_name_input |
+      | Live        | Bio      | can't be blank | #artist_bio_input  |
 
   Scenario: Admin creates artist with website url
     Given I am logged in as an admin user
