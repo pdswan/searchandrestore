@@ -12,6 +12,8 @@ ActiveAdmin.register Show do
     f.has_many :performances do |p|
       p.inputs :artist, :name => 'Choose an existing artist'
 
+      # FIXME
+      # shouldn't have to build the records here
       if p.object.new_record?
         p.object.build_artist
         p.inputs :name, :for => :artist, :name => 'Add a new artist'
