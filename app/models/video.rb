@@ -1,9 +1,11 @@
 class Video < ActiveRecord::Base
-  attr_protected :embed_code, :thumbnail_url
+  attr_protected :embed_code, :thumbnail, :remote_thumbnail_url
 
   belongs_to :show
 
   has_many :performances, :through => :show
+
+  mount_uploader :thumbnail, VideoThumbnailUploader
 
   def self.oembed_options
     { :width  => 651,
@@ -17,8 +19,9 @@ class Video < ActiveRecord::Base
       require 'oembed'
 
       if resource = OEmbed::Providers::Vimeo.get(oembed_request_url)
-        self.embed_code    = resource.html
-        self.thumbnail_url = resource.thumbnail_url
+        self.title                = resource.title if self.title.blank?
+        self.embed_code           = resource.html
+        self.remote_thumbnail_url = resource.thumbnail_url
       end
     end
 

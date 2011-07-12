@@ -6,7 +6,7 @@ describe Video do
 
     context "the url attributes is set" do
       before do
-        video.should_receive(:url).and_return('http://google.com')
+        video.should_receive(:url).at_least(1).and_return('http://google.com')
       end
 
       it "should return the url with the oembed parameters as query string parameters" do
