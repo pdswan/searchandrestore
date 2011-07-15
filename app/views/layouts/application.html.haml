@@ -76,9 +76,18 @@
                   title:"Hello World!",
                   icon:"/images/map_point.png"
             });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: "This is some information about this venue."
+            });
+            
             
             // To add the marker to the map, call setMap();
             marker.setMap(map);  
+
+            google.maps.event.addListener(marker,'click',function() {
+              infowindow.open(map, marker);
+            });
           });
           
         }
