@@ -73,7 +73,8 @@
           $(coords).each(function(c, coord) {
             var marker = new google.maps.Marker({
                   position: new google.maps.LatLng(coord.lat,coord.lng),
-                  title:"Hello World!"
+                  title:"Hello World!",
+                  icon:"/images/map_point.png"
             });
             
             // To add the marker to the map, call setMap();
