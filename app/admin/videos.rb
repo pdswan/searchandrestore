@@ -1,4 +1,29 @@
 ActiveAdmin.register Video do
+
+  controller do
+    def scoped_collection
+      super.scoped(:joins => :show, :include => :show)
+    end
+  end
+
+  filter :title
+  filter :show, :as => :select
+  filter :created_at
+  filter :updated_at
+  
+  index do
+    column :title
+    column :url
+    column :thumbnail do |video|
+      image_tag video.thumbnail.tiny.url
+    end
+    column :show, :sortable => 'shows.group_name'
+    column :created_at
+    column :updated_at
+
+    default_actions
+  end
+
   form do |f|
     f.inputs do
       f.input :show, :hint => "<a href='/admin/shows/new'>Add the show</a> where this video took place to associate it with a venue, artists, and instruments".html_safe
