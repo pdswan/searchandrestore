@@ -1,5 +1,30 @@
 ActiveAdmin.register Show do
-  
+
+  controller do
+    protected
+
+      def resource
+        show = super
+
+        if ['new', 'edit'].include?(params[:action])
+          3.times do
+            show.performances.build
+            show.performances.last.build_artist
+            show.performances.last.build_instrument
+          end if show.performances.empty?
+
+          3.times do
+            show.videos.build
+          end if show.videos.empty?
+        end
+
+        show
+      end
+
+      def scoped_collection
+        super.select('shows.*, count(videos.id) as video_count').joins(:videos).group('shows.id')
+      end
+  end
   form do |f|
     f.inputs do
       f.input :venue
@@ -40,21 +65,3 @@ ActiveAdmin.register Show do
   end
 end
 
-Admin::ShowsController.class_eval do
-
-  protected
-
-    def resource
-      show = super
-
-      if ['new'].include?(params[:action])
-        3.times do
-          show.performances.build
-          show.performances.last.build_artist
-          show.performances.last.build_instrument
-        end
-      end
-
-      show
-    end
-end
