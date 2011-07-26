@@ -25,6 +25,21 @@ ActiveAdmin.register Show do
         super.select('shows.*, count(videos.id) as video_count').joins(:videos).group('shows.id')
       end
   end
+
+  index do
+    column :group_name
+    column :when
+    column :cover_charge
+    column :venue
+    column :video_count, :sortable => 'video_count' do |show|
+      link_to show.video_count, admin_videos_path(:q => { :show_id_eq => show.id })
+    end
+    column :created_at
+    column :updated_at
+
+    default_actions
+  end
+
   form do |f|
     f.inputs do
       f.input :venue
