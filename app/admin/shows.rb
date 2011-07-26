@@ -29,6 +29,13 @@ ActiveAdmin.register Show do
       end
     end
 
+    f.has_many :videos do |v|
+      v.inputs do
+        v.input :title, :hint => 'If left blank, this will be automatically populated from the title of the vimeo video. It can be edited afterwards.'
+        v.input :url, :hint => 'Paste the vimeo link here; e.g. http://vimeo.com/25519509' 
+      end
+    end
+
     f.buttons
   end
 end
