@@ -3,12 +3,11 @@ require 'spec_helper'
 describe Show do
   it { should validate_presence_of(:venue) }
   it { should validate_presence_of(:group_name) }
-  it { should validate_presence_of(:description) }
 
   describe "#when" do
     let(:show) { Show.new }
 
-    context "the attribute has not been set" do
+    context "the attribute has been set" do
       let(:when_value) { 2.days.ago }
 
       before do

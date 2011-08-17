@@ -19,7 +19,6 @@ class Show < ActiveRecord::Base
   validates :venue,
             :group_name,
             :when,
-            :description,
             :presence => true
 
   def when
