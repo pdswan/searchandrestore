@@ -21,7 +21,7 @@ ActiveAdmin.register Artist do
     default_actions
   end
 
-  form(:html => { :multipart => true }) do |f|
+  form(:html => { :enctype => 'multipart/form-data' }) do |f|
     f.inputs :name => 'Basic Info' do
       f.input :name
       f.input :bio
