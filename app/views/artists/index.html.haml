@@ -26,4 +26,4 @@
           = image_tag(artist.image.thumb.url)
           .clear
           %span.box.block.name= artist.name
-          %p.byline= artist.instrument.name
+          %p.byline= artist.instrument.try(:name)
