@@ -7,7 +7,6 @@ Feature: Artists Landing
     Given I am not logged in
     And there are 3 live artists
 
-  @wip
   Scenario: Visitor sees artists landing page
     When I go to the artists page
     Then I should see the artist names
