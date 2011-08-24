@@ -1,0 +1,29 @@
+- @page_class = 'page-artists-landing'
+
+.floatleft#search-by-name.mr10
+  = form_for :blah do |f|
+    %fieldset
+      = f.label :name, 'Search Artists By ...', :class => 'box dark floatleft mr10 pr10 pl10'
+      .field.select.inline.mb5
+        = f.label :name, 'Name:'
+        .wrapper
+          = f.select :name, ['one','two','three']
+      = f.submit :submit
+.floatleft#search-by-instrument
+  = form_for :blah do |f|
+    %fieldset
+      .field.select.inline.mb5
+        = f.label :instrument, 'Instrument:'
+        .wrapper
+          = f.select :instrument, ['one','two','three']
+      = f.submit :submit
+.clear
+%ul.inline-list.grid-view
+  - @artists.each do |artist|
+    %li.container{ :class => cycle('first', '', '', '', '', 'last') }
+      = link_to(artist) do
+        .body
+          = image_tag(artist.image.thumb.url)
+          .clear
+          %span.box.block.name= artist.name
+          %p.byline= artist.instrument.name
