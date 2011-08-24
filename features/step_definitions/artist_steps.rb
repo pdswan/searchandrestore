@@ -11,3 +11,16 @@ end
 Then /^the artist should have 1 buy link$/ do
   the.artist.should have(1).buy_links
 end
+
+Then /^I should see the artist names$/ do
+  Artist.all.each do |artist|
+    Then %{I should see "#{artist.name}"}
+  end
+end
+
+Then /^I should see the artist image thumbs$/ do
+  Artist.all.each do |artist|
+    page.should have_css("img[src='#{artist.image.thumb.url}']")
+  end
+end
+

@@ -8,8 +8,12 @@ Factory.define :admin, :parent => :user do |u|
   u.roles [:admin]
 end
 
+Factory.sequence :instrument_name do |n|
+  ['Jazz Flute', 'Air Guitar', 'Bongos', 'Lute'][n] || "Instrument #{n}"
+end
+
 Factory.define :instrument do |i|
-  i.name 'Jazz Flute'
+  i.name { Factory.next(:instrument_name) }
 end
 
 Factory.define :venue do |v|
@@ -20,6 +24,12 @@ Factory.define :venue do |v|
 end
 
 Factory.define :artist do |a|
-  a.name 'Miles Davis'
+  a.name { "#{Faker::Name.first_name} #{Faker::Name.last_name}" }
   a.bio  Faker::Lorem.paragraphs.join("\n")
+  a.association :instrument
 end
+
+Factory.define :live_artist, :parent => :artist do |a|
+  a.state 'live'
+end
+
