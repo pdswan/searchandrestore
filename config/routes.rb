@@ -1,5 +1,7 @@
 Searchandrestore::Application.routes.draw do
 
+  resources :artists, :only => [:index, :show]
+
   ActiveAdmin.routes(self)
 
   root :to => "home#index"
@@ -9,8 +11,6 @@ Searchandrestore::Application.routes.draw do
   match 'components/:action' => 'components#action'
 
   match 'home/:action' => 'home#action'
-
-  resources :artists, :only => [:index, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
