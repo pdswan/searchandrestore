@@ -12,14 +12,15 @@ Feature: Artists Landing
     Then I should see the artist names
     And I should see the artist image thumbs
 
-  @wip
   Scenario: Visitor filters artists by name
-    Given there is an artist with:
+    Given there is a live artist with:
       | name | Phil Collins |
     When I go to the artists page
-    And I select "Phil Collins" from "Name"
-    Then I should see "Phil Collins"
-    But I should not see the other artist names
+    And show me the page
+    And I fill in "Name" with "Phil Collins"
+    And I press "search"
+    Then I should see the artist names for artists with:
+      | name | Phil Collins |
 
   @wip
   Scenario: Visitor filters artist by instrument

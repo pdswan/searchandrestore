@@ -1,22 +1,20 @@
 - @page_class = 'page-artists-landing'
 
-.floatleft#search-by-name.mr10
-  = form_for :blah do |f|
+.floatleft.mr10
+  = form_for @artists, :url => artists_path, :html => { :method => :get } do |f|
     %fieldset
-      = f.label :name, 'Search Artists By ...', :class => 'box dark floatleft mr10 pr10 pl10'
-      .field.select.inline.mb5
-        = f.label :name, 'Name:'
+      %p.box.dark.floatleft.mr10.pr10.pl10 Search Artists By ...
+      .field.text.inline.mb5  
+        = f.label :name_starts_with, 'Name: '
         .wrapper
-          = f.select :name, ['one','two','three']
-      = f.submit :submit
-.floatleft#search-by-instrument
-  = form_for :blah do |f|
-    %fieldset
+          = f.text_field :name_starts_with
+
       .field.select.inline.mb5
-        = f.label :instrument, 'Instrument:'
+        = f.label :instrument_id_equals, 'Instrument: '
         .wrapper
-          = f.select :instrument, ['one','two','three']
-      = f.submit :submit
+          = f.collection_select :instrument_id_equals, Instrument.all, :id, :name, :include_blank => 'any instrument'
+
+      = f.submit "search"
 .clear
 %ul.inline-list.grid-view
   - @artists.each do |artist|
