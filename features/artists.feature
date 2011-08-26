@@ -16,18 +16,17 @@ Feature: Artists Landing
     Given there is a live artist with:
       | name | Phil Collins |
     When I go to the artists page
-    And show me the page
     And I fill in "Name" with "Phil Collins"
     And I press "search"
-    Then I should see the artist names for artists with:
+    Then I should only see the artist names for artists with:
       | name | Phil Collins |
 
-  @wip
   Scenario: Visitor filters artist by instrument
     When I go to the artists page
-    And I select the first instrument from "Instrument"
-    Then I should see the artist names for the artists with primary instruments matching the first instrument
-    But I should not see the artist names for the artist with primary instruments not matching the first instrument
+    And I select the instrument name from "Instrument"
+    And I press "search"
+    Then I should only see the artist names for artists with:
+      | instrument_id | 3 |
 
   @wip
   Scenario: Visitor navigates to artist detail page
