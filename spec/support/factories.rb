@@ -9,7 +9,7 @@ Factory.define :admin, :parent => :user do |u|
 end
 
 Factory.sequence :instrument_name do |n|
-  ['Jazz Flute', 'Air Guitar', 'Bongos', 'Lute'][n] || "Instrument #{n}"
+  ['Jazz Flute', 'Air Guitar', 'Bongos', 'Lute'][n-1] || "Instrument #{n}"
 end
 
 Factory.define :instrument do |i|

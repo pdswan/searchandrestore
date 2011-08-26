@@ -12,8 +12,13 @@ Then /^the artist should have 1 buy link$/ do
   the.artist.should have(1).buy_links
 end
 
-Then /^I should see the artist names( for artists with:)?$/ do |with_attrs, *args|
-  attrs = args.first.try(:rows_hash)
+Then /^I should(?: only)? see the artist names( for artists with:)?$/ do |with_attrs, *args|
+  attrs = args.first.try(:rows_hash) || { }
+
+  attrs = attrs.inject({ }) do |attrs, (key, value)|
+    value = value.to_i if value =~ /^[0-9]+$/
+    attrs.merge(key => value)
+  end if attrs.present?
 
   Artist.all.each do |artist|
     if attrs.blank? || (attrs == artist.attributes.slice(*attrs.keys))
