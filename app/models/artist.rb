@@ -1,4 +1,6 @@
 class Artist < ActiveRecord::Base
+  default_scope order('name ASC')
+
   mount_uploader :image, ArtistImageUploader
 
   belongs_to :instrument

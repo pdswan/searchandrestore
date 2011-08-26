@@ -12,9 +12,15 @@ Then /^the artist should have 1 buy link$/ do
   the.artist.should have(1).buy_links
 end
 
-Then /^I should see the artist names$/ do
+Then /^I should see the artist names( for artists with:)?$/ do |with_attrs, *args|
+  attrs = args.first.try(:rows_hash)
+
   Artist.all.each do |artist|
-    Then %{I should see "#{artist.name}"}
+    if attrs.blank? || (attrs == artist.attributes.slice(*attrs.keys))
+      Then %{I should see "#{artist.name}"}
+    else
+      Then %{I should not see "#{artist.name}"}
+    end
   end
 end
 
