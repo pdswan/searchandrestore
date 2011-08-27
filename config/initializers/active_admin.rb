@@ -73,4 +73,11 @@ ActiveAdmin.setup do |config|
   #
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
+  
+  # Set this to the named route of your logout path
+  config.logout_link_path = :destroy_user_session_path
+
+  # This may need to be :delete, or :get depending on your version of Devise
+  # It's the method that gets used to render the link. Default :delete
+  config.logout_link_method = :get 
 end

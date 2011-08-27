@@ -34,6 +34,7 @@ ActiveAdmin.register Artist do
       f.input :instrument, :as => :select
     end
 
+    f.object.build_instrument
     f.inputs :name, :for => :instrument, :name => 'Add a new instrument'
 
     f.has_many :buy_links do |link|
@@ -70,7 +71,6 @@ Admin::ArtistsController.class_eval do
       # if we are creating a new artist or editing an existing artist
       # we want to build a new instrument for the embedded instrument form
       if ['new', 'edit'].include?(params[:action])
-        artist.build_instrument
         3.times { artist.buy_links.build }
       end
 
