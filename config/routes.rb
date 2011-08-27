@@ -2,9 +2,9 @@ Searchandrestore::Application.routes.draw do
 
   resources :artists, :only => [:index, :show]
 
-  ActiveAdmin.routes(self)
-
   root :to => "home#index"
+
+  ActiveAdmin.routes(self)
 
   devise_for :users, ActiveAdmin::Devise.config
 
