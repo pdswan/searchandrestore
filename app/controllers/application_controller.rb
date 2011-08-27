@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from CanCan::AccessDenied do |exception|
-    if anybody_signed_in?
+    if signed_in?
       redirect_to root_url, :alert => exception.message
     else
       redirect_to new_user_session_path, :alert => exception.message
