@@ -1,5 +1,8 @@
 .jazz {
   &.page-donate {
+    .masthead-top {
+       background-image: url(/images/titles/donate_title.png);
+    }
     #main-content {
       height: 543px;
       background: url(/images/rats.png) no-repeat top left;

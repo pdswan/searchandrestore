@@ -1,5 +1,8 @@
 .jazz {
   &.page-about {
+    .masthead-top {
+       background-image: url(/images/titles/about_title.png);
+    }
     #recent-press {
       .byline {
         margin-bottom: 2px;

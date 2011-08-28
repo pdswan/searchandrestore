@@ -199,15 +199,20 @@
   .jazz .media-with-info.large .info {
     padding-left: 172px; }
 
-.jazz.page-artists-landing #search-by-name {
+.jazz.section-artists .masthead-top {
+  background-image: url(/images/titles/artists_title.png);
+  background-position: 64px 5px; }
+.jazz.section-artists.page-index #search-by-name {
   width: 485px; }
-.jazz.page-artists-landing #search-by-instrument {
+.jazz.section-artists.page-index #search-by-instrument {
   width: 375px; }
-.jazz.page-artists-landing select {
+.jazz.section-artists.page-index select {
   width: 200px; }
-.jazz.page-artists-landing label {
+.jazz.section-artists.page-index label {
   margin-right: 3px; }
 
+.jazz.page-about .masthead-top {
+  background-image: url(/images/titles/about_title.png); }
 .jazz.page-about #recent-press .byline {
   margin-bottom: 2px; }
   .jazz.page-about #recent-press .byline .date {
@@ -220,9 +225,20 @@
 .jazz.page-shows form input[type='submit'] {
   margin: 200px 0 0 10px; }
 
+.jazz.page-donate .masthead-top {
+  background-image: url(/images/titles/donate_title.png); }
 .jazz.page-donate #main-content {
   height: 543px;
   background: url(/images/rats.png) no-repeat top left; }
+
+.jazz.page-resources .masthead-top {
+  background-image: url(/images/titles/resources_title.png); }
+
+.jazz.section-video .masthead-top {
+  background-image: url(/images/titles/video_title.png); }
+
+.jazz.section-venues .masthead-top {
+  background-image: url(/images/titles/venues_title.png); }
 
 .jazz .mt1 {
   margin-top: 1px !important; }
@@ -487,7 +503,7 @@ h4 {
   height: 126px;
   background-image: url(/images/titles/shows_title.png);
   background-repeat: no-repeat;
-  background-position: 78px 5px; }
+  background-position: 54px 5px; }
 
 .site-container {
   width: 960px;
@@ -536,15 +552,17 @@ p {
 
 body.page-shows .nav li#nav-shows a {
   background-color: #ff9900; }
-body.page-artists .nav li#nav-artists a, body.page-artists-landing .nav li#nav-artists a {
+body.section-artists .nav li#nav-artists a {
   background-color: #ff9900; }
-body.page-venues .nav li#nav-venues a {
+body.section-venues .nav li#nav-venues a {
   background-color: #ff9900; }
-body.page-video .nav li#nav-video a, body.page-video-landing .nav li#nav-video a {
+body.section-video .nav li#nav-video a {
   background-color: #ff9900; }
 body.page-about .nav li#nav-about a {
   background-color: #ff9900; }
 body.page-resources .nav li#nav-resources a {
+  background-color: #ff9900; }
+body.page-donate .nav li#nav-donate a {
   background-color: #ff9900; }
 
 .clear {
