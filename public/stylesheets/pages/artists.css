@@ -1,8 +1,11 @@
-.jazz.page-artists-landing #search-by-name {
+.jazz.section-artists .masthead-top {
+  background-image: url(/images/titles/artists_title.png);
+  background-position: 64px 5px; }
+.jazz.section-artists.page-index #search-by-name {
   width: 485px; }
-.jazz.page-artists-landing #search-by-instrument {
+.jazz.section-artists.page-index #search-by-instrument {
   width: 375px; }
-.jazz.page-artists-landing select {
+.jazz.section-artists.page-index select {
   width: 200px; }
-.jazz.page-artists-landing label {
+.jazz.section-artists.page-index label {
   margin-right: 3px; }

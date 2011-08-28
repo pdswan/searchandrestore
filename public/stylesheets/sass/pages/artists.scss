@@ -1,14 +1,21 @@
 .jazz {
-  &.page-artists-landing {
-    #search-by-name {width: 485px;}
-    #search-by-instrument {width: 375px;}
-    select {
-      width: 200px;
+  &.section-artists {
+    .masthead-top {
+       background-image: url(/images/titles/artists_title.png);
+       background-position: 64px 5px;
     }
-    label {
-      margin-right: 3px;
-    }
+    &.page-index {
+      #search-by-name {width: 485px;}
+      #search-by-instrument {width: 375px;}
 
+      select {
+        width: 200px;
+      }
+      label {
+        margin-right: 3px;
+      }
+
+    }
   }
 }
 

@@ -10,6 +10,9 @@ $ORANGE: #ff9900;
 @import "pages/about";
 @import "pages/shows";
 @import "pages/donate";
+@import "pages/resources";
+@import "pages/video";
+@import "pages/venues";
 
 .jazz {
   @include margins();
@@ -120,19 +123,17 @@ body {
       background-color: $ORANGE;
     }
   }
-  &.page-artists,
-  &.page-artists-landing {
+  &.section-artists {
     .nav li#nav-artists a {
       background-color: $ORANGE;
     }
   }
-  &.page-venues {
+  &.section-venues {
     .nav li#nav-venues a {
       background-color: $ORANGE;
     }
   }
-  &.page-video,
-  &.page-video-landing {
+  &.section-video {
     .nav li#nav-video a {
       background-color: $ORANGE;
     }
@@ -144,6 +145,11 @@ body {
   }
   &.page-resources {
     .nav li#nav-resources a {
+      background-color: $ORANGE;
+    }
+  }
+  &.page-donate {
+    .nav li#nav-donate a {
       background-color: $ORANGE;
     }
   }
