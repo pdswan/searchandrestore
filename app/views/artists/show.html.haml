@@ -1,0 +1,93 @@
+- @page_class = 'layout-1 page-artists'
+
+.col-1
+  #info.section
+    .container.skin-dark
+      .body
+        .media-with-info
+          .media
+            = image_tag(@artist.image.url(:thumb))
+          .info
+            %h3.name= @artist.name
+            %p.instrument= @artist.instrument.name
+            #bio= simple_format(sanitize(@artist.bio))
+        %a.box{:href => '#'} Read More
+        %a.box{:href => '#'} Visit artists website
+  #bio.section
+    .container.skin-dark
+      .body
+        %h3 Shop for tunes by this artist:
+        %ul.inline-list
+          %li
+            %a.box{:href => '#'} iTunes
+          %li
+            %a.box{:href => '#'} Bandcamp
+          %li.last
+            %a.box{:href => '#'} Amazon 
+  #shows.section
+    .container.skin-dark
+      .body
+        %h3 Upcoming shows by this artist:
+        %ul
+          %li Blah
+          %li Blah
+          %li Blah
+        %a.box{:href => '#'} See all shows by this artist
+  #known_associates.section.snug
+    .container.skin-dark
+      .body
+        %h3 Known associates:
+        %ul.inline-list
+          %li
+            %a.box{:href => '#'} Mikkel Ploug
+          %li
+            %a.box{:href => '#'} Simon Jermyn
+          %li
+            %a.box{:href => '#'} Tommy Crane 
+          %li
+            %a.box{:href => '#'} Eivind Opsvik
+          %li
+            %a.box{:href => '#'} Oscar Norieka 
+          %li
+            %a.box{:href => '#'} Simon Jermyn
+          %li
+            %a.box{:href => '#'} Tommy Crane 
+          %li
+            %a.box{:href => '#'} Eivind Opsvik
+          %li
+            %a.box{:href => '#'} Mikkel Ploug
+          %li
+            %a.box{:href => '#'} Mikkel Ploug
+          %li.last
+            %a.box{:href => '#'} Mikkel Ploug
+.col-2
+  .section
+    .container
+      .body
+        <iframe src="http://player.vimeo.com/video/14015287?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="621" height="350" frameborder="0" id="video-player"></iframe>
+        %p
+          %a.box.dark{:href => '#'} Transatlantic Quartet
+          03/31/2011 Tea Lounge, Brooklyn
+        %h3 Featured Artists
+        %ul.inline-list
+          %li
+            %a.box{:href => '#'} Pete Robbins(alto saxophone)
+          %li
+            %a.box{:href => '#'} Mikkel Plouge(guitar)
+          %li
+            %a.box{:href => '#'} Simon Jermyn(bass)
+          %li.last
+            %a.box{:href => '#'} Kevin Brow(drums)
+
+  .section.pl10.pt5
+    %h3 More videos by this artist:
+  .section
+    %ul.inline-list.grid-view
+      - 4.times do |t|
+        %li.container{:class => cycle('first','','','last')}
+          %a.block{:href => '#', 'data-video' => 'http://player.vimeo.com/video/10467928?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'}
+            .body
+              = image_tag('http://dummyimage.com/140x77/000/fff')
+              .clear
+              %span.box.block.name{:href => '#'} Pete Robbins
+              %p.instrument Alto Saxophone
