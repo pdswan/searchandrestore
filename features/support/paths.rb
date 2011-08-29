@@ -14,6 +14,9 @@ module NavigationHelpers
     when /the login page/
       new_user_session_path
 
+    when /the detail page for the artist/
+      artist_path(the.artist)
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
