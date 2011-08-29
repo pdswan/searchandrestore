@@ -28,7 +28,6 @@ Feature: Artists Landing
     Then I should only see the artist names for artists with:
       | instrument_id | 3 |
 
-  @wip
   Scenario: Visitor navigates to artist detail page
     When I go to the artists page
     And I click on an artist block

@@ -35,3 +35,7 @@ Then /^I should see the artist image thumbs$/ do
   end
 end
 
+Then /^I click on an artist block$/ do
+  Then %{I follow "#{the.artist.name}"}
+end
+
