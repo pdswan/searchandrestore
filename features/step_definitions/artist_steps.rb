@@ -39,3 +39,15 @@ Then /^I click on an artist block$/ do
   Then %{I follow "#{the.artist.name}"}
 end
 
+Then /^I should see identifying information for the artist$/ do
+  within "#info" do
+    Then %{I should see "#{the.artist.name}"}
+    Then %{I should see "#{the.artist.instrument.name}"}
+    
+    the.artist.bio.split("\n").each do |paragraph|
+      Then %{I should see "#{paragraph}"}
+    end
+
+    page.should have_css("img[src='#{the.artist.image.url(:thumb)}']")
+  end
+end
