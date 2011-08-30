@@ -9,3 +9,8 @@
   width: 200px; }
 .jazz.section-artists.page-index label {
   margin-right: 3px; }
+.jazz.section-artists.page-show #shop ul.inline-list li {
+  margin-right: 10px; }
+  .jazz.section-artists.page-show #shop ul.inline-list li a {
+    display: block;
+    width: 69px; }
