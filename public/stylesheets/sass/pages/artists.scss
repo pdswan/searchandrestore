@@ -17,6 +17,37 @@
 
     }
     &.page-show {
+      #info {
+        .body {
+          position: relative;
+          padding-bottom: 24px;
+        }
+        p.instrument {
+          margin-bottom: 5px;
+        }
+        a.box {
+          width: 125px;
+          position: absolute;
+          bottom: 10px;
+          left: 10px; 
+          &.visit-website {
+            left: 155px;
+          }
+        }
+        .media-with-info {
+          .media {
+            padding-right: 10px;
+            padding-bottom: 8px;
+          }
+          .info {
+            padding-left: 0px;    
+          }
+        }
+        #bio_clone,
+        #bio p {
+          color: #ccc;
+        }
+      }
       #shop {
         ul.inline-list {
           li {

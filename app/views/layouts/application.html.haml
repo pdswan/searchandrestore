@@ -46,8 +46,18 @@
     .site-container#main-content
       = yield
 
-    = javascript_include_tag ['jquery-5.1.min.js', 'jquery-ui-1.8.13.custom.min.js']
+    = javascript_include_tag ['jquery-5.1.min.js', 'jquery-ui-1.8.13.custom.min.js', 'jquery.cmtextconstrain.js']
 
+
+    - if @truncate_bio
+      :javascript
+        $('#bio').cmtextconstrain({
+          event: 'click',
+          restrict: {type: 'chars', limit: 170}, // type can be 'words' or 'chars'
+          showControl: {string: 'Read More', title: 'Read More', addclass: 'box'}, // element shown to expose
+          hideControl: {string: 'Read Less', title: 'Read Less', addclass: 'box'}, // element shown to constrain
+          trailingString: '...' // string to show at end of truncated text
+        });
       
 
     - if @uses_gmap
