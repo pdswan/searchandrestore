@@ -28,10 +28,13 @@
     .container.skin-dark
       .body
         %h3 Upcoming shows by this artist:
-        %ul
-          %li Blah
-          %li Blah
-          %li Blah
+        %ul.header-meta-list
+          - 3.times do |t|
+            %li 
+              %h4 Trans-Atlantic Quartet
+              %p.byline
+                %span.date 03/31/2011
+                %span.author Bowery Poetry Club
         %a.box{:href => '#'} See all shows by this artist
   #known_associates.section.snug
     .container.skin-dark
