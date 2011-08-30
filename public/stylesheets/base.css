@@ -230,6 +230,8 @@
 .jazz.section-artists.page-show #info #bio_clone,
 .jazz.section-artists.page-show #info #bio p {
   color: #ccc; }
+.jazz.section-artists.page-show #info #bio {
+  display: none; }
 .jazz.section-artists.page-show #shop ul.inline-list li {
   margin-right: 10px; }
   .jazz.section-artists.page-show #shop ul.inline-list li a {
