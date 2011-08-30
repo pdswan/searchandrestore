@@ -1,4 +1,5 @@
 - @page_class = 'layout-1 section-artists page-show'
+- @truncate_bio = true
 
 .col-1
   #info.section
@@ -11,8 +12,8 @@
             %h3.name= @artist.name
             %p.instrument= @artist.instrument.name
             #bio= simple_format(sanitize(@artist.bio))
-        %a.box{:href => '#'} Read More
-        %a.box{:href => '#'} Visit artists website
+        - if @artist.website
+          = link_to('Visit artists website', @artist.website, {:class => 'box visit-website', :target => '_blank'})
   #shop.section
     .container.skin-dark
       .body

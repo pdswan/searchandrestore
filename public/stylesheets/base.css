@@ -210,6 +210,26 @@
   width: 200px; }
 .jazz.section-artists.page-index label {
   margin-right: 3px; }
+.jazz.section-artists.page-show #info .body {
+  position: relative;
+  padding-bottom: 24px; }
+.jazz.section-artists.page-show #info p.instrument {
+  margin-bottom: 5px; }
+.jazz.section-artists.page-show #info a.box {
+  width: 125px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px; }
+  .jazz.section-artists.page-show #info a.box.visit-website {
+    left: 155px; }
+.jazz.section-artists.page-show #info .media-with-info .media {
+  padding-right: 10px;
+  padding-bottom: 8px; }
+.jazz.section-artists.page-show #info .media-with-info .info {
+  padding-left: 0px; }
+.jazz.section-artists.page-show #info #bio_clone,
+.jazz.section-artists.page-show #info #bio p {
+  color: #ccc; }
 .jazz.section-artists.page-show #shop ul.inline-list li {
   margin-right: 10px; }
   .jazz.section-artists.page-show #shop ul.inline-list li a {
