@@ -50,7 +50,9 @@ ActiveAdmin.register Show do
     end
 
     f.has_many :performances do |p|
-      p.inputs :artist, :name => 'Choose an existing artist'
+      p.inputs "Choose an existing artist" do
+        p.input :artist, :name => 'Choose an existing artist', :input_html => {:'data-placeholder' => 'Choose an artist...', :class => 'chzn-select'}
+      end
 
       # FIXME
       # shouldn't have to build the records here
