@@ -31,7 +31,7 @@ ActiveAdmin.register Artist do
     end
 
     f.inputs :name => 'Choose an existing instrument' do
-      f.input :instrument, :as => :select
+      f.input :instrument, :as => :select, :input_html => {:'data-placeholder' => 'Choose an instrument...', :class => 'chzn-select'}
     end
 
     f.object.build_instrument
