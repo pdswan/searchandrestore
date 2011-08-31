@@ -51,3 +51,9 @@ Then /^I should see identifying information for the artist$/ do
     page.should have_css("img[src='#{the.artist.image.url(:thumb)}']")
   end
 end
+
+Then /^I should see links to purchase the artist's music$/ do
+  the.artist.buy_links.each do |link|
+    Then %{I should see a link to "#{link.url}" with the text "#{link.title}"}
+  end
+end
