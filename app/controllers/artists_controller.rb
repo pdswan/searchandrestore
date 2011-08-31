@@ -4,6 +4,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    @has_video = true
     @artist = Artist.find(params[:id], :include => :instrument)
   end
 end
