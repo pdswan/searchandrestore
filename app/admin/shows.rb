@@ -42,7 +42,7 @@ ActiveAdmin.register Show do
 
   form do |f|
     f.inputs do
-      f.input :venue
+      f.input :venue, :input_html => {:'data-placeholder' => 'Select a venue...', :class => 'chzn-select'}
       f.input :group_name
       f.input :when
       f.input :cover_charge
