@@ -9,6 +9,13 @@ class Artist < ActiveRecord::Base
   has_many :buy_links, :as => :linkable
   accepts_nested_attributes_for :buy_links, :reject_if => proc { |attributes| attributes['url'].blank? }
 
+  has_many :performances
+  has_many :shows, :through => :performances
+
+  def upcoming_shows
+    shows.upcoming
+  end
+
   validates_presence_of :name
 
   state_machine :state, :initial => :in_progress do

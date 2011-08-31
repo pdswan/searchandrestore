@@ -14,29 +14,32 @@
             #bio= simple_format(sanitize(@artist.bio))
         - if @artist.website
           = link_to('Visit artists website', @artist.website, {:class => 'box visit-website', :target => '_blank'})
-  #shop.section
-    .container.skin-dark
-      .body
-        %h3 Shop for tunes by this artist:
-        %ul.inline-list
-          %li
-            %a.box{:href => '#'} iTunes
-          %li
-            %a.box{:href => '#'} Bandcamp
-          %li.last
-            %a.box{:href => '#'} Amazon 
-  #shows.section
-    .container.skin-dark
-      .body
-        %h3 Upcoming shows by this artist:
-        %ul.header-meta-list
-          - 3.times do |t|
-            %li 
-              %h4 Trans-Atlantic Quartet
-              %p.byline
-                %span.date 03/31/2011
-                %span.author Bowery Poetry Club
-        %a.box{:href => '#'} See all shows by this artist
+
+  - if @artist.buy_links.present?
+    #shop.section
+      .container.skin-dark
+        .body
+          %h3 Shop for tunes by this artist:
+          %ul.inline-list
+            - @artist.buy_links.each do |link|
+              %li= link_to(link.title, link.url, :class => 'box')
+
+  - if @artist.upcoming_shows.present?
+    #shows.section
+      .container.skin-dark
+        .body
+          %h3 Upcoming shows by this artist:
+          %ul.header-meta-list
+            - @artist.upcoming_shows.each do |show|
+              %li
+                %h4= link_to(show.group_name, show)
+                %p.byline
+                  %span.date= show.when.strftime("%m/%d/%Y")
+                  %span.venue= link_to(show.venue.name, show.venue)
+          -# TODO
+          -# hook this shit up
+          %a.box{:href => '#'} See all shows by this artist
+
   #known_associates.section.snug
     .container.skin-dark
       .body

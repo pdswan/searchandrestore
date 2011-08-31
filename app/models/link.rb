@@ -5,4 +5,8 @@ class Link < ActiveRecord::Base
   validates :url, :presence => true,
                   :format   => URI.regexp
 
+  def title
+    read_attribute(:title) || url
+  end
+
 end

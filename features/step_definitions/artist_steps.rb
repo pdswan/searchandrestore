@@ -53,7 +53,18 @@ Then /^I should see identifying information for the artist$/ do
 end
 
 Then /^I should see links to purchase the artist's music$/ do
+  raise "There are no buy links" unless the.artist.buy_links.present?
+
   the.artist.buy_links.each do |link|
     Then %{I should see a link to "#{link.url}" with the text "#{link.title}"}
+  end
+end
+
+Then /^I should see the artist's upcoming shows$/ do
+  raise "There are no upcoming shows" unless the.artist.upcoming_shows.present?
+
+  the.artist.upcoming_shows.each do |show|
+    Then %{I should see a link to "#{url_for(show)}" with the text "#{show.group_name}"}
+    Then %{I should see a link to "#{url_for(show.venue)}" with the text "#{show.venue.name}"}
   end
 end

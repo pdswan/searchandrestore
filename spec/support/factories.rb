@@ -34,14 +34,30 @@ Factory.define :live_artist, :parent => :artist do |a|
 end
 
 Factory.define :link do |l|
+  l.url "http://google.com"
+end
+
+Factory.define :buy_link do |l|
   l.url "http://www.itunes.com"
 end
 
-Factory.define :buy_link, :parent => :link do
+Factory.define :show do |s|
+  s.association :venue
+  s.group_name { Faker::Lorem.words(2).push("Trio").join(' ') }
+  s.when       Time.zone.now
+end
 
+Factory.define :performance do |p|
+  p.association :artist
+  p.association :instrument
+  p.association :show
 end
 
 Factory.define :live_artist_with_buy_links, :parent => :live_artist do |a|
   a.after_create { |artist| Factory(:buy_link, :linkable => artist) }
+end
+
+Factory.define :live_artist_with_upcoming_shows, :parent => :live_artist do |a|
+  a.after_create { |artist| Factory(:performance, :artist => artist) }
 end
 

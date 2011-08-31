@@ -9,8 +9,13 @@ Then /^I ommit "([^"]+)"$/ do |field|
   Then %{I fill in "#{field}" with ""}
 end
 
-Then /^I should see a link to "([^"]+)"(?: with the text "([^"]+)")?$/ do |url, text|
+Then /^I should see a link to "([^"]+)"(?: with the text "([^"]*)")?$/ do |url, text|
   options = { }
   options.merge!(:text => text) if text.present?
-  page.should have_css("a[href='#{url}']", options)
+
+  if (uri = URI.parse(url)).host =~ /example\.com/
+    page.should have_css("a[href$='#{uri.path}']", options)
+  else
+    page.should have_css("a[href='#{url}']", options)
+  end
 end
