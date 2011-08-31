@@ -5,17 +5,16 @@ Feature: Artist Show
 
   Background:
     Given I am not logged in
-    And there is a live artist
 
   Scenario: User sees artist information
+    Given there is a live artist
     When I am on the detail page for the artist
     Then I should see identifying information for the artist
 
-  @wip
   Scenario: User sees links to purchase artist's music
-    Given the artist has buy links
+    Given there is a live artist with buy links
     When I go to the detail page for the artist
-    Then I should links to purchase the artist's music
+    Then I should see links to purchase the artist's music
 
   @wip
   Scenario: User sees links to the artist's upcoming shows

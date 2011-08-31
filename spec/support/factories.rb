@@ -33,3 +33,15 @@ Factory.define :live_artist, :parent => :artist do |a|
   a.state 'live'
 end
 
+Factory.define :link do |l|
+  l.url "http://www.itunes.com"
+end
+
+Factory.define :buy_link, :parent => :link do
+
+end
+
+Factory.define :live_artist_with_buy_links, :parent => :live_artist do |a|
+  a.after_create { |artist| Factory(:buy_link, :linkable => artist) }
+end
+
