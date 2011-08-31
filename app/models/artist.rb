@@ -11,10 +11,9 @@ class Artist < ActiveRecord::Base
 
   has_many :performances
   has_many :shows, :through => :performances
-
-  def upcoming_shows
-    shows.upcoming
-  end
+  has_many :upcoming_shows, :through => :performances,
+                            :source  => :show,
+                            :conditions => ["#{Show.quoted_table_name}.when > ?", Time.zone.now]
 
   validates_presence_of :name
 
