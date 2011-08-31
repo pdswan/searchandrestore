@@ -331,4 +331,8 @@
   background: url('/images/chosen-sprite.png') no-repeat -38px -20px, linear-gradient(top, #ffffff 85%,#eeeeee 99%);
   padding: 4px 5px 4px 20px;
 }
+
+.chzn-select {
+  width: 250px !important;
+}
 /* @end */
