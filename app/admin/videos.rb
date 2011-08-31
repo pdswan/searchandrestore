@@ -26,7 +26,7 @@ ActiveAdmin.register Video do
 
   form do |f|
     f.inputs do
-      f.input :show, :hint => "<a href='/admin/shows/new'>Add the show</a> where this video took place to associate it with a venue, artists, and instruments".html_safe
+      f.input :show, :hint => "<a href='/admin/shows/new'>Add the show</a> where this video took place to associate it with a venue, artists, and instruments".html_safe, :input_html => {:'data-placeholder' => 'Select a show...', :class => 'chzn-select', :style => 'width: 500px !important;'}
       f.input :title, :hint => 'If left blank, this will be automatically populated from the title of the vimeo video. It can be edited afterwards.'
       f.input :url, :hint => 'Paste the vimeo link here; e.g. http://vimeo.com/25519509' 
     end
