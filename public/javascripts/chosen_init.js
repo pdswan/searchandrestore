@@ -1,0 +1,4 @@
+$(function() {
+  $(".chzn-select").chosen();
+});
+
