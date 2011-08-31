@@ -51,7 +51,7 @@ ActiveAdmin.register Show do
 
     f.has_many :performances do |p|
       p.inputs "Choose an existing artist" do
-        p.input :artist, :name => 'Choose an existing artist', :input_html => {:'data-placeholder' => 'Choose an artist...', :class => 'chzn-select'}
+        p.input :artist, :name => 'artist', :input_html => {:'data-placeholder' => 'Choose an artist...', :class => 'chzn-select'}
       end
 
       # FIXME
@@ -61,7 +61,9 @@ ActiveAdmin.register Show do
         p.inputs :name, :for => :artist, :name => 'Add a new artist'
       end
 
-      last = p.inputs :instrument, :name => 'Choose an existing instrument'
+      last = p.inputs 'Choose an existing instrument' do
+        p.input :instrument, :input_html => {:'data-placeholder' => 'Choose an instrument...', :class => 'chzn-select'}
+      end
 
       if p.object.new_record?
         p.object.build_instrument
