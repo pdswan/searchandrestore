@@ -21,6 +21,8 @@ class Show < ActiveRecord::Base
             :when,
             :presence => true
 
+  scope :upcoming, where("#{quoted_table_name}.when > ?", Time.zone.now)
+
   def when
     read_attribute(:when) || Time.zone.now
   end

@@ -16,9 +16,8 @@ Feature: Artist Show
     When I go to the detail page for the artist
     Then I should see links to purchase the artist's music
 
-  @wip
   Scenario: User sees links to the artist's upcoming shows
-    Given the artist has upcoming shows
+    Given there is a live artist with upcoming shows
     When I go to the detail page for the artist
     Then I should see the artist's upcoming shows
 
