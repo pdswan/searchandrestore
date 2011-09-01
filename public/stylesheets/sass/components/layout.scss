@@ -26,6 +26,14 @@
     .col-2 {
       margin-right: 10px;
     }
+    .col-1-2 {
+      width: 630px;
+      float: left;
+      margin-right: 10px;
+      .col-2 {
+        margin-right: 0px;
+      }
+    }
   }
   &.layout-3 {
     .col-1,

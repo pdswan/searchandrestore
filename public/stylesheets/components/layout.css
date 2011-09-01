@@ -17,6 +17,12 @@
 .jazz.layout-2 .col-1,
 .jazz.layout-2 .col-2 {
   margin-right: 10px; }
+.jazz.layout-2 .col-1-2 {
+  width: 630px;
+  float: left;
+  margin-right: 10px; }
+  .jazz.layout-2 .col-1-2 .col-2 {
+    margin-right: 0px; }
 .jazz.layout-3 .col-1,
 .jazz.layout-3 .col-2,
 .jazz.layout-3 .col-3,
