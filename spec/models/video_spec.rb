@@ -14,4 +14,32 @@ describe Video do
       end
     end
   end
+
+  describe ".for_artist" do
+    let(:not_an_artist) { double('not an artist') }
+    let(:artist)        { Factory(:live_artist_with_upcoming_shows) }
+    let(:video)         { Factory(:video, :show => artist.upcoming_shows.first) }
+
+    it "raises an ArgumentError if the argument is not a kind of Artist" do
+      expect { Video.for_artist(not_an_artist) }.
+        to raise_error(ArgumentError)
+    end
+
+    context "the artist performed in the show to which the video belongs" do
+      let(:video) { Factory(:video, :show => artist.upcoming_shows.first) }
+
+      it "should include the video" do
+        Video.for_artist(artist).should include(video)
+      end
+    end
+
+    context "the artist has not performed in the show to which the video belongs" do
+      let(:video) { Factory(:video) }
+
+      it "should not include the video" do
+        Video.for_artist(artist).should_not include(video)
+      end
+    end
+
+  end
 end

@@ -5,6 +5,12 @@ class Video < ActiveRecord::Base
 
   has_many :performances, :through => :show
 
+  def self.for_artist(artist)
+    raise ArgumentError.new("artist must be a kind of Artist") unless artist.kind_of?(Artist)
+    joins(:performances).
+      where(:performances => { :artist_id => artist.id })
+  end
+
   mount_uploader :thumbnail, VideoThumbnailUploader
 
   def self.oembed_options
