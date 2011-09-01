@@ -1,5 +1,3 @@
-.jazz.page-home p {
-  color: #ccc; }
 .jazz.page-home h3 {
   margin-bottom: 5px; }
 .jazz.page-home .masthead-top {
@@ -16,3 +14,7 @@
   width: 385px;
   margin-bottom: 60px;
   margin-top: 20px; }
+.jazz.page-home #featured-video .body {
+  padding: 5px; }
+  .jazz.page-home #featured-video .body .box.dark {
+    width: 290px; }
