@@ -31,10 +31,13 @@
   .col-2
     %h3
       = image_tag('/images/home/featured_video.png', :alt => 'Featured Video')
-    .section
+    .section#featured-video
       .container
         .body
-          Featured Video
+          = image_tag('/images/fpo/video_small.png')
+          %a.box.dark{:href => '#'} Whiteout With Thurston Moore
+          %p.snug 03/31/2011, Cornelia St. Cafe
+          %a.box{:href => '#'} See more videos...
   .clear
 
 .col-3

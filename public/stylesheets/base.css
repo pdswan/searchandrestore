@@ -205,8 +205,6 @@
   .jazz .media-with-info.large .info {
     padding-left: 172px; }
 
-.jazz.page-home p {
-  color: #ccc; }
 .jazz.page-home h3 {
   margin-bottom: 5px; }
 .jazz.page-home .masthead-top {
@@ -223,6 +221,10 @@
   width: 385px;
   margin-bottom: 60px;
   margin-top: 20px; }
+.jazz.page-home #featured-video .body {
+  padding: 5px; }
+  .jazz.page-home #featured-video .body .box.dark {
+    width: 290px; }
 
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);
@@ -586,6 +588,9 @@ h4 {
 p {
   margin-top: 0px;
   color: #666; }
+
+.skin-dark p {
+  color: #fff; }
 
 .nav li {
   float: left; }
