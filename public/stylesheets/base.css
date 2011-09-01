@@ -61,6 +61,16 @@
         width: 250px; }
   .jazz fieldset.searchy .calendar-submit {
     margin: 211px 0 0 10px; }
+.jazz .searchy-inline #search-by-name {
+  width: 485px; }
+.jazz .searchy-inline #search-by-instrument {
+  width: 375px; }
+.jazz .searchy-inline select {
+  width: 200px; }
+.jazz .searchy-inline .field.text input {
+  height: 15px; }
+.jazz .searchy-inline label {
+  margin-right: 3px; }
 
 .jazz a {
   cursor: pointer;
@@ -258,16 +268,6 @@
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);
   background-position: 64px 5px; }
-.jazz.section-artists.page-index #search-by-name {
-  width: 485px; }
-.jazz.section-artists.page-index #search-by-instrument {
-  width: 375px; }
-.jazz.section-artists.page-index select {
-  width: 200px; }
-.jazz.section-artists.page-index .field.text input {
-  height: 15px; }
-.jazz.section-artists.page-index label {
-  margin-right: 3px; }
 .jazz.section-artists.page-show #info .body {
   position: relative;
   padding-bottom: 26px; }
