@@ -264,6 +264,8 @@
   width: 375px; }
 .jazz.section-artists.page-index select {
   width: 200px; }
+.jazz.section-artists.page-index .field.text input {
+  height: 15px; }
 .jazz.section-artists.page-index label {
   margin-right: 3px; }
 .jazz.section-artists.page-show #info .body {

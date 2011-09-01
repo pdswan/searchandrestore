@@ -11,6 +11,11 @@
       select {
         width: 200px;
       }
+      .field.text {
+        input {
+          height: 15px;
+        } 
+      }
       label {
         margin-right: 3px;
       }
