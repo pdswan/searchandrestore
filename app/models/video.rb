@@ -4,6 +4,9 @@ class Video < ActiveRecord::Base
   belongs_to :show
 
   has_many :performances, :through => :show
+  has_many :related_videos, :through => :show,
+                            :source  => :videos,
+                            :conditions => 'videos.id <> #{id}'
 
   def self.for_artist(artist)
     raise ArgumentError.new("artist must be a kind of Artist") unless artist.kind_of?(Artist)

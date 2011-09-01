@@ -76,3 +76,8 @@ Then /^I should see the names of the artist's known associates with links to the
     Then %{I should see a link to "#{url_for(user)}" with the text "#{user.name}"}
   end
 end
+
+Then /^I should see the latest video for the artist in the main video player$/ do
+  Then %{show me the page}
+  embed_code = the.artist.latest_video
+end
