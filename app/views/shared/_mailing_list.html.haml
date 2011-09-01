@@ -1,0 +1,20 @@
+.section.snug#mailing-list
+  .container.skin-dark
+    .body
+      %h3 Join our mailing list.
+      - form_for :blah do |f|
+        %fieldset
+          .field.text
+            = f.label :name, 'Name:'
+            .wrapper
+              = f.text_field :name
+          .field.text
+            = f.label :email, 'Email:'
+            .wrapper
+              = f.text_field :email
+          .field.radio
+            = f.radio_button(:subscribe, 'yes')
+            = f.label(:subscribe_yes, 'Subscribe')
+          .field.radio
+            = f.radio_button(:subscribe, 'no')
+            = f.label(:subscribe_no, 'Unsubscribe')
