@@ -65,3 +65,6 @@ Factory.define :live_artist_with_known_associates, :parent => :live_artist_with_
   a.after_create { |artist| Factory(:performance, :show => artist.upcoming_shows.first) }
 end
 
+Factory.define :video do |v|
+  v.association :show
+end
