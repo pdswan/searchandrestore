@@ -48,7 +48,7 @@
           %ul.inline-list
             - @artist.associated_artists.each do |artist|
               %li
-                = link_to(artist.name, artist)
+                = link_to(artist.name, artist, :class => 'box')
 
 .col-2
   .section
