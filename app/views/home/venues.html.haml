@@ -2,7 +2,15 @@
 
 .col-1
   .section
-    .box.dark Search Venues
+    - form_for :blah do |f|
+      %fieldset.searchy
+        = f.label(:venue, 'Search Venues:', :class => 'box dark')
+        .field.select
+          .input
+            = f.select :venue, ['One','Two','Three']
+          .submit
+            = f.submit :search
+          .clear
   .section.snug
     #map_canvas{:style => "width: 310px; height: 387px"}
   .section.snug
