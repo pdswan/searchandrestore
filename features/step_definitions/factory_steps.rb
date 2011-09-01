@@ -13,5 +13,5 @@ def factory_name(str)
 end
 
 def factoryize(str)
-  str.gsub(/\s+/, '_').downcase
+  str.gsub(/\s+/, '_').downcase rescue ''
 end
