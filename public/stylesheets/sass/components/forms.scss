@@ -94,4 +94,21 @@
       margin: 211px 0 0 10px;
     }
   }
+
+  .searchy-inline { 
+    #search-by-name {width: 485px;}
+    #search-by-instrument {width: 375px;}
+
+    select {
+      width: 200px;
+    }
+    .field.text {
+      input {
+        height: 15px;
+      } 
+    }
+    label {
+      margin-right: 3px;
+    }
+  }
 }
