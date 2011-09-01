@@ -15,6 +15,16 @@ class Artist < ActiveRecord::Base
                             :source  => :show,
                             :conditions => ["#{Show.quoted_table_name}.when > ?", Time.zone.now]
 
+  def associated_artists
+    show_ids = shows.unscoped.select("shows.id").collect(&:id)
+
+    self.class.
+      with_state(:live).
+      joins(:shows).
+      where(["artists.id <> ?", id]).
+      where(:shows => { :id => show_ids })
+  end
+
   validates_presence_of :name
 
   state_machine :state, :initial => :in_progress do
