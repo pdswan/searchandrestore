@@ -26,7 +26,9 @@ Feature: Artist Show
     When I go to the detail page for the artist
     Then I should see the names of the artist's known associates with links to their pages
 
-  @pending
+  @wip
   Scenario: Users sees videos featuring the artist
-    Given there are videos featuring the artist
+    Given there is a live artist with videos
+    When I go to the detail page for the artist
+    Then I should see the latest video for the artist in the main video player
     

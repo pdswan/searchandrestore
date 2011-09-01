@@ -67,4 +67,9 @@ end
 
 Factory.define :video do |v|
   v.association :show
+  v.embed_code  "<iframe src=\"http://player.vimeo.com/video/27022490\" width=\"651\" height=\"366\" frameborder=\"0\"></iframe>"
+end
+
+Factory.define :live_artist_with_videos, :parent => :live_artist_with_upcoming_shows do |a|
+  a.after_create { |artist| Factory(:video, :show => artist.upcoming_shows.first) }
 end
