@@ -21,7 +21,6 @@ Feature: Artist Show
     When I go to the detail page for the artist
     Then I should see the artist's upcoming shows
 
-  @wip
   Scenario: User sees artist's known associates
     Given there is a live artist with known associates
     When I go to the detail page for the artist
