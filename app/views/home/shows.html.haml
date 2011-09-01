@@ -1,19 +1,27 @@
 - @page_class = 'layout-1 page-shows'
 .col-1
-  %a.box.dark{:href => '#'} Search Shows By...
-  - form_for :blah do |f|
-    %fieldset
-      .field.select
-        = f.label :artist
-        = f.select :artist, ['One','Two','Three']
-      .field.select
-        = f.label :venue
-        = f.select :venue, ['One','Two','Three']
-      .field.calendar.floatleft
-        #datepicker
-      .floatleft
-        = f.submit :search
-      .clear
+  .section
+    %a.box.dark{:href => '#'} Search Shows By...
+    - form_for :blah do |f|
+      %fieldset.searchy
+        .field.select
+          = f.label :artist, 'Artist:'
+          .input
+            = f.select :artist, ['One','Two','Three']
+          .submit
+            = f.submit :search
+        .field.select
+          = f.label :venue, 'Venue:'
+          .input
+            = f.select :venue, ['One','Two','Three']
+          .submit
+            = f.submit :search
+        .field.calendar.floatleft
+          = f.label :date, 'Date:'
+          #datepicker
+        .floatleft.calendar-submit
+          = f.submit :search
+        .clear
 
   %h3.box-header See Tonight's Top Picks
   .container.skin-dark

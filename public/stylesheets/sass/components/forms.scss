@@ -68,4 +68,30 @@
       }
     }
   }
+  fieldset.searchy {
+    margin-bottom: 5px;
+    .field {
+      margin-bottom: 3px;
+      label {
+        display: block;
+        float: none;
+        font-weight: normal;
+        padding-left: 5px;
+      }
+      &.select {
+       .input,
+       .submit {
+         float: left;
+       } 
+       .input {
+         margin-right: 3px;
+         width: 250px;
+         select {width: 250px;}
+       }
+      }
+    }
+    .calendar-submit {
+      margin: 211px 0 0 10px;
+    }
+  }
 }

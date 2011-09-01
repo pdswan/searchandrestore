@@ -2,6 +2,24 @@
 - @truncate_bio = true
 
 .col-1
+
+  .section
+    %a.box.dark{:href => 'javascript:void(0);'} Search Artists By...
+    - form_for :blah do |f|
+      %fieldset.searchy
+        .field.select
+          = f.label :name, 'Name:'
+          .input
+            = f.select :name, ['One','Two','Three']
+          .submit
+            = f.submit :search
+        .field.select
+          = f.label :instrument, 'Instrument:'
+          .input
+            = f.select :instrument, ['One','Two','Three']
+          .submit
+            = f.submit :search
+        .clear
   #info.section
     .container.skin-dark
       .body
