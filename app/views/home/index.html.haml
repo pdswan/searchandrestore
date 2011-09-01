@@ -1,14 +1,22 @@
 - @page_class = 'layout-2 page-home'
 
 .col-1-2
-  .section
+  .section#exciting-news
     .container.skin-dark
       .body
-        %h3 2011 Undead Jazz Fest is Coming!!!
-        %p BOOM Collective and Search &amp; Restore bring back the Undead Jazzfest, expanded to 4-days, in 11 venues across 2 boroughs and featuring 50+ groups. June 23rd through 26th 2011 
+        %h3
+          = image_tag('/images/home/exciting_news.png', :alt => 'Exciting News')
+        %ul.header-meta-list
+          %li
+            %h4 2011 Undead Jazz Fest is Coming!!!
+            %p.byline 
+              %span.author BOOM Collective and Search &amp; Restore bring back the Undead Jazzfest, expanded to 4-days, in 11 venues across 2 boroughs and featuring 50+ groups. June 23rd through 26th 2011 
         %a.box{:href => '#'} www.undeadjazz.com
+  .clear
 
   .col-1
+    %h3
+      = image_tag('/images/home/top_picks.png', :alt => 'Tonights Top Picks')
     .section
       .container.skin-dark
         .body
@@ -21,6 +29,8 @@
             %a.box{:href => '#'} See more shows...
   
   .col-2
+    %h3
+      = image_tag('/images/home/featured_video.png', :alt => 'Featured Video')
     .section
       .container
         .body
@@ -31,6 +41,8 @@
   .section
     .container.skin-dark
       .body
+        %h3
+          = image_tag('/images/home/hello_there.png', :alt => 'Well Hello There')
         %p Search And Restore is a 501(c)3 non-profit organization dedicated to developing and uniting the audience for new jazz music. We organize concerts and festivals, as well as this website which currently serves as a home for concert listings for the jazz scene in New York City. 
   
         %p Now, after an inspiring Kickstarter fundraiser for $75,000 , we're working on a new and improved website. Throughout 2011 we're going to film 200 concerts throughout the city, and a lot, lot more.

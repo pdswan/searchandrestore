@@ -1,4 +1,18 @@
 .jazz {
   &.page-home {
+    p {
+      color: #ccc;
+    }
+    h3 {
+      margin-bottom: 5px;   
+    }
+    .masthead {
+      background: url(/images/home/masthead_bg.png) repeat-x;
+    }
+    #exciting-news {
+      float: right;
+      width: 385px; 
+      margin-bottom: 60px;
+    }
   }
 }
