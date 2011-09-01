@@ -1,5 +1,24 @@
 - @page_class = 'section-video page-index'
 
+.searchy-inline
+  .floatleft#search-by-name.mr10
+    - form_for :blah do |f|
+      %fieldset
+        = f.label :artist, 'Search Video By ...', :class => 'box dark floatleft mr10 pr10 pl10'
+        .field.select.inline.mb5
+          = f.label :artist, 'Artist:'
+          .wrapper
+            = f.select :artist, ['one','two','three']
+        = f.submit :submit
+  .floatleft#search-by-instrument
+    - form_for :blah do |f|
+      %fieldset
+        .field.select.inline.mb5
+          = f.label :venue, 'Venue:'
+          .wrapper
+            = f.select :venue, ['one','two','three']
+        = f.submit :submit
+  .clear
 %ul.inline-list.grid-view
   - 18.times do |t|
     %li.container{:class => cycle('first','','','','','last')}
