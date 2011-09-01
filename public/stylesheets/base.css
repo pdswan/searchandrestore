@@ -57,6 +57,14 @@
   .jazz .box.dark {
     background-color: #000;
     text-transform: uppercase; }
+  .jazz .box.large {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 25px;
+    width: 100%;
+    text-align: center;
+    padding: 0px; }
 
 .jazz .container {
   overflow: hidden;
@@ -647,6 +655,18 @@ body.page-donate .nav li#nav-donate a {
   margin-right: 5px; }
 .jazz .mr-30 {
   margin-right: 5px; }
+.jazz .mt-5 {
+  margin-top: 5px; }
+.jazz .mt-10 {
+  margin-top: 10px; }
+.jazz .mt-15 {
+  margin-top: 15px; }
+.jazz .mt-20 {
+  margin-top: 25px; }
+.jazz .mt-25 {
+  margin-top: 5px; }
+.jazz .mt-30 {
+  margin-top: 5px; }
 
 #mailing-list .field {
   margin-bottom: 5px; }
