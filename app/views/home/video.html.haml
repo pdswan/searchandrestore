@@ -2,7 +2,22 @@
 
 .col-1
   .section
-    Search
+    .box.dark Search Videos By...
+    - form_for :blah do |f|
+      %fieldset.searchy
+        .field.select
+          = f.label :artist, 'Artist:'
+          .input
+            = f.select :artist, ['One','Two','Three']
+          .submit
+            = f.submit :search
+        .field.select
+          = f.label :venue, 'Venue:'
+          .input
+            = f.select :venue, ['One','Two','Three']
+          .submit
+            = f.submit :search
+        .clear
   .section
     .container.skin-dark
       .body
