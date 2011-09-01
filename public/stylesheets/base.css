@@ -225,6 +225,8 @@
   padding: 5px; }
   .jazz.page-home #featured-video .body .box.dark {
     width: 290px; }
+.jazz.page-home #intro a.box {
+  width: 210px; }
 
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);
@@ -582,6 +584,9 @@ h4 {
 .floatleft {
   float: left; }
 
+.floatright {
+  float: right; }
+
 .centered {
   text-align: center; }
 
@@ -642,3 +647,34 @@ body.page-donate .nav li#nav-donate a {
   margin-right: 5px; }
 .jazz .mr-30 {
   margin-right: 5px; }
+
+#mailing-list .field {
+  margin-bottom: 5px; }
+  #mailing-list .field label {
+    font-size: 12px;
+    color: #ccc;
+    font-weight: normal; }
+  #mailing-list .field.text {
+    clear: both; }
+    #mailing-list .field.text label {
+      float: left;
+      margin-right: 5px;
+      padding-top: 3px;
+      width: 36px; }
+    #mailing-list .field.text .wrapper {
+      width: 245px;
+      float: left; }
+      #mailing-list .field.text .wrapper input {
+        border: 1px solid #ccc;
+        height: 18px;
+        width: 245px; }
+  #mailing-list .field.radio {
+    overflow: hidden;
+    margin-right: 15px; }
+    #mailing-list .field.radio input,
+    #mailing-list .field.radio .wrapper {
+      float: left; }
+    #mailing-list .field.radio .wrapper {
+      margin-left: 5px; }
+    #mailing-list .field.radio.subscribe {
+      margin-left: 38px; }

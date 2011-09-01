@@ -12,9 +12,14 @@
             = f.label :email, 'Email:'
             .wrapper
               = f.text_field :email
-          .field.radio
+          .field.radio.floatleft.subscribe
             = f.radio_button(:subscribe, 'yes')
-            = f.label(:subscribe_yes, 'Subscribe')
-          .field.radio
+            .wrapper
+              = f.label(:subscribe_yes, 'Subscribe')
+          .field.radio.floatleft
             = f.radio_button(:subscribe, 'no')
-            = f.label(:subscribe_no, 'Unsubscribe')
+            .wrapper
+              = f.label(:subscribe_no, 'Unsubscribe')
+          .actions.floatright
+            = f.submit('go')
+          .clear
