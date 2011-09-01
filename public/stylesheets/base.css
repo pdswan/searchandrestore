@@ -42,6 +42,25 @@
     margin-right: 8px; }
   .jazz .field.select label {
     padding-top: 1px; }
+.jazz fieldset.searchy {
+  margin-bottom: 5px; }
+  .jazz fieldset.searchy .field {
+    margin-bottom: 3px; }
+    .jazz fieldset.searchy .field label {
+      display: block;
+      float: none;
+      font-weight: normal;
+      padding-left: 5px; }
+    .jazz fieldset.searchy .field.select .input,
+    .jazz fieldset.searchy .field.select .submit {
+      float: left; }
+    .jazz fieldset.searchy .field.select .input {
+      margin-right: 3px;
+      width: 250px; }
+      .jazz fieldset.searchy .field.select .input select {
+        width: 250px; }
+  .jazz fieldset.searchy .calendar-submit {
+    margin: 211px 0 0 10px; }
 
 .jazz a {
   cursor: pointer;
@@ -285,9 +304,6 @@
     color: #ccc; }
 .jazz.page-about #recent-press li {
   margin-bottom: 6px; }
-
-.jazz.page-shows form input[type='submit'] {
-  margin: 200px 0 0 10px; }
 
 .jazz.page-donate .masthead-top {
   background-image: url(/images/titles/donate_title.png); }
