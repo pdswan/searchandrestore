@@ -48,7 +48,7 @@ Factory.define :show do |s|
 end
 
 Factory.define :performance do |p|
-  p.association :artist
+  p.association :artist, :factory => :live_artist
   p.association :instrument
   p.association :show
 end
@@ -59,5 +59,9 @@ end
 
 Factory.define :live_artist_with_upcoming_shows, :parent => :live_artist do |a|
   a.after_create { |artist| Factory(:performance, :artist => artist) }
+end
+
+Factory.define :live_artist_with_known_associates, :parent => :live_artist_with_upcoming_shows do |a|
+  a.after_create { |artist| Factory(:performance, :show => artist.upcoming_shows.first) }
 end
 

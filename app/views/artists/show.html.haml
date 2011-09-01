@@ -40,33 +40,16 @@
           -# hook this shit up
           %a.box{:href => '#'} See all shows by this artist
 
-  #known_associates.section.snug
-    .container.skin-dark
-      .body
-        %h3 Known associates:
-        %ul.inline-list
-          %li
-            %a.box{:href => '#'} Mikkel Ploug
-          %li
-            %a.box{:href => '#'} Simon Jermyn
-          %li
-            %a.box{:href => '#'} Tommy Crane 
-          %li
-            %a.box{:href => '#'} Eivind Opsvik
-          %li
-            %a.box{:href => '#'} Oscar Norieka 
-          %li
-            %a.box{:href => '#'} Simon Jermyn
-          %li
-            %a.box{:href => '#'} Tommy Crane 
-          %li
-            %a.box{:href => '#'} Eivind Opsvik
-          %li
-            %a.box{:href => '#'} Mikkel Ploug
-          %li
-            %a.box{:href => '#'} Mikkel Ploug
-          %li.last
-            %a.box{:href => '#'} Mikkel Ploug
+  - if @artist.associated_artists.present?
+    #known_associates.section.snug
+      .container.skin-dark
+        .body
+          %h3 Known associates:
+          %ul.inline-list
+            - @artist.associated_artists.each do |artist|
+              %li
+                = link_to(artist.name, artist)
+
 .col-2
   .section
     .container

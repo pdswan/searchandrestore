@@ -68,3 +68,11 @@ Then /^I should see the artist's upcoming shows$/ do
     Then %{I should see a link to "#{url_for(show.venue)}" with the text "#{show.venue.name}"}
   end
 end
+
+Then /^I should see the names of the artist's known associates with links to their pages$/ do
+  raise "User has no known associates" unless the.artist.associated_artists.present?
+
+  the.artist.associated_artists.each do |user|
+    Then %{I should see a link to "#{url_for(user)}" with the text "#{user.name}"}
+  end
+end
