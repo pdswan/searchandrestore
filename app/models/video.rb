@@ -42,7 +42,7 @@ class Video < ActiveRecord::Base
 
   def url
     read_attribute(:url) ||
-      embed_code.match(/src=['"]([^'"]+)/)[1]
+      (embed_code.present? ? embed_code.match(/src=['"]([^'"]+)/)[1] : nil)
   end
 
   def oembed_request_url
