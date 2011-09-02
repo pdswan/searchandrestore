@@ -10,7 +10,7 @@ describe Video do
       end
 
       it "should return the url with the oembed parameters as query string parameters" do
-        video.oembed_request_url.should == 'http://google.com?height=350&width=651'
+        video.oembed_request_url.should == "http://google.com?#{Video.oembed_options.to_query}"
       end
     end
   end
