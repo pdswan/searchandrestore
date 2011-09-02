@@ -19,11 +19,6 @@ class Artist < ActiveRecord::Base
     Video.for_artist(self)
   end
 
-  def latest_video
-    videos.joins(:show).
-      order("shows.when DESC").first
-  end
-
   def associated_artists
     show_ids = shows.unscoped.select("shows.id").collect(&:id)
 

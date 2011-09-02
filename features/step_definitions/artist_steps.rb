@@ -78,6 +78,6 @@ Then /^I should see the names of the artist's known associates with links to the
 end
 
 Then /^I should see the latest video for the artist in the main video player$/ do
-  Then %{show me the page}
-  embed_code = the.artist.latest_video
+  Then %{I should see the video in the main video player}
 end
+

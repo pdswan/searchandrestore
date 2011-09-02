@@ -26,9 +26,15 @@ Feature: Artist Show
     When I go to the detail page for the artist
     Then I should see the names of the artist's known associates with links to their pages
 
-  @wip
-  Scenario: Users sees videos featuring the artist
+  Scenario: User sees latest video featuring the artist
     Given there is a live artist with videos
     When I go to the detail page for the artist
     Then I should see the latest video for the artist in the main video player
+
+  @wip
+  Scenario: User sees other videos from latest video's related show
+    Given there is a live artist with videos
+    And the show has an additional video
+    When I go to the detail page for the artist
+    Then I should see the additional video below the main video player
     
