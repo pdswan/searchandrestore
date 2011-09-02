@@ -82,7 +82,7 @@
           %h3 Featured Artists
           %ul.inline-list
             - @selected_video.show.performances.each do |performance|
-              %li= link_to("#{performance.artist.name} (#{performance.instrument.name})",
+              %li= link_to("#{performance.artist.name} (#{performance.instrument.present? ? performance.instrument.name : performance.artist.instrument.name})",
                 performance.artist, :class => 'box')
 
         - else
