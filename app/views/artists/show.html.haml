@@ -73,7 +73,9 @@
     .container
       .body#video-player-container
         - if @selected_video
-          %iframe#video-player{ :src => "#{@selected_video.url}?title=0&byline=0&portrait=0&color=ffffff", :width => '621', :height => '350', :frameborder => '0' }
+          :plain
+            #{@selected_video.embed_code}
+          /%iframe#video-player{ :src => "#{@selected_video.url}?title=0&byline=0&portrait=0&color=ffffff", :width => '621', :height => '350', :frameborder => '0' }
           %p
             = link_to(@selected_video.show.group_name, @selected_video.show, :class => 'box dark')
             = @selected_video.show.when.strftime("%m/%d/%Y")
