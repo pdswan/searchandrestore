@@ -20,13 +20,14 @@ class Artist < ActiveRecord::Base
   end
 
   def associated_artists
-    show_ids = shows.unscoped.select("shows.id").collect(&:id)
-
+    # TODO fixme
+    # this does not just select the id column and actually instantiates a bunch of objects
+    # should use column reader or something else to avoid that overhead
     self.class.
       with_state(:live).
       joins(:shows).
       where(["artists.id <> ?", id]).
-      where(:shows => { :id => show_ids })
+      where(:shows => { :id => shows.select("shows.id").collect(&:id) })
   end
 
   validates_presence_of :name
