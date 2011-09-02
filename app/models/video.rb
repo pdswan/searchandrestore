@@ -8,6 +8,9 @@ class Video < ActiveRecord::Base
                             :source  => :videos,
                             :conditions => 'videos.id <> #{id}'
 
+  scope :order_by_show_date, joins(:show).order("shows.when DESC")
+  scope :group_by_show, group("shows.id")
+
   def self.for_artist(artist)
     raise ArgumentError.new("artist must be a kind of Artist") unless artist.kind_of?(Artist)
     joins(:performances).
@@ -35,6 +38,11 @@ class Video < ActiveRecord::Base
     end
 
     ret
+  end
+
+  def url
+    read_attribute(:url) ||
+      embed_code.match(/src=['"]([^'"]+)/)[1]
   end
 
   def oembed_request_url

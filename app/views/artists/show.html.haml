@@ -5,7 +5,7 @@
 
   .section
     %a.box.dark{:href => 'javascript:void(0);'} Search Artists By...
-    - form_for :blah do |f|
+    = form_for :blah do |f|
       %fieldset.searchy
         .field.select
           = f.label :name, 'Name:'
@@ -71,31 +71,36 @@
 .col-2
   .section
     .container
-      .body
-        <iframe src="http://player.vimeo.com/video/14015287?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="621" height="350" frameborder="0" id="video-player"></iframe>
-        %p
-          %a.box.dark{:href => '#'} Transatlantic Quartet
-          03/31/2011 Tea Lounge, Brooklyn
-        %h3 Featured Artists
-        %ul.inline-list
-          %li
-            %a.box{:href => '#'} Pete Robbins(alto saxophone)
-          %li
-            %a.box{:href => '#'} Mikkel Plouge(guitar)
-          %li
-            %a.box{:href => '#'} Simon Jermyn(bass)
-          %li.last
-            %a.box{:href => '#'} Kevin Brow(drums)
+      .body#video-player-container
+        - if @selected_video
+          %iframe#video-player{ :src => "#{@selected_video.url}?title=0&byline=0&portrait=0&color=ffffff", :width => '621', :height => '350', :frameborder => '0' }
+          %p
+            = link_to(@selected_video.show.group_name, @selected_video.show, :class => 'box dark')
+            = @selected_video.show.when.strftime("%m/%d/%Y")
+            = link_to(@selected_video.show.venue.name, @selected_video.show.venue)
 
-  .section.pl10.pt5
-    %h3 More videos by this artist:
-  .section
-    %ul.inline-list.grid-view
-      - 4.times do |t|
-        %li.container{:class => cycle('first','','','last')}
-          %a.block{:href => '#', 'data-video' => 'http://player.vimeo.com/video/10467928?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff'}
-            .body
-              = image_tag('http://dummyimage.com/140x77/000/fff')
-              .clear
-              %span.box.block.name{:href => '#'} Pete Robbins
-              %p.instrument Alto Saxophone
+          %h3 Featured Artists
+          %ul.inline-list
+            - @selected_video.show.performances.each do |performance|
+              %li= link_to("#{performance.artist.name} (#{performance.instrument.name})",
+                performance.artist, :class => 'box')
+
+        - else
+          %p No Video Available
+
+  - if @videos.present?
+    .section.pl10.pt5
+      %h3 More videos featuring this artist:
+    .section
+      %ul.inline-list.grid-view
+        - @videos.each do |video|
+          %li.container{:class => cycle('first','','','last')}
+            %a.block{:href => video.url, :data => { :video => true, :embed_code => video.embed_code }}
+              .body
+                = image_tag(video.thumbnail.url(:tiny))
+                .clear
+                %span.box.block.name= video.show.group_name
+                %p.show
+                  %span.when= video.show.when.strftime("%m/%d/%Y")
+                  %span.venue= video.venue.name
+
