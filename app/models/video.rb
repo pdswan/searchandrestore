@@ -20,11 +20,12 @@ class Video < ActiveRecord::Base
   mount_uploader :thumbnail, VideoThumbnailUploader
 
   def self.oembed_options
-    { :width  => 621,
-      :height => 350,
-      :title  => 0,
-      :byline => 0,
-      :color  => 'ffffff' }
+    { :width    => 621,
+      :height   => 350,
+      :title    => 0,
+      :byline   => 0,
+      :portrait => 0,
+      :color    => 'ffffff' }
   end
 
   def self.update_existing_embed_codes
