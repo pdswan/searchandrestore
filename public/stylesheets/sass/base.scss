@@ -238,9 +238,13 @@ body {
 
 #video-player-container {
   p {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   h3 {
     margin-bottom: 4px;
+  }
+  a.venue-link {
+    color: #666;
+    text-decoration: none;
   }
 }
