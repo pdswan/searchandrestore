@@ -722,3 +722,8 @@ body.page-donate .nav li#nav-donate a {
       margin-left: 5px; }
     #mailing-list .field.radio.subscribe {
       margin-left: 38px; }
+
+#video-player-container p {
+  margin-bottom: 8px; }
+#video-player-container h3 {
+  margin-bottom: 4px; }

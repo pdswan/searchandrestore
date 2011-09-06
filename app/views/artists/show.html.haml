@@ -79,7 +79,7 @@
           %p
             = link_to(@selected_video.show.group_name, @selected_video.show, :class => 'box dark')
             = @selected_video.show.when.strftime("%m/%d/%Y")
-            = link_to(@selected_video.show.venue.name, @selected_video.show.venue)
+            = link_to(@selected_video.show.venue.name, @selected_video.show.venue, :class => 'venue-link')
 
           %h3 Featured Artists
           %ul.inline-list
