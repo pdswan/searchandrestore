@@ -4,8 +4,13 @@
 .jazz.section-artists.page-show #info .body {
   position: relative;
   padding-bottom: 26px; }
+.jazz.section-artists.page-show #info h3.name {
+  margin-bottom: 1px;
+  text-transform: uppercase;
+  color: #fff; }
 .jazz.section-artists.page-show #info p.instrument {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  color: #666; }
 .jazz.section-artists.page-show #info a.box {
   width: 125px;
   position: absolute;
@@ -25,6 +30,3 @@
   display: none; }
 .jazz.section-artists.page-show #shop ul.inline-list li {
   margin-right: 10px; }
-  .jazz.section-artists.page-show #shop ul.inline-list li a {
-    display: block;
-    width: 69px; }
