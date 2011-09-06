@@ -13,8 +13,14 @@
           position: relative;
           padding-bottom: 26px;
         }
+        h3.name {
+          margin-bottom: 1px;
+          text-transform: uppercase;
+          color: #fff;
+        }
         p.instrument {
           margin-bottom: 5px;
+          color: #666;
         }
         a.box {
           width: 125px;
