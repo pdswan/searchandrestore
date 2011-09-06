@@ -9,7 +9,7 @@
           = f.label :artist, 'Artist:'
           .wrapper
             = f.select :artist, ['one','two','three']
-        = f.submit :submit
+        = f.submit :search
   .floatleft#search-by-instrument
     - form_for :blah do |f|
       %fieldset
@@ -17,7 +17,7 @@
           = f.label :venue, 'Venue:'
           .wrapper
             = f.select :venue, ['one','two','three']
-        = f.submit :submit
+        = f.submit :search
   .clear
 %ul.inline-list.grid-view
   - 18.times do |t|
