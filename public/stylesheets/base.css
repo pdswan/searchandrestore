@@ -183,6 +183,8 @@
   line-height: 13px;
   padding: 8px;
   text-transform: uppercase; }
+.jazz h3.box {
+  font-size: 12px; }
 
 .jazz .col-1,
 .jazz .col-2,
@@ -312,8 +314,6 @@
 .jazz.page-donate #main-content {
   height: 543px;
   background: url(/images/rats.png) no-repeat top left; }
-.jazz.page-donate h3.box {
-  font-size: 12px; }
 .jazz.page-donate .container.with-tip .body {
   padding-top: 5px;
   padding-bottom: 20px; }
