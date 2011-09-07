@@ -315,6 +315,9 @@
 .jazz.page-about #recent-press li {
   margin-bottom: 6px; }
 
+.jazz.page-shows h3#featured-musicians-title {
+  margin-top: 5px; }
+
 .jazz.page-donate .masthead-top {
   background-image: url(/images/titles/donate_title.png); }
 .jazz.page-donate #main-content {
