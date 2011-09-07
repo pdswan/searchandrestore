@@ -136,9 +136,7 @@
       :javascript
         $(function() {
           $('ul').delegate('[data-video]', 'click', function(e) {
-            var src = $(this).attr('data-video');
-            var the_frame = $('#video-player');
-            the_frame.attr('src',src);
+            $('#video_player_container > iframe').replaceWith($(this).attr('data-embed_code'));
             e.preventDefault();
           });
         });

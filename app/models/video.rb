@@ -4,9 +4,6 @@ class Video < ActiveRecord::Base
   belongs_to :show
 
   has_many :performances, :through => :show
-  has_many :related_videos, :through => :show,
-                            :source  => :videos,
-                            :conditions => 'videos.id <> #{id}'
 
   scope :order_by_show_date, joins(:show).order("shows.when DESC")
   scope :group_by_show, group("shows.id")

@@ -31,10 +31,17 @@ Feature: Artist Show
     When I go to the detail page for the artist
     Then I should see the latest video for the artist in the main video player
 
-  @wip
   Scenario: User sees other videos from latest video's related show
     Given there is a live artist with videos
     And the show has an additional video
     When I go to the detail page for the artist
     Then I should see the related video below the main video player
+
+  @wip @javascript
+  Scenario: User chooses related video
+    Given there is a live artist with videos
+    And the show has an additional video
+    When I go to the detail page for the artist
+    And I click the related video below the main video player
+    Then I should see the related video in the main video player
     
