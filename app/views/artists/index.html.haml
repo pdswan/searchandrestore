@@ -12,7 +12,7 @@
       .field.select.inline.mb5
         = f.label :instrument_id_equals, 'Instrument: '
         .wrapper
-          = f.collection_select :instrument_id_equals, Instrument.all, :id, :name, :include_blank => 'any instrument'
+          = f.collection_select :instrument_id_equals, Instrument.all.sort! {|a,b| a.name.downcase <=> b.name.downcase }, :id, :name, :include_blank => 'any instrument'
 
       = f.submit "search"
 .clear
