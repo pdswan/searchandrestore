@@ -6,5 +6,24 @@
     .masthead {
       background: url(/images/masthead_bg/venues.png) repeat-x;
     }
+    &.page-index {
+      .searchy-inline select {width: 223px;}
+    }
+    &.page-show {
+      fieldset.searchy {
+        .field.select {
+          .input {
+            float: left;
+          }
+          .submit {
+            float: right;
+            input {
+              padding-right: 0px !important;
+              margin-right: 0px !important;
+            }
+          }
+        }
+      }
+    }
   }
 }

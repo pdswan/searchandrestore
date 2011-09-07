@@ -2,3 +2,12 @@
   background-image: url(/images/titles/venues_title.png); }
 .jazz.section-venues .masthead {
   background: url(/images/masthead_bg/venues.png) repeat-x; }
+.jazz.section-venues.page-index .searchy-inline select {
+  width: 223px; }
+.jazz.section-venues.page-show fieldset.searchy .field.select .input {
+  float: left; }
+.jazz.section-venues.page-show fieldset.searchy .field.select .submit {
+  float: right; }
+  .jazz.section-venues.page-show fieldset.searchy .field.select .submit input {
+    padding-right: 0px !important;
+    margin-right: 0px !important; }
