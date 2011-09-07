@@ -6,7 +6,10 @@
       padding: 10px;
     }
     &.skin-dark {
-      background-color: #000;
+      background: url(/images/black_container_bg.png);
+      .body {
+        padding-bottom: 20px;
+      }
     }
     &.with-tip {
       overflow: visible;
