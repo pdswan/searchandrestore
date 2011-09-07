@@ -1,5 +1,7 @@
 .jazz.page-donate .masthead-top {
   background-image: url(/images/titles/donate_title.png); }
+.jazz.page-donate .masthead {
+  background: url(/images/masthead_bg/donate.png) repeat-x; }
 .jazz.page-donate #main-content {
   height: 543px;
   background: url(/images/rats.png) no-repeat top left; }

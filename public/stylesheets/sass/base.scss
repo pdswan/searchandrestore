@@ -51,7 +51,7 @@ h4 {
 }
 
 .masthead {
-  background: url(/images/masthead_bg.png) repeat-x;
+  background: url(/images/masthead_bg/shows.png) repeat-x;
   height: 148px;
   width: 100%;
   margin-bottom: 13px;
@@ -65,6 +65,15 @@ h4 {
   background-repeat: no-repeat;
   background-position: 54px 5px;
 }
+
+.jazz.masthead-bg-shows .masthead {background: url(/images/masthead_bg/shows.png);}
+.jazz.masthead-bg-artists .masthead {background: url(/images/masthead_bg/artists.png);}
+.jazz.masthead-bg-venues .masthead {background: url(/images/masthead_bg/venues.png);}
+.jazz.masthead-bg-videos .masthead {background: url(/images/masthead_bg/videos.png);}
+.jazz.masthead-bg-resources .masthead {background: url(/images/masthead_bg/resources.png);}
+.jazz.masthead-bg-about .masthead {background: url(/images/masthead_bg/about.png);}
+.jazz.masthead-bg-donate .masthead {background: url(/images/masthead_bg/donate.png);}
+
 
 .site-container {
   width: 960px;
