@@ -37,12 +37,14 @@
       %a.box{:href => '#'} See All Search&amp;Restore Shows
 .col-2
   %h3 Search results for Thursday 31st of March 2011:
-  %ul.containers
+  %ul.containers.show-listing
     - 9.times do |t|
       %li.container
         .body
-          %a.box.dark{:href => '#'} SILENT Z
-          %a.box{:href => '#'} Tea Lounge, Brooklyn
+          %a.box.dark.band{:href => '#'} SILENT Z
+          %a.box.venue{:href => '#'} Tea Lounge, Brooklyn
+          %p.date 03/31/2011 9pm
+          .clear
           %h3#featured-musicians-title Featured Musicians:
           %ul.inline-list
             %li

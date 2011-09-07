@@ -3,5 +3,22 @@
     h3#featured-musicians-title {
       margin-top: 5px;
     }
+    .show-listing {
+      a.band,
+      a.venue,
+      p.date {
+        float: left;
+      }
+      a.band {
+        margin-right: 6px;
+      }
+      a.venue {
+        margin-right: 4px; 
+      }
+      p.date {
+        margin-bottom: 0px;
+        margin-top: 3px;
+      }
+    }
   }
 }
