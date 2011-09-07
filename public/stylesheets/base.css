@@ -262,6 +262,8 @@
   width: 385px;
   margin-bottom: 40px;
   margin-top: 20px; }
+  .jazz.page-home #exciting-news .body {
+    padding-bottom: 10px; }
 .jazz.page-home #featured-video .body {
   padding: 5px; }
   .jazz.page-home #featured-video .body .box.dark {
