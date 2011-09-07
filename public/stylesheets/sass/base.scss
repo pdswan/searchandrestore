@@ -69,6 +69,9 @@ h4 {
 .site-container {
   width: 960px;
   margin: 0px auto;
+  &#main-content {
+    padding-bottom: 30px;
+  }
 }
 .snug-bottom {
   margin-bottom: 0px !important;
