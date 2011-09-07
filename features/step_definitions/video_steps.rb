@@ -1,5 +1,5 @@
 Then /^I should see the video in the main video player$/ do
-  within("#video-player-container") do
+  within("#video_player_container") do
     Then %{the video should be loaded in the main video player}
     And  %{I should see a link to "#{url_for(the.video.show)}" with the text "#{the.video.show.group_name}"}
     And  %{I should see a link to "#{url_for(the.video.show.venue)}" with the text "#{the.video.show.venue.name}"}
@@ -10,7 +10,10 @@ Then /^I should see the video in the main video player$/ do
 end
 
 Then /^the video should be loaded in the main video player$/ do
-  page.should have_css("iframe#video-player[src^='#{the.video.url}']")
+  sleep(2)
+  within("#video_player_container") do
+    page.should have_css("iframe=[src^='#{the.video.url.split('?').first}']")
+  end
 end
 
 Then /^I should see a thumbnail for the video(?: within "([^"]+)")?$/ do |scope|

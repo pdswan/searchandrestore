@@ -85,3 +85,14 @@ Then /^I should see the related video below the main video player$/ do
   the.video = Video.last
   Then %{I should see a thumbnail for the video within "#related_videos"}
 end
+
+And /^I click the related video below the main video player$/ do
+  within("#related_videos") do
+    page.find("a[data-video=true]").click
+  end
+end
+
+Then /^I should see the related video in the main video player$/ do
+  the.video = Video.last
+  Then %{I should see the video in the main video player}
+end

@@ -65,9 +65,15 @@ Factory.define :live_artist_with_known_associates, :parent => :live_artist_with_
   a.after_create { |artist| Factory(:performance, :show => artist.upcoming_shows.first) }
 end
 
+Factory.sequence :embed_codes do |i|
+  ["<iframe src=\"http://player.vimeo.com/video/27022490?title=0&amp;byline=0&amp;portrait=0&amp;color=000000\" width=\"621\" height=\"350\" frameborder=\"0\"></iframe>",
+   "<iframe src=\"http://player.vimeo.com/video/19089326?title=0&amp;byline=0&amp;portrait=0&amp;color=000000\" width=\"621\" height=\"350\" frameborder=\"0\"></iframe>",
+   "<iframe src=\"http://player.vimeo.com/video/2074812?title=0&amp;byline=0&amp;portrait=0&amp;color=000000\" width=\"621\" height=\"350\" frameborder=\"0\"></iframe>"][i%3]
+end
+
 Factory.define :video do |v|
   v.association :show
-  v.embed_code  "<iframe src=\"http://player.vimeo.com/video/27022490\" width=\"651\" height=\"366\" frameborder=\"0\"></iframe>"
+  v.embed_code { Factory.next(:embed_codes) }
 end
 
 Factory.define :live_artist_with_videos, :parent => :live_artist_with_upcoming_shows do |a|
