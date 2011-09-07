@@ -12,3 +12,10 @@ end
 Then /^the video should be loaded in the main video player$/ do
   page.should have_css("iframe#video-player[src^='#{the.video.url}']")
 end
+
+Then /^I should see a thumbnail for the video(?: within "([^"]+)")?$/ do |scope|
+  within(scope) do
+    page.should have_css("img[src='#{the.video.thumbnail.url(:tiny)}']")
+    page.should have_css("a[href='#{the.video.url}'][data-video=true]")
+  end
+end

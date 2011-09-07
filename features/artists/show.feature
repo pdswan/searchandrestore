@@ -36,5 +36,5 @@ Feature: Artist Show
     Given there is a live artist with videos
     And the show has an additional video
     When I go to the detail page for the artist
-    Then I should see the additional video below the main video player
+    Then I should see the related video below the main video player
     
