@@ -13,7 +13,9 @@
     }
     #main-content {
       background: url(/images/titles/home_title_bottom.png) no-repeat top left;
-      margin-top: 5px;
+      #main-content-secondary {
+        padding-top: 5px;
+      }
     }
     #exciting-news {
       float: right;

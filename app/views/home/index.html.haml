@@ -2,62 +2,63 @@
 - @masthead_bg = masthead_bgs[rand(masthead_bgs.length)] 
 - @page_class = "layout-2 page-home masthead-bg-#{@masthead_bg}"
 
-.col-1-2
-  .section#exciting-news
-    .container.skin-dark
-      .body
-        %h3
-          = image_tag('/images/home/exciting_news.png', :alt => 'Exciting News')
-        %ul.header-meta-list
-          %li
-            %h4 2011 Undead Jazz Fest is Coming!!!
-            %p.byline 
-              %span.author BOOM Collective and Search &amp; Restore bring back the Undead Jazzfest, expanded to 4-days, in 11 venues across 2 boroughs and featuring 50+ groups. June 23rd through 26th 2011 
-        %a.box{:href => '#'} www.undeadjazz.com
-  .clear
-
-  .col-1
-    %h3
-      = image_tag('/images/home/top_picks.png', :alt => 'Tonights Top Picks')
-    .section
+#main-content-secondary
+  .col-1-2
+    .section#exciting-news
       .container.skin-dark
         .body
+          %h3
+            = image_tag('/images/home/exciting_news.png', :alt => 'Exciting News')
           %ul.header-meta-list
-            - 3.times do |t|
-              %li
-                %h4 CHARLIE HUNTER DUO featuring BOBBY PREVITE, ADAM CRUZ, ERIC KALB, SHAWN PELTON
-                %p.byline 
-                  %span.author Bowery Poetry Club, 9PM
-            %a.box{:href => '#'} See more shows...
+            %li
+              %h4 2011 Undead Jazz Fest is Coming!!!
+              %p.byline 
+                %span.author BOOM Collective and Search &amp; Restore bring back the Undead Jazzfest, expanded to 4-days, in 11 venues across 2 boroughs and featuring 50+ groups. June 23rd through 26th 2011 
+          %a.box{:href => '#'} www.undeadjazz.com
+    .clear
   
-  .col-2
-    %h3
-      = image_tag('/images/home/featured_video.png', :alt => 'Featured Video')
-    .section#featured-video
-      .container
+    .col-1
+      %h3
+        = image_tag('/images/home/top_picks.png', :alt => 'Tonights Top Picks')
+      .section
+        .container.skin-dark
+          .body
+            %ul.header-meta-list
+              - 3.times do |t|
+                %li
+                  %h4 CHARLIE HUNTER DUO featuring BOBBY PREVITE, ADAM CRUZ, ERIC KALB, SHAWN PELTON
+                  %p.byline 
+                    %span.author Bowery Poetry Club, 9PM
+              %a.box{:href => '#'} See more shows...
+    
+    .col-2
+      %h3
+        = image_tag('/images/home/featured_video.png', :alt => 'Featured Video')
+      .section#featured-video
+        .container
+          .body
+            = image_tag('/images/fpo/video_small.png')
+            %a.box.dark{:href => '#'} Whiteout With Thurston Moore
+            %p.snug 03/31/2011, Cornelia St. Cafe
+            %a.box{:href => '#'} See more videos...
+    .clear
+  
+  .col-3
+    .section#intro
+      .container.skin-dark
         .body
-          = image_tag('/images/fpo/video_small.png')
-          %a.box.dark{:href => '#'} Whiteout With Thurston Moore
-          %p.snug 03/31/2011, Cornelia St. Cafe
-          %a.box{:href => '#'} See more videos...
+          %h3
+            = image_tag('/images/home/hello_there.png', :alt => 'Well Hello There')
+          %p Search And Restore is a 501(c)3 non-profit organization dedicated to developing and uniting the audience for new jazz music. We organize concerts and festivals, as well as this website which currently serves as a home for concert listings for the jazz scene in New York City. 
+    
+          %p Now, after an inspiring Kickstarter fundraiser for $75,000 , we're working on a new and improved website. Throughout 2011 we're going to film 200 concerts throughout the city, and a lot, lot more.
+    
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus sollicitudin turpis, congue mollis magna fermentum sed. Fusce rhoncus eleifend turpis ut rutrum. Vestibulum eros sapien, dapibus ac tempus tempus, adipiscing a augue. Nam lectus nulla, suscipit vitae auctor id, scelerisque non enim. 
+    
+          %a.box{:href => '#'} Learn more...
+    = render :partial => 'shared/mailing_list'
+  
+    .section.mt-5
+      %a.box.large{:href => '#'} Donate To Search &amp; Restore
+  
   .clear
-
-.col-3
-  .section#intro
-    .container.skin-dark
-      .body
-        %h3
-          = image_tag('/images/home/hello_there.png', :alt => 'Well Hello There')
-        %p Search And Restore is a 501(c)3 non-profit organization dedicated to developing and uniting the audience for new jazz music. We organize concerts and festivals, as well as this website which currently serves as a home for concert listings for the jazz scene in New York City. 
-  
-        %p Now, after an inspiring Kickstarter fundraiser for $75,000 , we're working on a new and improved website. Throughout 2011 we're going to film 200 concerts throughout the city, and a lot, lot more.
-  
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus sollicitudin turpis, congue mollis magna fermentum sed. Fusce rhoncus eleifend turpis ut rutrum. Vestibulum eros sapien, dapibus ac tempus tempus, adipiscing a augue. Nam lectus nulla, suscipit vitae auctor id, scelerisque non enim. 
-  
-        %a.box{:href => '#'} Learn more...
-  = render :partial => 'shared/mailing_list'
-
-  .section.mt-5
-    %a.box.large{:href => '#'} Donate To Search &amp; Restore
-
-.clear

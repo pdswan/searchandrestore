@@ -255,8 +255,9 @@
   background: url(/images/home/masthead_bg.png) repeat-x;
   margin-bottom: 0px; }
 .jazz.page-home #main-content {
-  background: url(/images/titles/home_title_bottom.png) no-repeat top left;
-  margin-top: 5px; }
+  background: url(/images/titles/home_title_bottom.png) no-repeat top left; }
+  .jazz.page-home #main-content #main-content-secondary {
+    padding-top: 5px; }
 .jazz.page-home #exciting-news {
   float: right;
   width: 385px;
