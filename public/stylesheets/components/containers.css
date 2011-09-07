@@ -4,7 +4,9 @@
   .jazz .container .body {
     padding: 10px; }
   .jazz .container.skin-dark {
-    background-color: #000; }
+    background: url(/images/black_container_bg.png); }
+    .jazz .container.skin-dark .body {
+      padding-bottom: 20px; }
   .jazz .container.with-tip {
     overflow: visible;
     position: relative; }
