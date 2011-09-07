@@ -81,12 +81,25 @@
             = @selected_video.show.when.strftime("%m/%d/%Y")
             = link_to(@selected_video.show.venue.name, @selected_video.show.venue, :class => 'venue-link')
 
+          -# TODO
+          -# should probably load this asynchronously after page load
+          - if @selected_video.related_videos.present?
+            %h3 More Videos from this Show
+            %ul#related_videos.inline-list
+              - @selected_video.related_videos.each do |video|
+                %li.container
+                  %a.block{:href => video.url, :data => { :video => 'true', :embed_code => video.embed_code }}
+                    .body
+                      = image_tag(video.thumbnail.url(:tiny))
+                      .clear
+                      %span.box.block.name= video.title
+
           %h3 Featured Artists
           %ul.inline-list
             - @selected_video.show.performances.each do |performance|
               %li= link_to("#{performance.artist.name} (#{performance.instrument.present? ? performance.instrument.name : performance.artist.instrument.name})",
                 performance.artist, :class => 'box')
-
+          
         - else
           %p No Video Available
 
@@ -97,7 +110,7 @@
       %ul.inline-list.grid-view
         - @videos.each do |video|
           %li.container{:class => cycle('first','','','last')}
-            %a.block{:href => video.url, :data => { :video => true, :embed_code => video.embed_code }}
+            %a.block{:href => video.url, :data => { :video => 'true', :embed_code => video.embed_code }}
               .body
                 = image_tag(video.thumbnail.url(:tiny))
                 .clear

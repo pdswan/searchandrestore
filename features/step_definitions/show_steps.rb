@@ -21,3 +21,7 @@ Then /^the show should have one performance for the artist(?: "([^"]+)")? and th
     performance.instrument.should == the.instrument
   end
 end
+
+Given /^the show has an additional video$/ do
+  Factory(:video, :show => the.show)
+end

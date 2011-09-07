@@ -81,3 +81,7 @@ Then /^I should see the latest video for the artist in the main video player$/ d
   Then %{I should see the video in the main video player}
 end
 
+Then /^I should see the related video below the main video player$/ do
+  the.video = Video.last
+  Then %{I should see a thumbnail for the video within "#related_videos"}
+end
