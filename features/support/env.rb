@@ -27,6 +27,9 @@ require 'factory_girl'
 # require spec custom matchers and factories
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
+require 'selenium-webdriver'
+Selenium::WebDriver::Firefox.path = '/opt/local/bin/start-i386-firefox'
+
 # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
 # order to ease the transition to Capybara we set the default here. If you'd
 # prefer to use XPath just remove this line and adjust any selectors in your
