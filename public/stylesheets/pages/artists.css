@@ -1,6 +1,8 @@
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);
   background-position: 64px 5px; }
+.jazz.section-artists .masthead {
+  background: url(/images/masthead_bg/artists.png) repeat-x; }
 .jazz.section-artists.page-show #info .body {
   position: relative;
   padding-bottom: 26px; }

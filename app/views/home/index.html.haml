@@ -1,4 +1,6 @@
-- @page_class = 'layout-2 page-home'
+- masthead_bgs = ['videos','venues','resources','donate','artists','about', 'shows']
+- @masthead_bg = masthead_bgs[rand(masthead_bgs.length)] 
+- @page_class = "layout-2 page-home masthead-bg-#{@masthead_bg}"
 
 .col-1-2
   .section#exciting-news

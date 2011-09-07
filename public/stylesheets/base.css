@@ -274,6 +274,8 @@
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);
   background-position: 64px 5px; }
+.jazz.section-artists .masthead {
+  background: url(/images/masthead_bg/artists.png) repeat-x; }
 .jazz.section-artists.page-show #info .body {
   position: relative;
   padding-bottom: 26px; }
@@ -306,6 +308,8 @@
 
 .jazz.page-about .masthead-top {
   background-image: url(/images/titles/about_title.png); }
+.jazz.page-about .masthead {
+  background: url(/images/masthead_bg/about.png) repeat-x; }
 .jazz.page-about #recent-press .byline {
   margin-bottom: 2px; }
   .jazz.page-about #recent-press .byline .date {
@@ -331,6 +335,8 @@
 
 .jazz.page-donate .masthead-top {
   background-image: url(/images/titles/donate_title.png); }
+.jazz.page-donate .masthead {
+  background: url(/images/masthead_bg/donate.png) repeat-x; }
 .jazz.page-donate #main-content {
   height: 543px;
   background: url(/images/rats.png) no-repeat top left; }
@@ -340,12 +346,18 @@
 
 .jazz.page-resources .masthead-top {
   background-image: url(/images/titles/resources_title.png); }
+.jazz.page-resources .masthead {
+  background: url(/images/masthead_bg/resources.png) repeat-x; }
 
 .jazz.section-video .masthead-top {
   background-image: url(/images/titles/video_title.png); }
+.jazz.section-video .masthead {
+  background: url(/images/masthead_bg/videos.png) repeat-x; }
 
 .jazz.section-venues .masthead-top {
   background-image: url(/images/titles/venues_title.png); }
+.jazz.section-venues .masthead {
+  background: url(/images/masthead_bg/venues.png) repeat-x; }
 
 .jazz .mt1 {
   margin-top: 1px !important; }
@@ -599,7 +611,7 @@ h4 {
   left: 0px; }
 
 .masthead {
-  background: url(/images/masthead_bg.png) repeat-x;
+  background: url(/images/masthead_bg/shows.png) repeat-x;
   height: 148px;
   width: 100%;
   margin-bottom: 13px; }
@@ -611,6 +623,27 @@ h4 {
   background-image: url(/images/titles/shows_title.png);
   background-repeat: no-repeat;
   background-position: 54px 5px; }
+
+.jazz.masthead-bg-shows .masthead {
+  background: url(/images/masthead_bg/shows.png); }
+
+.jazz.masthead-bg-artists .masthead {
+  background: url(/images/masthead_bg/artists.png); }
+
+.jazz.masthead-bg-venues .masthead {
+  background: url(/images/masthead_bg/venues.png); }
+
+.jazz.masthead-bg-videos .masthead {
+  background: url(/images/masthead_bg/videos.png); }
+
+.jazz.masthead-bg-resources .masthead {
+  background: url(/images/masthead_bg/resources.png); }
+
+.jazz.masthead-bg-about .masthead {
+  background: url(/images/masthead_bg/about.png); }
+
+.jazz.masthead-bg-donate .masthead {
+  background: url(/images/masthead_bg/donate.png); }
 
 .site-container {
   width: 960px;
