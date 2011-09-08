@@ -105,7 +105,7 @@
   - if @videos.present?
     .section.pl10.pt5
       %h3 More videos featuring this artist:
-    .section
+    #more_videos.section
       %ul.inline-list.grid-view
         - @videos.each do |video|
           %li.container{:class => cycle('first','','','last')}
