@@ -19,3 +19,10 @@ Then /^I should see a link to "([^"]+)"(?: with the text "([^"]*)")?$/ do |url, 
     page.should have_css("a[href='#{url}']", options)
   end
 end
+
+When /^I wait until all Ajax requests are complete$/ do
+  wait_until do
+    page.evaluate_script('$.active') == 0
+  end
+end
+

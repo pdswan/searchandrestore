@@ -17,6 +17,9 @@ module NavigationHelpers
     when /the detail page for the artist/
       artist_path(the.artist)
 
+    when /the detail page for artist ([0-9]+)$/
+      artist_path(Artist.find($1))
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
