@@ -5,7 +5,7 @@ Feature: Artists Landing
 
   Background:
     Given I am not logged in
-    And there are 3 live artists
+    And 3 live artists exist
 
   Scenario: Visitor sees artists landing page
     When I go to the artists page
@@ -13,8 +13,9 @@ Feature: Artists Landing
     And I should see the artist image thumbs
 
   Scenario: Visitor filters artists by name
-    Given there is a live artist with:
-      | name | Phil Collins |
+    Given the following live artist exists:
+      | name         |
+      | Phil Collins |
     When I go to the artists page
     And I fill in "Name" with "Phil Collins"
     And I press "search"

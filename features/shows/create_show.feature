@@ -5,9 +5,9 @@ Feature: Create Artist
 
   Background:
     Given I am logged in as an admin user
-    And there is a venue
-    And there is an artist
-    And there is an instrument
+    And a venue exists
+    And an artist exists
+    And an instrument exists
     When I go to the new admin show page
 
   Scenario: Admin creates show

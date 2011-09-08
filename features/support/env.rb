@@ -27,6 +27,8 @@ require 'factory_girl'
 # require spec custom matchers and factories
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
+require 'factory_girl/step_definitions'
+
 require 'selenium-webdriver'
 Selenium::WebDriver::Firefox.path = '/opt/local/bin/start-i386-firefox'
 
