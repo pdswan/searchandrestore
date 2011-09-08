@@ -10,7 +10,7 @@ class VideosController < ApplicationController
   protected
 
     def find_video
-      @video = Video.find(params[:id])
+      @video = Video.includes(:show => [:venue, { :performances => [:artist, :instrument] }]).find(params[:id])
     end
 
 end
