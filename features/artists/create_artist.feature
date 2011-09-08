@@ -62,8 +62,9 @@ Feature: Create Artist
 
   Scenario: Admin creates artist with existing primary instrument
     Given I am logged in as an admin user
-    And there is an instrument with:
-      | name | Banjo |
+    And the following instrument exists:
+      | name  | 
+      | Banjo |
     When I go to the new admin artist page
     And I fill in the new artist form with valid attributes
     And I select "banjo" from "Instrument"

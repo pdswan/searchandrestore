@@ -77,22 +77,25 @@ Then /^I should see the names of the artist's known associates with links to the
   end
 end
 
-Then /^I should see the latest video for the artist in the main video player$/ do
-  Then %{I should see the video in the main video player}
+Then /^I should see the first video from the show$/ do
+  the.video = the.show.videos.first
+  Then %{I should see the video}
 end
 
-Then /^I should see the related video below the main video player$/ do
-  the.video = Video.last
-  Then %{I should see a thumbnail for the video within "#related_videos"}
+Then /^I should see thumbnails for the videos from the show in the related videos section$/ do
+  the.show.videos.each do |video|
+    the.video = video
+    Then %{I should see a thumbnail for the video within "#related_videos"}
+  end
 end
 
-And /^I click the related video below the main video player$/ do
-  within("#related_videos") do
+And /^I click the thumbnail for the last video in the related videos section$/ do
+  within("#related_videos > li:last-child") do
     page.find("a[data-video=true]").click
   end
 end
 
-Then /^I should see the related video in the main video player$/ do
-  the.video = Video.last
-  Then %{I should see the video in the main video player}
+Then /^I should see the last video from the show$/ do
+  the.video = the.show.videos.last
+  Then %{I should see the video}
 end

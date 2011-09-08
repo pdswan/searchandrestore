@@ -7,41 +7,36 @@ Feature: Artist Show
     Given I am not logged in
 
   Scenario: User sees artist information
-    Given there is a live artist
+    Given a live artist exists
     When I am on the detail page for the artist
     Then I should see identifying information for the artist
 
   Scenario: User sees links to purchase artist's music
-    Given there is a live artist with buy links
+    Given a live artist with buy links exists
     When I go to the detail page for the artist
     Then I should see links to purchase the artist's music
 
   Scenario: User sees links to the artist's upcoming shows
-    Given there is a live artist with upcoming shows
+    Given a live artist with upcoming shows exists
     When I go to the detail page for the artist
     Then I should see the artist's upcoming shows
 
   Scenario: User sees artist's known associates
-    Given there is a live artist with known associates
+    Given a live artist with known associates exists
     When I go to the detail page for the artist
     Then I should see the names of the artist's known associates with links to their pages
 
-  Scenario: User sees latest video featuring the artist
-    Given there is a live artist with videos
+  Scenario: User sees videos from latest show in main video player
+    Given a live artist with upcoming shows exists
+    And 2 videos exist with a show id of "1"
     When I go to the detail page for the artist
-    Then I should see the latest video for the artist in the main video player
+    Then I should see the first video from the show in the main video player
+    And I should see thumbnails for the videos from the show in the related videos section
 
-  Scenario: User sees other videos from latest video's related show
-    Given there is a live artist with videos
-    And the show has an additional video
+  @javascript
+  Scenario: User chooses other video from the latest video's show
+    Given a live artist with upcoming shows exists
+    And 2 videos exist with a show id of "1"
     When I go to the detail page for the artist
-    Then I should see the related video below the main video player
-
-  @wip @javascript
-  Scenario: User chooses related video
-    Given there is a live artist with videos
-    And the show has an additional video
-    When I go to the detail page for the artist
-    And I click the related video below the main video player
-    Then I should see the related video in the main video player
-    
+    And I click the thumbnail for the last video in the related videos section
+    Then I should see the last video from the show in the main video player

@@ -71,11 +71,10 @@
 .col-2
   .section
     .container
-      .body#video_player_container
+      #video_player_container.body
         - if @selected_video
           :plain
             #{@selected_video.embed_code}
-          /%iframe#video-player{ :src => "#{@selected_video.url}?title=0&byline=0&portrait=0&color=ffffff", :width => '621', :height => '350', :frameborder => '0' }
           %p
             = link_to(@selected_video.show.group_name, @selected_video.show, :class => 'box dark')
             = @selected_video.show.when.strftime("%m/%d/%Y")
@@ -87,7 +86,7 @@
             %h3 More Videos from this Show
             %ul#related_videos.inline-list
               - @selected_video.show.videos.each do |video|
-                %li.container
+                %li.container{ :class => (video == @selected_video && 'active') }
                   %a.block{:href => video.url, :data => { :video => 'true', :embed_code => video.embed_code }}
                     .body
                       = image_tag(video.thumbnail.url(:tiny))
@@ -117,5 +116,5 @@
                 %span.box.block.name= video.show.group_name
                 %p.show
                   %span.when= video.show.when.strftime("%m/%d/%Y")
-                  %span.venue= video.venue.name
+                  %span.venue= video.show.venue.name
 
