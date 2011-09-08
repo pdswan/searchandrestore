@@ -89,10 +89,28 @@ Then /^I should see thumbnails for the videos from the show in the related video
   end
 end
 
+Then /^I should see thumbnails for the videos from the last show in the related videos section$/ do
+  the.artist.shows.last.videos.each do |video|
+    the.video = video
+    Then %{I should see a thumbnail for the video within "#related_videos"}
+  end
+end
+
 And /^I click the thumbnail for the last video in the related videos section$/ do
   within("#related_videos > li:last-child") do
-    page.find("a[data-video=true]").click
+    page.find("a[data-video]").click
   end
+end
+
+And /^I click the thumbnail for the first video from the last show in the more videos section$/ do
+  within("#more_videos > li:last-child") do
+    page.find("a[data-video]").click
+  end
+end
+
+Then /^I should see the first video from the last show$/ do
+  the.video = the.artist.shows.last.videos.first
+  Then %{I should see the video}
 end
 
 Then /^I should see the last video from the show$/ do

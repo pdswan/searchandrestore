@@ -135,10 +135,29 @@
     - if @has_video
       :javascript
         $(function() {
-          $('ul').delegate('[data-video]', 'click', function(e) {
-            $('#video_player_container > iframe').replaceWith($(this).attr('data-embed_code'));
-            $('#video_player_container > ul#related_videos > li').removeClass('active');
-            $(this).parent('li').addClass('active');
+          $('[data-video]').live('click', function(e) {
+            var current_show_id = $('#video_player_container').attr('data-show');
+            var new_show_id     = $(this).attr('data-show');
+            var video_id        = $(this).attr('data-video');
+
+            if (current_show_id != new_show_id) {
+              // if this video is part of a different show we need to load information
+              // specific to this video and it's related show
+
+              // TODO show loading?
+              $.get('/videos/' + video_id, function(data) {
+                $('#video_player_container').replaceWith(data);
+                // TODO hide loading?
+              });
+            } else {
+              // otherwise it's a related video and we can just swap out the code
+              $('#video_player_container > iframe').replaceWith($(this).attr('data-embed_code'));
+            }
+
+            $('a[data-video]').parent('li').removeClass('active');
+            $('a[data-video=' + video_id + ']').parent('li').addClass('active');
+
             e.preventDefault();
+            return false;
           });
         });

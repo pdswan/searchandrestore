@@ -22,6 +22,6 @@ Then /^the show should have one performance for the artist(?: "([^"]+)")? and th
   end
 end
 
-Given /^the show has an additional video$/ do
-  Factory(:video, :show => the.show)
+Given /^the( last)? show has an additional video$/ do |last|
+  Factory(:video, :show => (last ? Show.last : the.show))
 end

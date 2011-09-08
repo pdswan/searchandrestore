@@ -46,3 +46,15 @@ Feature: Artist Show
     Given there is an artist who has performed in 2 shows and the shows both have videos
     When I go to the detail page for the artist
     Then I should see the thumbnail for the first video from the last show in the more videos section
+
+  @javascript
+  Scenario: User chooses video from another show
+    Given there is an artist who has performed in 2 shows and the shows both have videos
+    And the last show has an additional video
+    And 2 performances exist with a show id of "2"
+    When I go to the detail page for artist 1
+    And I click the thumbnail for the first video from the last show in the more videos section
+    And I wait until all Ajax requests are complete
+    Then I should see the first video from the last show in the main video player
+    And I should see thumbnails for the videos from the last show in the related videos section
+
