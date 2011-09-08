@@ -40,3 +40,9 @@ Feature: Artist Show
     When I go to the detail page for the artist
     And I click the thumbnail for the last video in the related videos section
     Then I should see the last video from the show in the main video player
+
+  Scenario: User sees one video per show for all shows beyond the most recent
+    show with videos
+    Given there is an artist who has performed in 2 shows and the shows both have videos
+    When I go to the detail page for the artist
+    Then I should see the thumbnail for the first video from the last show in the more videos section

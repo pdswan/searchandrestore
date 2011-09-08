@@ -99,3 +99,25 @@ Then /^I should see the last video from the show$/ do
   the.video = the.show.videos.last
   Then %{I should see the video}
 end
+
+Given /^there is an artist who has performed in 2 shows and the shows both have videos$/ do
+  Given %{a live artist exists}
+  And   %{2 shows exist}
+
+  And   %{the following performances exist:}, table(%{
+    | show_id | artist_id |
+    | 1       | 1         |
+    | 2       | 1         |
+  })
+
+  And   %{the following videos exist:}, table(%{
+    | show_id |
+    | 1       |
+    | 2       |
+  })
+end
+
+Then /^I should see the thumbnail for the first video from the last show in the more videos section$/ do
+  the.video = the.artist.shows.last.videos.first
+  Then %{I should see a thumbnail for the video within "#more_videos"}
+end
