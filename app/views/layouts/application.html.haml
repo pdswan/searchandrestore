@@ -135,7 +135,7 @@
     - if @has_video
       :javascript
         $(function() {
-          $('[data-video]').live('click', function(e) {
+          $('a[data-video]').live('click', function(e) {
             var current_show_id = $('#video_player_container').attr('data-show');
             var new_show_id     = $(this).attr('data-show');
             var video_id        = $(this).attr('data-video');
