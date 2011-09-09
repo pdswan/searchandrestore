@@ -4,22 +4,23 @@
 .col-1
 
   .section
-    %a.box.dark{:href => 'javascript:void(0);'} Search Artists By...
-    = form_for :blah do |f|
+    = form_for Artist.search, :url => artists_path, :html => { :method => :get } do |f|
+      .box.dark Search Artists By...
       %fieldset.searchy
-        .field.select
-          = f.label :name, 'Name:'
+        .field.text
+          = f.label :name_starts_with, 'Name:'
           .input
-            = f.select :name, ['One','Two','Three']
-          .submit
-            = f.submit :search
+            = f.text_field :name_starts_with
+
         .field.select
-          = f.label :instrument, 'Instrument:'
+          = f.label :instrument_id_equals, 'Instrument:'
           .input
-            = f.select :instrument, ['One','Two','Three']
+            = f.collection_select :instrument_id_equals, Instrument.all, :id, :name, :include_blank => 'any instrument'
+
           .submit
             = f.submit :search
         .clear
+
   #info.section
     .container.skin-dark
       .body

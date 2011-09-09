@@ -12,22 +12,31 @@ Feature: Artists Landing
     Then I should see the artist names
     And I should see the artist image thumbs
 
-  Scenario: Visitor filters artists by name
+  Scenario Outline: Visitor filters artists by name
     Given the following live artist exists:
       | name         |
       | Phil Collins |
-    When I go to the artists page
+    When I go to the <page>
     And I fill in "Name" with "Phil Collins"
     And I press "search"
     Then I should only see the artist names for artists with:
       | name | Phil Collins |
 
-  Scenario: Visitor filters artist by instrument
+    Scenarios:
+      | page                     |
+      | artists page             |
+      | detail page for artist 1 |
+
+  Scenario Outline: Visitor filters artist by instrument
     When I go to the artists page
     And I select the instrument name from "Instrument"
     And I press "search"
-    Then I should only see the artist names for artists with:
-      | instrument_id | 3 |
+    Then I should only see the artist names for artists with the instrument
+
+    Scenarios:
+      | page                     | id |
+      | artists page             | 3  |
+      | detail page for artist 1 | 6  |
 
   Scenario: Visitor navigates to artist detail page
     When I go to the artists page

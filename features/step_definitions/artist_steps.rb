@@ -12,6 +12,18 @@ Then /^the artist should have 1 buy link$/ do
   the.artist.should have(1).buy_links
 end
 
+Then /^I should only see the artist names for artists with the instrument$/ do
+  should, should_not = Artist.all.partition { |a| a.instrument == the.instrument }
+
+  should.each do |artist|
+    Then %{I should see "#{artist.name}"}
+  end
+
+  should_not.each do |artist|
+    Then %{I should not see "#{artist.name}"}
+  end
+end
+
 Then /^I should(?: only)? see the artist names( for artists with:)?$/ do |with_attrs, *args|
   attrs = args.first.try(:rows_hash) || { }
 
