@@ -26,3 +26,13 @@ Feature: Shows
     When I go to the shows page
     Then I should see the upcoming search and restore shows section
 
+  Scenario: Visitor searches for shows by artist
+    Given a show exists
+    And the following live artist with upcoming shows exists:
+      | name     |
+      | Weird Al |
+    When I go to the shows page
+    And I fill in "Artist" with "Weird Al"
+    And I press "search"
+    Then I should only see the shows for the artist with name "Weird Al"
+

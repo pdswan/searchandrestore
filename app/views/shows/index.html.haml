@@ -1,13 +1,13 @@
 - @page_class = 'layout-1 page-shows'
 .col-1
   .section
-    %a.box.dark{:href => '#'} Search Shows By...
+    %span.box.dark Search Shows By...
     = form_for @shows do |f|
       %fieldset.searchy
-        /.field.select
-        /  = f.label :artist, 'Artist:'
-        /  .input
-        /    = f.select :artist, ['One','Two','Three']
+        .field.text
+          = f.label :artists_name_starts_with, 'Artist:'
+          .input
+            = f.text_field :artists_name_starts_with
         /  .submit
         /    = f.submit :search
         /.field.select
