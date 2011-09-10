@@ -8,14 +8,14 @@
           = f.label :artists_name_starts_with, 'Artist:'
           .input
             = f.text_field :artists_name_starts_with
-        /  .submit
-        /    = f.submit :search
-        /.field.select
-        /  = f.label :venue, 'Venue:'
-        /  .input
-        /    = f.select :venue, ['One','Two','Three']
-        /  .submit
-        /    = f.submit :search
+          .submit
+            = f.submit :search
+        .field.select
+          = f.label :venue_id_equals, 'Venue:'
+          .input
+            = f.collection_select :venue_id_equals, Venue.all, :id, :name, :include_blank => 'any venue' 
+          .submit
+            = f.submit :search
         .field.calendar.floatleft
           = f.label :for_day, 'Date:'
           = f.hidden_field :for_day
