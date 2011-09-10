@@ -49,4 +49,5 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers', '~> 1.0.0.beta1'
   gem 'watchr'
+  gem 'timecop'
 end

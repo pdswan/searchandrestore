@@ -51,3 +51,10 @@ Then /^I should( not)? see the shows( not)? happening today$/ do |should_see, to
     Then %{I should#{should_see} see the show}
   end
 end
+
+Then /^I should( not)? see the shows with a when of "([^"]+)"$/ do |should_i, day|
+  Show.for_day(day).each do |show|
+    the.show = show
+    Then %{I should#{should_i} see the show}
+  end
+end

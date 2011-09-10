@@ -32,6 +32,8 @@ require 'factory_girl/step_definitions'
 require 'selenium-webdriver'
 Selenium::WebDriver::Firefox.path = '/opt/local/bin/start-i386-firefox'
 
+require 'timecop'
+
 # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
 # order to ease the transition to Capybara we set the default here. If you'd
 # prefer to use XPath just remove this line and adjust any selectors in your
@@ -70,4 +72,8 @@ if defined?(ActiveRecord::Base)
     DatabaseCleaner.strategy = :truncation
   rescue LoadError => ignore_if_database_cleaner_not_present
   end
+end
+
+Before do
+  Timecop.return
 end

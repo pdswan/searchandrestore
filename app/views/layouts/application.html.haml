@@ -127,8 +127,15 @@
     - if @uses_datepicker
       :javascript
         $(function() {
-          $('#datepicker').datepicker({
-            inline: true
+          $('#datepicker').each(function() {
+            var options = { 
+              inline:      true,
+              dateFormat:  'yy-mm-dd',
+              altField:    $(this).data('input'),
+              defaultDate: $(this).data('default-date')
+            };
+
+            $(this).datepicker(options);
           });
         });
 
