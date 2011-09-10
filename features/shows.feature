@@ -10,6 +10,7 @@ Feature: Shows
     Then I should see the shows happening today
     But I should not see the shows not happening today
 
+  @javascript
   Scenario: Visitor users calendar to search for shows by date
     Given the date is "9/10/2011"
     And a show with performances exists with a when of "2011-09-09"
@@ -33,7 +34,7 @@ Feature: Shows
     When I go to the shows page
     And I fill in "Artist" with "Weird Al"
     And I press "search"
-    Then I should only see the shows having artists with name "Weird Al"
+    Then I should only see the shows for the artist with name "Weird Al"
 
   Scenario: Visitor searches for show by venue
     Given a venue exists with a name of "Bowery Ballroom"
