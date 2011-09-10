@@ -4,15 +4,15 @@
       margin-top: 5px;
     }
     .show-listing {
-      a.band,
-      a.venue,
+      .band,
+      .venue,
       p.date {
         float: left;
       }
-      a.band {
+      .band {
         margin-right: 6px;
       }
-      a.venue {
+      .venue {
         margin-right: 4px; 
       }
       p.date {

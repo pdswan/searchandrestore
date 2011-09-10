@@ -47,6 +47,10 @@ Factory.define :show do |s|
   s.when       Time.zone.now
 end
 
+Factory.define :show_with_performances, :parent => :show do |s|
+  s.after_create { |show| Factory(:performance, :show => show) }
+end
+
 Factory.define :performance do |p|
   p.association :artist, :factory => :live_artist
   p.association :instrument

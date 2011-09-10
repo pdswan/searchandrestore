@@ -25,3 +25,29 @@ end
 Given /^the( last)? show has an additional video$/ do |last|
   Factory(:video, :show => (last ? Show.last : the.show))
 end
+
+Then /^I should see the show$/ do
+  Then %{I should see "#{the.show.group_name}"}
+  And  %{I should see a link to "#{url_for(the.show.venue)}" with the text "#{the.show.venue.name}"}
+
+  the.show.performances.each do |performance|
+    And  %{I should see a link to "#{url_for(performance.artist)}" with the text "#{performance.artist.name} (#{performance.instrument.name})"}
+  end
+
+  the.show.description.split(/\n+/).each do |fragment|
+    Then %{I should see "#{fragment}"}
+  end if the.show.description.present?
+end
+
+Then /^I should not see the show$/ do
+  page.should have_no_css("[id=show_#{the.show.id}]")
+end
+
+Then /^I should( not)? see the shows( not)? happening today$/ do |should_see, today|
+  today = today.blank?
+
+  (today ? Show.today : Show.not_today).each do |show|
+    the.show = show
+    Then %{I should#{should_see} see the show}
+  end
+end
