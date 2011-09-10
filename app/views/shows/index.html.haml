@@ -2,23 +2,24 @@
 .col-1
   .section
     %a.box.dark{:href => '#'} Search Shows By...
-    = form_for :blah do |f|
+    = form_for @shows do |f|
       %fieldset.searchy
-        .field.select
-          = f.label :artist, 'Artist:'
-          .input
-            = f.select :artist, ['One','Two','Three']
-          .submit
-            = f.submit :search
-        .field.select
-          = f.label :venue, 'Venue:'
-          .input
-            = f.select :venue, ['One','Two','Three']
-          .submit
-            = f.submit :search
+        /.field.select
+        /  = f.label :artist, 'Artist:'
+        /  .input
+        /    = f.select :artist, ['One','Two','Three']
+        /  .submit
+        /    = f.submit :search
+        /.field.select
+        /  = f.label :venue, 'Venue:'
+        /  .input
+        /    = f.select :venue, ['One','Two','Three']
+        /  .submit
+        /    = f.submit :search
         .field.calendar.floatleft
-          = f.label :date, 'Date:'
-          #datepicker
+          = f.label :for_day, 'Date:'
+          = f.hidden_field :for_day
+          #datepicker{ :data => { :input => '#search_for_day', :'default-date' => @current_date.strftime('%Y-%m-%d') } }
         .floatleft.calendar-submit
           = f.submit :search
         .clear
@@ -37,7 +38,7 @@
       %a.box{:href => '#'} See All Search&amp;Restore Shows
 
 .col-2
-  %h3 Search results for #{Time.zone.now.strftime("%A %B %d, %Y")}
+  %h3 Search results for #{@current_date.strftime("%A %B %d, %Y")}
   %ul.containers.show-listing
     - @shows.each do |show|
       %li.container[show]

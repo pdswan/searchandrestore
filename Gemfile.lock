@@ -163,6 +163,7 @@ GEM
     state_machine (1.0.1)
     term-ansicolor (1.0.5)
     thor (0.14.6)
+    timecop (0.3.5)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
@@ -200,4 +201,5 @@ DEPENDENCIES
   spork (~> 0.9.0.rc)
   sqlite3
   state_machine
+  timecop
   watchr
