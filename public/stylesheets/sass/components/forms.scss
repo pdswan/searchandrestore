@@ -78,6 +78,20 @@
         font-weight: normal;
         padding-left: 5px;
       }
+      &.text {
+        .input,
+        .submit {
+          float: left;
+        } 
+        .input {
+          width:242px;
+          margin-right:11px;
+          input {
+            width: 242px;
+            height:15px;
+          }
+        }
+      }
       &.select {
        .input,
        .submit {
