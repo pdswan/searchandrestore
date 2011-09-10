@@ -78,3 +78,12 @@ Then /^I should only see the shows for the artist with name "([^"]+)"$/ do |name
     Then %{I should#{show.artists.include?(the.artist) ? '' : ' not'} see the show}
   end
 end
+
+Then /^I should only see the shows for the venue with name "([^"]+)"$/ do |name|
+  the.venue = Venue.find_by_name(name)
+
+  Show.all.each do |show|
+    the.show = show
+    Then %{I should#{show.venue == the.venue ? '' : ' not'} see the show}
+  end
+end
