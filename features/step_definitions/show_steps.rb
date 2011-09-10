@@ -69,3 +69,12 @@ Then /^I should see the upcoming search and restore shows section$/ do
     And %{I should see a link to "#{shows_path(:search => { :search_and_restore_is_true => 1 })}"}
   end
 end
+
+Then /^I should only see the shows for the artist with name "([^"]+)"$/ do |name|
+  the.artist = Artist.find_by_name(name)
+
+  Show.all.each do |show|
+    the.show = show
+    Then %{I should#{show.artists.include?(the.artist) ? '' : ' not'} see the show}
+  end
+end
