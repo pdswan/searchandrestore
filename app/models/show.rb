@@ -27,9 +27,13 @@ class Show < ActiveRecord::Base
     end
     where(:when => (day_or_date_string.beginning_of_day..day_or_date_string.end_of_day))
   end
-  scope :upcoming,  where(self.arel_table[:when].gt(Time.zone.now))
+  scope :upcoming,  where(self.arel_table[:when].gt(Time.zone.now)).order(:when => 'asc')
   scope :today,     for_day(Time.zone.now)
   scope :not_today, where(self.arel_table[:when].not_in(Time.zone.now.beginning_of_day..Time.zone.now.end_of_day))
+
+  def self.search_and_restore(bool = true)
+    where(:search_and_restore => !!bool)
+  end
 
   search_methods :for_day
 

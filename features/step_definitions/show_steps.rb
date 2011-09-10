@@ -58,3 +58,14 @@ Then /^I should( not)? see the shows with a when of "([^"]+)"$/ do |should_i, da
     Then %{I should#{should_i} see the show}
   end
 end
+
+Then /^I should see the upcoming search and restore shows section$/ do
+  within('#upcoming-search-and-restore') do
+    Show.all.each do |show|
+      the.show = show
+      Then %{I should#{show.search_and_restore? ? '' : ' not'} see the show}
+    end
+
+    And %{I should see a link to "#{shows_path(:search => { :search_and_restore_is_true => 1 })}"}
+  end
+end

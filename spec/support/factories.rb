@@ -47,6 +47,10 @@ Factory.define :show do |s|
   s.when       Time.zone.now
 end
 
+Factory.define :search_and_restore_show, :parent => :show do |s|
+  s.search_and_restore true
+end
+
 Factory.define :show_with_performances, :parent => :show do |s|
   s.after_create { |show| Factory(:performance, :show => show) }
 end

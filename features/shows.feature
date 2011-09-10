@@ -20,3 +20,9 @@ Feature: Shows
     Then I should see the shows with a when of "2011-09-09"
     But I should not see the shows with a when of "2011-09-10"
 
+  Scenario: Visitor sees upcoming search and restore shows
+    Given a show exists
+    And a search and restore show exists
+    When I go to the shows page
+    Then I should see the upcoming search and restore shows section
+
