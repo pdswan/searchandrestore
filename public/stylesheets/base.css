@@ -291,9 +291,9 @@
   width: 125px;
   position: absolute;
   bottom: 10px;
-  left: 10px; }
+  left: 155px; }
   .jazz.section-artists.page-show #info a.box.visit-website {
-    left: 155px; }
+    left: 10px; }
 .jazz.section-artists.page-show #info .media-with-info .media {
   padding-right: 10px;
   padding-bottom: 8px; }
@@ -322,13 +322,13 @@
 
 .jazz.page-shows h3#featured-musicians-title {
   margin-top: 5px; }
-.jazz.page-shows .show-listing a.band,
-.jazz.page-shows .show-listing a.venue,
+.jazz.page-shows .show-listing .band,
+.jazz.page-shows .show-listing .venue,
 .jazz.page-shows .show-listing p.date {
   float: left; }
-.jazz.page-shows .show-listing a.band {
+.jazz.page-shows .show-listing .band {
   margin-right: 6px; }
-.jazz.page-shows .show-listing a.venue {
+.jazz.page-shows .show-listing .venue {
   margin-right: 4px; }
 .jazz.page-shows .show-listing p.date {
   margin-bottom: 0px;
