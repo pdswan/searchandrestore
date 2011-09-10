@@ -25,17 +25,19 @@
         .clear
 
   %h3.box-header See Tonight's Top Picks
-  .container.skin-dark
-    .body
-      %h3 Upcoming Search&amp;Restore Shows:
-      %ul.header-meta-list
-        - 3.times do |t|
-          %li
-            %h4 Trans-Atlantic Quartet
-            %p.byline
-              %span.date 03/31/2011
-              %span.location Bowery Poetry Club
-      %a.box{:href => '#'} See All Search&amp;Restore Shows
+
+  - unless @upcoming_search_and_restore_shows.empty?
+    #upcoming-search-and-restore.container.skin-dark
+      .body
+        %h3 Upcoming Search&amp;Restore Shows:
+        %ul.header-meta-list
+          - @upcoming_search_and_restore_shows.each do |show|
+            %li
+              %h4= show.group_name
+              %p.byline
+                %span.date= show.when.strftime("%m/%d/%Y")
+                %span.location= link_to(show.venue.name, show.venue)
+        = link_to("See All Search&amp;Restore Shows", shows_path(:search => { :search_and_restore_is_true => 1 }), :class => 'box')
 
 .col-2
   %h3 Search results for #{@current_date.strftime("%A %B %d, %Y")}

@@ -6,6 +6,8 @@ class ShowsController < ApplicationController
     @shows           = Show.search(params[:search])
     @current_date    = params[:search][:for_day].respond_to?(:strftime) ?
       params[:search][:for_day] : Time.zone.parse(params[:search][:for_day])
+
+    @upcoming_search_and_restore_shows = Show.upcoming.search_and_restore.limit(5)
   end
 
   protected

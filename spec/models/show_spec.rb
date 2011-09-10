@@ -31,4 +31,26 @@ describe Show do
       end
     end
   end
+
+  describe ".search_and_restore" do
+    let!(:search_and_restore_show) { Factory(:search_and_restore_show) }
+    let!(:show)                    { Factory(:show) }
+
+    subject { Show.search_and_restore }
+
+    it { should include(search_and_restore_show) }
+    it { should_not include(show) }
+  end
+
+  describe ".upcoming" do
+    let!(:upcoming_show) { Factory(:show, :when => 1.day.from_now) }
+    let!(:past_show)     { Factory(:show, :when => 1.day.ago) }
+    let!(:todays_show)   { Factory(:show, :when => 1.hour.from_now) }
+
+    subject { Show.upcoming }
+
+    it { should include(upcoming_show) }
+    it { should_not include(past_show) }
+    it { should include(todays_show) }
+  end
 end
