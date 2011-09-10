@@ -21,7 +21,9 @@ class Show < ActiveRecord::Base
             :when,
             :presence => true
 
-  scope :upcoming, where("#{quoted_table_name}.when > ?", Time.zone.now)
+  scope :upcoming,  where("#{quoted_table_name}.when > ?", Time.zone.now)
+  scope :today,     where(:when => (Time.zone.now.beginning_of_day..Time.zone.now.end_of_day))
+  scope :not_today, where(["#{quoted_table_name}.when < ? OR #{quoted_table_name}.when > ?", Time.zone.now.beginning_of_day, Time.zone.now.end_of_day])
 
   def when
     read_attribute(:when) || Time.zone.now

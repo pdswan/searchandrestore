@@ -1,0 +1,60 @@
+- @page_class = 'layout-1 page-shows'
+.col-1
+  .section
+    %a.box.dark{:href => '#'} Search Shows By...
+    = form_for :blah do |f|
+      %fieldset.searchy
+        .field.select
+          = f.label :artist, 'Artist:'
+          .input
+            = f.select :artist, ['One','Two','Three']
+          .submit
+            = f.submit :search
+        .field.select
+          = f.label :venue, 'Venue:'
+          .input
+            = f.select :venue, ['One','Two','Three']
+          .submit
+            = f.submit :search
+        .field.calendar.floatleft
+          = f.label :date, 'Date:'
+          #datepicker
+        .floatleft.calendar-submit
+          = f.submit :search
+        .clear
+
+  %h3.box-header See Tonight's Top Picks
+  .container.skin-dark
+    .body
+      %h3 Upcoming Search&amp;Restore Shows:
+      %ul.header-meta-list
+        - 3.times do |t|
+          %li
+            %h4 Trans-Atlantic Quartet
+            %p.byline
+              %span.date 03/31/2011
+              %span.location Bowery Poetry Club
+      %a.box{:href => '#'} See All Search&amp;Restore Shows
+
+.col-2
+  %h3 Search results for #{Time.zone.now.strftime("%A %B %d, %Y")}
+  %ul.containers.show-listing
+    - @shows.each do |show|
+      %li.container[show]
+        .body
+          %p.box.dark.band= show.group_name
+          = link_to("#{show.venue.name}, #{show.venue.address}", show.venue, :class => 'box venue')
+          %p.date= show.when.strftime("%d/%m/%Y %I:%M%p")
+          .clear
+
+          - if show.performances.present?
+            %h3#featured-musicians-title Featured Musicians:
+            %ul.inline-list
+              - show.performances.each do |performance|
+                %li= link_to("#{performance.artist.name} (#{performance.instrument.name})", performance.artist, :class => 'box')
+
+          - if show.description.present?
+            %h3 About This Show
+            .description
+              = simple_format(sanitize(show.description))
+.clear
