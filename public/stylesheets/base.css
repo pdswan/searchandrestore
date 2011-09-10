@@ -306,6 +306,24 @@
   display: none; }
 .jazz.section-artists.page-show #shop ul.inline-list li {
   margin-right: 10px; }
+.jazz.section-artists.page-show #related_videos {
+  margin-bottom: 15px; }
+  .jazz.section-artists.page-show #related_videos .body {
+    padding: 0px; }
+  .jazz.section-artists.page-show #related_videos li {
+    width: 140px;
+    padding-right: 17px;
+    padding-bottom: 5px; }
+    .jazz.section-artists.page-show #related_videos li.last {
+      padding-right: 0px; }
+    .jazz.section-artists.page-show #related_videos li span.box {
+      overflow: hidden; }
+      .jazz.section-artists.page-show #related_videos li span.box span {
+        overflow: hidden;
+        display: block;
+        float: left;
+        white-space: nowrap;
+        width: 129px; }
 
 .jazz.page-about .masthead-top {
   background-image: url(/images/titles/about_title.png); }
