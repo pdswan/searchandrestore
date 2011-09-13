@@ -30,9 +30,9 @@
           %li
             %a{:href => root_path} Home
           %li#nav-shows
-            %a{:href => '/home/shows'} Shows
+            = link_to('Shows', shows_path)
           %li#nav-artists
-            = link_to('Artists', artists_url)
+            = link_to('Artists', artists_path)
           %li#nav-venues
             %a{:href => '/home/venues_landing'} Venues
           %li#nav-video
