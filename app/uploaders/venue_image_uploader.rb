@@ -21,7 +21,7 @@ class VenueImageUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
   def default_url
-    'http://dummyimage.com/160x160/000/fff'
+    'http://dummyimage.com/140x140/000/fff'
   end
 
   # Process files as they are uploaded:
@@ -33,7 +33,7 @@ class VenueImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fill => [160, 160]
+    process :resize_to_fill => [140, 140]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
