@@ -45,3 +45,9 @@ Feature: Shows
     And I press "search"
     Then I should only see the shows for the venue with name "Bowery Ballroom"
 
+  Scenario: User views all search and restore shows
+    Given a search and restore show exists
+    When I go to the shows page
+    And I follow "See All Search&amp;Restore Shows"
+    Then I should see the search and restore shows
+
