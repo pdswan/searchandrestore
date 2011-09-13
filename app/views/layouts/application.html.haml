@@ -79,9 +79,10 @@
           var open_infowindow = null;
           
           $('[data-latitude][data-longitude]').each(function() {
-            var latitude  = $(this).data('latitude'),
-                longitude = $(this).data('longitude'),
-                name      = $(this).find('.name').text();
+            var latitude           = $(this).data('latitude'),
+                longitude          = $(this).data('longitude'),
+                name               = $(this).find('.name').text(),
+                include_infowindow = ($(this).data('include-infowindow') == 0 ? false : true);
 
             var marker = new google.maps.Marker({
               position: new google.maps.LatLng(latitude, longitude),
@@ -89,26 +90,27 @@
               icon:"/images/map_point.png"
             });
 
-            var infowindow = new google.maps.InfoWindow({
-              content: name 
-            });
-            
             // To add the marker to the map, call setMap();
-            marker.setMap(map);  
+            marker.setMap(map);
 
-            google.maps.event.addListener(marker,'click',function() {
-              infowindow.open(map, marker);
-            });
+            if (include_infowindow) {
+              var infowindow = new google.maps.InfoWindow({
+                content: name 
+              });
 
-            $(this).mouseover(function() {
-              map.setCenter(new google.maps.LatLng(latitude, longitude));
+              google.maps.event.addListener(marker,'click',function() {
+                infowindow.open(map, marker);
+              });
 
-              if(open_infowindow) { open_infowindow.close(); }
+              $(this).mouseover(function() {
+                map.setCenter(new google.maps.LatLng(latitude, longitude));
 
-              infowindow.open(map, marker);
-              open_infowindow = infowindow;
-            });
+                if(open_infowindow) { open_infowindow.close(); }
 
+                infowindow.open(map, marker);
+                open_infowindow = infowindow;
+              });
+            }
           });
           
         }
