@@ -7,7 +7,9 @@ class VenuesController < ApplicationController
   end
 
   def show
-    @venue = Venue.find(params[:id])
+    @uses_gmap = true
+    @venue     = Venue.find(params[:id])
+
     render :nothing => true
   end
 

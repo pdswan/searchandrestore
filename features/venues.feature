@@ -5,7 +5,6 @@ Feature: Venues
     When I go to the venues page
     Then I should see the venue
 
-  @wip
   Scenario: Visitor searches for venue
     Given a venue exists with a name of "CBGBs"
     When I go to the venues page
