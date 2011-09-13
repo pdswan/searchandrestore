@@ -10,7 +10,13 @@ class Venue < ActiveRecord::Base
             :latitude,
             :longitude, :presence => true
 
-  geocoded_by :address
+  geocoded_by :address do |obj, results|
+    if result = results.first
+      obj.city      = result.city
+      obj.latitude  = result.latitude
+      obj.longitude = result.longitude
+    end
+  end
 
   before_validation :geocode, :if => proc { |record| record.new_record? || record.address_changed? }
 end

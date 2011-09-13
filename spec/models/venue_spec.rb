@@ -20,7 +20,7 @@ describe Venue do
       it "should set latitude and longitude" do
         venue.save
         venue.latitude.should_not be_nil
-        venue.longitude.should_not be nil
+        venue.longitude.should_not be_nil
       end
     end
 
@@ -32,7 +32,7 @@ describe Venue do
       context "the address has changed" do
         before { venue.should_receive(:address_changed?).and_return(true) }
 
-        it "should not call geocode" do
+        it "should call geocode" do
           venue.should_receive(:geocode).and_return(true)
           venue.save
         end
