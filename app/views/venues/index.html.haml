@@ -2,14 +2,14 @@
 
 .searchy-inline
   .floatleft#search-by-name.mr10
-    = form_for :blah do |f|
+    = form_tag venues_url, :method => 'get' do
       %fieldset
-        = f.label :name, 'Search Venues:', :class => 'box dark floatleft mr10 pr10 pl10'
+        %p.box.dark.floatleft.mr10.pr10.pl10 Search Venues:
         .field.select.inline.mb5
-          = f.label :name, 'Name:'
+          = label_tag :id, 'Name:'
           .wrapper
-            = f.select :name, ['one','two','three']
-        = f.submit :search
+            = select_tag :id, options_from_collection_for_select(Venue.all, :id, :name), :include_blank => 'choose a venue'
+        = submit_tag :search
   .clear
 .col-1
   .container
