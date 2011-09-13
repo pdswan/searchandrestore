@@ -1,0 +1,28 @@
+- @page_class = 'layout-4 section-venues page-index'
+
+.searchy-inline
+  .floatleft#search-by-name.mr10
+    = form_for :blah do |f|
+      %fieldset
+        = f.label :name, 'Search Venues:', :class => 'box dark floatleft mr10 pr10 pl10'
+        .field.select.inline.mb5
+          = f.label :name, 'Name:'
+          .wrapper
+            = f.select :name, ['one','two','three']
+        = f.submit :search
+  .clear
+.col-1
+  .container
+    .body{:style => 'padding: 6px;'}
+      #map_canvas{:style => "width: 457px; height: 560px"}
+.col-2
+  %ul.inline-list.grid-view
+    - @venues.each do |venue|
+      %li.container{:class => cycle('first','','last'), :data => { :latitude => venue.latitude, :longitude => venue.longitude }}
+        %a.block{:href => url_for(venue)}
+          .body
+            = image_tag(venue.image.url(:thumb))
+            .clear
+            %span.box.block.name= venue.name
+            %p.byline= venue.city 
+.clear
