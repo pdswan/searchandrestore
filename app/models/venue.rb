@@ -1,4 +1,6 @@
 class Venue < ActiveRecord::Base
+  default_scope order("#{quoted_table_name}.name asc")
+
   mount_uploader :image, VenueImageUploader
 
   has_many :shows
