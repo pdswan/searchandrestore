@@ -20,7 +20,7 @@ class ShowsController < ApplicationController
     def set_date
       params[:search] ||= { }
       if params[:search][:for_day].blank?
-        params[:search][:for_day] = Date.today
+        params[:search][:for_day] = Time.zone.now
       end
     end
 end
