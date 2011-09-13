@@ -1,7 +1,8 @@
 class VenuesController < ApplicationController
 
   def index
-    @venues = Venue.scoped
+    @uses_gmap = true
+    @venues    = Venue.scoped
   end
 
 end
