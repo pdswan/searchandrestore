@@ -78,7 +78,8 @@ Admin::ArtistsController.class_eval do
     end
 
     def scoped_collection
-      super.scoped(:joins => :instrument, :include => :instrument)
+      super.joins("LEFT JOIN instruments ON instruments.id = artists.instrument_id").
+        includes(:instrument)
     end
 
 end
