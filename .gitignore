@@ -11,3 +11,4 @@ db/schema.rb
 *.swn
 .webbynode/credentials
 public/uploads/*
+vendor/bundle
