@@ -29,9 +29,6 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 require 'factory_girl/step_definitions'
 
-require 'selenium-webdriver'
-Selenium::WebDriver::Firefox.path = '/opt/local/bin/start-i386-firefox'
-
 require 'timecop'
 
 # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In

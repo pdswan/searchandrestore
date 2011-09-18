@@ -1,0 +1,86 @@
+- @page_class = 'layout-1 section-venues page-show'
+
+.col-1
+  .section
+    - form_for :blah do |f|
+      %fieldset.searchy
+        = f.label(:venue, 'Search Venues:', :class => 'box dark')
+        .field.select
+          .input
+            = f.select :venue, ['One','Two','Three']
+          .submit
+            = f.submit :search
+          .clear
+  .section
+    #map_canvas{:style => "width: 310px; height: 387px"}
+  .section.snug
+    .container.skin-dark
+      .body
+        %h3 Upcoming Shows at this Venue:
+        %ul.header-meta-list
+          - 3.times do |t|
+            %li
+              %h4 Trans-Atlantic Quartet
+              %p.byline
+                %span.date 03/31/2011
+                %span.location Bowery Poetry Club
+        %a.box{:href => '#'} See All Shows at this Venue
+
+
+.col-2
+  .section
+    .container.skin-dark
+      .body
+        .media-with-info.large
+          .media
+            = image_tag(@venue.image.url(:thumb))
+          .info
+            %h4= @venue.name
+            %address.mb10= @venue.address
+            %dl
+              %dt Music every night:
+              %dd.music_every_night= @venue.music_every_night? ? 'Yes' : 'No'
+              %dt Capacity:
+              %dd.capacity= @venue.capacity
+              %dt Reservations:
+              %dd.reservations= @venue.reservations? ? 'Yes' : 'No'
+
+              - if @venue.age_restriction.present?
+                %dt Age Restrictions:
+                %dd.age_restriction= @venue.age_restriction
+
+              - if @venue.food_and_drink.present?
+                %dt Food/Drink:
+                %dd.food_and_drink= @venue.food_and_drink
+
+              - if @venue.price_and_discount_info.present?
+                %dt Price / Student Discount:
+                %dd.price_and_discount_info= @venue.price_and_discount_info
+
+            - if @venue.website.present?
+              %a.box{:href => @venue.website, :target => '_blank'} Visit this venue's website
+  .section
+    .container
+      .body
+        %h3.snug Their words:
+        = simple_format(@venue.their_words)
+  .section
+    .container
+      .body
+        %h3.snug Our words:
+        = simple_format(@venue.our_words)
+        
+  .section
+    .pl10.pt5
+      %h3.inline Latest videos from this venue:
+      %a.box{:href => '#'} See all videos from this venue
+  .section.snug
+    %ul.inline-list.grid-view
+      - 4.times do |t|
+        %li.container{:class => cycle('first','','','last')}
+          %a.block{:href => '#'}
+            .body
+              = image_tag('http://dummyimage.com/140x77/000/fff')
+              .clear
+              %span.box.block.name{:href => '#'} Val Shaffer Quartet
+              %p.byline 03/31/2011, Tea Lounge 
