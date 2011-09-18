@@ -27,3 +27,12 @@ Then /^I should see the venue details$/ do
     end
   end
 end
+
+Then /^I should see the upcoming shows at the venue$/ do
+  within('#upcoming-shows') do
+    the.venue.shows.upcoming.each do |show|
+      Then %{I should see "#{show.group_name}"}
+      And  %{I should see a link to "#{url_for(show.venue)}" with the text "#{show.venue.name}"}
+    end
+  end
+end

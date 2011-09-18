@@ -23,6 +23,10 @@ Factory.define :venue do |v|
   v.our_words   { Faker::Lorem.paragraphs.join("\n") }
 end
 
+Factory.define :venue_with_upcoming_shows, :parent => :venue do |v|
+  v.after_create { |venue| Factory(:show, :venue => venue) }
+end
+
 Factory.define :artist do |a|
   a.name { "#{Faker::Name.first_name} #{Faker::Name.last_name}" }
   a.bio  Faker::Lorem.paragraphs.join("\n")

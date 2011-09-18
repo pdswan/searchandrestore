@@ -6,7 +6,6 @@ Feature: Venue details page
     Then show me the page
     Then I should see the venue details
 
-  @wip
   Scenario: User sees upcoming shows at the venue
     Given a venue with upcoming shows exists
     When I go to the detail page for the venue

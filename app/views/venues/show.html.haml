@@ -13,18 +13,19 @@
           .clear
   .section
     #map_canvas{:style => "width: 310px; height: 387px"}
-  .section.snug
+  #upcoming-shows.section.snug
     .container.skin-dark
       .body
-        %h3 Upcoming Shows at this Venue:
-        %ul.header-meta-list
-          - 3.times do |t|
-            %li
-              %h4 Trans-Atlantic Quartet
-              %p.byline
-                %span.date 03/31/2011
-                %span.location Bowery Poetry Club
-        %a.box{:href => '#'} See All Shows at this Venue
+        - if @venue.shows.upcoming.any?
+          %h3 Upcoming Shows at this Venue:
+          %ul.header-meta-list
+            - @venue.shows.upcoming.limit(3).each do |show|
+              %li
+                %h4= show.group_name
+                %p.byline
+                  %span.date= show.when.strftime('%m/%d/%Y')
+                  %span.location= link_to(@venue.name, @venue)
+        = link_to('See All Shows at this Venue', { :action => 'index', :search => { :venue_id_equals => @venue.id } }, :class => 'box')
 
 
 .col-2
