@@ -8,11 +8,11 @@ Feature: Venues
   Scenario Outline: Visitor searches for venue
     Given a venue exists with a name of "CBGBs"
     When I go to the <start page>
-    And I select "CBGBs" from "Name:"
+    And I select "CBGBs" from "<select>"
     Then I press "search"
     Then I should be on the detail page for the venue
 
     Scenarios:
-      | start page                |
-      | venues page               |
-      | detail page for the venue |
+      | start page                | select |
+      | venues page               | Name:  |
+      | detail page for the venue | id     |

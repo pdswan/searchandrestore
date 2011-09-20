@@ -38,7 +38,6 @@ Then /^I should see the upcoming shows at the venue$/ do
 end
 
 Then /^I should see the latest videos for the venue$/ do
-  Then %{show me the page}
   within('#latest-videos') do
     the.venue.videos.each do |video|
       Then %{I should see a link to "#{video_path(video)}"}

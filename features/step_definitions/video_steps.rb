@@ -22,8 +22,7 @@ end
 
 Then /^I should see a thumbnail for the first video which links to the video detail page$/ do
   the.video = Video.first
-  page.should have_css("img[src='#{the.video.thumbnail.url(:tiny)}']")
-  page.should have_css("a[href='#{video_path(the.video)}'][data-video]")
+  Then %{I should see a thumbnail for the video}
 end
 
 Then /^I should not see a thumbnail for the last video$/ do
@@ -32,8 +31,8 @@ Then /^I should not see a thumbnail for the last video$/ do
 end
 
 Then /^I should see a thumbnail for the video(?: within "([^"]+)")?$/ do |scope|
-  within(scope) do
+  within(scope || 'body') do
     page.should have_css("img[src='#{the.video.thumbnail.url(:tiny)}']")
-    page.should have_css("a[href='#{the.video.url}'][data-video]")
+    page.should have_css("a[href='#{video_path(the.video)}'][data-video='#{the.video.id}']")
   end
 end
