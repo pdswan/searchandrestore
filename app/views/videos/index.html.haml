@@ -1,34 +1,24 @@
 - @page_class = 'section-video page-index'
 
+-# TODO
+-# should these be separate forms? should you only be able to search
+-# by artist OR venue?
 .searchy-inline
   = form_for @videos, :url => videos_path do |f|
-    .floatleft.mr10
-      %fieldset
-        %span.box.dark.floatleft.mr10.pr10.pl10 Search Video By ...
-        .field.select.inline.mb5
-          = f.label :performances_artist_id_equals, 'Artist:'
-          .wrapper
-            = f.collection_select :performances_artist_id_equals, Artist.with_state(:live), :id, :name, :include_blank => 'any artist'
-        = f.submit :search
+    %fieldset
+      %span.box.dark.floatleft.mr10.pr10.pl10 Search Video By ...
+      .field.select.inline.mb5
+        = f.label :performances_artist_id_equals, 'Artist:'
+        .wrapper
+          = f.collection_select :performances_artist_id_equals, Artist.with_state(:live), :id, :name, :include_blank => 'any artist'
+      = f.submit :search, :class => 'floatleft mr10'
 
+      .field.select.inline.mb5
+        = f.label :show_venue_id_equals, 'Venue:'
+        .wrapper
+          = f.collection_select :show_venue_id_equals, Venue.all, :id, :name, :include_blank => 'any venue'
+      = f.submit :search
 
-  //.floatleft#search-by-name.mr10
-  //  = form_for :blah do |f|
-  //    %fieldset
-  //      = f.label :artist, 'Search Video By ...', :class => 'box dark floatleft mr10 pr10 pl10'
-  //      .field.select.inline.mb5
-  //        = f.label :artist, 'Artist:'
-  //        .wrapper
-  //          = f.select :artist, ['one','two','three']
-  //      = f.submit :search
-  //.floatleft#search-by-instrument
-  //  = form_for :blah do |f|
-  //    %fieldset
-  //      .field.select.inline.mb5
-  //        = f.label :venue, 'Venue:'
-  //        .wrapper
-  //          = f.select :venue, ['one','two','three']
-  //      = f.submit :search
   .clear
 
 -# TODO refactor
