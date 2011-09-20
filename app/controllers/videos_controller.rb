@@ -12,6 +12,8 @@ class VideosController < ApplicationController
   end
 
   def show
+    @page_class = 'layout-1 section-video page-show'
+
     render_options = { }
     render_options.merge!(:layout => false) if request.xhr?
     render render_options
