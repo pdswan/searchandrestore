@@ -6,7 +6,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @has_video      = true
+    @page_class     = 'layout-1 section-artists page-show'
     @artist         = Artist.find(params[:id], :include => :instrument)
     @videos         = @artist.
                         videos.
@@ -14,5 +14,7 @@ class ArtistsController < ApplicationController
                         group_by_show.
                         includes(:show => [:venue, { :performances => [:artist, :instrument] }]).all
     @selected_video = @videos.shift
+
+    render :layout => 'videos'
   end
 end
