@@ -20,3 +20,14 @@ Feature: Videos index
     Then I should see a thumbnail for the first video which links to the video detail page
     But I should not see a thumbnail for the last video
 
+  Scenario: User searches for videos by venue
+    Given the following venue with videos exists:
+      | name           |
+      | The Brown Note |
+    And a video exists
+    When I go to the videos page
+    And I select "The Brown Note" from "Venue"
+    And I press "search"
+    Then I should see a thumbnail for the first video which links to the video detail page
+    But I should not see a thumbnail for the last video
+
