@@ -16,4 +16,3 @@ Feature: Venue details page
     When I go to the detail page for the venue
     Then I should see the latest videos for the venue
 
-  # search should use the scenario from venues.feature
