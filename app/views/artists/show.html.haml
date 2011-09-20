@@ -81,6 +81,8 @@
     .section.pl10.pt5
       %h3 More videos featuring this artist:
     .section
+      -# TODO refactor
+      -# this and venues show should share the same partial?
       %ul#more_videos.inline-list.grid-view
         - @videos.each do |video|
           %li.container{:class => cycle('first','','','last')}
