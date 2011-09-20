@@ -7,6 +7,8 @@ class VideosController < ApplicationController
       group_by_show.
       includes(:show).
       search(params[:search])
+
+    render :layout => 'application'
   end
 
   def show
