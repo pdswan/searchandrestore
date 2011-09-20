@@ -2,15 +2,16 @@
 
 .col-1
   .section
-    - form_for :blah do |f|
+    = form_tag venues_url, :method => 'get' do
       %fieldset.searchy
-        = f.label(:venue, 'Search Venues:', :class => 'box dark')
+        = label_tag :id, 'Search Venues:', :class => 'box dark'
         .field.select
           .input
-            = f.select :venue, ['One','Two','Three']
+            = select_tag :id, options_from_collection_for_select(Venue.all, :id, :name), :include_blank => 'choose a venue'
           .submit
-            = f.submit :search
+            = submit_tag :search
           .clear
+
   .section
     #map_canvas{:style => "width: 310px; height: 387px"}
   #upcoming-shows.section.snug
@@ -25,7 +26,7 @@
                 %p.byline
                   %span.date= show.when.strftime('%m/%d/%Y')
                   %span.location= link_to(@venue.name, @venue)
-        = link_to('See All Shows at this Venue', { :action => 'index', :search => { :venue_id_equals => @venue.id } }, :class => 'box')
+        = link_to('See All Shows at this Venue', shows_path(:search => { :venue_id_equals => @venue.id }), :class => 'box')
 
 
 .col-2
@@ -71,17 +72,21 @@
         %h3.snug Our words:
         = simple_format(@venue.our_words)
         
-  .section
-    .pl10.pt5
-      %h3.inline Latest videos from this venue:
-      %a.box{:href => '#'} See all videos from this venue
-  .section.snug
-    %ul.inline-list.grid-view
-      - 4.times do |t|
-        %li.container{:class => cycle('first','','','last')}
-          %a.block{:href => '#'}
-            .body
-              = image_tag('http://dummyimage.com/140x77/000/fff')
-              .clear
-              %span.box.block.name{:href => '#'} Val Shaffer Quartet
-              %p.byline 03/31/2011, Tea Lounge 
+  - if @venue.videos.any?
+    #latest-videos
+      .section
+        .pl10.pt5
+          %h3.inline Latest videos from this venue:
+          %a.box{ :href => videos_path(:search => { :venue_id_equals => @venue }) } See all videos from this venue
+      .section.snug
+        -# TODO refactor
+        -# this and artists show should share the same partial?
+        %ul.inline-list.grid-view
+          - @venue.videos.each do |video|
+            %li.container{ :class => cycle('first', '', '', 'last') }
+              %a.block{ :href => video_path(video) }
+                .body
+                  = image_tag(video.thumbnail.url(:tiny))
+                  .clear
+                  %span.box.block.name= video.show.group_name
+                  %p.byline #{video.show.when.strftime('%m/%d/%Y')}, #{video.show.venue.name}

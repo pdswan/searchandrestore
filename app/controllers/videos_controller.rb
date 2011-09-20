@@ -1,5 +1,9 @@
 class VideosController < ApplicationController
-  before_filter :find_video
+  before_filter :find_video, :only => [:show]
+
+  def index
+    render :nothing => true
+  end
 
   def show
     render_options = { }

@@ -27,6 +27,10 @@ Factory.define :venue_with_upcoming_shows, :parent => :venue do |v|
   v.after_create { |venue| Factory(:show, :venue => venue) }
 end
 
+Factory.define :venue_with_videos, :parent => :venue do |v|
+  v.after_create { |venue| Factory(:show_with_videos, :venue => venue) }
+end
+
 Factory.define :artist do |a|
   a.name { "#{Faker::Name.first_name} #{Faker::Name.last_name}" }
   a.bio  Faker::Lorem.paragraphs.join("\n")
@@ -57,6 +61,10 @@ end
 
 Factory.define :show_with_performances, :parent => :show do |s|
   s.after_create { |show| Factory(:performance, :show => show) }
+end
+
+Factory.define :show_with_videos, :parent => :show do |s|
+  s.after_create { |show| Factory(:video, :show => show) }
 end
 
 Factory.define :performance do |p|

@@ -4,6 +4,7 @@ class Venue < ActiveRecord::Base
   mount_uploader :image, VenueImageUploader
 
   has_many :shows
+  has_many :videos, :through => :shows
 
   validates :name, 
             :address, 

@@ -3,7 +3,7 @@ Searchandrestore::Application.routes.draw do
   resources :artists, :only => [:index, :show]
   resources :shows,   :only => [:index, :show]
   resources :venues,  :only => [:index, :show]
-  resources :videos,  :only => [:show]
+  resources :videos,  :only => [:index, :show]
 
   root :to => "home#index"
 
