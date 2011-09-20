@@ -6,7 +6,7 @@ class VideosController < ApplicationController
       order_by_show_date.
       group_by_show.
       includes(:show).
-      all
+      search(params[:search])
   end
 
   def show

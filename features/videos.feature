@@ -9,3 +9,15 @@ Feature: Videos index
     When I go to the videos page
     Then I should see a thumbnail for the first video which links to the video detail page
 
+  Scenario: User searches for videos by artist
+    Given the following live artist with videos exists:
+      | name        |
+      | Miles Davis |
+    And a video exists
+    When I go to the videos page
+    And I select "Miles Davis" from "Artist"
+    And I press "search"
+    Then show me the page
+    Then I should see a thumbnail for the first video which links to the video detail page
+    But I should not see a thumbnail for the last video
+
