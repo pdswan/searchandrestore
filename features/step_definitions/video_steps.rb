@@ -26,6 +26,11 @@ Then /^I should see a thumbnail for the first video which links to the video det
   page.should have_css("a[href='#{video_path(the.video)}'][data-video]")
 end
 
+Then /^I should not see a thumbnail for the last video$/ do
+  the.video = Video.last
+  page.should have_no_css("a[data-video='#{the.video.id}']")
+end
+
 Then /^I should see a thumbnail for the video(?: within "([^"]+)")?$/ do |scope|
   within(scope) do
     page.should have_css("img[src='#{the.video.thumbnail.url(:tiny)}']")
