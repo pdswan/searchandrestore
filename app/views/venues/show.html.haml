@@ -26,7 +26,7 @@
                 %p.byline
                   %span.date= show.when.strftime('%m/%d/%Y')
                   %span.location= link_to(@venue.name, @venue)
-        = link_to('See All Shows at this Venue', shows_path(:search => { :venue_id_equals => @venue.id }), :class => 'box')
+        = link_to('See All Shows at this Venue', shows_path(:search => { :show_venue_id_equals => @venue.id }), :class => 'box')
 
 
 .col-2{ :data => { :latitude => @venue.latitude, :longitude => @venue.longitude } }
