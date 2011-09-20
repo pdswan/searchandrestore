@@ -1,0 +1,36 @@
+- @page_class = 'section-video page-index'
+
+.searchy-inline
+  .floatleft#search-by-name.mr10
+    = form_for :blah do |f|
+      %fieldset
+        = f.label :artist, 'Search Video By ...', :class => 'box dark floatleft mr10 pr10 pl10'
+        .field.select.inline.mb5
+          = f.label :artist, 'Artist:'
+          .wrapper
+            = f.select :artist, ['one','two','three']
+        = f.submit :search
+  .floatleft#search-by-instrument
+    = form_for :blah do |f|
+      %fieldset
+        .field.select.inline.mb5
+          = f.label :venue, 'Venue:'
+          .wrapper
+            = f.select :venue, ['one','two','three']
+        = f.submit :search
+  .clear
+
+-# TODO refactor
+-# this and venues show should share the same partial?
+%ul.inline-list.grid-view
+  - @videos.each do |video|
+    %li.container{:class => cycle('first','','','','','last')}
+      %a.block{ :href => video_path(video), :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
+        .body
+          = image_tag(video.thumbnail.url(:tiny))
+          .clear
+          %span.box.block.name= video.show.group_name
+          %p.show
+            %span.when= video.show.when.strftime("%m/%d/%Y")
+            %span.venue= video.show.venue.name
+
