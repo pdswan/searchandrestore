@@ -7,7 +7,8 @@
   %p
     = link_to(show.group_name, show, :class => 'box dark')
     = show.when.strftime("%m/%d/%Y")
-    = link_to(show.venue.name, show.venue, :class => 'venue-link')
+    - if show.venue.present?
+      = link_to(show.venue.name, show.venue, :class => 'venue-link')
 
   - if show.videos.count > 1
     %h3 More Videos from this Show
