@@ -11,10 +11,9 @@ Feature: Venue details page
     When I go to the detail page for the venue
     Then I should see the upcoming shows at the venue
 
-  @wip
   Scenario: User sees latest videos from the venue
     Given a venue with videos exists
     When I go to the detail page for the venue
-    Then I should see the most recent videos
+    Then I should see the latest videos for the venue
 
   # search should use the scenario from venues.feature
