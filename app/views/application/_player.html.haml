@@ -14,7 +14,7 @@
     %ul#related_videos.inline-list
       - show.videos.each do |video|
         %li.container{ :class => (selected_video == video ? 'active' : '') << cycle('','','','last') }
-          %a.block{:href => video.url, :title => video.title, :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code }}
+          %a.block{:href => video_path(video), :title => video.title, :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code }}
             .body
               = image_tag(video.thumbnail.url(:tiny))
               .clear

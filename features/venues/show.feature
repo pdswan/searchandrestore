@@ -3,7 +3,6 @@ Feature: Venue details page
   Scenario: User sees venue details
     Given a venue exists
     When I go to the detail page for the venue
-    Then show me the page
     Then I should see the venue details
 
   Scenario: User sees upcoming shows at the venue
