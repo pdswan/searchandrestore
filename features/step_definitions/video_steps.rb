@@ -20,6 +20,12 @@ Then /^the video should be loaded$/ do
   page.should have_css("iframe[src^='#{the.video.url.split('?').first}']")
 end
 
+Then /^I should see a thumbnail for the first video which links to the video detail page$/ do
+  the.video = Video.first
+  page.should have_css("img[src='#{the.video.thumbnail.url(:tiny)}']")
+  page.should have_css("a[href='#{video_path(the.video)}'][data-video]")
+end
+
 Then /^I should see a thumbnail for the video(?: within "([^"]+)")?$/ do |scope|
   within(scope) do
     page.should have_css("img[src='#{the.video.thumbnail.url(:tiny)}']")

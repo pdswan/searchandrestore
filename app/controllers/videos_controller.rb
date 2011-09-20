@@ -2,7 +2,11 @@ class VideosController < ApplicationController
   before_filter :find_video, :only => [:show]
 
   def index
-    render :nothing => true
+    @videos = Video.
+      order_by_show_date.
+      group_by_show.
+      includes(:show).
+      all
   end
 
   def show
