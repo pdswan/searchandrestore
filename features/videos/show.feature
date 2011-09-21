@@ -11,3 +11,9 @@ Feature: Video details feature
     When I go to the detail page for the video
     Then I should see thumbnails for the videos from the show in the related videos section
 
+  Scenario: User sees thumbnails for videos from other shows
+    Given a video exists
+    And 3 videos exist
+    When I go to the detail page for the video
+    Then I should see thumbnails for the videos within "#more_videos"
+
