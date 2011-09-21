@@ -6,7 +6,7 @@ class Video < ActiveRecord::Base
   has_many :performances, :through => :show
 
   scope :order_by_show_date, joins(:show).order("shows.when DESC")
-  scope :group_by_show, group("shows.id")
+  scope :group_by_show, group("show_id")
 
   def self.for_artist(artist)
     raise ArgumentError.new("artist must be a kind of Artist") unless artist.kind_of?(Artist)

@@ -1,13 +1,8 @@
 class VideosController < ApplicationController
   before_filter :find_video, :only => [:show]
+  before_filter :find_videos
 
   def index
-    @videos = Video.
-      order_by_show_date.
-      group_by_show.
-      includes(:show).
-      search(params[:search])
-
     render :layout => 'application'
   end
 
@@ -16,6 +11,7 @@ class VideosController < ApplicationController
 
     render_options = { }
     render_options.merge!(:layout => false) if request.xhr?
+
     render render_options
   end
 
@@ -23,6 +19,14 @@ class VideosController < ApplicationController
 
     def find_video
       @video = Video.includes(:show => [:venue, { :performances => [:artist, :instrument] }]).find(params[:id])
+    end
+
+    def find_videos
+      @videos = Video.
+        order_by_show_date.
+        group_by_show.
+        includes(:show).
+        search(params[:search]) unless request.xhr?
     end
 
 end
