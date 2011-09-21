@@ -8,7 +8,7 @@
     - else
       .section
         .box.dark Search Videos By...
-        - form_for :blah do |f|
+        = form_for :blah do |f|
           %fieldset.searchy
             .field.select
               = f.label :artist, 'Artist:'
