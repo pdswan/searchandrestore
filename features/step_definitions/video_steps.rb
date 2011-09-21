@@ -25,6 +25,13 @@ Then /^I should see a thumbnail for the first video which links to the video det
   Then %{I should see a thumbnail for the video}
 end
 
+Then /^I should see thumbnails for the videos( within .*)?$/ do |within|
+  Video.order_by_show_date.group_by_show.all.each do |video|
+    the.video = video
+    Then %{I should see a thumbnail for the video#{within}}
+  end
+end
+
 Then /^I should not see a thumbnail for the last video$/ do
   the.video = Video.last
   page.should have_no_css("a[data-video='#{the.video.id}']")
@@ -36,3 +43,50 @@ Then /^I should see a thumbnail for the video(?: within "([^"]+)")?$/ do |scope|
     page.should have_css("a[href='#{video_path(the.video)}'][data-video='#{the.video.id}']")
   end
 end
+
+Then /^I should see thumbnails for the videos from the show in the related videos section$/ do
+  the.show.videos.each do |video|
+    the.video = video
+    Then %{I should see a thumbnail for the video within "#related_videos"}
+  end
+end
+
+Then /^I should see thumbnails for the videos from the last show in the related videos section$/ do
+  Show.last.videos.each do |video|
+    the.video = video
+    Then %{I should see a thumbnail for the video within "#related_videos"}
+  end
+end
+
+Then /^I should see the thumbnail for the first video from the last show in the more videos section$/ do
+  the.video = the.artist.shows.last.videos.first
+  Then %{I should see a thumbnail for the video within "#more_videos"}
+end
+
+Then /^I should see the first video from the show$/ do
+  the.video = the.show.videos.first
+  Then %{I should see the video}
+end
+
+And /^I click the thumbnail for the last video in the related videos section$/ do
+  within("#related_videos > li:last-child") do
+    page.find("a[data-video]").click
+  end
+end
+
+And /^I click the thumbnail for the first video from the last show in the more videos section$/ do
+  within("#more_videos > li:last-child") do
+    page.find("a[data-video]").click
+  end
+end
+
+Then /^I should see the first video from the last show$/ do
+  the.video = the.artist.shows.last.videos.first
+  Then %{I should see the video}
+end
+
+Then /^I should see the last video from the show$/ do
+  the.video = the.show.videos.last
+  Then %{I should see the video}
+end
+
