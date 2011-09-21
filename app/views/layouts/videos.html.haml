@@ -47,6 +47,6 @@
                   %span.box.block.name= video.show.group_name
                   %p.show
                     %span.when= video.show.when.strftime("%m/%d/%Y")
-                    %span.venue= video.show.venue.name
+                    %span.venue= video.show.venue.try(:name)
 
 = render :template => 'layouts/application'
