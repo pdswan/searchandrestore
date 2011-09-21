@@ -3,6 +3,7 @@ class VideosController < ApplicationController
   before_filter :find_videos
 
   def index
+    @video_url_params = { :search => params[:search] }
     render :layout => 'application'
   end
 

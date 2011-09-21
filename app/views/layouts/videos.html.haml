@@ -1,4 +1,5 @@
-- @has_video  = true
+- @has_video          = true
+- @video_url_params ||= { }
 
 - content_for(:content) do
   .col-1
@@ -39,7 +40,7 @@
         %ul#more_videos.inline-list.grid-view
           - @videos.each do |video|
             %li.container{:class => cycle('first','','','last')}
-              %a.block{:href => video_path(video), :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code }}
+              %a.block{:href => video_path(video, @video_url_params), :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code }}
                 .body
                   = image_tag(video.thumbnail.url(:tiny))
                   .clear

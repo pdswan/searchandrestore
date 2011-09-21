@@ -1,4 +1,5 @@
-- @page_class = 'section-video page-index'
+- @page_class          = 'section-video page-index'
+- @video_url_options ||= { }
 
 -# TODO
 -# should these be separate forms? should you only be able to search
@@ -26,7 +27,7 @@
 %ul.inline-list.grid-view
   - @videos.each do |video|
     %li.container{:class => cycle('first','','','','','last')}
-      %a.block{ :href => video_path(video), :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
+      %a.block{ :href => video_path(video, @video_url_params), :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
         .body
           = image_tag(video.thumbnail.url(:tiny))
           .clear

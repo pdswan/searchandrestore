@@ -20,9 +20,9 @@ Then /^the video should be loaded$/ do
   page.should have_css("iframe[src^='#{the.video.url.split('?').first}']")
 end
 
-Then /^I should see a thumbnail for the first video which links to the video detail page$/ do
+Then /^I should see a thumbnail for the first video( within .*)?$/ do |within|
   the.video = Video.first
-  Then %{I should see a thumbnail for the video}
+  Then %{I should see a thumbnail for the video#{within}}
 end
 
 Then /^I should see thumbnails for the videos( within .*)?$/ do |within|
@@ -40,7 +40,7 @@ end
 Then /^I should see a thumbnail for the video(?: within "([^"]+)")?$/ do |scope|
   within(scope || 'body') do
     page.should have_css("img[src='#{the.video.thumbnail.url(:tiny)}']")
-    page.should have_css("a[href='#{video_path(the.video)}'][data-video='#{the.video.id}']")
+    page.should have_css("a[href*='#{video_path(the.video)}'][data-video='#{the.video.id}']")
   end
 end
 
@@ -66,6 +66,11 @@ end
 Then /^I should see the first video from the show$/ do
   the.video = the.show.videos.first
   Then %{I should see the video}
+end
+
+And /^I click the thumbnail for(?: the)? video(?: "(.+)?")?$/ do |video_id|
+  the.video = Video.find(video_id) if video_id.present?
+  page.find("a[data-video='#{the.video.id}']").click
 end
 
 And /^I click the thumbnail for the last video in the related videos section$/ do

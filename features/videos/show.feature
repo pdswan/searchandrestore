@@ -17,3 +17,14 @@ Feature: Video details feature
     When I go to the detail page for the video
     Then I should see thumbnails for the videos within "#more_videos"
 
+  Scenario: User sees one video per show for all shows from the venue
+    Given the following venue with videos exists:
+      | name           |
+      | The Brown Note |
+    And a venue with videos exists
+    When I go to the videos page
+    And I select "The Brown Note" from "Venue"
+    And I press "search"
+    And I click the thumbnail for video "1"
+    Then I should see a thumbnail for the first video within "#more_videos"
+    But I should not see a thumbnail for the last video
