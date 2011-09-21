@@ -23,6 +23,9 @@ module NavigationHelpers
     when /the detail page for the venue/
       venue_path(the.venue)
 
+    when /the detail page for the video/
+      video_path(the.video)
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
