@@ -9,25 +9,35 @@ Feature: Videos index
     When I go to the videos page
     Then I should see a thumbnail for the first video
 
-  Scenario: User searches for videos by artist
+  Scenario Outline: User searches for videos by artist
     Given the following live artist with videos exists:
       | name        |
       | Miles Davis |
     And a video exists
-    When I go to the videos page
+    When I go to the <page>
+    And show me the page
     And I select "Miles Davis" from "Artist"
     And I press "search"
     Then I should see a thumbnail for the first video
     But I should not see a thumbnail for the last video
 
-  Scenario: User searches for videos by venue
+    Scenarios:
+      | page                      |
+      | videos page               |
+      | detail page for the video |
+
+  Scenario Outline: User searches for videos by venue
     Given the following venue with videos exists:
       | name           |
       | The Brown Note |
     And a video exists
-    When I go to the videos page
+    When I go to the <page>
     And I select "The Brown Note" from "Venue"
     And I press "search"
     Then I should see a thumbnail for the first video
     But I should not see a thumbnail for the last video
 
+    Scenarios:
+      | page                      |
+      | videos page               |
+      | detail page for the video |
