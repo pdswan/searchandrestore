@@ -7,7 +7,7 @@ Feature: Videos index
     Given a show exists
     And 2 videos exist with a show id of "1"
     When I go to the videos page
-    Then I should see a thumbnail for the first video which links to the video detail page
+    Then I should see a thumbnail for the first video
 
   Scenario: User searches for videos by artist
     Given the following live artist with videos exists:
@@ -17,7 +17,7 @@ Feature: Videos index
     When I go to the videos page
     And I select "Miles Davis" from "Artist"
     And I press "search"
-    Then I should see a thumbnail for the first video which links to the video detail page
+    Then I should see a thumbnail for the first video
     But I should not see a thumbnail for the last video
 
   Scenario: User searches for videos by venue
@@ -28,6 +28,6 @@ Feature: Videos index
     When I go to the videos page
     And I select "The Brown Note" from "Venue"
     And I press "search"
-    Then I should see a thumbnail for the first video which links to the video detail page
+    Then I should see a thumbnail for the first video
     But I should not see a thumbnail for the last video
 
