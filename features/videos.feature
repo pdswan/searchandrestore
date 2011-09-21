@@ -15,7 +15,6 @@ Feature: Videos index
       | Miles Davis |
     And a video exists
     When I go to the <page>
-    And show me the page
     And I select "Miles Davis" from "Artist"
     And I press "search"
     Then I should see a thumbnail for the first video
