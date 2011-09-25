@@ -166,6 +166,7 @@
               // TODO show loading?
               $.get('/videos/' + video_id, function(data) {
                 $('#video_player_container').replaceWith(data);
+                $('html,body').scrollTop(0);
                 // TODO hide loading?
               });
             } else {
