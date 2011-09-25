@@ -4,6 +4,11 @@
   background: url(/images/masthead_bg/venues.png) repeat-x; }
 .jazz.section-venues.page-index .searchy-inline select {
   width: 223px; }
+.jazz.section-venues.page-index span.box.block span {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 130px;
+  display: block; }
 .jazz.section-venues.page-show fieldset.searchy .field.select .input {
   float: left; }
 .jazz.section-venues.page-show fieldset.searchy .field.select .submit {
