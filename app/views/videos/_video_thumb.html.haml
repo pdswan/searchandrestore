@@ -2,7 +2,7 @@
 - group_name = video.show.group_name
 - date = video.show.when.strftime("%m/%d/%Y")
 - venue = video.show.venue.try(:name)
-- title = (group_name << " - " << date << (venue ? (" @ " << venue) : ""))
+- title = (group_name + " - " + date + (venue ? (" @ " + venue) : ""))
 
 %li.container{:class => li_class}
 
