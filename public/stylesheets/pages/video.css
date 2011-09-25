@@ -2,3 +2,7 @@
   background-image: url(/images/titles/video_title.png); }
 .jazz.section-video .masthead {
   background: url(/images/masthead_bg/videos.png) repeat-x; }
+.jazz.section-video.page-index p.show {
+  width: 140px;
+  overflow: hidden;
+  white-space: nowrap; }

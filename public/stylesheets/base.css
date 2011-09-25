@@ -103,6 +103,11 @@
     width: 100%;
     text-align: center;
     padding: 0px; }
+.jazz span.box.block span {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 130px;
+  display: block; }
 
 .jazz .container {
   overflow: hidden;
@@ -381,6 +386,10 @@
   background-image: url(/images/titles/video_title.png); }
 .jazz.section-video .masthead {
   background: url(/images/masthead_bg/videos.png) repeat-x; }
+.jazz.section-video.page-index p.show {
+  width: 140px;
+  overflow: hidden;
+  white-space: nowrap; }
 
 .jazz.section-venues .masthead-top {
   background-image: url(/images/titles/venues_title.png); }
@@ -388,11 +397,6 @@
   background: url(/images/masthead_bg/venues.png) repeat-x; }
 .jazz.section-venues.page-index .searchy-inline select {
   width: 223px; }
-.jazz.section-venues.page-index span.box.block span {
-  white-space: nowrap;
-  overflow: hidden;
-  width: 130px;
-  display: block; }
 .jazz.section-venues.page-show fieldset.searchy .field.select .input {
   float: left; }
 .jazz.section-venues.page-show fieldset.searchy .field.select .submit {
