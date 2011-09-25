@@ -1,23 +1,24 @@
 - @page_class = 'layout-4 section-venues page-index'
 
-.searchy-inline
-  .floatleft#search-by-name.mr10
-    = form_tag venues_url, :method => 'get' do
-      %fieldset
-        %p.box.dark.floatleft.mr10.pr10.pl10 Search Venues:
-        .field.select.inline.mb5
-          = label_tag :id, 'Name:'
-          .wrapper
-            = select_tag :id, options_from_collection_for_select(Venue.all, :id, :name), :include_blank => 'choose a venue'
-        = submit_tag :search
-  .clear
 .col-1
   .div{:style => 'height:1px;'} &nbsp;
-  .container.fixed{:style => 'margin-top:-1px;'}
-    .body{:style => 'padding: 6px;'}
-      #map_canvas{:style => "width: 457px; height: 560px"}
+  .fixed{:style => 'margin-top:-1px;'}
+    .searchy-inline
+      .floatleft#search-by-name.mr10
+        = form_tag venues_url, :method => 'get' do
+          %fieldset
+            %p.box.dark.floatleft.mr10.pr10.pl10 Search Venues:
+            .field.select.inline.mb5
+              = label_tag :id, 'Name:'
+              .wrapper
+                = select_tag :id, options_from_collection_for_select(Venue.all, :id, :name), :include_blank => 'choose a venue'
+            = submit_tag :search
+      .clear
+    .container{:style => 'width:470px;'}
+      .body{:style => 'padding: 6px;'}
+        #map_canvas{:style => "width: 457px; height: 560px"}
 .col-2
-  %ul.inline-list.grid-view
+  %ul.inline-list.grid-view{:style => 'margin-top:33px;'}
     - @venues.each do |venue|
       %li.container{:class => cycle('first','','last'), :data => { :latitude => venue.latitude, :longitude => venue.longitude }}
         %a.block{:href => url_for(venue), :title => venue.name}
