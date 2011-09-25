@@ -12,7 +12,8 @@
         = submit_tag :search
   .clear
 .col-1
-  .container
+  .div{:style => 'height:1px;'} &nbsp;
+  .container.fixed{:style => 'margin-top:-1px;'}
     .body{:style => 'padding: 6px;'}
       #map_canvas{:style => "width: 457px; height: 560px"}
 .col-2
