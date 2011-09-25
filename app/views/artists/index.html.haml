@@ -22,7 +22,7 @@
       - name = artist.name
       - instrument = artist.instrument.try(:name)
 
-      = link_to(artist, :title => (name + ' - ' + instrument)) do
+      = link_to(artist, :title => (name + ' - ' + (instrument ? instrument : ''))) do
         .body
           = image_tag(artist.image.thumb.url)
           .clear
