@@ -6,12 +6,10 @@
     .masthead {
       background: url(/images/masthead_bg/videos.png) repeat-x;
     }
-    &.page-index {
-      p.show {
-        width:140px;
-        overflow:hidden;
-        white-space:nowrap;
-      }
+    p.show {
+      width:140px;
+      overflow:hidden;
+      white-space:nowrap;
     }
   }
 }
