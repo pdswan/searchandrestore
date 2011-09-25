@@ -8,6 +8,14 @@
     }
     &.page-index {
       .searchy-inline select {width: 223px;}
+      span.box.block {
+        span {
+          white-space:nowrap;
+          overflow:hidden;
+          width:130px;
+          display:block;
+        }
+      }
     }
     &.page-show {
       fieldset.searchy {
