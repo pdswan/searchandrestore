@@ -28,4 +28,8 @@
           .clear
           %span.box.block.name
             %span= name
-          %p.byline= (instrument ? instrument : '&nbsp;')
+          %p.byline
+            - if instrument
+              instrument
+            - else
+              &nbsp;
