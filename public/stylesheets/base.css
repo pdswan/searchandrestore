@@ -395,6 +395,17 @@
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 0px; }
+.jazz.section-video .venue-link {
+  color: #ff9900; }
+.jazz.section-video #related_videos {
+  margin-bottom: 5px; }
+  .jazz.section-video #related_videos li {
+    margin-right: 0px;
+    padding-bottom: 0; }
+    .jazz.section-video #related_videos li .body {
+      padding: 7px; }
+    .jazz.section-video #related_videos li:hover .box, .jazz.section-video #related_videos li.active .box {
+      background-color: #000; }
 
 .jazz.section-venues .masthead-top {
   background-image: url(/images/titles/venues_title.png); }
