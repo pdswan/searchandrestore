@@ -12,5 +12,24 @@
       white-space:nowrap;
       margin-bottom:0px;
     }
+    .venue-link {
+      color: $ORANGE;
+    }
+    #related_videos {
+      margin-bottom:5px;
+      li {
+        margin-right:0px;
+        padding-bottom:0;
+        .body {
+          padding:7px;
+        }
+        &:hover,
+        &.active {
+          .box {
+            background-color:#000;
+          }
+        }
+      }
+    }
   }
 }
