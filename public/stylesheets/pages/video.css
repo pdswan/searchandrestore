@@ -5,4 +5,5 @@
 .jazz.section-video p.show {
   width: 140px;
   overflow: hidden;
-  white-space: nowrap; }
+  white-space: nowrap;
+  margin-bottom: 0px; }
