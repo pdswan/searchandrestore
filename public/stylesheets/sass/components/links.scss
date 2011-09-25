@@ -25,4 +25,12 @@
       padding: 0px;
     }
   }
+  span.box.block {
+    span {
+      white-space:nowrap;
+      overflow:hidden;
+      width:130px;
+      display:block;
+    }
+  }
 }
