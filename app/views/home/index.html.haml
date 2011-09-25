@@ -29,7 +29,7 @@
                   %h4 CHARLIE HUNTER DUO featuring BOBBY PREVITE, ADAM CRUZ, ERIC KALB, SHAWN PELTON
                   %p.byline 
                     %span.author Bowery Poetry Club, 9PM
-              %a.box{:href => '#'} See more shows...
+              = link_to('See more shows...', shows_url(), :class => 'box')
     
     .col-2
       %h3
@@ -40,7 +40,7 @@
             = image_tag('/images/fpo/video_small.png')
             %a.box.dark{:href => '#'} Whiteout With Thurston Moore
             %p.snug 03/31/2011, Cornelia St. Cafe
-            %a.box{:href => '#'} See more videos...
+            = link_to('See more videos...', videos_url(), :class => 'box')
     .clear
   
   .col-3
@@ -55,10 +55,10 @@
     
           %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus sollicitudin turpis, congue mollis magna fermentum sed. Fusce rhoncus eleifend turpis ut rutrum. Vestibulum eros sapien, dapibus ac tempus tempus, adipiscing a augue. Nam lectus nulla, suscipit vitae auctor id, scelerisque non enim. 
     
-          %a.box{:href => '#'} Learn more...
+          %a.box{:href => '/home/about'} Learn more...
     = render :partial => 'shared/mailing_list'
   
     .section.mt-5
-      %a.box.large{:href => '#'} Donate To Search &amp; Restore
+      %a.box.large{:href => '/home/donate'} Donate To Search &amp; Restore
   
   .clear
