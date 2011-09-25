@@ -3,6 +3,10 @@
   background-position: 64px 5px; }
 .jazz.section-artists .masthead {
   background: url(/images/masthead_bg/artists.png) repeat-x; }
+.jazz.section-artists.page-index p.byline {
+  width: 130px;
+  overflow: hidden;
+  white-space: nowrap; }
 .jazz.section-artists.page-show #info .body {
   position: relative;
   padding-bottom: 26px; }

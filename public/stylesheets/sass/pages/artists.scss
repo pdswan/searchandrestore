@@ -8,7 +8,11 @@
       background: url(/images/masthead_bg/artists.png) repeat-x;
     }
     &.page-index {
-
+      p.byline {
+        width: 130px;
+        overflow:hidden;
+        white-space:nowrap;
+      }
     }
     &.page-show {
       #info {

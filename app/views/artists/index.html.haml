@@ -19,9 +19,13 @@
 %ul.inline-list.grid-view
   - @artists.each do |artist|
     %li.container{ :class => cycle('first', '', '', '', '', 'last') }
-      = link_to(artist) do
+      - name = artist.name
+      - instrument = artist.instrument.try(:name)
+
+      = link_to(artist, :title => (name + ' - ' + instrument)) do
         .body
           = image_tag(artist.image.thumb.url)
           .clear
-          %span.box.block.name= artist.name
-          %p.byline= artist.instrument.try(:name)
+          %span.box.block.name
+            %span= name
+          %p.byline= instrument
