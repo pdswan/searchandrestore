@@ -77,6 +77,8 @@
               myOptions);
 
           var open_infowindow = null;
+
+          var markerBounds = new google.maps.LatLngBounds();
           
           $('[data-latitude][data-longitude]').each(function() {
             var latitude           = $(this).data('latitude'),
@@ -84,14 +86,17 @@
                 name               = $(this).find('.name').text(),
                 include_infowindow = ($(this).data('include-infowindow') == 0 ? false : true);
 
+            var pos = new google.maps.LatLng(latitude, longitude);
+
             var marker = new google.maps.Marker({
-              position: new google.maps.LatLng(latitude, longitude),
+              position: pos,
               title: name,
               icon:"/images/map_point.png"
             });
 
             // To add the marker to the map, call setMap();
             marker.setMap(map);
+            markerBounds.extend(pos);
 
             if (include_infowindow) {
               var infowindow = new google.maps.InfoWindow({
@@ -112,6 +117,8 @@
               //});
             }
           });
+
+          map.fitBounds(markerBounds);
           
         }
         
