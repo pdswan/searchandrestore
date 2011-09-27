@@ -31,6 +31,8 @@ ActiveAdmin.register Show do
     column :when
     column :cover_charge
     column :venue
+    column :search_and_restore
+    column :featured
     column :video_count, :sortable => 'video_count' do |show|
       link_to show.video_count, admin_videos_path(:q => { :show_id_eq => show.id })
     end
@@ -47,6 +49,8 @@ ActiveAdmin.register Show do
       f.input :when
       f.input :cover_charge
       f.input :description
+      f.input :search_and_restore
+      f.input :featured
     end
 
     f.has_many :performances do |p|
