@@ -1,7 +1,11 @@
 class HomeController < ApplicationController
 
   def index
-    @top_picks = Show.featured.today.limit(5)
+    @top_picks    = Show.featured.today.limit(5)
+    @latest_video = Video.
+      order_by_show_date.
+      includes(:show, { :performances => [:artist, :instrument] }).
+      first
   end
 
   def shows

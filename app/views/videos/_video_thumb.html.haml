@@ -1,17 +1,15 @@
 - video_url_params = video_url_params || nil
-- group_name = video.show.group_name
-- date = video.show.when.strftime("%m/%d/%Y")
-- venue = video.show.venue.try(:name)
-- title = (group_name + " - " + date + (venue ? (" @ " + venue) : ""))
+- group_name       = video.show.group_name
+- date             = video.show.when.strftime("%m/%d/%Y")
+- venue            = video.show.venue.try(:name)
+- title            = (group_name + " - " + date + (venue ? (" @ " + venue) : ""))
 
-%li.container{:class => li_class}
-
-  %a.block{ :href => video_path(video, video_url_params), :title => title, :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
-    .body
-      = image_tag(video.thumbnail.url(:tiny))
-      .clear
-      %span.box.block.name
-        %span= group_name 
-      %p.show
-        %span.when= date
-        %span.venue= venue
+%a.block{ :href => video_path(video, video_url_params), :title => title, :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
+  .body
+    = image_tag(video.thumbnail.url(:tiny))
+    .clear
+    %span.box.block.name
+      %span= group_name 
+    %p.show
+      %span.when= date
+      %span.venue= venue

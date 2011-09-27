@@ -41,10 +41,9 @@
       .section#featured-video
         .container
           .body
-            = image_tag('/images/fpo/video_small.png')
-            %a.box.dark{:href => '#'} Whiteout With Thurston Moore
-            %p.snug 03/31/2011, Cornelia St. Cafe
-            = link_to('See more videos...', videos_url(), :class => 'box')
+            - if @latest_video.present?
+              = render :partial => 'videos/video_thumb', :locals => { :video => @latest_video }
+            = link_to('See more videos...', videos_path, :class => 'box')
     .clear
   
   .col-3
