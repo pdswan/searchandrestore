@@ -53,4 +53,21 @@ describe Show do
     it { should_not include(past_show) }
     it { should include(todays_show) }
   end
+
+  describe ".featured" do
+    let!(:featured)     { Factory(:featured_show) }
+    let!(:not_featured) { Factory(:show) }
+
+    subject { Show.featured }
+
+    it { should include(featured) }
+    it { should_not include(not_featured) }
+
+    context "false is passed" do
+      subject { Show.featured(false) }
+
+      it { should_not include(featured) }
+      it { should include(not_featured) }
+    end
+  end
 end

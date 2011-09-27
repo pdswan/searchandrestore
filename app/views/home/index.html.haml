@@ -24,12 +24,16 @@
         .container.skin-dark
           .body
             %ul.header-meta-list
-              - 3.times do |t|
+              - @top_picks.each do |show|
+                -# TODO refactor
+                -# show listings show up a lot of places, and I don't think
+                -# they're right since they don't always show all the information
                 %li
-                  %h4 CHARLIE HUNTER DUO featuring BOBBY PREVITE, ADAM CRUZ, ERIC KALB, SHAWN PELTON
-                  %p.byline 
-                    %span.author Bowery Poetry Club, 9PM
-              = link_to('See more shows...', shows_url(), :class => 'box')
+                  %h4= show.group_name
+                  %p.byline
+                    %span.date= show.when.strftime("%m/%d/%Y")
+                    %span.location= link_to(show.venue.name, show.venue)
+              = link_to('See more shows...', shows_path, :class => 'box')
     
     .col-2
       %h3
