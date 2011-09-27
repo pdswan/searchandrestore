@@ -2,7 +2,7 @@ class ArtistsController < ApplicationController
   def index
     @artists = Artist.with_state(:live).includes([:instrument, 
                                                   :buy_links,
-                                                  { :upcoming_shows => :venues }]).search(params[:search])
+                                                  { :upcoming_shows => :venue }]).search(params[:search])
   end
 
   def show
