@@ -1,3 +1,11 @@
+Then /^the show should be a search and restore show$/ do
+  the.show.search_and_restore?.should be_true
+end
+
+Then /^the show should be featured$/ do
+  the.show.featured.should be_true
+end
+
 Given /^I fill in the new show form with valid attributes$/ do
   Then %{I select "#{the.venue.name}" from "Venue"}
   Then %{I fill in "Group name" with "#{Faker::Lorem.words.join(' ')}"}

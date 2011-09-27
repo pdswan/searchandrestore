@@ -15,6 +15,20 @@ Feature: Create Artist
     And I press "Create Show"
     Then I should see "Show was successfully created"
 
+  Scenario: Admin creates search and restore show
+    Given I fill in the new show form with valid attributes
+    And I check "Search and restore"
+    And I press "Create Show"
+    Then I should see "Show was successfully created"
+    And the show should be a search and restore show
+
+  Scenario: Admin creates featured show
+    Given I fill in the new show form with valid attributes
+    And I check "Featured"
+    And I press "Create Show"
+    Then I should see "Show was successfully created"
+    And the show should be featured
+
   Scenario: Admin creates show with performance by existing artist with existing instrument
     Given I fill in the new show form with valid attributes
     And I select the artist name from "Artist"
