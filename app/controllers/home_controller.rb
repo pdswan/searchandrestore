@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
   def index
+    @top_picks = Show.featured.today.limit(5)
   end
 
   def shows

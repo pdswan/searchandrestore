@@ -35,6 +35,10 @@ class Show < ActiveRecord::Base
     where(:search_and_restore => !!bool)
   end
 
+  def self.featured(bool = true)
+    where(:featured => !!bool)
+  end
+
   search_methods :for_day
 
   def when
