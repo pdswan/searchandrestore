@@ -2,24 +2,28 @@
   .container.skin-dark
     .body
       %h3 Join our mailing list.
-      = form_for :blah do |f|
+      = form_tag 'http://SearchAndRestore.us1.list-manage.com/subscribe/post?u=303dcaaa45addeada91b6a5e3&id=dc362c84a7', :method => 'post', :id => 'mc-embedded-subscribe-form', :name => 'mc-embedded-subscribe-form', :class => 'validate', :target => '_blank' do
         %fieldset
-          .field.text
-            = f.label :name, 'Name:'
+          .field.text.mc-field-group
+            = label_tag 'mce-EMAIL', 'Email:'
             .wrapper
-              = f.text_field :name
-          .field.text
-            = f.label :email, 'Email:'
+              = email_field_tag 'EMAIL', nil, :id => 'mce-EMAIL', :class => 'required email'
+
+          .field.text.mc-field-group
+            = label_tag 'mce-FNAME', 'First Name:'
             .wrapper
-              = f.text_field :email
-          .field.radio.floatleft.subscribe
-            = f.radio_button(:subscribe, 'yes')
+              = text_field_tag 'FNAME', nil, :id => 'mce-FNAME'
+
+          .field.text.mc-field-group
+            = label_tag 'mce-LNAME', 'Last Name:'
             .wrapper
-              = f.label(:subscribe_yes, 'Subscribe')
-          .field.radio.floatleft
-            = f.radio_button(:subscribe, 'no')
-            .wrapper
-              = f.label(:subscribe_no, 'Unsubscribe')
-          .actions.floatright
-            = f.submit('go')
+              = text_field_tag 'LNAME', nil, :id => 'mce-LNAME'
+
+          #mc-responses.clear
+            #mc-error-response.response{ :style => 'display: none;' }
+            #mc-success-response.response{ :style => 'display: none;' }
+
+          .actions.clear.floatright
+            = submit_tag('subscribe', :id => 'mc-embedded-subscribe', :class => 'button')
+            = link_to 'unsubscribe', 'http://SearchAndRestore.us1.list-manage1.com/unsubscribe?u=303dcaaa45addeada91b6a5e3&id=dc362c84a7', :target => '_blank'
           .clear
