@@ -24,4 +24,4 @@
 
 %ul.inline-list.grid-view
   - @videos.each do |video|
-    = render :partial => 'videos/video_thumb', :locals => {:li_class => cycle('first','','','','','last'), :video => video, :url_params => @video_url_params}
+    = render :partial => 'videos/video_thumb', :locals => {:li_class => cycle('first','','','','','last'), :video => video, :video_url_params => @video_url_params}
