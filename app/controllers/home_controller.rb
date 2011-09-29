@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
   def index
+    @homepage     = Homepage.last || Homepage.new(:exciting_news => 'Add some exciting news dudes!')
     @top_picks    = Show.featured.today.limit(5)
     @latest_video = Video.
       order_by_show_date.

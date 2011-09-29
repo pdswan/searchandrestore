@@ -9,12 +9,9 @@
         .body
           %h3
             = image_tag('/images/home/exciting_news.png', :alt => 'Exciting News')
-          %ul.header-meta-list
-            %li
-              %h4 2011 Undead Jazz Fest is Coming!!!
-              %p.byline 
-                %span.author BOOM Collective and Search &amp; Restore bring back the Undead Jazzfest, expanded to 4-days, in 11 venues across 2 boroughs and featuring 50+ groups. June 23rd through 26th 2011 
-          %a.box{:href => '#'} www.undeadjazz.com
+          %div
+            :textile
+              #{@homepage.exciting_news}
     .clear
   
     .col-1

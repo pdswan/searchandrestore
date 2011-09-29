@@ -103,3 +103,7 @@ end
 Factory.define :live_artist_with_videos, :parent => :live_artist_with_upcoming_shows do |a|
   a.after_create { |artist| Factory(:video, :show => artist.upcoming_shows.first) }
 end
+
+Factory.define :homepage do |h|
+  h.exciting_news Faker::Lorem.paragraphs(3).join("\n\n")
+end
