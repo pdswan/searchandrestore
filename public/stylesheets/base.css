@@ -2,6 +2,8 @@
   border: none;
   padding: 0;
   margin: 0; }
+  .jazz fieldset .actions a {
+    color: #ff9900; }
 .jazz .field {
   margin-bottom: 20px;
   overflow: hidden; }

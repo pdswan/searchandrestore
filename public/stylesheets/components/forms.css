@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$ORANGE".
-        on line 31 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss
+        on line 7 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss
 
-26: 
-27:     label {
-28:       font-weight: bold;
-29:       clear: both;
-30:       margin-right: 20px;
-31:       color: $ORANGE;
-32:       font-size: 14px;
-33:       cursor: pointer;
-34:     }
-35:     &.inline {
-36:       float: left;
+2:   fieldset {
+3:     border: none;
+4:     padding: 0;
+5:     margin: 0;
+6: 
+7:     .actions a {color:$ORANGE;}
+8:   }
+9:   .field {
+10:     margin-bottom: 20px;
+11:     overflow: hidden;
+12:     input[type='text'],
 
 Backtrace:
-/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss:31
+/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss:7
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/variable.rb:50:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/node.rb:40:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
@@ -138,4 +138,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 31 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss\A \A 26: \A 27:     label {\A 28:       font-weight: bold;\A 29:       clear: both;\A 30:       margin-right: 20px;\A 31:       color: $ORANGE;\A 32:       font-size: 14px;\A 33:       cursor: pointer;\A 34:     }\A 35:     &.inline {\A 36:       float: left;"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 7 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss\A \A 2:   fieldset {\A 3:     border: none;\A 4:     padding: 0;\A 5:     margin: 0;\A 6: \A 7:     .actions a {color:$ORANGE;}\A 8:   }\A 9:   .field {\A 10:     margin-bottom: 20px;\A 11:     overflow: hidden;\A 12:     input[type='text'],"; }
