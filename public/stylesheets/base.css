@@ -12,8 +12,8 @@
     width: 300px; }
   .jazz .field input[type='text'],
   .jazz .field input[type='password'] {
-    line-height: 20px;
-    font-size: 16px;
+    line-height: 16px;
+    font-size: 12px;
     color: #000; }
   .jazz .field label,
   .jazz .field .control {
