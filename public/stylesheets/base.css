@@ -330,6 +330,8 @@
   padding: 5px 10px 10px 10px; }
 .jazz.section-artists.page-show #shop ul.inline-list li {
   margin-right: 10px; }
+.jazz.section-artists.page-show .venue-link {
+  color: #ff9900; }
 .jazz.section-artists.page-show #related_videos {
   margin-bottom: 15px; }
   .jazz.section-artists.page-show #related_videos .body {
