@@ -19,6 +19,8 @@
     padding-bottom: 10px; }
 .jazz.page-home #featured-video .body {
   padding: 5px; }
+  .jazz.page-home #featured-video .body img {
+    width: 290px; }
   .jazz.page-home #featured-video .body .box.dark {
     width: 290px; }
 .jazz.page-home #intro a.box {
