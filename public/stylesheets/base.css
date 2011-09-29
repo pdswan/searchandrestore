@@ -376,6 +376,8 @@
 .jazz.page-shows .show-listing ul li {
   padding-bottom: 0px;
   margin-bottom: 5px; }
+  .jazz.page-shows .show-listing ul li.featured-musician a.box {
+    font-weight: normal; }
 
 .jazz.page-donate .masthead-top {
   background-image: url(/images/titles/donate_title.png); }
