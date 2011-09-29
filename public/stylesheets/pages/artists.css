@@ -13,7 +13,8 @@
 .jazz.section-artists.page-show #info h3.name {
   margin-bottom: 1px;
   text-transform: uppercase;
-  color: #fff; }
+  color: #fff;
+  font-size: 12px; }
 .jazz.section-artists.page-show #info p.instrument {
   margin-bottom: 5px;
   color: #666; }
