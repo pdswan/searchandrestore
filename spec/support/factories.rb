@@ -107,3 +107,7 @@ end
 Factory.define :homepage do |h|
   h.exciting_news Faker::Lorem.paragraphs(3).join("\n\n")
 end
+
+Factory.define :about do |a|
+  a.about Faker::Lorem.paragraphs(3).join("\n\n")
+end
