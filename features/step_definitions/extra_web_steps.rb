@@ -26,3 +26,11 @@ When /^I wait until all Ajax requests are complete$/ do
   end
 end
 
+Then /^I choose the date "([^"]+)" from "([^"]+)"$/ do |date, field|
+  date = Date.parse(date)
+
+  Then %{I select "#{date.year}" from "#{field}_1i"}
+  And  %{I select "#{Date::MONTHNAMES[date.month]}" from "#{field}_2i"}
+  And  %{I select "#{date.mday}" from "#{field}_3i"}
+end
+
