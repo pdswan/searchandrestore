@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_filter :find_about, :only => [:index, :about]
 
   def index
     @homepage     = Homepage.last || 
@@ -31,4 +32,12 @@ class HomeController < ApplicationController
     @has_video = true
   end
 
+  def about
+  end
+
+  protected
+
+    def find_about
+      @about ||= About.last
+    end
 end
