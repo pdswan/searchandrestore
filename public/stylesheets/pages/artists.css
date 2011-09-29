@@ -35,6 +35,10 @@
   color: #ccc; }
 .jazz.section-artists.page-show #info #bio {
   display: none; }
+.jazz.section-artists.page-show #known_associates .body,
+.jazz.section-artists.page-show #shop .body,
+.jazz.section-artists.page-show #shows .body {
+  padding: 5px 10px 10px 10px; }
 .jazz.section-artists.page-show #shop ul.inline-list li {
   margin-right: 10px; }
 .jazz.section-artists.page-show #related_videos {
