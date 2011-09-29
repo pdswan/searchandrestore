@@ -17,11 +17,11 @@
     .body
       %h3 Recent Press:
       %ul.header-meta-list
-        - 5.times do |t|
+        - @press_clippings.each do |pc|
           %li
-            %h4 The New York Times
-            %p.byline 
-              %span.date 03/31/2011, 
-              %span.author Ben Ratliff
-            %a.box{:href => '#'} "Promoter wants to build jazz audience"
+            %h4= pc.source
+            %p.byline
+              %span.date= pc.date.strftime("%m/%d/%Y")
+              %span.author= pc.author
+            = link_to(pc.link.title, pc.link.url, :target => '_blank', :class => 'box')
 .clear

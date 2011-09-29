@@ -111,3 +111,10 @@ end
 Factory.define :about do |a|
   a.about Faker::Lorem.paragraphs(3).join("\n\n")
 end
+
+Factory.define :press_clipping do |p|
+  p.source      'New York Times'
+  p.author      'Phil Collins'
+  p.date        Date.today
+  p.association :link
+end
