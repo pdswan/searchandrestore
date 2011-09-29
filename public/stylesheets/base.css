@@ -50,7 +50,8 @@
       display: block;
       float: none;
       font-weight: normal;
-      padding-left: 5px; }
+      padding-left: 5px;
+      padding-top: 5px; }
     .jazz fieldset.searchy .field.text .input,
     .jazz fieldset.searchy .field.text .submit {
       float: left; }
