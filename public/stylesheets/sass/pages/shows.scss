@@ -26,6 +26,11 @@
       ul li {
         padding-bottom:0px;
         margin-bottom:5px;
+        &.featured-musician {
+          a.box {
+            font-weight:normal;
+          }
+        }
       }
     }
   }
