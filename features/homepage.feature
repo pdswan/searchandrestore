@@ -16,3 +16,10 @@ Feature:
       | This is some damn exciting news! |
     When I go to the home page
     Then I should see "This is some damn exciting news!"
+
+  Scenario: User sees about on homepage
+    Given the following about exists:
+      | about                       |
+      | All about jazz, doggy |
+    When I go to the home page
+    Then I should see "All about jazz, doggy"

@@ -49,11 +49,9 @@
         .body
           %h3
             = image_tag('/images/home/hello_there.png', :alt => 'Well Hello There')
-          %p Search And Restore is a 501(c)3 non-profit organization dedicated to developing and uniting the audience for new jazz music. We organize concerts and festivals, as well as this website which currently serves as a home for concert listings for the jazz scene in New York City. 
-    
-          %p Now, after an inspiring Kickstarter fundraiser for $75,000 , we're working on a new and improved website. Throughout 2011 we're going to film 200 concerts throughout the city, and a lot, lot more.
-    
-          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus sollicitudin turpis, congue mollis magna fermentum sed. Fusce rhoncus eleifend turpis ut rutrum. Vestibulum eros sapien, dapibus ac tempus tempus, adipiscing a augue. Nam lectus nulla, suscipit vitae auctor id, scelerisque non enim. 
+          #about
+            :textile
+              #{@about.about}
     
           %a.box{:href => '/home/about'} Learn more...
     = render :partial => 'shared/mailing_list'
