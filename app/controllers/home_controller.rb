@@ -33,11 +33,15 @@ class HomeController < ApplicationController
   end
 
   def about
+    @press_clippings = PressClipping.
+      order('date DESC').
+      includes(:link).
+      limit(5)
   end
 
   protected
 
     def find_about
-      @about ||= About.last
+      @about ||= (About.last || About.new(:about => 'Add some about dudes!'))
     end
 end
