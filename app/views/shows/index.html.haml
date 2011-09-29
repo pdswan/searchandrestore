@@ -47,7 +47,7 @@
         .body
           %p.box.dark.band= show.group_name
           = link_to("#{show.venue.name}", show.venue, :class => 'box venue')
-          %p.date= show.when.strftime("%d/%m/%Y %I:%M%p")
+          %p.date= show.when.strftime("%m/%d/%Y %I:%M%p")
           .clear
 
           - if show.performances.present?
