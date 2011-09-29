@@ -4,7 +4,6 @@ class CreatePressClippings < ActiveRecord::Migration
       t.string :source
       t.string :author
       t.date :date
-      t.integer :link_id
 
       t.timestamps
     end

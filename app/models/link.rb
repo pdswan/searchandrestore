@@ -6,7 +6,7 @@ class Link < ActiveRecord::Base
                   :format   => URI.regexp
 
   def title
-    read_attribute(:title) || url
+    read_attribute(:title).presence || url
   end
 
 end
