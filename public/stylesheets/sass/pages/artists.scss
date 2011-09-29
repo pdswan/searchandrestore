@@ -56,6 +56,11 @@
           display: none;
         }
       }
+      #known_associates .body,
+      #shop .body,
+      #shows .body {
+        padding: 5px 10px 10px 10px;
+      }
       #shop {
         ul.inline-list {
           li {
