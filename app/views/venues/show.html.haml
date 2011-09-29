@@ -86,7 +86,7 @@
             - group_name = video.show.group_name
             - time = video.show.when.strftime('%m/%d/%Y')
             - venue = video.show.venue.name
-            - title = groupd_name + ' - ' + time + ' @ ' + venue
+            - title = group_name + ' - ' + time + ' @ ' + venue
             %li.container{ :class => cycle('first', '', '', 'last') }
               %a.block{ :href => video_path(video), :title => title, :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
                 .body
