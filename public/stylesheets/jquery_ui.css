@@ -1023,7 +1023,7 @@
   color: #fff !important; }
 
 .ui-datepicker {
-  background: #000;
+  background: url(/images/black_container_bg.png);
   width: 17em;
   padding: .2em .2em 0;
   display: none;
@@ -1032,10 +1032,10 @@
 .ui-datepicker .ui-datepicker-header {
   position: relative;
   padding: .2em 0;
-  background: #000 !important; }
+  background: url(/images/black_container_bg.png) !important; }
 
 .ui-datepicker .ui-datepicker-header.ui-widget-header {
-  background: #000 !important;
+  background: url(/images/black_container_bg.png) !important;
   border-radius: 0;
   border: none; }
 
@@ -1081,7 +1081,7 @@
   margin: 0 2.3em;
   line-height: 1.8em;
   text-align: center;
-  background: #000; }
+  background: url(/images/black_container_bg.png); }
 
 .ui-datepicker .ui-datepicker-title select {
   font-size: 1em;
