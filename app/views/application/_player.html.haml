@@ -6,9 +6,9 @@
     #{selected_video.embed_code}
   %p
     = link_to(show.group_name, show, :class => 'box dark')
-    = show.when.strftime("%m/%d/%Y")
     - if show.venue.present?
       = link_to(show.venue.name, show.venue, :class => 'venue-link')
+    = show.when.strftime("%m/%d/%Y")
 
   - if show.videos.count > 1
     %h3 More Videos from this Show
