@@ -83,10 +83,15 @@
         -# this and artists show should share the same partial?
         %ul.inline-list.grid-view
           - @venue.videos.order_by_show_date.group_by_show.limit(4).each do |video|
+            - group_name = video.show.group_name
+            - time = video.show.when.strftime('%m/%d/%Y')
+            - venue = video.show.venue.name
+            - title = groupd_name + ' - ' + time + ' @ ' + venue
             %li.container{ :class => cycle('first', '', '', 'last') }
-              %a.block{ :href => video_path(video), :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
+              %a.block{ :href => video_path(video), :title => title, :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
                 .body
                   = image_tag(video.thumbnail.url(:tiny))
                   .clear
-                  %span.box.block.name= video.show.group_name
-                  %p.byline #{video.show.when.strftime('%m/%d/%Y')}, #{video.show.venue.name}
+                  %span.box.block.name
+                    %span= group_name
+                  %p.byline #{time}, #{venue}
