@@ -16,6 +16,7 @@ gem 'rmagick'
 gem 'geocoder'
 gem 'state_machine'
 gem 'ruby-oembed'
+gem 'RedCloth'
 
 # Use unicorn as the web server
 # gem 'unicorn'
