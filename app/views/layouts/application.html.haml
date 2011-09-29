@@ -83,7 +83,8 @@
           $('[data-latitude][data-longitude]').each(function() {
             var latitude           = $(this).data('latitude'),
                 longitude          = $(this).data('longitude'),
-                name               = $(this).find('.name').text(),
+                name               = $(this).data('name'),
+                address            = $(this).data('address'),
                 include_infowindow = ($(this).data('include-infowindow') == 0 ? false : true);
 
             var pos = new google.maps.LatLng(latitude, longitude);
@@ -100,7 +101,7 @@
 
             if (include_infowindow) {
               var infowindow = new google.maps.InfoWindow({
-                content: name 
+                content: '<h3><strong>' + name + '</strong></h3><p>' + address + '</p>'
               });
 
               google.maps.event.addListener(marker,'click',function() {
