@@ -34,7 +34,7 @@
       .section
         %ul#more_videos.inline-list.grid-view
           - @videos.each do |video|
-            %li{ :class => cycle('first','','','last') }
+            %li{ :class => cycle('first','','','last', :name => 'video_thumbs') }
               = render :partial => 'videos/video_thumb', :locals => { :video => video }
 
 = render :template => 'layouts/application'
