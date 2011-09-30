@@ -655,6 +655,9 @@ h4 {
   font-size: 12px;
   text-transform: uppercase; }
 
+a {
+  color: #ff9900; }
+
 .fixed {
   position: fixed; }
 
