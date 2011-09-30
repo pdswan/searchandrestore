@@ -26,8 +26,7 @@
             .clear
 
   .col-2
-    .section
-      .container= content_for?(:video_content) ? yield(:video_content) : yield
+    .section= content_for?(:video_content) ? yield(:video_content) : yield
 
     - if @videos.present?
       .section.pl10.pt5

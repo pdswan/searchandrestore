@@ -336,24 +336,6 @@
   margin-right: 10px; }
 .jazz.section-artists.page-show .venue-link {
   color: #ff9900; }
-.jazz.section-artists.page-show #related_videos {
-  margin-bottom: 15px; }
-  .jazz.section-artists.page-show #related_videos .body {
-    padding: 0px; }
-  .jazz.section-artists.page-show #related_videos li {
-    width: 140px;
-    padding-right: 17px;
-    padding-bottom: 5px; }
-    .jazz.section-artists.page-show #related_videos li.last {
-      padding-right: 0px; }
-    .jazz.section-artists.page-show #related_videos li span.box {
-      overflow: hidden; }
-      .jazz.section-artists.page-show #related_videos li span.box span {
-        overflow: hidden;
-        display: block;
-        float: left;
-        white-space: nowrap;
-        width: 129px; }
 
 .jazz.page-about .masthead-top {
   background-image: url(/images/titles/about_title.png); }
@@ -410,22 +392,8 @@
   background-image: url(/images/titles/video_title.png); }
 .jazz.section-video .masthead {
   background: url(/images/masthead_bg/videos.png) repeat-x; }
-.jazz.section-video p.show {
-  width: 140px;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-bottom: 0px; }
 .jazz.section-video .venue-link {
   color: #ff9900; }
-.jazz.section-video #related_videos {
-  margin-bottom: 5px; }
-  .jazz.section-video #related_videos li {
-    margin-right: 0px;
-    padding-bottom: 0; }
-    .jazz.section-video #related_videos li .body {
-      padding: 7px; }
-    .jazz.section-video #related_videos li:hover .box, .jazz.section-video #related_videos li.active .box {
-      background-color: #000; }
 
 .jazz.section-venues .masthead-top {
   background-image: url(/images/titles/venues_title.png); }
@@ -863,10 +831,40 @@ body.page-donate .nav li#nav-donate a {
     #mailing-list .field.radio.subscribe {
       margin-left: 38px; }
 
-#video-player-container p {
+#video_player_container p {
   margin-bottom: 6px; }
-#video-player-container h3 {
+#video_player_container h3 {
   margin-bottom: 4px; }
-#video-player-container a.venue-link {
-  color: #666;
+#video_player_container a.venue-link {
+  color: #ff9900;
   text-decoration: none; }
+
+#video_player_container .video-thumb,
+#more_videos .video-thumb,
+.section-video .video-thumb {
+  background-color: #fff; }
+  #video_player_container .video-thumb:hover .box, #video_player_container .video-thumb.active .box,
+  #more_videos .video-thumb:hover .box,
+  #more_videos .video-thumb.active .box,
+  .section-video .video-thumb:hover .box,
+  .section-video .video-thumb.active .box {
+    background-color: #000; }
+  #video_player_container .video-thumb p,
+  #more_videos .video-thumb p,
+  .section-video .video-thumb p {
+    margin-bottom: 0px; }
+  #video_player_container .video-thumb .body,
+  #more_videos .video-thumb .body,
+  .section-video .video-thumb .body {
+    padding: 5px 5px 8px 5px !important; }
+  #video_player_container .video-thumb p.show,
+  #more_videos .video-thumb p.show,
+  .section-video .video-thumb p.show {
+    width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 0px; }
+#video_player_container li.last .video-thumb,
+#more_videos li.last .video-thumb,
+.section-video li.last .video-thumb {
+  margin-right: 0px; }

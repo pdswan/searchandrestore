@@ -10,9 +10,9 @@ Syntax error: Undefined variable: "$ORANGE".
 72:         color: $ORANGE;
 73:       }
 74:       #related_videos {
-75:         margin-bottom:15px;
-76:         .body {padding:0px;}
-77:         li {
+75:         li {
+76:           span.box {
+77:           }
 
 Backtrace:
 /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss:72
@@ -149,4 +149,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 72 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss\A \A 67:             margin-right: 10px;\A 68:           }\A 69:         }\A 70:       }\A 71:       .venue-link {\A 72:         color: $ORANGE;\A 73:       }\A 74:       #related_videos {\A 75:         margin-bottom:15px;\A 76:         .body {padding:0px;}\A 77:         li {"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 72 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss\A \A 67:             margin-right: 10px;\A 68:           }\A 69:         }\A 70:       }\A 71:       .venue-link {\A 72:         color: $ORANGE;\A 73:       }\A 74:       #related_videos {\A 75:         li {\A 76:           span.box {\A 77:           }"; }

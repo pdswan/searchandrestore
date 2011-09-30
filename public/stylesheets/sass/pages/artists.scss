@@ -72,24 +72,8 @@
         color: $ORANGE;
       }
       #related_videos {
-        margin-bottom:15px;
-        .body {padding:0px;}
         li {
-          width:140px;
-          padding-right:17px;
-          padding-bottom:5px;
-          &.last {
-            padding-right: 0px;
-          }
           span.box {
-            overflow:hidden;
-            span {
-              overflow:hidden;
-              display:block;
-              float:left;
-              white-space:nowrap;
-              width:129px;
-            }
           }
         }
       }

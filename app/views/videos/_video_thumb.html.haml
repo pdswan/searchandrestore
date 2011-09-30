@@ -4,7 +4,7 @@
 - venue            = video.show.venue.try(:name)
 - title            = (group_name + " - " + date + (venue ? (" @ " + venue) : ""))
 
-%a.block{ :href => video_path(video, video_url_params), :title => title, :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
+%a.block.video-thumb{ :href => video_path(video, video_url_params), :title => title, :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code } }
   .body
     = image_tag(video.thumbnail.url(:tiny))
     .clear
