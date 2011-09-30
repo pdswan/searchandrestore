@@ -251,7 +251,7 @@ body {
   }
 }
 
-#video-player-container {
+#video_player_container {
   p {
     margin-bottom: 6px;
   }
@@ -259,7 +259,37 @@ body {
     margin-bottom: 4px;
   }
   a.venue-link {
-    color: #666;
+    color: $ORANGE;
     text-decoration: none;
+  }
+}
+
+
+#video_player_container,
+#more_videos,
+.section-video {
+  .video-thumb {
+    background-color:#fff;
+    &:hover,
+    &.active {
+      .box {
+        background-color:#000;
+      }
+    }
+    p {
+      margin-bottom:0px;
+    }
+    .body {
+      padding:5px 5px 8px 5px !important;
+    }
+    p.show {
+      width:140px;
+      overflow:hidden;
+      white-space:nowrap;
+      margin-bottom:0px;
+    }
+  }
+  li.last .video-thumb {
+    margin-right:0px;
   }
 }

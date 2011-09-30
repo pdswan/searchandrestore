@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$ORANGE".
-        on line 16 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/video.scss
+        on line 10 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/video.scss
 
-11:       overflow:hidden;
-12:       white-space:nowrap;
-13:       margin-bottom:0px;
-14:     }
-15:     .venue-link {
-16:       color: $ORANGE;
-17:     }
-18:     #related_videos {
-19:       margin-bottom:5px;
-20:       li {
-21:         margin-right:0px;
+5:     }
+6:     .masthead {
+7:       background: url(/images/masthead_bg/videos.png) repeat-x;
+8:     }
+9:     .venue-link {
+10:       color: $ORANGE;
+11:     }
+12:     #related_videos {
+13:       li {
+14:       }
+15:     }
 
 Backtrace:
-/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/video.scss:16
+/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/video.scss:10
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/variable.rb:50:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/node.rb:40:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
@@ -138,4 +138,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 16 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/video.scss\A \A 11:       overflow:hidden;\A 12:       white-space:nowrap;\A 13:       margin-bottom:0px;\A 14:     }\A 15:     .venue-link {\A 16:       color: $ORANGE;\A 17:     }\A 18:     #related_videos {\A 19:       margin-bottom:5px;\A 20:       li {\A 21:         margin-right:0px;"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 10 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/video.scss\A \A 5:     }\A 6:     .masthead {\A 7:       background: url(/images/masthead_bg/videos.png) repeat-x;\A 8:     }\A 9:     .venue-link {\A 10:       color: $ORANGE;\A 11:     }\A 12:     #related_videos {\A 13:       li {\A 14:       }\A 15:     }"; }
