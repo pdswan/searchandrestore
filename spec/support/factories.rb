@@ -98,6 +98,7 @@ end
 Factory.define :video do |v|
   v.association :show
   v.embed_code { Factory.next(:embed_codes) }
+  v.title      { Faker::Lorem.words(3).join(' ') }
 end
 
 Factory.define :live_artist_with_videos, :parent => :live_artist_with_upcoming_shows do |a|
