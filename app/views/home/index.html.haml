@@ -38,8 +38,12 @@
       .section#featured-video
         .container
           .body
-            - if @latest_video.present?
-              = render :partial => 'videos/video_thumb', :locals => { :video => @latest_video }
+            - if @featured_video.present?
+              = render :partial => 'videos/video_thumb', :locals => { :video => @featured_video }
+
+              - if @featured_video_description
+                .video_description= @featured_video_description
+
             = link_to('See more videos...', videos_path, :class => 'box')
     .clear
   

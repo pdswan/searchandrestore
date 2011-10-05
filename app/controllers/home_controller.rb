@@ -7,10 +7,15 @@ class HomeController < ApplicationController
     @about        = About.last || 
       About.new(:about => 'Add some about text dudes!')
     @top_picks    = Show.featured.today.limit(5)
-    @latest_video = Video.
+
+    @featured_video = @homepage.video(:includes => [:show, { :performances => [:artist, :instrument] }])
+
+    @featured_video ||= Video.
       order_by_show_date.
       includes(:show, { :performances => [:artist, :instrument] }).
       first
+
+    @featured_video_description = @homepage.video_description
   end
 
   def shows
