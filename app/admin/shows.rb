@@ -22,7 +22,7 @@ ActiveAdmin.register Show do
       end
 
       def scoped_collection
-        super.select('shows.*, count(videos.id) as video_count').joins(:videos).group('shows.id')
+        super.select('shows.*, count(videos.id) as video_count').joins("LEFT JOIN videos on shows.id = videos.show_id").group('shows.id')
       end
   end
 
