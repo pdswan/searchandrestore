@@ -5,9 +5,9 @@
     %fieldset
       %p.box.dark.floatleft.mr10.pr10.pl10 Search Artists By ...
       .field.text.inline.mb5  
-        = f.label :name_starts_with, 'Name: '
+        = f.label :name_contains, 'Name:'
         .wrapper
-          = f.text_field :name_starts_with
+          = f.text_field :name_contains
 
       .field.select.inline.mb5
         = f.label :instrument_id_equals, 'Instrument: '
