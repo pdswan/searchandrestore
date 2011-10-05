@@ -6,9 +6,9 @@
       .box.dark Search Artists By...
       %fieldset.searchy
         .field.text
-          = f.label :name_starts_with, 'Name:'
+          = f.label :name_contains, 'Name:'
           .input
-            = f.text_field :name_starts_with
+            = f.text_field :name_contains
 
         .field.select
           = f.label :instrument_id_equals, 'Instrument:'

@@ -17,15 +17,17 @@ Feature: Artists Landing
       | name         |
       | Phil Collins |
     When I go to the <page>
-    And I fill in "Name" with "Phil Collins"
+    And I fill in "Name" with "<search>"
     And I press "search"
     Then I should only see the artist names for artists with:
       | name | Phil Collins |
 
     Scenarios:
-      | page                     |
-      | artists page             |
-      | detail page for artist 1 |
+      | page                     | search |
+      | artists page             | Phil   |
+      | artists page             | Col    |
+      | detail page for artist 1 | Phil   |
+      | detail page for artist 1 | Col    |
 
   Scenario Outline: Visitor filters artist by instrument
     When I go to the artists page
