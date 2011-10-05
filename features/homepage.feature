@@ -5,8 +5,9 @@ Feature:
     When I go to the home page
     Then I should see the show
 
-  Scenario: Users should see latest video on homepage
+  Scenario: User sees featured video
     Given a video exists
+    And the video is featured on the homepage
     When I go to the home page
     Then I should see a thumbnail for the video
 
