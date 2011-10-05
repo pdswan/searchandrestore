@@ -5,6 +5,7 @@ ActiveAdmin.register Homepage do
     f.inputs do
       f.input :exciting_news
       f.input :video, :input_html => { :'data-placeholder' => 'Select a video...', :class => 'chzn-select' }
+      f.input :video_description
     end
 
     f.buttons
