@@ -1,0 +1,41 @@
+= semantic_form_for show do |f|
+  = f.inputs do
+    = f.input :venue, :input_html => {:'data-placeholder' => 'Select a venue...', :class => 'chzn-select'}
+    = f.input :group_name
+    = f.input :when
+    = f.input :cover_charge
+    = f.input :description
+    = f.input :search_and_restore
+    = f.input :featured
+
+  - if show.performances.empty?
+    - 3.times do
+      - show.performances.build
+      - show.performances.last.build_artist
+      - show.performances.last.build_instrument
+
+  %h3 Performances
+  = f.semantic_fields_for :performances do |p|
+    = p.inputs do
+      = p.input :artist, :label => 'Existing Artist', :input_html => { :'data-placeholder' => 'Choose an artist', :class => 'chzn-select chzn-select-with-new' }
+
+      - if p.object.new_record?
+        - p.object.build_artist
+      = p.semantic_fields_for :artist do |a|
+        = a.input :name, :label => 'Add a New Artist', :input_html => { :placeholder => 'Artist Name' }
+
+      = p.input :instrument, :label => 'Existing Instrument', :input_html => { :'data-placeholder' => 'Choose an instrument...', :class => 'chzn-select chzn-select-with-new' }
+
+      - if p.object.new_record?
+        - p.object.build_instrument
+      = p.semantic_fields_for :instrument do |i|
+        = i.input :name, :label => 'Add a New Instrument', :input_html => { :placeholder => 'Instrument Name' }
+
+  - 5.times { show.videos.build }
+  %h3 Videos
+  = f.semantic_fields_for :videos do |v|
+    = v.inputs do
+      = v.input :title, :hint => 'If left blank, this will be automatically populated from the title of the vimeo video. It can be edited afterwards.'
+      = v.input :url, :hint => 'Paste the vimeo link here; e.g. http://vimeo.com/25519509' 
+
+  = f.buttons

@@ -42,49 +42,51 @@ ActiveAdmin.register Show do
     default_actions
   end
 
-  form do |f|
-    f.inputs do
-      f.input :venue, :input_html => {:'data-placeholder' => 'Select a venue...', :class => 'chzn-select'}
-      f.input :group_name
-      f.input :when
-      f.input :cover_charge
-      f.input :description
-      f.input :search_and_restore
-      f.input :featured
-    end
+  form :partial => 'form'
 
-    f.has_many :performances do |p|
-      p.inputs "Choose an existing artist" do
-        p.input :artist, :name => 'artist', :input_html => {:'data-placeholder' => 'Choose an artist...', :class => 'chzn-select'}
-      end
+  #form do |f|
+  #  f.inputs do
+  #    f.input :venue, :input_html => {:'data-placeholder' => 'Select a venue...', :class => 'chzn-select'}
+  #    f.input :group_name
+  #    f.input :when
+  #    f.input :cover_charge
+  #    f.input :description
+  #    f.input :search_and_restore
+  #    f.input :featured
+  #  end
 
-      # FIXME
-      # shouldn't have to build the records here
-      if p.object.new_record?
-        p.object.build_artist
-        p.inputs :name, :for => :artist, :name => 'Add a new artist'
-      end
+  #  f.has_many :performances do |p|
+  #    p.inputs "Choose an existing artist" do
+  #      p.input :artist, :name => 'artist', :input_html => {:'data-placeholder' => 'Choose an artist...', :class => 'chzn-select'}
+  #    end
 
-      last = p.inputs 'Choose an existing instrument' do
-        p.input :instrument, :input_html => {:'data-placeholder' => 'Choose an instrument...', :class => 'chzn-select'}
-      end
+  #    # FIXME
+  #    # shouldn't have to build the records here
+  #    if p.object.new_record?
+  #      p.object.build_artist
+  #      p.inputs :name, :for => :artist, :name => 'Add a new artist'
+  #    end
 
-      if p.object.new_record?
-        p.object.build_instrument
-        p.inputs :name, :for => :instrument, :name => 'Add a new instrument'
-      else
-        last
-      end
-    end
+  #    last = p.inputs 'Choose an existing instrument' do
+  #      p.input :instrument, :input_html => {:'data-placeholder' => 'Choose an instrument...', :class => 'chzn-select'}
+  #    end
 
-    f.has_many :videos do |v|
-      v.inputs do
-        v.input :title, :hint => 'If left blank, this will be automatically populated from the title of the vimeo video. It can be edited afterwards.'
-        v.input :url, :hint => 'Paste the vimeo link here; e.g. http://vimeo.com/25519509' 
-      end
-    end
+  #    if p.object.new_record?
+  #      p.object.build_instrument
+  #      p.inputs :name, :for => :instrument, :name => 'Add a new instrument'
+  #    else
+  #      last
+  #    end
+  #  end
 
-    f.buttons
-  end
+  #  f.has_many :videos do |v|
+  #    v.inputs do
+  #      v.input :title, :hint => 'If left blank, this will be automatically populated from the title of the vimeo video. It can be edited afterwards.'
+  #      v.input :url, :hint => 'Paste the vimeo link here; e.g. http://vimeo.com/25519509' 
+  #    end
+  #  end
+
+  #  f.buttons
+  #end
 end
 
