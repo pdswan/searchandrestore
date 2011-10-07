@@ -72,7 +72,7 @@ ActiveAdmin.setup do |config|
   config.register_stylesheet 'chosen.css'
   #
   # To load a javascript file:
-  config.register_javascript 'chosen.jquery.min.js'
+  config.register_javascript 'chosen.jquery.js'
   config.register_javascript 'chosen_init.js'
   
   # Set this to the named route of your logout path
