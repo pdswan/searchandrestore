@@ -1,4 +1,4 @@
-= semantic_form_for show do |f|
+= semantic_form_for [:admin, show] do |f|
   = f.inputs do
     = f.input :venue, :input_html => {:'data-placeholder' => 'Select a venue...', :class => 'chzn-select'}
     = f.input :group_name
@@ -19,16 +19,12 @@
     = p.inputs do
       = p.input :artist, :label => 'Existing Artist', :input_html => { :'data-placeholder' => 'Choose an artist', :class => 'chzn-select chzn-select-with-new' }
 
-      - if p.object.new_record?
-        - p.object.build_artist
-      = p.semantic_fields_for :artist do |a|
+      = p.semantic_fields_for :artist, Artist.new do |a|
         = a.input :name, :label => 'Add a New Artist', :input_html => { :placeholder => 'Artist Name' }
 
       = p.input :instrument, :label => 'Existing Instrument', :input_html => { :'data-placeholder' => 'Choose an instrument...', :class => 'chzn-select chzn-select-with-new' }
 
-      - if p.object.new_record?
-        - p.object.build_instrument
-      = p.semantic_fields_for :instrument do |i|
+      = p.semantic_fields_for :instrument, Instrument.new do |i|
         = i.input :name, :label => 'Add a New Instrument', :input_html => { :placeholder => 'Instrument Name' }
 
   - 5.times { show.videos.build }
