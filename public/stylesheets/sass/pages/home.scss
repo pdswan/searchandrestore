@@ -1,6 +1,11 @@
 .jazz {
   &.page-home {
-    h3 {
+    h3.container {
+      img {display:block;}
+      .body {
+        padding-bottom:10px;
+        height:25px;
+      }
       margin-bottom: 5px;   
     }
     .masthead-top {

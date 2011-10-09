@@ -15,8 +15,9 @@
     .clear
   
     .col-1
-      %h3
-        = image_tag('/images/home/top_picks.png', :alt => 'Tonights Top Picks')
+      %h3.container.skin-dark.darker
+        .body
+          = image_tag('/images/home/top_picks.png', :alt => 'Tonights Top Picks')
       .section
         .container.skin-dark
           .body
@@ -33,8 +34,9 @@
               = link_to('See more shows...', shows_path, :class => 'box')
     
     .col-2
-      %h3
-        = image_tag('/images/home/featured_video.png', :alt => 'Featured Video')
+      %h3.container.skin-dark.darker
+        .body
+          = image_tag('/images/home/featured_video.png', :alt => 'Featured Video')
       .section#featured-video
         .container
           .body
