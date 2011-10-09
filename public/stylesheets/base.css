@@ -288,8 +288,13 @@
   .jazz .media-with-info.large .info {
     padding-left: 172px; }
 
-.jazz.page-home h3 {
+.jazz.page-home h3.container {
   margin-bottom: 5px; }
+  .jazz.page-home h3.container img {
+    display: block; }
+  .jazz.page-home h3.container .body {
+    padding-bottom: 10px;
+    height: 25px; }
 .jazz.page-home .masthead-top {
   background-image: url(/images/titles/home_title.png);
   background-position: 10px 5px; }
