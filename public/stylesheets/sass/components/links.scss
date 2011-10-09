@@ -11,6 +11,7 @@
     display: inline-block;
     text-decoration: none;
     font-weight: bold;
+    white-space:nowrap;
     &.dark {
       background-color: #000;
       text-transform: uppercase;
