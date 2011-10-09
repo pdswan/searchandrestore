@@ -7,7 +7,14 @@
       background: url(/images/masthead_bg/venues.png) repeat-x;
     }
     &.page-index {
-      .searchy-inline select {width: 223px;}
+      .searchy-inline {
+        select {
+          width: 223px;
+        }
+        * {
+          margin-bottom:2px;
+        }
+      }
     }
     &.page-show {
       fieldset.searchy {
