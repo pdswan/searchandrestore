@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$ORANGE".
-        on line 70 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/lists.scss
+        on line 79 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/lists.scss
 
-65:     margin: 0 0 5px 0;
-66:     dd, dt {float: left;}
-67:     dt {
-68:       font-size: 14px;
-69:       font-weight: bold;
-70:       color: $ORANGE;
-71:       padding-right: 5px;
-72:       clear: both;
-73:     }
-74:     dd {
-75:       color: #ccc;
+74:     margin: 0 0 5px 0;
+75:     dd, dt {float: left;}
+76:     dt {
+77:       font-size: 14px;
+78:       font-weight: bold;
+79:       color: $ORANGE;
+80:       padding-right: 5px;
+81:       clear: both;
+82:     }
+83:     dd {
+84:       color: #ccc;
 
 Backtrace:
-/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/lists.scss:70
+/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/lists.scss:79
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/variable.rb:50:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/node.rb:40:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
@@ -138,4 +138,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 70 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/lists.scss\A \A 65:     margin: 0 0 5px 0;\A 66:     dd, dt {float: left;}\A 67:     dt {\A 68:       font-size: 14px;\A 69:       font-weight: bold;\A 70:       color: $ORANGE;\A 71:       padding-right: 5px;\A 72:       clear: both;\A 73:     }\A 74:     dd {\A 75:       color: #ccc;"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 79 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/lists.scss\A \A 74:     margin: 0 0 5px 0;\A 75:     dd, dt {float: left;}\A 76:     dt {\A 77:       font-size: 14px;\A 78:       font-weight: bold;\A 79:       color: $ORANGE;\A 80:       padding-right: 5px;\A 81:       clear: both;\A 82:     }\A 83:     dd {\A 84:       color: #ccc;"; }

@@ -1,5 +1,6 @@
 - @page_class = 'layout-4 section-venues page-index'
 
+-@venues = [@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues,@venues].flatten
 .col-1
   .div{:style => 'height:1px;'} &nbsp;
   .fixed{:style => 'margin-top:-1px;'}
@@ -24,8 +25,7 @@
         %a.block{:href => url_for(venue), :title => venue.name}
           .body
             = image_tag(venue.image.url(:thumb), :style => 'width: 140px; height: 140px;')
-            .clear
-            %span.box.block.name
-              %span= venue.name
-            %p.byline= venue.city || raw("&nbsp;")
+            -#%span.box.block.name
+            -#  %span= venue.name
+            -#%p.byline= venue.city || raw("&nbsp;")
 .clear

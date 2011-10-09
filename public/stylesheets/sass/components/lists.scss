@@ -24,8 +24,10 @@
     li.last {margin-bottom: 0px !important;}
     &.grid-view {
       li {
+        &.container {
+          background:none;
+        }
         margin-right: 10px;
-        margin-bottom: 10px;
         &.last {
           margin-right: 0px;
         } 
@@ -33,7 +35,14 @@
           clear: both;
         }
         .body {
-          padding: 5px 5px 0px 5px;
+          background-color:#fff;
+          margin-bottom:10px;
+          padding: 5px 5px 5px 5px;
+          img {
+            margin:0;
+            padding:0;
+            display:block;
+          }
           .name {
             margin-bottom: 2px;
           }

@@ -149,14 +149,21 @@
 .jazz ul li.last {
   margin-bottom: 0px !important; }
 .jazz ul.grid-view li {
-  margin-right: 10px;
-  margin-bottom: 10px; }
+  margin-right: 10px; }
+  .jazz ul.grid-view li.container {
+    background: none; }
   .jazz ul.grid-view li.last {
     margin-right: 0px; }
   .jazz ul.grid-view li.first {
     clear: both; }
   .jazz ul.grid-view li .body {
-    padding: 5px 5px 0px 5px; }
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 5px; }
+    .jazz ul.grid-view li .body img {
+      margin: 0;
+      padding: 0;
+      display: block; }
     .jazz ul.grid-view li .body .name {
       margin-bottom: 2px; }
     .jazz ul.grid-view li .body .byline {
@@ -659,6 +666,9 @@ h4 {
 
 a {
   color: #ff9900; }
+
+img {
+  border: none; }
 
 .fixed {
   position: fixed; }
