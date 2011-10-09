@@ -94,7 +94,8 @@
   padding: 2px 5px 2px 5px;
   display: inline-block;
   text-decoration: none;
-  font-weight: bold; }
+  font-weight: bold;
+  white-space: nowrap; }
   .jazz .box.dark {
     background-color: #000;
     text-transform: uppercase; }
@@ -312,7 +313,8 @@
   white-space: nowrap; }
 .jazz.section-artists.page-show #info .body {
   position: relative;
-  padding-bottom: 26px; }
+  padding-bottom: 26px;
+  zoom: 1; }
 .jazz.section-artists.page-show #info h3.name {
   margin-bottom: 1px;
   text-transform: uppercase;

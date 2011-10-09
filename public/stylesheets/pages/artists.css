@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$ORANGE".
-        on line 72 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss
+        on line 73 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss
 
-67:             margin-right: 10px;
-68:           }
-69:         }
-70:       }
-71:       .venue-link {
-72:         color: $ORANGE;
-73:       }
-74:       #related_videos {
-75:         li {
-76:           span.box {
-77:           }
+68:             margin-right: 10px;
+69:           }
+70:         }
+71:       }
+72:       .venue-link {
+73:         color: $ORANGE;
+74:       }
+75:       #related_videos {
+76:         li {
+77:           span.box {
+78:           }
 
 Backtrace:
-/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss:72
+/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss:73
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/variable.rb:50:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/node.rb:40:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
@@ -149,4 +149,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 72 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss\A \A 67:             margin-right: 10px;\A 68:           }\A 69:         }\A 70:       }\A 71:       .venue-link {\A 72:         color: $ORANGE;\A 73:       }\A 74:       #related_videos {\A 75:         li {\A 76:           span.box {\A 77:           }"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 73 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss\A \A 68:             margin-right: 10px;\A 69:           }\A 70:         }\A 71:       }\A 72:       .venue-link {\A 73:         color: $ORANGE;\A 74:       }\A 75:       #related_videos {\A 76:         li {\A 77:           span.box {\A 78:           }"; }
