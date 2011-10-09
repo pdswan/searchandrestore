@@ -33,9 +33,23 @@
     }
     #featured-video .body {
       padding: 5px;
-      img {width:290px}
-      .box.dark {
-        width: 290px;
+      img {width:300px}
+      .box.name {
+        background-color:#000;
+        span {
+          width:290px;
+        }
+      }
+      &.additional-content {
+        padding-top:0px;
+      }
+      p {
+        &.video_description {
+          margin-bottom:10px;
+        }
+        &.show {
+          margin-bottom:0px;
+        }
       }
     }
     #intro {

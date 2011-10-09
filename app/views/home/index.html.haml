@@ -39,14 +39,14 @@
           = image_tag('/images/home/featured_video.png', :alt => 'Featured Video')
       .section#featured-video
         .container
-          .body
-            - if @featured_video.present?
-              = render :partial => 'videos/video_thumb', :locals => { :video => @featured_video }
+          - if @featured_video.present?
+            = render :partial => 'videos/video_thumb', :locals => { :video => @featured_video }
 
+            .body.additional-content
               - if @featured_video_description
-                .video_description= @featured_video_description
-
-            = link_to('See more videos...', videos_path, :class => 'box')
+                %p.video_description= @featured_video_description
+            
+              = link_to('See more videos...', videos_path, :class => 'box')
     .clear
   
   .col-3

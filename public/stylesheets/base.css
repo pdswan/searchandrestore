@@ -315,9 +315,17 @@
 .jazz.page-home #featured-video .body {
   padding: 5px; }
   .jazz.page-home #featured-video .body img {
-    width: 290px; }
-  .jazz.page-home #featured-video .body .box.dark {
-    width: 290px; }
+    width: 300px; }
+  .jazz.page-home #featured-video .body .box.name {
+    background-color: #000; }
+    .jazz.page-home #featured-video .body .box.name span {
+      width: 290px; }
+  .jazz.page-home #featured-video .body.additional-content {
+    padding-top: 0px; }
+  .jazz.page-home #featured-video .body p.video_description {
+    margin-bottom: 10px; }
+  .jazz.page-home #featured-video .body p.show {
+    margin-bottom: 0px; }
 .jazz.page-home #intro a.box {
   width: 210px; }
 
