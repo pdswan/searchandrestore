@@ -102,8 +102,10 @@
        } 
        .input {
          margin-right: 3px;
-         width: 250px;
-         select {width: 250px;}
+         width: 249px;
+         select {
+          width: 249px;
+         }
        }
       }
     }
