@@ -16,13 +16,14 @@
             = f.collection_select :venue_id_equals, Venue.all, :id, :name, :include_blank => 'any venue' 
           .submit
             = f.submit :search
-        .field.calendar.floatleft
-          = f.label :for_day, 'Date:'
-          = f.hidden_field :for_day
-          #datepicker{ :data => { :input => '#search_for_day', :'default-date' => @current_date.strftime('%Y-%m-%d') } }
-        .floatleft.calendar-submit
-          = f.submit :search
-        .clear
+        .calendar-wrapper
+          .field.calendar.floatleft
+            = f.label :for_day, 'Date:'
+            = f.hidden_field :for_day
+            #datepicker{ :data => { :input => '#search_for_day', :'default-date' => @current_date.strftime('%Y-%m-%d') } }
+          .calendar-submit
+            = f.submit :search
+          .clear
 
   %h3.box-header See Tonight's Top Picks
 

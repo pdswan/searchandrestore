@@ -88,7 +88,7 @@
         } 
         .input {
           width:242px;
-          margin-right:11px;
+          margin-right:10px;
           input {
             width: 242px;
             height:15px;
@@ -108,9 +108,26 @@
          }
        }
       }
+      &.calendar {
+        width:234px;
+        margin:0;
+        padding:0;
+      }
+    }
+    .calendar-wrapper {
+      position:relative;
+      padding-bottom:0px;
+      background-color:transparent;
     }
     .calendar-submit {
+      width: 66px;
       margin: 217px 0 0 10px;
+      position:absolute;
+      right:0px;
+      bottom:0px;
+      input {
+        float:right;
+      }
     }
   }
 

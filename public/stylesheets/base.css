@@ -59,7 +59,7 @@
       float: left; }
     .jazz fieldset.searchy .field.text .input {
       width: 242px;
-      margin-right: 11px; }
+      margin-right: 10px; }
       .jazz fieldset.searchy .field.text .input input {
         width: 242px;
         height: 15px; }
@@ -71,8 +71,22 @@
       width: 249px; }
       .jazz fieldset.searchy .field.select .input select {
         width: 249px; }
+    .jazz fieldset.searchy .field.calendar {
+      width: 234px;
+      margin: 0;
+      padding: 0; }
+  .jazz fieldset.searchy .calendar-wrapper {
+    position: relative;
+    padding-bottom: 0px;
+    background-color: transparent; }
   .jazz fieldset.searchy .calendar-submit {
-    margin: 217px 0 0 10px; }
+    width: 66px;
+    margin: 217px 0 0 10px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px; }
+    .jazz fieldset.searchy .calendar-submit input {
+      float: right; }
 .jazz .searchy-inline #search-by-name {
   width: 485px; }
 .jazz .searchy-inline #search-by-instrument {
