@@ -23,7 +23,7 @@
       %li.container{:class => cycle('first','','last'), :data => { :latitude => venue.latitude, :longitude => venue.longitude, :name => venue.name, :address => venue.address }}
         %a.block{:href => url_for(venue), :title => venue.name}
           .body
-            = image_tag(venue.image.url(:thumb), :style => 'width: 140px; height: 140px;')
+            = image_tag(venue.image.url(:thumb), :style => 'width: 140px; height: 140px;', :alt => venue.name)
             %span.box.block.name
               %span= venue.name
             %p.byline= venue.city || raw("&nbsp;")
