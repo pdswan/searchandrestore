@@ -121,6 +121,8 @@
     background: url(/images/black_container_bg.png); }
     .jazz .container.skin-dark .body {
       padding-bottom: 20px; }
+    .jazz .container.skin-dark.darker {
+      background: url(/images/black_container_bg_darker.png); }
   .jazz .container.with-tip {
     overflow: visible;
     position: relative; }
