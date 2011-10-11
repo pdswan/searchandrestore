@@ -16,29 +16,22 @@ $(function() {
 
     $(this).next(".chzn-container-single").find(".chzn-drop .chzn-search").keyup(function(evt) {
       var stroke = (_ref = evt.which) != null ? _ref : evt.keyCode;
-      switch (stroke) {
-        case 8:
-        case 27:
-        case 9:
-        case 38:
-        case 40:
-        case 16:
-        case 91:
-        case 17:
-          break;
-        case 13:
-          if (chosen.choices == 0) {
-            var new_input = findNextInput(this);
+      if (stroke == 13) {
+        if (chosen.search_field.attr('value')) {
+          evt.preventDefault();
+          var new_input = findNextInput(this);
 
-            // set the value of the new input to the value of the search
-            new_input.value = chosen.search_field.attr('value');
+          // set the value of the new input to the value of the search
+          new_input.value = chosen.search_field.attr('value');
 
-            // deselect all existing values from select box
-            chosen.results_reset(evt);
-            chosen.close_field();
-            new_input.focus();
-          }
-          break;
+          // deselect all existing values from select box
+          // pass in empty object instead of evt because
+          // results_reset tries to remove evt.target which breaks things
+          // after the new functionality has been used
+          chosen.results_reset({ });
+          chosen.close_field();
+          new_input.focus();
+        }
       }
     });
   });
