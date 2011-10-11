@@ -1,4 +1,4 @@
-Feature: Create Artist
+Feature: Create Show
   As an admin
   In order to present information about an artist
   I should be able to create an artist

@@ -9,6 +9,12 @@ Searchandrestore::Application.routes.draw do
 
   ActiveAdmin.routes(self)
 
+  namespace :admin do
+    namespace :shows do
+      resource :batch
+    end
+  end
+
   devise_for :users, ActiveAdmin::Devise.config
 
   match 'components/:action' => 'components#action'
