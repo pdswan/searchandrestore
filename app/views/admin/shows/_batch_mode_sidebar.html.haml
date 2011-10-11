@@ -1,1 +1,5 @@
-= link_to('Start batch', new_admin_shows_batch_path)
+- if batch_mode?
+  = link_to('Stop batch entry', admin_shows_batch_path, :method => 'delete')
+
+- else
+  = link_to('Start batch entry', new_admin_shows_batch_path)

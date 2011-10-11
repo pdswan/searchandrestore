@@ -7,14 +7,14 @@ Searchandrestore::Application.routes.draw do
 
   root :to => "home#index"
 
-  ActiveAdmin.routes(self)
-
   namespace :admin do
     namespace :shows do
       resource :batch
     end
   end
 
+  ActiveAdmin.routes(self)
+  
   devise_for :users, ActiveAdmin::Devise.config
 
   match 'components/:action' => 'components#action'

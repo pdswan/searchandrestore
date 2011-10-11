@@ -12,6 +12,13 @@ Feature: Batch entry of shows
 
   Scenario: Admin creates batch entry session
     Given I go to the admin shows page
-    And I create a new batch entry session
+    And I create a batch entry session
     Then I should be on the new admin show page
     And the fields should be populated with the data from the batch entry session
+
+  Scenario: Admin stops batch entry session
+    Given I have created a batch entry session
+    And I go to the admin shows page
+    When I follow "Stop batch entry"
+    And I go to the new admin show page
+    Then the fields should not be populated with any data
