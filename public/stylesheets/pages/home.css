@@ -15,13 +15,8 @@
   background: url(/images/titles/home_title_bottom.png) no-repeat top left; }
   .jazz.page-home #main-content #main-content-secondary {
     padding-top: 5px; }
-.jazz.page-home #exciting-news {
-  float: right;
-  width: 385px;
-  margin-bottom: 40px;
-  margin-top: 20px; }
-  .jazz.page-home #exciting-news .body {
-    padding-bottom: 10px; }
+.jazz.page-home .col-1-2 {
+  margin-top: 220px; }
 .jazz.page-home #featured-video .body {
   padding: 5px; }
   .jazz.page-home #featured-video .body img {
