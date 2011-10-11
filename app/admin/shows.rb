@@ -1,7 +1,40 @@
 ActiveAdmin.register Show do
-
   controller do
+    def create
+      if start_batch?
+        save_batch_attrs(params[:show])
+        flash[:notice] = 'You are now in batch mode!'
+        redirect_to new_admin_show_path
+      else
+        create!
+      end
+    end
+
+    def new
+      @show = Show.new(batch_attrs) if batch_attrs.present?
+      new!
+    end
+
     protected
+
+      def start_batch?
+        params[:start_batch].present?
+      end
+      helper_method :start_batch?
+
+      def batch_mode?
+        start_batch? || batch_attrs.present?
+      end
+      helper_method :batch_mode?
+
+      def batch_attrs
+        session[:batch][:show] rescue nil
+      end
+
+      def save_batch_attrs(attrs)
+        session[:batch] ||= { }
+        session[:batch][:show] = attrs
+      end
 
       def resource
         show = super
@@ -25,6 +58,8 @@ ActiveAdmin.register Show do
         super.select('shows.*, count(videos.id) as video_count').joins("LEFT JOIN videos on shows.id = videos.show_id").group('shows.id')
       end
   end
+
+  sidebar :batch_mode
 
   index do
     column :group_name
