@@ -6,7 +6,15 @@ ActiveAdmin.register Show do
         flash[:notice] = 'You are now in batch mode!'
         redirect_to new_admin_show_path
       else
-        create!
+        create! do |format, *args|
+          format.html do
+            if batch_mode?
+              redirect_to new_admin_show_path
+            else
+              redirect_to admin_show_path(@show)
+            end
+          end
+        end
       end
     end
 

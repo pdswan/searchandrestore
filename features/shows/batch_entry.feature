@@ -16,6 +16,12 @@ Feature: Batch entry of shows
     Then I should be on the new admin show page
     And the fields should be populated with the data from the batch entry session
 
+  Scenario: Admin is taken directly to another new form after creating a show
+    in batch mode
+    Given I have created a batch entry session
+    And I create a show
+    Then I should be on the new admin show page
+
   Scenario: Admin stops batch entry session
     Given I have created a batch entry session
     And I go to the admin shows page
