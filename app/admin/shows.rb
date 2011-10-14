@@ -70,12 +70,20 @@ ActiveAdmin.register Show do
   sidebar :batch_mode
 
   index do
+    column :featured, :sortable => 'featured' do |show|
+      form_for [:admin, show], :html => { 'data-remote' => true, 'data-type' => 'json' } do |f|
+        f.check_box :featured, :onclick => '$(this).parent("form").submit();'
+      end
+    end
+    column :search_and_restore, :sortable => 'search_and_restore' do |show|
+      form_for [:admin, show], :html => { 'data-remote' => true, 'data-type' => 'json' } do |f|
+        f.check_box :search_and_restore, :onclick => '$(this).parent("form").submit();'
+      end
+    end
     column :group_name
     column :when
     column :cover_charge
     column :venue
-    column :search_and_restore
-    column :featured
     column :video_count, :sortable => 'video_count' do |show|
       link_to show.video_count, admin_videos_path(:q => { :show_id_eq => show.id })
     end

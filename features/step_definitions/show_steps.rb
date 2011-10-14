@@ -4,12 +4,38 @@ Given /^I create a show$/ do
   And  %{I press "Create Show"}
 end
 
+Then /^I click the featured checkboxes for the shows$/ do
+  Show.all.each do |show|
+    page.find("#edit_show_#{show.id} > #show_featured").click
+  end
+end
+
+Then /^I click the search and restore checkboxes for the shows$/ do
+  Show.all.each do |show|
+    page.find("#edit_show_#{show.id} > #show_search_and_restore").click
+  end
+end
+
 Then /^the show should be a search and restore show$/ do
   the.show.search_and_restore?.should be_true
 end
 
 Then /^the show should be featured$/ do
   the.show.featured.should be_true
+end
+
+Then /^the shows should be search and restore shows$/ do
+  Show.all.each do |show|
+    the.show = show
+    Then %{the show should be a search and restore show}
+  end
+end
+
+Then /^the shows should be featured shows$/ do
+  Show.all.each do |show|
+    the.show = show
+    Then %{the show should be featured}
+  end
 end
 
 Given /^I fill in the new show form with valid attributes$/ do
