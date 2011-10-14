@@ -1,3 +1,9 @@
+Given /^I create a show$/ do
+  Then %{I go to the new admin show page}
+  And  %{I fill in the new show form with valid attributes}
+  And  %{I press "Create Show"}
+end
+
 Then /^the show should be a search and restore show$/ do
   the.show.search_and_restore?.should be_true
 end
