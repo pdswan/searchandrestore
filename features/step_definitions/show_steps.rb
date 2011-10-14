@@ -45,7 +45,7 @@ Then /^I should see the show$/ do
   And  %{I should see a link to "#{url_for(the.show.venue)}" with the text "#{the.show.venue.name}"}
 
   the.show.performances.each do |performance|
-    And  %{I should see a link to "#{url_for(performance.artist)}" with the text "#{performance.artist.name} (#{performance.instrument.name})"}
+    And  %{I should see a link to "#{url_for(performance.artist)}" with the text "#{performance.artist.name}(#{performance.instrument.name})"}
   end
 
   the.show.description.split(/\n+/).each do |fragment|
