@@ -28,15 +28,16 @@
   %h3 Performances
   = f.semantic_fields_for :performances do |p|
     = p.inputs do
-      = p.input :artist, :label => 'Existing Artist', :input_html => { :'data-placeholder' => 'Choose an artist', :class => 'chzn-select chzn-select-with-new' }
+      = p.input :artist, :label => 'Existing Artist', :input_html => { :'data-placeholder' => 'Choose an artist', :class => 'chzn-select chzn-select-with-new', :style => 'float:left;' },:label_html => {:style => 'float:left;width:150px;'}, :wrapper_html => {:style => 'float:left;'}
 
       = p.semantic_fields_for :artist, Artist.new do |a|
-        = a.input :name, :label => 'Add a New Artist', :input_html => { :placeholder => 'Artist Name' }
+        = a.input :name, :label => 'Add a New Artist', :input_html => { :placeholder => 'Artist Name', :style => 'float:left;width:350px;' },:label_html => {:style => 'float:left;width:150px;'}, :wrapper_html => {:style => 'float:left;width:600px;'}
 
-      = p.input :instrument, :label => 'Existing Instrument', :input_html => { :'data-placeholder' => 'Choose an instrument...', :class => 'chzn-select chzn-select-with-new' }
+      = p.input :instrument, :label => 'Existing Instrument', :input_html => { :'data-placeholder' => 'Choose an instrument...', :class => 'chzn-select chzn-select-with-new', :style => 'float:left' }, :label_html => {:style => 'float:left;width:150px;'}, :wrapper_html => {:style => 'float:left;'}
 
       = p.semantic_fields_for :instrument, Instrument.new do |i|
-        = i.input :name, :label => 'Add a New Instrument', :input_html => { :placeholder => 'Instrument Name' }
+        = i.input :name, :label => 'Add a New Instrument', :input_html => { :placeholder => 'Instrument Name', :style => 'float:left;width:350px;' }, :label_html => {:style => 'float:left;width:150px;'}, :wrapper_html => {:style => 'float:left;width:600px;'}
+      %div{:style => 'clear:both;'}
 
   - 3.times { show.videos.build }
 
