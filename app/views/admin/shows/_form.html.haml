@@ -2,13 +2,13 @@
   - if start_batch?
     = hidden_field_tag :start_batch, true
 
-    .instructions
+    .instructions{:style => 'width:700px;'}
       %h4 What is Batch Mode?
-      %p.mb10
+      %p{:style => 'margin-bottom:10px;'}
         Batch mode is for entering multiple shows that share the same information. Use the form below to enter that share information and it will be auto-populated for all new shows until you choose to stop batch editing.
-      %p.mb10 
+      %p{:style => 'margin-bottom:10px;'}
         For example: if all of the shows you have to enter are at the same venue and have the same cover charge, enter those in the form below and press 'Start batch entry' at the bottom of the page..mb10
-      %p.mb10 
+      %p{:style => 'margin-bottom:10px;'}
         You can stop batch entry at any time by clicking the 'Stop batch entry' link in the sidebar.
 
   = f.inputs do
