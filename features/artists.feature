@@ -23,11 +23,11 @@ Feature: Artists Landing
       | name | Phil Collins |
 
     Scenarios:
-      | page                     | search |
-      | artists page             | Phil   |
-      | artists page             | Col    |
-      | detail page for artist 1 | Phil   |
-      | detail page for artist 1 | Col    |
+      | page                     | search  |
+      | artists page             | Phil    |
+      | artists page             | Collins |
+      | detail page for artist 1 | Phil    |
+      | detail page for artist 1 | Collins |
 
   Scenario Outline: Visitor filters artist by instrument
     When I go to the artists page
