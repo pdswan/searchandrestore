@@ -22,7 +22,6 @@ Searchandrestore::Application.routes.draw do
 
   match 'components/:action' => 'components#action'
 
-  match 'home/about' => 'home#about', :as => 'about'
   match 'home/:action' => 'home#action'
 
   # The priority is based upon order of creation:
