@@ -27,7 +27,7 @@
         .masthead-top
           = image_tag('logo.png', :alt => 'Search and Restore', :id => 'logo')
         %ul.nav
-          %li
+          %li#nav-home
             %a{:href => root_path} Home
           %li#nav-shows
             = link_to('Shows', shows_path)
