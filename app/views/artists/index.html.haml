@@ -29,7 +29,7 @@
           %span.box.block.name
             %span= name
           %p.byline
-            - if instrument
-              instrument
+            - if instrument.present?
+              = instrument
             - else
               &nbsp;
