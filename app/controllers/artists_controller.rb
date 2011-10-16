@@ -13,7 +13,8 @@ class ArtistsController < ApplicationController
                         order_by_show_date.
                         group_by_show.
                         includes(:show => [:venue, { :performances => [:artist, :instrument] }]).all
-    @selected_video = @videos.shift
+    @selected_video = @videos.first
+    @more_videos    = 'More videos for this artist:'
 
     render :layout => 'videos'
   end
