@@ -55,7 +55,7 @@
             %h3#featured-musicians-title Featured Musicians:
             %ul.inline-list
               - show.performances.each do |performance|
-                %li.featured-musician= link_to(content_tag(:strong,performance.artist.name) << "(#{performance.instrument.name})", performance.artist, :class => 'box')
+                %li.featured-musician= performance_link(performance)
 
           - if show.description.present?
             %h3 About This Show
