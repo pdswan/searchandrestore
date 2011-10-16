@@ -30,7 +30,7 @@
 
     - if @videos.present?
       .section.pl10.pt5
-        %h3 More videos featuring this artist:
+        %h3= @more_videos
       .section
         %ul#more_videos.inline-list.grid-view
           - @videos.each do |video|
