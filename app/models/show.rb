@@ -42,7 +42,7 @@ class Show < ActiveRecord::Base
   search_methods :for_day
 
   def when
-    read_attribute(:when).in_time_zone || Time.zone.now
+    read_attribute(:when).try(:in_time_zone) || Time.zone.now
   end
 
   def name
