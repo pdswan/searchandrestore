@@ -6,6 +6,7 @@ Searchandrestore::Application.routes.draw do
   resources :videos,  :only => [:index, :show]
 
   get 'resources' => 'link_groups#index', :as => :resources
+  get 'about' => 'about#index', :as => :about
 
   root :to => "home#index"
 
