@@ -143,6 +143,11 @@ p {
   }
 }
 body {
+  &.page-home {
+    .nav li#nav-home a {
+      background-color: $ORANGE;
+    }
+  }
   &.page-shows {
     .nav li#nav-shows a {
       background-color: $ORANGE;
