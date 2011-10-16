@@ -1,0 +1,9 @@
+- @page_class = 'section-resources page-resources'
+- @link_groups.each_slice(6) do |groups|
+  - i = 0
+  - groups.each do |group|
+    %div{ :class => "col-#{i += 1}" }
+      %h3.box.dark.mb10= group.name
+      %ul.with-gaps
+        - group.links.each do |link|
+          %li= link_to(link.title, link.url, :class => 'box', :target => '_blank')

@@ -5,6 +5,8 @@ Searchandrestore::Application.routes.draw do
   resources :venues,  :only => [:index, :show]
   resources :videos,  :only => [:index, :show]
 
+  get 'resources' => 'link_groups#index', :as => :resources
+
   root :to => "home#index"
 
   namespace :admin do
