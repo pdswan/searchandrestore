@@ -49,6 +49,14 @@ Factory.define :buy_link do |l|
   l.url "http://www.itunes.com"
 end
 
+Factory.define :link_group do |lg|
+  lg.name { Faker::Lorem.words(2).join(' ') }
+end
+
+Factory.define :link_group_with_links, :parent => :link_group do |lg|
+  lg.after_create { |link_group| Factory(:link, :linkable => link_group) }
+end
+
 Factory.define :show do |s|
   s.association :venue
   s.group_name { Faker::Lorem.words(2).push("Trio").join(' ') }
