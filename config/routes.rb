@@ -7,6 +7,7 @@ Searchandrestore::Application.routes.draw do
 
   get 'resources' => 'link_groups#index', :as => :resources
   get 'about' => 'about#index', :as => :about
+  get 'donate' => 'donate#index', :as => :donate
 
   root :to => "home#index"
 
