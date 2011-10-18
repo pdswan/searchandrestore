@@ -57,10 +57,10 @@
             :textile
               #{truncate(@about.about, :length => (@about.about.index('==<!-- homepage -->==') || 347) + 3)}
     
-          %a.box{:href => '/home/about'} Learn more...
+          %a.box{:href => about_path} Learn more...
     = render :partial => 'shared/mailing_list'
   
     .section.mt-5
-      %a.box.large{:href => '/home/donate'} Donate To Search &amp; Restore
+      %a.box.large{:href => donate_path} Donate To Search &amp; Restore
   
   .clear
