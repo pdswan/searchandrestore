@@ -1,7 +1,6 @@
 - @page_class = 'layout-1 page-donate'
 .col-1
-  %h3.box-header.centered 
-    %a{:href => '#'} Click Here to Donate to Search&amp;Restore via PayPal
+  = render :partial => 'shared/donate_form', :locals => { :content => content_tag(:h3, "Click Here to Donate to Search&amp;Restore via PayPal".html_safe, :class => 'box-header centered') }
   .container.with-tip
     .body
       %h3.box.dark About Search&amp;Restore
