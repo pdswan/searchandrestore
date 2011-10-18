@@ -49,7 +49,7 @@
           %ul.header-meta-list
             - @artist.upcoming_shows.each do |show|
               %li
-                %h4= link_to(show.group_name, show)
+                %h4= show.group_name
                 %p.byline
                   %span.date= show.when.strftime("%m/%d/%Y")
                   %span.venue= link_to(show.venue.name, show.venue)
