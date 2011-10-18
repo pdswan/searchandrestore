@@ -20,7 +20,7 @@
       .section#featured-video
         .container
           - if @featured_video.present?
-            = render :partial => 'videos/video_thumb', :locals => { :video => @featured_video }
+            = render :partial => 'videos/video_thumb', :locals => { :thumbnail => nil, :video => @featured_video }
 
             .body.additional-content
               - if @featured_video_description
