@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$ORANGE".
-        on line 8 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/links.scss
+        on line 14 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/links.scss
 
-3:     cursor: pointer;
-4:     text-decoration: none;
-5:   }
-6:   .box {
-7:     color: #fff;
-8:     background-color: $ORANGE;
-9:     line-height: 14px;
-10:     padding: 2px 5px 2px 5px;
-11:     display: inline-block;
-12:     text-decoration: none;
-13:     font-weight: bold;
+9:     margin: 0px;
+10:     padding: 0px;
+11:   }
+12:   .box {
+13:     color: #fff;
+14:     background-color: $ORANGE;
+15:     line-height: 14px;
+16:     padding: 2px 5px 2px 5px;
+17:     display: inline-block;
+18:     text-decoration: none;
+19:     font-weight: bold;
 
 Backtrace:
-/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/links.scss:8
+/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/links.scss:14
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/variable.rb:50:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/node.rb:40:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
@@ -127,4 +127,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 8 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/links.scss\A \A 3:     cursor: pointer;\A 4:     text-decoration: none;\A 5:   }\A 6:   .box {\A 7:     color: #fff;\A 8:     background-color: $ORANGE;\A 9:     line-height: 14px;\A 10:     padding: 2px 5px 2px 5px;\A 11:     display: inline-block;\A 12:     text-decoration: none;\A 13:     font-weight: bold;"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 14 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/links.scss\A \A 9:     margin: 0px;\A 10:     padding: 0px;\A 11:   }\A 12:   .box {\A 13:     color: #fff;\A 14:     background-color: $ORANGE;\A 15:     line-height: 14px;\A 16:     padding: 2px 5px 2px 5px;\A 17:     display: inline-block;\A 18:     text-decoration: none;\A 19:     font-weight: bold;"; }
