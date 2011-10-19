@@ -4,6 +4,7 @@ class ShowsController < ApplicationController
   def index
     @uses_datepicker = true
     @shows           = Show.includes([:venue, { :performances => [:artist, :instrument] }]).
+                            order("shows.when DESC").
                             search(params[:search])
 
     @current_date    = params[:search][:for_day].respond_to?(:strftime) ?
