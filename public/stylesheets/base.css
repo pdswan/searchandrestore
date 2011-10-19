@@ -98,9 +98,14 @@
 .jazz .searchy-inline label {
   margin-right: 3px; }
 
-.jazz a {
+.jazz a, .jazz button.link {
   cursor: pointer;
   text-decoration: none; }
+.jazz button.link {
+  background: transparent;
+  border: none;
+  margin: 0px;
+  padding: 0px; }
 .jazz .box {
   color: #fff;
   background-color: #ff9900;
@@ -669,7 +674,7 @@
   height: 45px !important; }
 
 body {
-  line-height: 1.2;
+  line-height: 1.35;
   font-size: 12px;
   font-family: Ariel, sans-serif;
   margin: 0;
@@ -794,6 +799,8 @@ p {
   .nav li.selected a, .nav li:hover a {
     background-color: #ff9900; }
 
+body.page-home .nav li#nav-home a {
+  background-color: #ff9900; }
 body.page-shows .nav li#nav-shows a {
   background-color: #ff9900; }
 body.section-artists .nav li#nav-artists a {
