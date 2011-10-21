@@ -47,7 +47,7 @@
               %p.byline
                 %span.date= show.when.strftime("%m/%d/%Y")
                 %span.location= link_to(show.venue.name, show.venue)
-        = link_to("See All Search&amp;Restore Shows", shows_path(:search => { :search_and_restore_is_true => 1 }), :class => 'box')
+        = link_to("See All Search&Restore Shows", shows_path(:search => { :search_and_restore_is_true => 1 }), :class => 'box')
 
 .col-2
   %h3= @search_title
