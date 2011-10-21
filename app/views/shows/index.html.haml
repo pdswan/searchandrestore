@@ -2,6 +2,7 @@
 .col-1
   .section
     %span.box.dark Search Shows By...
+
     = form_for @shows do |f|
       %fieldset.searchy
         .field.text
@@ -10,17 +11,25 @@
             = f.text_field :artists_name_starts_with
           .submit
             = f.submit :search
+          .clear
+
+    = form_for @shows do |f|
+      %fieldset.searchy
         .field.select
           = f.label :venue_id_equals, 'Venue:'
           .input
-            = f.collection_select :venue_id_equals, Venue.all, :id, :name, :include_blank => 'any venue' 
+            = f.collection_select :venue_id_equals, Venue.all, :id, :name, :prompt => 'choose a venue' 
           .submit
             = f.submit :search
+          .clear
+
+    = form_for @shows do |f|
+      %fieldset.searchy
         .calendar-wrapper
           .field.calendar.floatleft
             = f.label :for_day, 'Date:'
             = f.hidden_field :for_day
-            #datepicker{ :data => { :input => '#search_for_day', :'default-date' => @current_date.strftime('%Y-%m-%d') } }
+            #datepicker{ :data => { :input => '#search_for_day', :'default-date' => @current_date.try(:strftime, '%Y-%m-%d') } }
           .calendar-submit
             = f.submit :search
           .clear
@@ -41,7 +50,7 @@
         = link_to("See All Search&amp;Restore Shows", shows_path(:search => { :search_and_restore_is_true => 1 }), :class => 'box')
 
 .col-2
-  %h3 Search results for #{@current_date.strftime("%A %B %d, %Y")}
+  %h3= @search_title
   %ul.containers.show-listing
     - @shows.each do |show|
       %li.container[show]
