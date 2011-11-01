@@ -42,12 +42,12 @@ class ShowsController < ApplicationController
       @search_title = "Search results for #{@current_date.present? ? '' : 'upcoming '}shows "
 
       if params[:search][:for_day].present?
-        @search_title << %{on "#{@current_date.strftime("%A %B %d, %Y")}"}
+        @search_title << %{on #{@current_date.strftime("%A %B %d, %Y")}}
 
       elsif params[:search][:artists_name_starts_with]
         @search_title << %{featuring artist matching "#{params[:search][:artists_name_starts_with]}"}
       elsif params[:search][:venue_id_equals]
-        @search_title << %{at "#{Venue.find(params[:search][:venue_id_equals]).try(:name)}"}
+        @search_title << %{at #{Venue.find(params[:search][:venue_id_equals]).try(:name)}}
       end
     end
 end
