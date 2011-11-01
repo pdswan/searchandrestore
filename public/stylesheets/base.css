@@ -141,8 +141,6 @@
     background: url(/images/black_container_bg.png); }
     .jazz .container.skin-dark .body {
       padding-bottom: 20px; }
-    .jazz .container.skin-dark.darker {
-      background: url(/images/black_container_bg_darker.png); }
   .jazz .container.with-tip {
     overflow: visible;
     position: relative; }
@@ -311,7 +309,7 @@
   .jazz.page-home #main-content #main-content-secondary {
     padding-top: 5px; }
 .jazz.page-home .col-1-2 {
-  margin-top: 220px; }
+  margin-top: 204px; }
 .jazz.page-home #featured-video .body {
   padding: 5px; }
   .jazz.page-home #featured-video .body img {
