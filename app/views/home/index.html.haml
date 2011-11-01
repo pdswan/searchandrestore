@@ -39,10 +39,10 @@
                 -# show listings show up a lot of places, and I don't think
                 -# they're right since they don't always show all the information
                 %li
-                  %h4= show.group_name
+                  %h4.box.dark= show.group_name
                   %p.byline
                     %span.date= show.when.strftime("%m/%d/%Y")
-                    %span.location= link_to(show.venue.name, show.venue)
+                    %span.location= show.venue.name
               = link_to('See more shows...', shows_path, :class => 'box')
     
     .clear
