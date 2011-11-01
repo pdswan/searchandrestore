@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$ORANGE".
-        on line 7 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss
+        on line 33 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss
 
-2:   fieldset {
-3:     border: none;
-4:     padding: 0;
-5:     margin: 0;
-6: 
-7:     .actions a {color:$ORANGE;}
-8:   }
-9:   .field {
-10:     margin-bottom: 20px;
-11:     overflow: hidden;
-12:     input[type='text'],
+28: 
+29:     label {
+30:       font-weight: bold;
+31:       clear: both;
+32:       margin-right: 20px;
+33:       color: $ORANGE;
+34:       font-size: 14px;
+35:       cursor: pointer;
+36:     }
+37:     &.inline {
+38:       float: left;
 
 Backtrace:
-/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss:7
+/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss:33
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/variable.rb:50:in `_perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/node.rb:40:in `perform'
 /Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
@@ -138,4 +138,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 7 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss\A \A 2:   fieldset {\A 3:     border: none;\A 4:     padding: 0;\A 5:     margin: 0;\A 6: \A 7:     .actions a {color:$ORANGE;}\A 8:   }\A 9:   .field {\A 10:     margin-bottom: 20px;\A 11:     overflow: hidden;\A 12:     input[type='text'],"; }
+  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 33 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss\A \A 28: \A 29:     label {\A 30:       font-weight: bold;\A 31:       clear: both;\A 32:       margin-right: 20px;\A 33:       color: $ORANGE;\A 34:       font-size: 14px;\A 35:       cursor: pointer;\A 36:     }\A 37:     &.inline {\A 38:       float: left;"; }
