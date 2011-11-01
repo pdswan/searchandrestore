@@ -126,6 +126,8 @@
     width: 100%;
     text-align: center;
     padding: 0px; }
+  .jazz .box.wrap {
+    white-space: normal; }
 .jazz span.box.block span {
   white-space: nowrap;
   overflow: hidden;
@@ -326,6 +328,8 @@
     margin-bottom: 0px; }
 .jazz.page-home #intro a.box {
   width: 210px; }
+.jazz.page-home #mailing-list .body {
+  padding-top: 5px; }
 
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);
