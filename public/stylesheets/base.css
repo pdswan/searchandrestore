@@ -914,6 +914,10 @@ body.page-donate .nav li#nav-donate a {
     overflow: hidden;
     white-space: nowrap;
     margin-bottom: 0px; }
+  #video_player_container .video-thumb .name,
+  #more_videos .video-thumb .name,
+  .section-video .video-thumb .name {
+    margin-top: 3px; }
 #video_player_container li.last .video-thumb,
 #more_videos li.last .video-thumb,
 .section-video li.last .video-thumb {
