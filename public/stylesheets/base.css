@@ -183,7 +183,8 @@
       padding: 0;
       display: block; }
     .jazz ul.grid-view li .body .name {
-      margin-bottom: 2px; }
+      margin-bottom: 2px;
+      margin-top: 3px; }
     .jazz ul.grid-view li .body .byline {
       margin-bottom: 0px;
       padding-left: 5px;
