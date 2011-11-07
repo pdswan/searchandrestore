@@ -64,11 +64,13 @@
       -# GMAP_KEY
       %script{:src => "http://maps.google.com/maps/api/js?sensor=false"}
   
+      - if @venue_map
+        %script= "VENUE_MAP = true;"
       :javascript
         function initializeMap() {
           var latlng = new google.maps.LatLng(40.724001, -73.992837);
           var myOptions = {
-            zoom: 12,
+            zoom: 11,
             center: latlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP
           };
@@ -118,7 +120,9 @@
             }
           });
 
-          map.fitBounds(markerBounds);
+          if (!VENUE_MAP) {
+            map.fitBounds(markerBounds);
+          }
           
         }
         

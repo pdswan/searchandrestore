@@ -8,6 +8,7 @@ class VenuesController < ApplicationController
 
   def show
     @uses_gmap = true
+    @venue_map = true
     @venue     = Venue.find(params[:id])
   end
 
