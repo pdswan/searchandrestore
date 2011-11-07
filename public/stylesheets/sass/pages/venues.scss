@@ -17,6 +17,14 @@
       }
     }
     &.page-show {
+      #their-words,
+      #our-words {
+        .container {
+          .body {
+            padding-top:5px;
+          }
+        }
+      }
       fieldset.searchy {
         .field.select {
           .input {

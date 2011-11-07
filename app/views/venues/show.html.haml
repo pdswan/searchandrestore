@@ -25,7 +25,7 @@
                 %h4= show.group_name
                 %p.byline
                   %span.date= show.when.strftime('%m/%d/%Y')
-                  %span.location= link_to(@venue.name, @venue)
+                  %span.location= @venue.name
         = link_to('See All Shows at this Venue', shows_path(:search => { :venue_id_equals => @venue.id }), :class => 'box')
 
 
@@ -61,12 +61,12 @@
 
             - if @venue.website.present?
               %a.box{:href => @venue.website, :target => '_blank'} Visit this venue's website
-  .section
+  .section#their-words
     .container
       .body
         %h3.snug Their words:
         = simple_format(@venue.their_words)
-  .section
+  .section#our-words
     .container
       .body
         %h3.snug Our words:
