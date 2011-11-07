@@ -26,5 +26,5 @@
             = image_tag(venue.image.url(:thumb), :style => 'width: 140px; height: 140px;', :alt => venue.name)
             %span.box.block.name
               %span= venue.name
-            %p.byline= venue.city || raw("&nbsp;")
+            -#%p.byline= venue.city || raw("&nbsp;")
 .clear
