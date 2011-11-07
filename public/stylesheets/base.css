@@ -373,8 +373,6 @@
   padding: 5px 10px 10px 10px; }
 .jazz.section-artists.page-show #shop ul.inline-list li {
   margin-right: 10px; }
-.jazz.section-artists.page-show .venue-link {
-  color: #ff9900; }
 
 .jazz.page-about .masthead-top {
   background-image: url(/images/titles/about_title.png); }
@@ -405,11 +403,17 @@
   margin-top: 3px; }
 .jazz.page-shows .show-listing h3 {
   margin-bottom: 3px; }
+.jazz.page-shows .show-listing > .container .body {
+  padding: 5px 10px 10px 10px; }
 .jazz.page-shows .show-listing ul li {
   padding-bottom: 0px;
   margin-bottom: 5px; }
-  .jazz.page-shows .show-listing ul li.featured-musician a.box {
-    font-weight: normal; }
+  .jazz.page-shows .show-listing ul li.featured-musician {
+    color: #666;
+    margin-bottom: 0;
+    line-height: 14px; }
+    .jazz.page-shows .show-listing ul li.featured-musician a.box {
+      font-weight: normal; }
 
 .jazz.page-donate .masthead-top {
   background-image: url(/images/titles/donate_title.png); }
@@ -431,8 +435,6 @@
   background-image: url(/images/titles/video_title.png); }
 .jazz.section-video .masthead {
   background: url(/images/masthead_bg/videos.png) repeat-x; }
-.jazz.section-video .venue-link {
-  color: #ff9900; }
 
 .jazz.section-venues .masthead-top {
   background-image: url(/images/titles/venues_title.png); }
@@ -885,7 +887,6 @@ body.page-donate .nav li#nav-donate a {
 #video_player_container h3 {
   margin-bottom: 4px; }
 #video_player_container a.venue-link {
-  color: #ff9900;
   text-decoration: none; }
 
 #video_player_container .video-thumb,

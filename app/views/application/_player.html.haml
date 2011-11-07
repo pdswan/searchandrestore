@@ -8,11 +8,11 @@
       %p
         = link_to(show.group_name, show, :class => 'box dark')
         - if show.venue.present?
-          = link_to(show.venue.name, show.venue, :class => 'venue-link')
+          = link_to(show.venue.name, show.venue, :class => 'box venue-link')
         = show.when.strftime("%m/%d/%Y")
     
     
-      %h3 Featured Artists
+      %h3 Featured Artists:
       %ul.inline-list
         - show.performances.each do |performance|
           %li= performance_link(performance, :class => 'box')

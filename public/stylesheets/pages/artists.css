@@ -1,152 +1,44 @@
-/*
-Syntax error: Undefined variable: "$ORANGE".
-        on line 73 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss
-
-68:             margin-right: 10px;
-69:           }
-70:         }
-71:       }
-72:       .venue-link {
-73:         color: $ORANGE;
-74:       }
-75:       #related_videos {
-76:         li {
-77:           span.box {
-78:           }
-
-Backtrace:
-/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss:73
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/variable.rb:50:in `_perform'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/node.rb:40:in `perform'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/engine.rb:293:in `_render'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/engine.rb:241:in `render'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/util.rb:297:in `silence_sass_warnings'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/engine.rb:241:in `render'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:181:in `update_stylesheets'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:175:in `each'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:175:in `update_stylesheets'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:173:in `each'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:173:in `update_stylesheets'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin.rb:81:in `update_stylesheets'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin.rb:54:in `check_for_updates'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/rack.rb:51:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/warden-1.0.5/lib/warden/manager.rb:35:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/warden-1.0.5/lib/warden/manager.rb:34:in `catch'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/warden-1.0.5/lib/warden/manager.rb:34:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/methodoverride.rb:24:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/sendfile.rb:106:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/runtime.rb:17:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/lock.rb:11:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/lock.rb:11:in `synchronize'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/lock.rb:11:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/application.rb:77:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/content_length.rb:13:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/handler/webrick.rb:52:in `service'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/handler/webrick.rb:13:in `run'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/server.rb:217:in `start'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/commands/server.rb:65:in `start'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/commands.rb:30
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/commands.rb:27:in `tap'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/commands.rb:27
-script/rails:6:in `require'
-script/rails:6
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 73 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/pages/artists.scss\A \A 68:             margin-right: 10px;\A 69:           }\A 70:         }\A 71:       }\A 72:       .venue-link {\A 73:         color: $ORANGE;\A 74:       }\A 75:       #related_videos {\A 76:         li {\A 77:           span.box {\A 78:           }"; }
+.jazz.section-artists .masthead-top {
+  background-image: url(/images/titles/artists_title.png);
+  background-position: 64px 5px; }
+.jazz.section-artists .masthead {
+  background: url(/images/masthead_bg/artists.png) repeat-x; }
+.jazz.section-artists.page-index p.byline {
+  width: 130px;
+  overflow: hidden;
+  white-space: nowrap; }
+.jazz.section-artists.page-show #info .body {
+  position: relative;
+  padding-bottom: 26px;
+  zoom: 1; }
+.jazz.section-artists.page-show #info h3.name {
+  margin-bottom: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px; }
+.jazz.section-artists.page-show #info p.instrument {
+  margin-bottom: 5px;
+  color: #666; }
+.jazz.section-artists.page-show #info a.box {
+  width: 125px;
+  position: absolute;
+  bottom: 10px;
+  left: 155px; }
+  .jazz.section-artists.page-show #info a.box.visit-website {
+    left: 10px; }
+.jazz.section-artists.page-show #info .media-with-info .media {
+  padding-right: 10px;
+  padding-bottom: 8px; }
+.jazz.section-artists.page-show #info .media-with-info .info {
+  padding-left: 0px; }
+.jazz.section-artists.page-show #info #bio_clone,
+.jazz.section-artists.page-show #info #bio p {
+  color: #ccc; }
+.jazz.section-artists.page-show #info #bio {
+  display: none; }
+.jazz.section-artists.page-show #known_associates .body,
+.jazz.section-artists.page-show #shop .body,
+.jazz.section-artists.page-show #shows .body {
+  padding: 5px 10px 10px 10px; }
+.jazz.section-artists.page-show #shop ul.inline-list li {
+  margin-right: 10px; }
