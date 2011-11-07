@@ -6,6 +6,9 @@
   width: 223px; }
 .jazz.section-venues.page-index .searchy-inline * {
   margin-bottom: 2px; }
+.jazz.section-venues.page-show #their-words .container .body,
+.jazz.section-venues.page-show #our-words .container .body {
+  padding-top: 5px; }
 .jazz.section-venues.page-show fieldset.searchy .field.select .input {
   float: left; }
 .jazz.section-venues.page-show fieldset.searchy .field.select .submit {
