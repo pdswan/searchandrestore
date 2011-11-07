@@ -14,8 +14,14 @@
   margin-top: 3px; }
 .jazz.page-shows .show-listing h3 {
   margin-bottom: 3px; }
+.jazz.page-shows .show-listing > .container .body {
+  padding: 5px 10px 10px 10px; }
 .jazz.page-shows .show-listing ul li {
   padding-bottom: 0px;
   margin-bottom: 5px; }
-  .jazz.page-shows .show-listing ul li.featured-musician a.box {
-    font-weight: normal; }
+  .jazz.page-shows .show-listing ul li.featured-musician {
+    color: #666;
+    margin-bottom: 0;
+    line-height: 14px; }
+    .jazz.page-shows .show-listing ul li.featured-musician a.box {
+      font-weight: normal; }
