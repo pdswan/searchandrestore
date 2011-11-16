@@ -24,6 +24,12 @@ Feature:
     When I go to the home page
     Then I should see "This is some damn exciting news!"
 
+  Scenario: User sees more exciting news on homepage
+    Given a homepage exists
+    And the homepage has a blurb
+    When I go to the home page
+    Then I should see the title and text of the blurb
+
   Scenario: User sees about on homepage
     Given the following about exists:
       | about                       |

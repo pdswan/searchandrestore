@@ -14,6 +14,15 @@ Feature: Edit Homepage
     Then I should see "Homepage was successfully updated"
     And I should see "This is something exciting"
 
+  Scenario: Admin adds more exciting news
+    Given I follow "Homepage"
+    Then show me the page
+    And I fill in "Title" with "More exciting news"
+    And I fill in "Text" with "Guess how exciting this is?"
+    And I press "Update Homepage"
+    Then I should see "Homepage was successfully updated"
+    And the homepage should have 1 blurb
+
   Scenario: Admin adds featured video
     Given a video exists with a title of "Surfing Dogs"
     And I follow "Homepage"
