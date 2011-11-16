@@ -1,4 +1,8 @@
 class HomeController < ApplicationController
+  module Helpers
+    extend ActionView::Helpers::TextHelper
+  end
+
   before_filter :find_about, :only => [:index, :about]
 
   def index
@@ -11,7 +15,7 @@ class HomeController < ApplicationController
       @about        = About.last || 
         About.new(:about => 'Add some about text dudes!')
 
-      @well_hello_there = truncate(@about.about, :length => (@about.about.index('==<!-- homepage -->==') || 347) + 3)
+      @well_hello_there = Helpers.truncate(@about.about, :length => (@about.about.index('==<!-- homepage -->==') || 347) + 3)
     end
 
     @top_picks    = Show.featured.today.limit(5)
