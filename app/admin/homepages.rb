@@ -9,6 +9,11 @@ ActiveAdmin.register Homepage do
       f.input :video_description
     end
 
+    while f.object.blurbs.size < 3
+      f.object.blurbs.build
+    end
+    f.inputs :title, :text, :for => :blurbs, :name => 'More Exciting News'
+
     f.buttons
   end
 

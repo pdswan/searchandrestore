@@ -12,6 +12,14 @@
           %div
             :textile
               #{@homepage.exciting_news}
+
+      - @homepage.blurbs.each do |blurb|
+        .container.skin-dark.darker.mt10
+          .body
+            %h3= blurb.title
+            %div
+              :textile
+                #{blurb.text}
   
     .col-2
       %h3.container.skin-dark.darker
