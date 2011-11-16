@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     @homepage     = Homepage.last || 
       Homepage.new(:exciting_news => 'Add some exciting news dudes!')
 
-    if @homepage.well_hello_there.strip.present?
+    if @homepage.well_hello_there.present?
       @well_hello_there = @homepage.well_hello_there
     else
       @about        = About.last || 
