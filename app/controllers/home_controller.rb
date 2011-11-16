@@ -4,8 +4,16 @@ class HomeController < ApplicationController
   def index
     @homepage     = Homepage.last || 
       Homepage.new(:exciting_news => 'Add some exciting news dudes!')
-    @about        = About.last || 
-      About.new(:about => 'Add some about text dudes!')
+
+    if @homepage.well_hello_there.strip.present?
+      @well_hello_there = @homepage.well_hello_there
+    else
+      @about        = About.last || 
+        About.new(:about => 'Add some about text dudes!')
+
+      @well_hello_there = truncate(@about.about, :length => (@about.about.index('==<!-- homepage -->==') || 347) + 3)
+    end
+
     @top_picks    = Show.featured.today.limit(5)
 
     @featured_video = @homepage.video(:includes => [:show, { :performances => [:artist, :instrument] }])

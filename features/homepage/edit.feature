@@ -28,3 +28,10 @@ Feature: Edit Homepage
     And I press "Update Homepage"
     Then I should see "Homepage was successfully updated"
     And I should see "This is the featured video"
+
+  Scenario: Admin adds well hello there
+    Given I follow "Homepage"
+    And I fill in "Well hello there" with "Check it out suckas!"
+    And I press "Update Homepage"
+    Then I should see "Homepage was successfully updated"
+    And I should see "Check it out suckas!"

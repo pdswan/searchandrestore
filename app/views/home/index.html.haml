@@ -55,7 +55,7 @@
             = image_tag('/images/home/hello_there.png', :alt => 'Well Hello There')
           #about
             :textile
-              #{truncate(@about.about, :length => (@about.about.index('==<!-- homepage -->==') || 347) + 3)}
+              #{@well_hello_there}
     
           %a.box{:href => about_path} Learn more...
     = render :partial => 'shared/mailing_list'
