@@ -32,7 +32,7 @@
           color: #666;
         }
         a.box {
-          width: 125px;
+          width: 130px;
           position: absolute;
           bottom: 10px;
           left: 155px;
@@ -52,6 +52,13 @@
         #bio_clone,
         #bio p {
           color: #ccc;
+        }
+        #bio_clone {
+          width:140px;
+          float:right;
+        }
+        #bio p {
+          margin-bottom:0;
         }
         #bio {
           display: none;
