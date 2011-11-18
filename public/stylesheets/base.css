@@ -352,7 +352,7 @@
   margin-bottom: 5px;
   color: #666; }
 .jazz.section-artists.page-show #info a.box {
-  width: 125px;
+  width: 130px;
   position: absolute;
   bottom: 10px;
   left: 155px; }
@@ -366,6 +366,11 @@
 .jazz.section-artists.page-show #info #bio_clone,
 .jazz.section-artists.page-show #info #bio p {
   color: #ccc; }
+.jazz.section-artists.page-show #info #bio_clone {
+  width: 140px;
+  float: right; }
+.jazz.section-artists.page-show #info #bio p {
+  margin-bottom: 0; }
 .jazz.section-artists.page-show #info #bio {
   display: none; }
 .jazz.section-artists.page-show #known_associates .body,
