@@ -34,9 +34,8 @@
             = f.submit :search
           .clear
 
-  %h3.box-header See Tonight's Top Picks
-
   - unless @upcoming_search_and_restore_shows.empty?
+    %h3.box-header See Tonight's Top Picks
     #upcoming-search-and-restore.container.skin-dark
       .body
         %h3 Upcoming Search&amp;Restore Shows:

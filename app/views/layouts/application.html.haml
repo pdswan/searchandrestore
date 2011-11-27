@@ -67,7 +67,32 @@
       - if @venue_map
         %script= "VENUE_MAP = true;"
       :javascript
+
+        function initializeScrollObserver() {
+          var fixed = $('.fixed-on-scroll');
+          if (fixed && fixed.length === 1) {
+            var top = fixed.offset().top;
+            var elem = fixed[0];
+
+            setTimeout(function() {
+              var sTop = $(document).scrollTop();
+
+              if (sTop > (top)) {
+                elem.style.position = 'fixed';
+                elem.style.marginTop = '-145px';
+              } else {
+                elem.style.position = '';
+                elem.style.marginTop = '-1px';
+              } 
+              setTimeout(arguments.callee, 100);
+            },100);
+
+          }
+        }
+
         function initializeMap() {
+
+          initializeScrollObserver(); 
           var latlng = new google.maps.LatLng(40.724001, -73.992837);
           var myOptions = {
             zoom: 11,
