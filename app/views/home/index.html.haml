@@ -35,6 +35,28 @@
                 %p.video_description= @featured_video_description
             
               = link_to('See more videos...', videos_path, :class => 'box')
+      -#%h3.container.skin-dark.darker
+      -#  .body
+      -#    = image_tag('/images/home/top_picks.png', :alt => 'Tonights Top Picks')
+      -#.section
+      -#  .container.skin-dark
+      -#    .body
+      -#      %ul.header-meta-list
+      -#        - @top_picks.each do |show|
+      -#          -# TODO refactor
+      -#          -# show listings show up a lot of places, and I don't think
+      -#          -# they're right since they don't always show all the information
+      -#          %li
+      -#            %h4.box.dark.wrap= show.group_name
+      -#            %p.byline
+      -#              %span.date= show.when.strftime("%m/%d/%Y")
+      -#              %span.location= show.venue.name
+      -#        = link_to('See more shows...', shows_path, :class => 'box')
+    
+    .clear
+  
+  .col-3
+    .section#intro
       %h3.container.skin-dark.darker
         .body
           = image_tag('/images/home/top_picks.png', :alt => 'Tonights Top Picks')
@@ -52,20 +74,15 @@
                     %span.date= show.when.strftime("%m/%d/%Y")
                     %span.location= show.venue.name
               = link_to('See more shows...', shows_path, :class => 'box')
+      -#.container.skin-dark
+      -#  .body
+      -#    %h3
+      -#      = image_tag('/images/home/hello_there.png', :alt => 'Well Hello There')
+      -#    #about
+      -#      :textile
+      -#        #{@well_hello_there}
     
-    .clear
-  
-  .col-3
-    .section#intro
-      .container.skin-dark
-        .body
-          %h3
-            = image_tag('/images/home/hello_there.png', :alt => 'Well Hello There')
-          #about
-            :textile
-              #{@well_hello_there}
-    
-          %a.box{:href => about_path} Learn more...
+      -#    %a.box{:href => about_path} Learn more...
     = render :partial => 'shared/mailing_list'
   
     .section.mt-5
