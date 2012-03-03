@@ -1,26 +1,33 @@
 - @page_class = 'layout-2 page-about'
 
-.col-1
-  .section
-    = image_tag('/images/about.jpg')
-  = render :partial => 'shared/mailing_list'
-.col-2
+.col-1-2
   .container
     .body
-      %h4.box.dark.mb5 About Search&amp;Restore
-      #about
-        :textile
-          #{@about.about}
+      .tabs
+        %ul
+          - @tabs.each do |tab|
+            %li
+              %h4
+                = link_to tab.title, "#tab-#{tab.id}", :class => 'box dark'
+
+        - @tabs.each_with_index do |tab, i|
+          .tab-content{ :id => "tab-#{tab.id}" }
+            :textile
+              #{tab.about}
+
 .col-3
-  .container.skin-dark
-    .body
-      %h3 Recent Press:
-      %ul.header-meta-list
-        - @press_clippings.each do |pc|
-          %li
-            %h4= pc.source
-            %p.byline
-              %span.date= pc.date.strftime("%m/%d/%Y")
-              %span.author= pc.author
-            = link_to(pc.link.title, pc.link.url, :target => '_blank', :class => 'box')
+  .section
+    .container.skin-dark
+      .body
+        %h3 Recent Press:
+        %ul.header-meta-list
+          - @press_clippings.each do |pc|
+            %li
+              %h4= pc.source
+              %p.byline
+                %span.date= pc.date.strftime("%m/%d/%Y")
+                %span.author= pc.author
+              = link_to(pc.link.title, pc.link.url, :target => '_blank', :class => 'box')
+
+  = render :partial => 'shared/mailing_list'
 .clear

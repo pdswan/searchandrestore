@@ -1,7 +1,7 @@
 class AboutController < ApplicationController
   
   def index
-    @about = About.last || About.new(:about => 'Add some about text dudes!')
+    @tabs = About.all
 
     @press_clippings = PressClipping.
       order('date DESC').

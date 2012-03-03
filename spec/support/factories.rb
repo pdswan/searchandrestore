@@ -118,6 +118,7 @@ Factory.define :homepage do |h|
 end
 
 Factory.define :about do |a|
+  a.title Faker::Lorem.words(2).join(' ')
   a.about Faker::Lorem.paragraphs(3).join("\n\n")
 end
 
