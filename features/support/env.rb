@@ -71,6 +71,27 @@ if defined?(ActiveRecord::Base)
   end
 end
 
+require 'selenium-webdriver'
+Capybara.register_driver :firefox_with_firebug do |app|
+  profile                                           = Selenium::WebDriver::Firefox::Profile.from_name "WebDriver"
+  profile["extensions.firebug.onByDefault"]         = true
+  profile["extensions.firebug.allPagesActivation"]  = "on"
+  profile["extensions.firebug.defaultPanelName"]    = "net"
+  profile["extensions.firebug.net.enableSites"]     = true
+  profile["extensions.firebug.console.enableSites"] = true
+
+  Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => profile)
+end
+
+Before '@javascript' do
+  Capybara.current_driver = :firefox_with_firebug
+end
+
 Before do
   Timecop.return
+end
+
+After '@keep_it_open' do
+  puts "Hit the any key when you're done"
+  STDIN.getc
 end

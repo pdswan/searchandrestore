@@ -11,7 +11,7 @@ Then /^I should see the video$/ do
   And  %{I should see a link to "#{url_for(the.video.show.venue)}"}
 
   the.video.performances.each do |performance|
-    And  %{I should see a link to "#{url_for(performance.artist)}" with the text "#{performance.artist.name} (#{performance.instrument.name})"}
+    And  %{I should see a link to "#{url_for(performance.artist)}" with the text "#{performance.artist.name}(#{performance.instrument.name})"}
   end
 end
 

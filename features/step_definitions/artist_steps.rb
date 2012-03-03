@@ -76,7 +76,7 @@ Then /^I should see the artist's upcoming shows$/ do
   raise "There are no upcoming shows" unless the.artist.upcoming_shows.present?
 
   the.artist.upcoming_shows.each do |show|
-    Then %{I should see a link to "#{url_for(show)}" with the text "#{show.group_name}"}
+    Then %{I should see "#{show.group_name}"}
     Then %{I should see a link to "#{url_for(show.venue)}" with the text "#{show.venue.name}"}
   end
 end
