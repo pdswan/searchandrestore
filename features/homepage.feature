@@ -30,21 +30,3 @@ Feature:
     When I go to the home page
     Then I should see the title and text of the blurb
 
-  Scenario: User sees about on homepage
-    Given the following about exists:
-      | about                       |
-      | All about jazz, doggy |
-    When I go to the home page
-    Then I should see "All about jazz, doggy"
-
-  Scenario: User sees well hello there on homepage
-    Given the following about exists:
-      | about                         |
-      | about is what we're all about |
-    And the following homepage exists:
-      | well_hello_there     |
-      | blurb from the burbs |
-    When I go to the home page
-    Then I should see "blurb from the burbs"
-    But I should not see "about is what we're all about"
-

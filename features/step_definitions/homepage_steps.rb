@@ -18,7 +18,6 @@ Given /^the homepage has a blurb$/ do
 end
 
 Then /^I should see the title and text of the blurb$/ do
-  save_and_open_page
   page.should have_content(the.blurb.title)
   page.should have_content(the.blurb.text)
 end

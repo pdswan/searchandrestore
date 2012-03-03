@@ -72,7 +72,7 @@
                   %h4.box.dark.wrap= show.group_name
                   %p.byline
                     %span.date= show.when.strftime("%m/%d/%Y")
-                    %span.location= show.venue.name
+                    %span.location= link_to(show.venue.name, show.venue)
               = link_to('See more shows...', shows_path, :class => 'box')
       -#.container.skin-dark
       -#  .body
