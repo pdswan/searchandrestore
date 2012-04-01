@@ -3,6 +3,8 @@ ActiveAdmin.register HomepageBanner do
     f.inputs do
       f.input :image, :as => :file, :hint => 'Image will be resized to a width of 630px'
       f.input :url, :hint => 'Optional url for the banner to link to'
+
+      f.buttons
     end
   end
   
