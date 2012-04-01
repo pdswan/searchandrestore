@@ -128,3 +128,11 @@ Factory.define :press_clipping do |p|
   p.date        Date.today
   p.association :link
 end
+
+Factory.define :homepage_banner do |hb|
+  hb.image File.open(File.expand_path('undead.jpg', File.join(Rails.root, 'spec', 'fixtures')))
+end
+
+Factory.define :homepage_banner_with_a_url, :parent => :homepage_banner do |hb|
+  hb.url 'http://google.com'
+end
