@@ -27,7 +27,7 @@ class HomeController < ApplicationController
       includes(:show, { :performances => [:artist, :instrument] }).
       first
 
-    @banner = HomepageBanner.first
+    @banner = HomepageBanner.order('RAND()').first
 
     @featured_video_description = @homepage.video_description
   end
