@@ -4,8 +4,14 @@
 
 
 #main-content-secondary
-  .col-1-2{ :class => @banner && 'with-banner' }
-    = display_banner(@banner)
+  .col-1-2{ :class => @banners.any? && 'with-banner' }
+    - if @banners.any?
+      .banners{ :class => @banners.size > 1 && 'slides' }
+        .slides_container
+          - @banners.each do |banner|
+            .banner.slide
+              = display_banner(banner)
+
     .col-1.section#exciting-news
       .container.skin-dark.darker
         .body
