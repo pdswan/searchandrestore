@@ -2,10 +2,10 @@
 - @masthead_bg = masthead_bgs[rand(masthead_bgs.length)] 
 - @page_class = "layout-2 page-home masthead-bg-#{@masthead_bg}"
 
-= display_banner(@banner)
 
 #main-content-secondary
-  .col-1-2
+  .col-1-2{ :class => @banner && 'with-banner' }
+    = display_banner(@banner)
     .col-1.section#exciting-news
       .container.skin-dark.darker
         .body
