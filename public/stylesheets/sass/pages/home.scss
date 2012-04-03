@@ -17,13 +17,16 @@
       margin-bottom: 0px;
     }
     #main-content {
+      background: url(/images/titles/home_title_bottom.png) no-repeat top left;
       #main-content-secondary {
-        background: url(/images/titles/home_title_bottom.png) no-repeat top left;
         padding-top: 5px;
       }
     }
     .col-1-2 {
       margin-top:204px;
+    }
+    .col-1-2.with-banner {
+      margin-top: 0px;
     }
     #exciting-news {
       //float: right;
