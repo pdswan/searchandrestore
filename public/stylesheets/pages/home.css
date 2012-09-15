@@ -17,6 +17,8 @@
     padding-top: 5px; }
 .jazz.page-home .col-1-2 {
   margin-top: 204px; }
+.jazz.page-home .col-1-2.with-banner {
+  margin-top: 0px; }
 .jazz.page-home #featured-video .body {
   padding: 5px; }
   .jazz.page-home #featured-video .body img {
