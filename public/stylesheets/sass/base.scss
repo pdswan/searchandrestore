@@ -1,4 +1,7 @@
-$ORANGE: #ff9900;
+// don't need to define this here since imported files bring it in
+// (n.b. NOT the other way around)
+//$ORANGE: #ff9900;
+
 @import "components/spacing";
 @import "components/forms";
 @import "components/links";
@@ -121,6 +124,7 @@ p {
   color: #fff;
 }
 .nav {
+  width: 1013px;
   li {
     float: left;
     a {
@@ -141,6 +145,17 @@ p {
       }
     }
   }
+  li#nav-banner {
+    width: 468px;
+    height: 60px;
+    position: relative;
+    top: -60px;
+  }
+}
+.banner {
+  position: relative;
+  top: -60px;
+  left: 555px;
 }
 body {
   &.page-home {
