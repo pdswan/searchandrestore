@@ -27,7 +27,7 @@ class HomeController < ApplicationController
       includes(:show, { :performances => [:artist, :instrument] }).
       first
 
-    @banners = HomepageBanner.order('RAND()').all
+    @banners = HomepageBanner.order(random_function).all
 
     @featured_video_description = @homepage.video_description
   end
@@ -56,6 +56,17 @@ class HomeController < ApplicationController
       order('date DESC').
       includes(:link).
       limit(5)
+  end
+  
+  def random_function
+   	 adapter = Rails.configuration.database_configuration[Rails.env]['adapter']
+   	 if adapter == 'postgresql'
+   	   rand_func = 'RANDOM()'
+   	 else
+   	   rand_func = 'RAND()'
+   	 end
+   	  rand_func	
+    end
   end
 
   protected
