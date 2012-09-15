@@ -59,14 +59,13 @@ class HomeController < ApplicationController
   end
   
   def random_function
-   	 adapter = Rails.configuration.database_configuration[Rails.env]['adapter']
-   	 if adapter == 'postgresql'
+   	adapter = Rails.configuration.database_configuration[Rails.env]['adapter']
+    if adapter == 'postgresql'
    	   rand_func = 'RANDOM()'
    	 else
    	   rand_func = 'RAND()'
    	 end
-   	  rand_func	
-    end
+    rand_func	
   end
 
   protected
