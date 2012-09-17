@@ -813,11 +813,6 @@ p {
       text-decoration: none; }
     .nav li.selected a, .nav li:hover a {
       background-color: #ff9900; }
-  .nav li#nav-banner {
-    width: 468px;
-    height: 60px;
-    position: relative;
-    top: -60px; }
 
 .banner {
   position: relative;
