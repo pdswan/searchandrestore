@@ -1,6 +1,4 @@
-// don't need to define this here since imported files bring it in
-// (n.b. NOT the other way around)
-//$ORANGE: #ff9900;
+$ORANGE: #ff9900;
 
 @import "components/spacing";
 @import "components/forms";
@@ -144,12 +142,6 @@ p {
         background-color: $ORANGE;
       }
     }
-  }
-  li#nav-banner {
-    width: 468px;
-    height: 60px;
-    position: relative;
-    top: -60px;
   }
 }
 .banner {
