@@ -1,141 +1,97 @@
-/*
-Syntax error: Undefined variable: "$ORANGE".
-        on line 33 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss
-
-28: 
-29:     label {
-30:       font-weight: bold;
-31:       clear: both;
-32:       margin-right: 20px;
-33:       color: $ORANGE;
-34:       font-size: 14px;
-35:       cursor: pointer;
-36:     }
-37:     &.inline {
-38:       float: left;
-
-Backtrace:
-/Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss:33
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/variable.rb:50:in `_perform'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/script/node.rb:40:in `perform'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/engine.rb:293:in `_render'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/engine.rb:241:in `render'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/util.rb:297:in `silence_sass_warnings'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/engine.rb:241:in `render'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:181:in `update_stylesheets'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:175:in `each'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:175:in `update_stylesheets'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:173:in `each'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/compiler.rb:173:in `update_stylesheets'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin.rb:81:in `update_stylesheets'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin.rb:54:in `check_for_updates'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/sass-3.1.7/lib/sass/../sass/plugin/rack.rb:51:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/warden-1.0.5/lib/warden/manager.rb:35:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/warden-1.0.5/lib/warden/manager.rb:34:in `catch'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/warden-1.0.5/lib/warden/manager.rb:34:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/methodoverride.rb:24:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/sendfile.rb:106:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/runtime.rb:17:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/lock.rb:11:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/lock.rb:11:in `synchronize'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/lock.rb:11:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/application.rb:77:in `send'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/content_length.rb:13:in `call'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/handler/webrick.rb:52:in `service'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
-/Users/dalton/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/handler/webrick.rb:13:in `run'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/rack-1.2.4/lib/rack/server.rb:217:in `start'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/commands/server.rb:65:in `start'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/commands.rb:30
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/commands.rb:27:in `tap'
-/Users/dalton/.rvm/gems/ruby-1.8.7-p352@searchandrestore/gems/railties-3.0.4/lib/rails/commands.rb:27
-script/rails:6:in `require'
-script/rails:6
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 33 of /Users/dalton/Desktop/WORK/searchandrestore/public/stylesheets/sass/components/forms.scss\A \A 28: \A 29:     label {\A 30:       font-weight: bold;\A 31:       clear: both;\A 32:       margin-right: 20px;\A 33:       color: $ORANGE;\A 34:       font-size: 14px;\A 35:       cursor: pointer;\A 36:     }\A 37:     &.inline {\A 38:       float: left;"; }
+.jazz fieldset {
+  border: none;
+  padding: 0;
+  margin: 0; }
+.jazz .field {
+  margin-bottom: 20px;
+  overflow: hidden; }
+  .jazz .field input[type='text'],
+  .jazz .field input[type='password'],
+  .jazz .field textarea {
+    border: 2px solid #d7d7d7;
+    width: 300px; }
+  .jazz .field input[type='text'],
+  .jazz .field input[type='password'] {
+    line-height: 16px;
+    font-size: 12px;
+    color: #000; }
+  .jazz .field label,
+  .jazz .field .control {
+    float: left; }
+  .jazz .field label {
+    font-weight: bold;
+    clear: both;
+    margin-right: 20px;
+    color: #ff9900;
+    font-size: 14px;
+    cursor: pointer; }
+  .jazz .field.inline {
+    float: left;
+    margin-right: 10px; }
+    .jazz .field.inline label {
+      clear: none; }
+    .jazz .field.inline .wrapper {
+      float: left; }
+  .jazz .field.textarea textarea {
+    height: 150px; }
+  .jazz .field.radio label {
+    padding-top: 2px;
+    margin-right: 8px; }
+  .jazz .field.check label {
+    padding-top: 1px;
+    margin-right: 8px; }
+  .jazz .field.select label {
+    padding-top: 1px; }
+.jazz fieldset.searchy {
+  margin-bottom: 5px; }
+  .jazz fieldset.searchy .field {
+    margin-bottom: 3px; }
+    .jazz fieldset.searchy .field label {
+      display: block;
+      float: none;
+      font-weight: normal;
+      padding-left: 5px;
+      padding-top: 5px; }
+    .jazz fieldset.searchy .field.text .input,
+    .jazz fieldset.searchy .field.text .submit {
+      float: left; }
+    .jazz fieldset.searchy .field.text .input {
+      width: 242px;
+      margin-right: 10px; }
+      .jazz fieldset.searchy .field.text .input input {
+        width: 242px;
+        height: 15px; }
+    .jazz fieldset.searchy .field.select .input,
+    .jazz fieldset.searchy .field.select .submit {
+      float: left; }
+    .jazz fieldset.searchy .field.select .input {
+      margin-right: 3px;
+      width: 249px; }
+      .jazz fieldset.searchy .field.select .input select {
+        width: 249px; }
+    .jazz fieldset.searchy .field.calendar {
+      width: 253px;
+      margin: 0;
+      padding: 0; }
+  .jazz fieldset.searchy .calendar-wrapper {
+    position: relative;
+    padding-bottom: 0px;
+    background-color: transparent; }
+  .jazz fieldset.searchy .calendar-submit {
+    width: 66px;
+    margin: 217px 0 0 10px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px; }
+    .jazz fieldset.searchy .calendar-submit input {
+      float: right; }
+.jazz .searchy-inline #search-by-name {
+  width: 485px; }
+.jazz .searchy-inline #search-by-instrument {
+  width: 375px; }
+.jazz .searchy-inline select {
+  width: 200px; }
+.jazz .searchy-inline .field.text input {
+  height: 15px; }
+.jazz .searchy-inline label {
+  margin-right: 3px; }

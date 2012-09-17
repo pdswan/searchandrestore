@@ -42,6 +42,8 @@
             %a{:href => resources_path} Resources
           %li#nav-donate
             %a{:href => donate_path} Donate
+        .banner
+          = image_tag('banner.jpg')
     .site-container#main-content
       = content_for?(:content) ? yield(:content) : yield
       .clear
