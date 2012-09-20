@@ -311,6 +311,8 @@
     padding-top: 5px; }
 .jazz.page-home .col-1-2 {
   margin-top: 204px; }
+.jazz.page-home .col-1-2.with-banner {
+  margin-top: 0px; }
 .jazz.page-home #featured-video .body {
   padding: 5px; }
   .jazz.page-home #featured-video .body img {
@@ -795,20 +797,28 @@ p {
 .skin-dark p {
   color: #fff; }
 
-.nav li {
-  float: left; }
-  .nav li a {
-    display: block;
-    cursor: pointer;
-    line-height: 16px;
-    padding: 3px 6px 2px 6px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none; }
-  .nav li.selected a, .nav li:hover a {
-    background-color: #ff9900; }
+.nav {
+  width: 1013px; }
+  .nav li {
+    float: left; }
+    .nav li a {
+      display: block;
+      cursor: pointer;
+      line-height: 16px;
+      padding: 3px 6px 2px 6px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none; }
+    .nav li.selected a, .nav li:hover a {
+      background-color: #ff9900; }
+
+.banner {
+  position: relative;
+  width: 468px;
+  top: -81px;
+  left: 480px; }
 
 body.page-home .nav li#nav-home a {
   background-color: #ff9900; }
