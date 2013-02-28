@@ -12,3 +12,5 @@ db/schema.rb
 .webbynode/credentials
 public/uploads/*
 vendor/bundle
+.project
+.DS_Store
