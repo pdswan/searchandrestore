@@ -815,9 +815,9 @@ p {
       background-color: #ff9900; }
 
 .banner {
-  position: relative;
+  position: absolute;
   width: 468px;
-  top: -81px;
+  top: 67px;
   left: 480px; }
 
 body.page-home .nav li#nav-home a {
