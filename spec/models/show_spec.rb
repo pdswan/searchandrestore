@@ -4,7 +4,17 @@ describe Show do
   it { should validate_presence_of(:venue) }
   it { should validate_presence_of(:group_name) }
 
-  describe "#when" do
+   # it "does not allow duplicate shows" do
+   #    Factory.create(:show,
+   #      :group_name => "The Wild Bunch",
+   #      :when => Time.now )
+   #    Factory.build(:show,
+   #      :group_name => "The Wild Bunch",
+   #      :when => Time.now ).should_not be_valid
+   # end
+
+
+   describe "#when" do
     let(:show) { Show.new }
 
     context "the attribute has been set" do

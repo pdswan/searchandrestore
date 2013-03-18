@@ -16,10 +16,11 @@ class Show < ActiveRecord::Base
                                 :allow_destroy => true,
                                 :reject_if => proc { |attributes| attributes[:url].blank? }
 
-  validates :venue,
-            :group_name,
-            :when,
+  validates :venue, :group_name,
             :presence => true
+
+  validates :group_name, :uniqueness => { :scope => :group_name,
+            :message => "can't play two shows at the same place" }
 
   def self.for_day(day_or_date_string)
     unless day_or_date_string.respond_to?(:beginning_of_day)
